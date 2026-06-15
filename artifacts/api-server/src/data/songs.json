@@ -5141,5 +5141,1116 @@
     "description": "Theodore's progressive rock instincts are most evident on Kalopsia \u2014 his approach to odd-meter sections and his compositional sensibility come from a different tradition than most hard rock drummers.",
     "whyStudy": "Study how Theodore handles the transitions between sections \u2014 his ability to connect radically different grooves without audible 'gear changes' is the advanced skill. The song's architecture is visible through his drumming.",
     "songsterrSlug": null
+  },
+  {
+    "id": "the-weight-band",
+    "title": "The Weight",
+    "artist": "The Band",
+    "drummerId": "levon-helm",
+    "year": 1968,
+    "eraId": "1960s",
+    "genreIds": [
+      "rock",
+      "blues",
+      "country"
+    ],
+    "tempo": 90,
+    "feel": "Laid-back Southern rock groove that swings without trying \u2014 the definition of 'feel'",
+    "complexity": 3,
+    "description": "Levon Helm singing lead while drumming, creating one of rock music's most authentic performances. His loose, conversational drumming sounds like it could only have come from the American South.",
+    "whyStudy": "Study how Helm maintains groove while singing complex lead vocal lines \u2014 the coordination required is extraordinary. His ability to serve the song first, last, and always is the essential lesson.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "up-on-cripple-creek",
+    "title": "Up on Cripple Creek",
+    "artist": "The Band",
+    "drummerId": "levon-helm",
+    "year": 1969,
+    "eraId": "1960s",
+    "genreIds": [
+      "rock",
+      "country"
+    ],
+    "tempo": 108,
+    "feel": "Wah-wah clavinet groove meets Levon's shuffling Southern feel for one of rock's most joyful performances",
+    "complexity": 3,
+    "description": "Helm at his most playful \u2014 his shuffle feel on this track captures the spirit of American roots music with a momentum and energy that never feels forced or contrived.",
+    "whyStudy": "Study how Helm uses shuffle feel in a rock context. His ride cymbal pattern and the way he places the snare slightly behind the beat creates the infectious forward momentum of classic Americana drumming.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "waltz-for-debby",
+    "title": "Waltz for Debby",
+    "artist": "Bill Evans Trio",
+    "drummerId": "paul-motian",
+    "year": 1961,
+    "eraId": "1960s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 88,
+    "feel": "Gentle 3/4 jazz trio where Motian's brushes create pure atmosphere rather than timekeeping",
+    "complexity": 5,
+    "description": "The quintessential Paul Motian performance \u2014 his brushwork on this Bill Evans classic is less about keeping time than about painting sonic watercolors. The three musicians sound like a single organism breathing together.",
+    "whyStudy": "Study Motian's concept of 'space as rhythm' \u2014 he is often playing nothing, yet the music never feels empty. Understanding how to use silence as a rhythmic device is the most advanced jazz drumming skill.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "peace-piece-motian",
+    "title": "Peace Piece",
+    "artist": "Bill Evans",
+    "drummerId": "paul-motian",
+    "year": 1958,
+    "eraId": "1950s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 70,
+    "feel": "Meditative modal jazz where Motian's cymbal work creates pure timbral atmosphere",
+    "complexity": 4,
+    "description": "From the very first Bill Evans sessions, Motian's approach was revolutionary \u2014 here his cymbal work creates a shimmering, almost static texture while Evans's left hand repeats a single bass note. This is drumming as pure sound design.",
+    "whyStudy": "Study how Motian uses the full timbral range of his cymbals to create mood. His touch on the ride cymbal \u2014 barely grazing the surface \u2014 produces a sound that no amount of technique can replicate without the right conceptual framework.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "thriller-live-moffett",
+    "title": "Thriller (Live)",
+    "artist": "Michael Jackson",
+    "drummerId": "jonathan-moffett",
+    "year": 1984,
+    "eraId": "1980s",
+    "genreIds": [
+      "soul",
+      "funk",
+      "pop"
+    ],
+    "tempo": 118,
+    "feel": "Moffett's precision funk groove powering one of pop music's greatest live shows",
+    "complexity": 4,
+    "description": "Jonathan Moffett supporting Michael Jackson at the peak of his fame \u2014 the drumming must be perfect because there is no margin for error when 100,000 people are watching. His consistency and musicality under that pressure is extraordinary.",
+    "whyStudy": "Study Moffett's approach to playing pop music live \u2014 every groove decision serves the choreography and theatrical presentation. This is drumming as part of a total artistic production, not just musical performance.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "beat-it-live-moffett",
+    "title": "Beat It (Live)",
+    "artist": "Michael Jackson",
+    "drummerId": "jonathan-moffett",
+    "year": 1988,
+    "eraId": "1980s",
+    "genreIds": [
+      "soul",
+      "rock",
+      "pop"
+    ],
+    "tempo": 138,
+    "feel": "The Bad World Tour version of Beat It with Moffett's rock-pop fusion groove at center stage",
+    "complexity": 4,
+    "description": "Moffett bridging the rock guitar arrangement with pop groove fundamentals \u2014 his ability to play in a rock context while maintaining the precision required for MJ's choreography-synchronized performances is a unique skill.",
+    "whyStudy": "Study how Moffett adapts to different genre requirements within a single show. Playing funk, pop, rock, and ballads back-to-back while serving elaborate choreography demands exceptional versatility and preparation.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "antipop-aristocrats",
+    "title": "Antipop",
+    "artist": "The Aristocrats",
+    "drummerId": "marco-minnemann",
+    "year": 2011,
+    "eraId": "2010s",
+    "genreIds": [
+      "progressive-rock",
+      "jazz",
+      "metal"
+    ],
+    "tempo": 175,
+    "feel": "Progressive fusion at its most joyfully virtuosic \u2014 Minnemann, Govan, and Beller trading impossible ideas",
+    "complexity": 5,
+    "description": "Marco Minnemann with The Aristocrats is the gold standard of modern progressive trio drumming. His ability to improvise freely at extreme technical levels while serving the ensemble rather than competing with two equally virtuosic players is extraordinary.",
+    "whyStudy": "Study how Minnemann creates space for his bandmates despite his technical ability to fill every moment. The best progressive drumming is about musical intelligence, not showing off \u2014 Antipop is a masterclass in this distinction.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "sweaty-knockers",
+    "title": "Sweaty Knockers",
+    "artist": "The Aristocrats",
+    "drummerId": "marco-minnemann",
+    "year": 2011,
+    "eraId": "2010s",
+    "genreIds": [
+      "progressive-rock",
+      "jazz"
+    ],
+    "tempo": 145,
+    "feel": "Odd-meter fusion with Minnemann's four-limb independence making impossible patterns sound inevitable",
+    "complexity": 5,
+    "description": "The Aristocrats' most celebrated track \u2014 three virtuosos improvising within a framework of complex compositional material. Minnemann's ability to hold the center while playing rhythmically intricate material is breathtaking.",
+    "whyStudy": "Study the metric modulation in this track \u2014 Minnemann shifts between time signatures without disrupting the groove's essential energy. This is advanced compositional drumming: the form is served by every technical choice.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "goliath-mars-volta",
+    "title": "Goliath",
+    "artist": "The Mars Volta",
+    "drummerId": "thomas-pridgen",
+    "year": 2008,
+    "eraId": "2000s",
+    "genreIds": [
+      "progressive-rock",
+      "jazz",
+      "metal"
+    ],
+    "tempo": 168,
+    "feel": "Progressive rock at maximum intensity with Pridgen's jazz-trained mind navigating complex compositional structures",
+    "complexity": 5,
+    "description": "Thomas Pridgen's most celebrated Mars Volta performance \u2014 his ability to sustain maximum intensity over nine minutes while following the song's complex metric and compositional changes is extraordinary.",
+    "whyStudy": "Study how Pridgen structures intensity over a long-form progressive track. His fills follow melodic lines rather than filling space arbitrarily \u2014 transcribing where he places fills versus where he doesn't reveals a sophisticated compositional mind.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "conjugal-burns",
+    "title": "Conjugal Burns",
+    "artist": "The Mars Volta",
+    "drummerId": "thomas-pridgen",
+    "year": 2008,
+    "eraId": "2000s",
+    "genreIds": [
+      "progressive-rock",
+      "metal"
+    ],
+    "tempo": 195,
+    "feel": "The Mars Volta at maximum velocity with Pridgen pushing the band to its limits",
+    "complexity": 5,
+    "description": "Pridgen at his most explosive \u2014 the track demands total commitment and maximum physicality for its entire duration. His endurance and the precision he maintains at extreme speeds are as impressive as his compositional intelligence.",
+    "whyStudy": "Study how Pridgen maintains musical thinking under extreme physical demands. The temptation at high tempos is to abandon musical judgment for survival \u2014 Pridgen's ability to keep thinking musically while playing this fast is the advanced skill to identify.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "creative-coordination-lang",
+    "title": "Creative Coordination",
+    "artist": "Thomas Lang",
+    "drummerId": "thomas-lang",
+    "year": 2006,
+    "eraId": "2000s",
+    "genreIds": [
+      "rock",
+      "progressive-rock"
+    ],
+    "tempo": 135,
+    "feel": "Thomas Lang's signature four-limb independence \u2014 each limb playing an entirely different rhythmic pattern",
+    "complexity": 5,
+    "description": "Thomas Lang at his most compositionally independent \u2014 this track demonstrates each of his four limbs playing autonomous rhythmic patterns that create a complex polyrhythmic texture while still serving musical function.",
+    "whyStudy": "This is advanced study material \u2014 begin by learning each limb's pattern separately, then combine two at a time. Full four-way independence takes years to develop. Use this as a long-term benchmark rather than a short-term goal.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "creative-control",
+    "title": "Creative Control",
+    "artist": "Thomas Lang",
+    "drummerId": "thomas-lang",
+    "year": 2009,
+    "eraId": "2000s",
+    "genreIds": [
+      "rock",
+      "jazz"
+    ],
+    "tempo": 148,
+    "feel": "Lang applying his independence technique in a musical rock-jazz context",
+    "complexity": 5,
+    "description": "Thomas Lang demonstrating that extreme technical development can serve musical ends \u2014 this track shows his four-limb independence functioning as compositional layers in a context where the music benefits from the complexity.",
+    "whyStudy": "Study how independence technique becomes musical. Lang's genius is that his coordination exercises aren't just exercises \u2014 they're musical concepts. Understanding the difference between technique and musicality is the lesson.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "royster-jr-solo",
+    "title": "Tony Royster Jr. Drum Solo (DCI 1998)",
+    "artist": "Tony Royster Jr.",
+    "drummerId": "tony-royster-jr",
+    "year": 1998,
+    "eraId": "1990s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 165,
+    "feel": "A 12-year-old demonstrating complete professional mastery \u2014 every rudiment, every fill perfectly executed",
+    "complexity": 5,
+    "description": "The most famous child drumming performance in history \u2014 a complete professional demonstration of technique, creativity, and musicality from a 12-year-old. His time feel and musical phrasing are as sophisticated as any adult professional.",
+    "whyStudy": "Study this performance to understand what 'natural talent' combined with dedicated practice can achieve. More importantly, study Royster's musical intelligence \u2014 his fills are compositional choices, not random displays of technique.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "99-problems-live-royster",
+    "title": "99 Problems (Live)",
+    "artist": "Jay-Z",
+    "drummerId": "tony-royster-jr",
+    "year": 2003,
+    "eraId": "2000s",
+    "genreIds": [
+      "hiphop",
+      "rock"
+    ],
+    "tempo": 90,
+    "feel": "Hip-hop live drumming with Royster Jr. transforming a sample-based track into a live band showcase",
+    "complexity": 4,
+    "description": "Tony Royster Jr. demonstrating his ability to serve hip-hop music with live drumming \u2014 maintaining the pocket and energy of the original production while bringing his jazz sensibility to the live performance context.",
+    "whyStudy": "Study how Royster adapts his jazz technique to serve hip-hop's groove requirements. The challenge of playing hip-hop on a live kit \u2014 maintaining the quantized feel while adding the natural dynamics of live playing \u2014 requires genuine stylistic intelligence.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "pikalar",
+    "title": "Pikalar",
+    "artist": "Anika Nilles",
+    "drummerId": "anika-nilles",
+    "year": 2016,
+    "eraId": "2010s",
+    "genreIds": [
+      "rock",
+      "jazz",
+      "electronic"
+    ],
+    "tempo": 138,
+    "feel": "Viral drum-forward composition that introduced Nilles to millions \u2014 groove, technique, and composition unified",
+    "complexity": 5,
+    "description": "The video that made Anika Nilles a global phenomenon. Her drumming here is simultaneously a groove, a melody, a harmonic statement, and a formal composition \u2014 all happening through the drum kit alone.",
+    "whyStudy": "Study how Nilles uses the kit to create a complete musical statement. Her hi-hat patterns, tom melodies, and groove elements each serve a compositional function. This is drumming as composition \u2014 the rarest and most sophisticated approach.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "nevermind-nilles",
+    "title": "Nevermind",
+    "artist": "Anika Nilles",
+    "drummerId": "anika-nilles",
+    "year": 2018,
+    "eraId": "2010s",
+    "genreIds": [
+      "rock",
+      "jazz"
+    ],
+    "tempo": 126,
+    "feel": "Anika Nilles at her most compositionally focused \u2014 groove-jazz with electronic influences",
+    "complexity": 4,
+    "description": "Nilles demonstrating her ability to sustain musical interest over a full track \u2014 her compositional intelligence is as evident in what she doesn't play as in her spectacular technical moments.",
+    "whyStudy": "Study how Nilles builds and releases tension over a full performance. Her dynamic arc \u2014 from sparse, sparse playing to complex polyrhythmic passages \u2014 is the work of a composer, not just a drummer.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "shofukan-sput",
+    "title": "Shofukan",
+    "artist": "Snarky Puppy",
+    "drummerId": "sput-searight",
+    "year": 2013,
+    "eraId": "2010s",
+    "genreIds": [
+      "jazz",
+      "funk"
+    ],
+    "tempo": 112,
+    "feel": "Snarky Puppy's most explosive collective moment with Sput's gospel-jazz groove as the foundation",
+    "complexity": 5,
+    "description": "Robert Sput Searight anchoring Snarky Puppy at their most collectively explosive \u2014 his ability to hold a groove that supports 15+ musicians while remaining completely in service of the music demonstrates the highest level of ensemble drumming.",
+    "whyStudy": "Study how Sput creates a groove that 'breathes' \u2014 it's simultaneously locked and conversational, rigid and flexible. His ghost note density and his hi-hat openings create the specific pocket quality that makes Snarky Puppy's music feel this way.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "bent-nails-sput",
+    "title": "Bent Nails",
+    "artist": "Snarky Puppy",
+    "drummerId": "sput-searight",
+    "year": 2010,
+    "eraId": "2000s",
+    "genreIds": [
+      "jazz",
+      "funk"
+    ],
+    "tempo": 126,
+    "feel": "Early Snarky Puppy with Sput's gospel roots showing clearly in every groove choice",
+    "complexity": 4,
+    "description": "Sput in the early Snarky Puppy context \u2014 his gospel background is most audible here, and the combination of that deep spiritual groove tradition with the band's jazz-funk synthesis is the sound that would eventually make Snarky Puppy world-famous.",
+    "whyStudy": "Study the gospel drum tradition in this track \u2014 Sput's time feel, his dynamic approach, and his relationship to the kick drum all come from a tradition of sacred music. Understanding those roots illuminates everything he plays.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "black-classic-dayes",
+    "title": "Black Classic",
+    "artist": "Yousef Dayes",
+    "drummerId": "yousef-dayes",
+    "year": 2021,
+    "eraId": "2010s",
+    "genreIds": [
+      "jazz",
+      "soul",
+      "hiphop"
+    ],
+    "tempo": 92,
+    "feel": "UK jazz meets hip-hop pocket in one of contemporary drumming's most exciting debut statements",
+    "complexity": 5,
+    "description": "Yousef Dayes announcing himself to the world \u2014 his playing synthesizes everything happening in contemporary music (hip-hop, electronic, jazz, UK soul) into a completely personal statement that sounds unlike anyone else.",
+    "whyStudy": "Study how Dayes integrates electronic music sensibility into jazz drumming. His hi-hat patterns in particular come from a place that understands both programmed beats and jazz subdivision \u2014 the combination is the unique quality to identify and study.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "vol-1-dayes",
+    "title": "Volume 1",
+    "artist": "Yousef Dayes",
+    "drummerId": "yousef-dayes",
+    "year": 2018,
+    "eraId": "2010s",
+    "genreIds": [
+      "jazz",
+      "electronic"
+    ],
+    "tempo": 88,
+    "feel": "Dayes's earliest wide-release recording showcasing the foundations of his unique style",
+    "complexity": 5,
+    "description": "The emergence of Yousef Dayes's musical personality \u2014 his combination of jazz instinct, electronic texture awareness, and deep pocket feel was fully formed from the very beginning. A genuinely original voice on the instrument.",
+    "whyStudy": "Study Dayes's sound design as much as his playing \u2014 his choice of ride cymbal articulation, bass drum sound, and snare touch are as important to his style as his rhythmic vocabulary. Sound and feel are inseparable.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "two-against-nature",
+    "title": "Two Against Nature",
+    "artist": "Steely Dan",
+    "drummerId": "keith-carlock",
+    "year": 2000,
+    "eraId": "2000s",
+    "genreIds": [
+      "rock",
+      "jazz",
+      "funk"
+    ],
+    "tempo": 108,
+    "feel": "Grammy-winning sophistication \u2014 Steely Dan's return with Carlock's groove at the center",
+    "complexity": 4,
+    "description": "Keith Carlock's introduction to the world on Steely Dan's first album in 20 years. His ability to match the band's legendary pop-jazz sophistication while bringing contemporary energy proved why he would become one of the most sought-after drummers in the world.",
+    "whyStudy": "Study how Carlock achieves the Steely Dan 'feel' \u2014 a perfect blend of jazz subdivision, funk ghost notes, and rock authority. His approach to the hi-hat is particularly distinctive. This track launched a career that defined modern studio drumming.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "gaslighting-abscam",
+    "title": "Gaslighting Abscam",
+    "artist": "Steely Dan",
+    "drummerId": "keith-carlock",
+    "year": 2003,
+    "eraId": "2000s",
+    "genreIds": [
+      "rock",
+      "jazz"
+    ],
+    "tempo": 132,
+    "feel": "Steely Dan at their most compositionally sophisticated with Carlock's drumming as the rhythmic centerpiece",
+    "complexity": 5,
+    "description": "From 'Everything Must Go', this track showcases Carlock's ability to handle complex compositional material while maintaining perfect groove. His fills are musical sentences that follow the harmonic structure of the song.",
+    "whyStudy": "Study Carlock's relationship to the chord changes \u2014 his fills anticipate and respond to the harmonic rhythm of the song rather than being placed arbitrarily. This level of harmonic awareness in drumming is the difference between a good drummer and an extraordinary one.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "usher-yeah-spears",
+    "title": "Yeah! (Live)",
+    "artist": "Usher",
+    "drummerId": "aaron-spears",
+    "year": 2004,
+    "eraId": "2000s",
+    "genreIds": [
+      "soul",
+      "funk",
+      "hiphop"
+    ],
+    "tempo": 130,
+    "feel": "Aaron Spears bringing gospel power to one of the decade's biggest hits on the world's largest stages",
+    "complexity": 4,
+    "description": "Spears supporting Usher's most commercially successful era \u2014 his ability to replicate the energy and feel of a programmed track while adding the explosive live quality that only a drummer of his caliber can deliver.",
+    "whyStudy": "Study how Spears translates a producer's vision into a live performance. His ability to capture the feel of a programmed beat while adding live dynamics and Gospel energy is the model for any drummer playing pop music in a live setting.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "triple-diddle-spears",
+    "title": "Triple Diddle Showcase",
+    "artist": "Aaron Spears",
+    "drummerId": "aaron-spears",
+    "year": 2010,
+    "eraId": "2000s",
+    "genreIds": [
+      "gospel",
+      "soul"
+    ],
+    "tempo": 145,
+    "feel": "The technique that made Aaron Spears a viral sensation \u2014 gospel rudiments applied to the full drum kit",
+    "complexity": 5,
+    "description": "Spears demonstrating the Triple Diddle technique that originates in African-American gospel drumming. The combination of orchestral gospel kit setup with traditional rudiments produces a sound unlike any other drumming tradition.",
+    "whyStudy": "Study the gospel drumming tradition through Spears's teaching materials before attempting this technique. The Triple Diddle is not just a physical technique \u2014 it's a cultural expression rooted in decades of church music. Understanding the context makes the playing more meaningful.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "g-spot-tornado",
+    "title": "G-Spot Tornado",
+    "artist": "Frank Zappa",
+    "drummerId": "chad-wackerman",
+    "year": 1986,
+    "eraId": "1980s",
+    "genreIds": [
+      "jazz",
+      "progressive-rock"
+    ],
+    "tempo": 200,
+    "feel": "Zappa's most rhythmically complex composition with Wackerman executing impossible notation at blazing speed",
+    "complexity": 5,
+    "description": "The most demanding piece of notated drumming in the contemporary repertoire. Wackerman's ability to execute Zappa's irrational meters, polyrhythmic notation, and extreme tempos while maintaining a musical feel represents the absolute peak of technical drumming.",
+    "whyStudy": "Study Zappa's notation system before attempting this piece. The rhythmic relationships here are mathematically precise \u2014 every subdivision is intentional. This is not improvisation; it is the most demanding sight-reading ever applied to the drum kit.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "alien-orifice",
+    "title": "Alien Orifice",
+    "artist": "Frank Zappa",
+    "drummerId": "chad-wackerman",
+    "year": 1982,
+    "eraId": "1980s",
+    "genreIds": [
+      "rock",
+      "progressive-rock"
+    ],
+    "tempo": 185,
+    "feel": "Early Wackerman-era Zappa demonstrating his immediate mastery of Zappa's rhythmic language",
+    "complexity": 5,
+    "description": "Wackerman's first recordings with Zappa show immediate mastery \u2014 he arrived fully formed, capable of executing Zappa's most demanding material from the very first sessions. His reading ability and physical accuracy are extraordinary.",
+    "whyStudy": "Study how Wackerman approaches technically impossible material with apparent ease. The key is his jazz musician's ability to internalize complex rhythm rather than counting \u2014 he hears the music, not the notation.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "yankee-rose",
+    "title": "Yankee Rose",
+    "artist": "David Lee Roth",
+    "drummerId": "greg-bisonette",
+    "year": 1986,
+    "eraId": "1980s",
+    "genreIds": [
+      "rock",
+      "hard-rock"
+    ],
+    "tempo": 148,
+    "feel": "Hard rock groove with Bisonette's jazz-influenced fills giving post-Van Halen Roth unexpected musical depth",
+    "complexity": 4,
+    "description": "Greg Bisonette's debut on the world stage \u2014 his ability to replace the Van Halen sound (which was built around Alex Van Halen's playing) while bringing his own musical personality is a masterclass in adaptability.",
+    "whyStudy": "Study how Bisonette handles the transition between a tight, driving rock groove and his jazz-influenced fills. His fills are compositional \u2014 they respond to the guitar and vocal melodic content rather than being formulaic rock patterns.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "just-like-paradise-roth",
+    "title": "Just Like Paradise",
+    "artist": "David Lee Roth",
+    "drummerId": "greg-bisonette",
+    "year": 1988,
+    "eraId": "1980s",
+    "genreIds": [
+      "rock",
+      "hard-rock"
+    ],
+    "tempo": 150,
+    "feel": "Pop-rock crossover with Bisonette's versatility allowing him to serve a more commercial sound without losing groove quality",
+    "complexity": 3,
+    "description": "Bisonette demonstrating range \u2014 from the harder rock of Yankee Rose to this more commercial sound. His ability to dial back complexity without losing musicality is a skill that distinguishes mature drummers from merely technical ones.",
+    "whyStudy": "Study how Bisonette adapts his approach to serve a more pop-oriented song. The restraint shown here is as sophisticated as the flashy fills on Yankee Rose \u2014 knowing when to hold back is the lesson.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "chicken-noodle-soul",
+    "title": "Chicken Noodle Soul",
+    "artist": "Forq",
+    "drummerId": "nate-wood",
+    "year": 2015,
+    "eraId": "2010s",
+    "genreIds": [
+      "jazz",
+      "funk",
+      "electronic"
+    ],
+    "tempo": 118,
+    "feel": "Nate Wood's synthesis of jazz, funk, and electronic music \u2014 groove that sounds produced but feels human",
+    "complexity": 5,
+    "description": "Nate Wood with Forq demonstrating his unique synthesis \u2014 the music has the feel and texture of electronic production while being performed entirely live. His ability to create this quality with acoustic instruments is the most sophisticated trick in contemporary drumming.",
+    "whyStudy": "Study how Wood creates an 'electronic' feel with acoustic drums. His hi-hat patterns, bass drum placement, and snare dynamics are all informed by his knowledge of electronic production. Understanding both worlds is the prerequisite for understanding Forq's music.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "forq-love",
+    "title": "Love",
+    "artist": "Forq",
+    "drummerId": "nate-wood",
+    "year": 2015,
+    "eraId": "2010s",
+    "genreIds": [
+      "jazz",
+      "funk"
+    ],
+    "tempo": 104,
+    "feel": "Contemporary jazz-funk with Wood's compositional approach to groove creating something genuinely new",
+    "complexity": 4,
+    "description": "Wood demonstrating his compositional approach \u2014 the drums are not supporting a melody, they ARE the melody. His groove contains all the information a complete musical statement needs.",
+    "whyStudy": "Study how Wood uses groove as primary compositional material. His patterns have melodic and harmonic implications because he understands music theory at a level most drummers don't. This is the result of musician-level education applied to drumming.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "kairos-sepultura",
+    "title": "Kairos",
+    "artist": "Sepultura",
+    "drummerId": "eloy-casagrande",
+    "year": 2011,
+    "eraId": "2010s",
+    "genreIds": [
+      "metal"
+    ],
+    "tempo": 168,
+    "feel": "Eloy Casagrande's debut with Sepultura \u2014 technical metal drumming with unexpected Brazilian warmth",
+    "complexity": 4,
+    "description": "A 18-year-old joining one of metal's most important bands and immediately sounding completely at home \u2014 Casagrande's Brazilian rhythmic sensibility gives Sepultura's classic aggressive sound a new quality that invigorated the band.",
+    "whyStudy": "Study how Casagrande's Brazilian background affects his approach to metal drumming. His double bass patterns have a different quality from European or American metal drummers \u2014 the rhythmic 'swing' from samba and Afrobeat creates a groove quality unusual in extreme metal.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "the-mediator",
+    "title": "The Mediator Between Head and Hands Must Be the Heart",
+    "artist": "Sepultura",
+    "drummerId": "eloy-casagrande",
+    "year": 2013,
+    "eraId": "2010s",
+    "genreIds": [
+      "metal",
+      "progressive-rock"
+    ],
+    "tempo": 175,
+    "feel": "Sepultura's most technically ambitious modern-era album with Casagrande fully establishing his voice",
+    "complexity": 5,
+    "description": "Casagrande pushing Sepultura into new technical territory \u2014 the rhythmic complexity here surpasses anything the band had attempted before, demonstrating that his technical development has continued beyond what his debut showed.",
+    "whyStudy": "Study the title track specifically \u2014 the odd-meter passages and the way Casagrande handles transitions between rhythmic settings demonstrate a mathematical understanding of meter that is unusual in metal drumming.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "black-codes",
+    "title": "Black Codes (From the Underground)",
+    "artist": "Wynton Marsalis Quintet",
+    "drummerId": "jeff-tain-watts",
+    "year": 1985,
+    "eraId": "1980s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 196,
+    "feel": "Hard bop at its most modern and powerful \u2014 Tain Watts driving Wynton's neo-bop quintet with authority",
+    "complexity": 5,
+    "description": "Jeff Tain Watts with the Wynton Marsalis Quintet at their most explosive \u2014 his ability to swing at extreme tempos while maintaining a melodic, compositional approach to every fill is what places him among jazz's greatest drummers.",
+    "whyStudy": "Study Watts's approach to fills \u2014 they are melodic phrases, not rhythmic patterns. His fills quote melodies, outline harmonies, and respond to the other musicians' lines. This level of melodic intelligence in fill construction is rare and should be studied closely.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "think-of-one",
+    "title": "Think of One",
+    "artist": "Wynton Marsalis Quintet",
+    "drummerId": "jeff-tain-watts",
+    "year": 1983,
+    "eraId": "1980s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 240,
+    "feel": "Blazing bebop tempos with Tain Watts demonstrating that speed and musicality are not in opposition",
+    "complexity": 5,
+    "description": "Watts and the Marsalis Quintet at maximum velocity \u2014 this is modern bebop drumming at its most demanding and most musical. At these tempos, most drummers play survival mode; Watts plays compositionally.",
+    "whyStudy": "Study how Watts maintains musical thinking at extreme tempos. His snare placement, his ride pattern, and his fill construction all remain sophisticated and intentional regardless of how fast the tempo is. This is the most advanced jazz drumming skill.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "through-the-fire-chaka",
+    "title": "Through the Fire",
+    "artist": "Chaka Khan",
+    "drummerId": "chris-coleman",
+    "year": 2004,
+    "eraId": "2000s",
+    "genreIds": [
+      "soul",
+      "funk"
+    ],
+    "tempo": 100,
+    "feel": "Chris Coleman in the Chaka Khan context \u2014 gospel-influenced groove serving one of R&B's greatest voices",
+    "complexity": 4,
+    "description": "Chris Coleman serving Chaka Khan's legendary voice with a groove that is both technically sophisticated and emotionally supportive. His ability to play complex patterns while maintaining complete sensitivity to the vocalist is extraordinary.",
+    "whyStudy": "Study how Coleman's gospel background informs his approach to serving a singer. His groove patterns have a quality of support and elevation that comes directly from the tradition of accompanying gospel vocalists \u2014 where the drummer's primary purpose is to lift the singing.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "coleman-showcase",
+    "title": "Chris Coleman Masterclass Showcase",
+    "artist": "Chris Coleman",
+    "drummerId": "chris-coleman",
+    "year": 2015,
+    "eraId": "2010s",
+    "genreIds": [
+      "funk",
+      "gospel"
+    ],
+    "tempo": 132,
+    "feel": "Coleman demonstrating four-limb independence in a musical context \u2014 technology meeting tradition",
+    "complexity": 5,
+    "description": "Chris Coleman showing that his extraordinary independence is not just technical gymnastics but serves musical function. His ability to play four different patterns simultaneously while maintaining groove is the culmination of the gospel drumming tradition's technical development.",
+    "whyStudy": "Study this in conjunction with Coleman's teaching materials. His independence is built from the ground up through the gospel tradition \u2014 understanding that tradition makes his playing more comprehensible and provides a roadmap for developing similar abilities.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "central-park-north-lewis",
+    "title": "Central Park North",
+    "artist": "Thad Jones-Mel Lewis Orchestra",
+    "drummerId": "mel-lewis",
+    "year": 1969,
+    "eraId": "1960s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 165,
+    "feel": "The Thad Jones-Mel Lewis Orchestra at their most ambitious and their most swinging",
+    "complexity": 5,
+    "description": "Mel Lewis making a 17-piece orchestra sound like a single, perfectly coordinated musical entity. His ability to give the band both rhythmic precision and complete freedom to breathe is the defining quality of great big band drumming.",
+    "whyStudy": "Study Lewis's ride cymbal technique specifically \u2014 his light, singing touch creates the 'lift' that a big band needs to swing. Compare his technique to Buddy Rich's more aggressive approach and understand that there are multiple correct paths to making an orchestra swing.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "village-vanguard-lewis",
+    "title": "Suite for Pops",
+    "artist": "Thad Jones-Mel Lewis Orchestra",
+    "drummerId": "mel-lewis",
+    "year": 1975,
+    "eraId": "1970s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 140,
+    "feel": "The Village Vanguard recordings capturing Mel Lewis at the height of his powers with America's finest big band",
+    "complexity": 5,
+    "description": "The definitive Mel Lewis recording \u2014 he and Thad Jones's orchestra at their Monday night residency, where 40 years of big band drumming tradition met contemporary jazz's most sophisticated compositional minds.",
+    "whyStudy": "Study how Lewis maintains absolute consistency over a two-hour performance. Big band drumming requires endurance, concentration, and the ability to serve the music's needs rather than your own \u2014 Lewis is the model for all three.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "layla-gordon",
+    "title": "Layla",
+    "artist": "Derek and the Dominos",
+    "drummerId": "jim-gordon",
+    "year": 1970,
+    "eraId": "1970s",
+    "genreIds": [
+      "rock",
+      "blues"
+    ],
+    "tempo": 116,
+    "feel": "One of rock's greatest recordings with Gordon's drumming as one of its pillars \u2014 and the piano coda he composed",
+    "complexity": 4,
+    "description": "Jim Gordon's drumming on Layla is perfectly matched to the song's emotional intensity \u2014 powerful and authoritative in the main section, and his famous piano coda (which he composed) is one of rock music's most beautiful moments.",
+    "whyStudy": "Study Gordon's ability to serve the song's emotional arc \u2014 the main groove has urgency and power, the coda section he plays on piano demonstrates musical intelligence beyond drumming alone. This is a musician who happens to be a drummer, not just a technician.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "let-it-down-gordon",
+    "title": "Let It Down",
+    "artist": "George Harrison",
+    "drummerId": "jim-gordon",
+    "year": 1970,
+    "eraId": "1970s",
+    "genreIds": [
+      "rock"
+    ],
+    "tempo": 98,
+    "feel": "Session mastery on one of George Harrison's most ambitious post-Beatles recordings",
+    "complexity": 3,
+    "description": "Jim Gordon demonstrating why he was George Harrison's first call for the All Things Must Pass album \u2014 his ability to serve Harrison's compositional vision while bringing authority and groove to the most complex arrangements is what session drumming greatness looks like.",
+    "whyStudy": "Study how Gordon adapts his playing to serve different artistic visions across different sessions. The ability to immediately understand and serve another artist's musical personality is the most valuable skill a session musician can have.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "i-wanna-dance-whitney",
+    "title": "I Wanna Dance with Somebody",
+    "artist": "Whitney Houston",
+    "drummerId": "jr-robinson",
+    "year": 1987,
+    "eraId": "1980s",
+    "genreIds": [
+      "soul",
+      "pop"
+    ],
+    "tempo": 118,
+    "feel": "The defining pop-R&B groove of the 1980s \u2014 J.R. Robinson's pocket anchoring one of pop's greatest voices",
+    "complexity": 3,
+    "description": "J.R. Robinson serving Whitney Houston at the height of her commercial peak \u2014 his ability to create a groove that sounds effortless while being perfectly crafted for maximum commercial and musical impact is the pinnacle of session drumming.",
+    "whyStudy": "Study how Robinson creates the 'perfect pop groove' \u2014 his hi-hat patterns, his snare placement, and his kick drum subtleties are all carefully chosen to serve the song. Nothing here is arbitrary. Session drumming at this level is composition.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "sweet-love-robinson",
+    "title": "Sweet Love",
+    "artist": "Anita Baker",
+    "drummerId": "jr-robinson",
+    "year": 1986,
+    "eraId": "1980s",
+    "genreIds": [
+      "soul",
+      "r&b"
+    ],
+    "tempo": 76,
+    "feel": "Slow jam groove mastery with Robinson's feather-light touch serving one of R&B's most intimate recordings",
+    "complexity": 3,
+    "description": "Robinson demonstrating the opposite end of his dynamic range from high-energy pop \u2014 his ability to play so softly and sensitively on this Anita Baker classic shows why he was the first call for every type of commercial recording.",
+    "whyStudy": "Study Robinson's brush technique and his approach to very slow tempos. The restraint required to play this slowly while maintaining forward momentum and emotional intensity is one of the hardest skills in drumming.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "bark-at-the-moon",
+    "title": "Bark at the Moon",
+    "artist": "Ozzy Osbourne",
+    "drummerId": "tommy-aldridge",
+    "year": 1983,
+    "eraId": "1980s",
+    "genreIds": [
+      "hard-rock",
+      "metal"
+    ],
+    "tempo": 152,
+    "feel": "Hard rock with Aldridge's massive power and Jake E. Lee's guitar creating one of metal's most explosive combinations",
+    "complexity": 4,
+    "description": "Tommy Aldridge replacing Tommy Lee (who left to join M\u00f6tley Cr\u00fce) and immediately stamping his own personality on Ozzy's sound. His physical power and classic rock sensibility gave this album its distinctive combination of metal aggression and rock groove.",
+    "whyStudy": "Study Aldridge's approach to combining rock groove with metal aggression \u2014 he never loses the groove feel even in the most aggressive sections. His kick drum patterns in particular bridge the gap between classic rock and heavy metal.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "here-ill-stay",
+    "title": "Here I Go Again",
+    "artist": "Whitesnake",
+    "drummerId": "tommy-aldridge",
+    "year": 1987,
+    "eraId": "1980s",
+    "genreIds": [
+      "hard-rock",
+      "rock"
+    ],
+    "tempo": 130,
+    "feel": "Whitesnake's biggest hit with Aldridge's driving groove supporting one of rock's most memorable melodies",
+    "complexity": 3,
+    "description": "Tommy Aldridge serving David Coverdale's most commercially successful vision \u2014 his ability to dial back the aggression of his Ozzy work and create a groove that serves a more melodic, radio-friendly sound shows his versatility.",
+    "whyStudy": "Study how Aldridge adapts from the more aggressive approach of Bark at the Moon to serve this more melodic song. Understanding how to calibrate your playing to the song's commercial and emotional requirements is an advanced skill.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "beneath-the-mask-corea",
+    "title": "Beneath the Mask",
+    "artist": "Chick Corea Elektric Band II",
+    "drummerId": "gary-novak",
+    "year": 1991,
+    "eraId": "1990s",
+    "genreIds": [
+      "jazz",
+      "rock"
+    ],
+    "tempo": 128,
+    "feel": "Gary Novak stepping into Dave Weckl's role with Chick Corea \u2014 a nearly impossible task executed with distinction",
+    "complexity": 4,
+    "description": "Taking over from Dave Weckl in Chick Corea's Elektric Band required playing the most demanding fusion material at the highest level. Novak's ability to honor the band's established sound while bringing his own musical personality is a masterclass in adaptation.",
+    "whyStudy": "Compare Novak's approach with Dave Weckl's on earlier Elektric Band recordings. The material is equally demanding but the personalities are different \u2014 understanding how two great drummers can interpret the same music differently is illuminating.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "one-hand-in-my-pocket-novak",
+    "title": "One Hand in My Pocket (Tour)",
+    "artist": "Alanis Morissette",
+    "drummerId": "gary-novak",
+    "year": 1995,
+    "eraId": "1990s",
+    "genreIds": [
+      "rock"
+    ],
+    "tempo": 122,
+    "feel": "Novak bringing jazz-quality technique to Alanis Morissette's breakthrough tour \u2014 alternative rock with unexpected sophistication",
+    "complexity": 3,
+    "description": "Gary Novak in the commercial rock context \u2014 his ability to serve a singer-songwriter's vision while bringing musical quality that most rock drummers couldn't achieve demonstrates the value of serious jazz education in any musical context.",
+    "whyStudy": "Study how jazz training improves rock playing. Novak's subdivision, his ghost notes, and his musical awareness are all more sophisticated than his alternative rock contemporaries \u2014 and it's audible, even if casual listeners don't consciously register it.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "a-go-go-scofield",
+    "title": "A Go Go",
+    "artist": "John Scofield",
+    "drummerId": "bill-stewart",
+    "year": 1997,
+    "eraId": "1990s",
+    "genreIds": [
+      "jazz",
+      "funk"
+    ],
+    "tempo": 108,
+    "feel": "John Scofield meets Medeski Martin & Wood with Bill Stewart's groove as the essential connective tissue",
+    "complexity": 5,
+    "description": "Bill Stewart in a groove-jazz context \u2014 his ability to bridge jazz, funk, and the downtown New York scene is perfect for Scofield's A Go Go project. His groove here has the depth of a lifetime of jazz playing applied to funk's most basic requirements.",
+    "whyStudy": "Study how Stewart approaches groove in a jazz context \u2014 his patterns come from a different place than a funk drummer's patterns, yet they serve the same function. Understanding why the approach is different helps clarify the distinction between jazz and funk vocabulary.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "quiet-scofield",
+    "title": "Quiet",
+    "artist": "John Scofield",
+    "drummerId": "bill-stewart",
+    "year": 1996,
+    "eraId": "1990s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 88,
+    "feel": "Ballad drumming from one of jazz's most sensitive and musical percussionists",
+    "complexity": 4,
+    "description": "Bill Stewart at his most intimate \u2014 his ability to create atmosphere and emotional depth at slow tempos demonstrates that his musical intelligence is about more than technical prowess.",
+    "whyStudy": "Study Stewart's ballad approach \u2014 his touch, his dynamic variation, and his use of space are all maximally refined on slow material. Compare to his playing on A Go Go to understand his full dynamic range.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "berts-playground",
+    "title": "Bert's Playground",
+    "artist": "Ari Hoenig",
+    "drummerId": "ari-hoenig",
+    "year": 2007,
+    "eraId": "2000s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 168,
+    "feel": "Melodic drumming at its most developed \u2014 Ari Hoenig playing recognizable melodies on the drum kit",
+    "complexity": 5,
+    "description": "Ari Hoenig demonstrating his unique system for melodic drumming \u2014 his ability to play melodies that listeners can sing along with using a non-pitched instrument is the most extreme development of jazz drumming's melodic tradition.",
+    "whyStudy": "Study Hoenig's specific techniques for creating pitch on the drum kit \u2014 his snare tuning, his tom melody patterns, and his use of bending pitches through pressure on the drumhead. This is a system, not a technique, and requires serious study of his teaching materials.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "matrix-battle",
+    "title": "Matrix/Numerical",
+    "artist": "Ari Hoenig",
+    "drummerId": "ari-hoenig",
+    "year": 2002,
+    "eraId": "2000s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 210,
+    "feel": "Bebop at maximum velocity with Hoenig's melodic intelligence operating at full speed",
+    "complexity": 5,
+    "description": "Ari Hoenig demonstrating that his melodic system works at any tempo. Even at blinding bebop speeds, his fills quote melodies and his comping implies harmonic movement \u2014 jazz drumming as full harmonic participation.",
+    "whyStudy": "Study how Hoenig handles bebop vocabulary while maintaining his melodic approach. Most bebop drummers play rhythmic patterns \u2014 Hoenig plays melodic ones. Understanding the difference requires careful listening to what he's 'saying' rather than just how fast he's playing.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "giant-bad-plus",
+    "title": "Giant",
+    "artist": "The Bad Plus",
+    "drummerId": "dave-king",
+    "year": 2001,
+    "eraId": "2000s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 145,
+    "feel": "The Bad Plus announcing their arrival \u2014 jazz piano trio with rock aggression and irreverent intelligence",
+    "complexity": 5,
+    "description": "Dave King in his first The Bad Plus recording \u2014 his approach to jazz drumming with rock-influenced aggression and compositional intelligence is immediately audible. This is jazz drumming that grew up listening to Sonic Youth.",
+    "whyStudy": "Study how King integrates rock aggression into jazz drumming. His fills are more abrasive and less 'correct' than mainstream jazz drumming \u2014 this is intentional. Understanding that jazz can incorporate multiple aesthetic perspectives is the conceptual lesson.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "anthem-earnest",
+    "title": "Anthem for the Earnest",
+    "artist": "The Bad Plus",
+    "drummerId": "dave-king",
+    "year": 2003,
+    "eraId": "2000s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 125,
+    "feel": "The Bad Plus covering pop music as jazz \u2014 Dave King's ability to make anything swing",
+    "complexity": 4,
+    "description": "King demonstrating that his approach to jazz drumming works in any harmonic and compositional context \u2014 his ability to find the jazz in pop music structures (The Bad Plus became famous for covering artists like Nirvana and ABBA) is a unique skill.",
+    "whyStudy": "Study how King adapts jazz vocabulary to non-jazz source material. His covers approach any song as a blank slate for jazz improvisation \u2014 understanding how he does this requires analyzing the rhythmic relationship between his playing and the original song's groove.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "the-stage-a7x",
+    "title": "The Stage",
+    "artist": "Avenged Sevenfold",
+    "drummerId": "brooks-wackerman",
+    "year": 2016,
+    "eraId": "2010s",
+    "genreIds": [
+      "metal",
+      "progressive-rock"
+    ],
+    "tempo": 165,
+    "feel": "Avenged Sevenfold's most progressive work with Wackerman's jazz education clearly informing every choice",
+    "complexity": 5,
+    "description": "Brooks Wackerman stepping into Jimmy Sullivan's iconic role and immediately bringing his own musical personality \u2014 the jazz training is audible in his fill construction and his approach to odd-meter sections in ways that distinguish him from The Rev.",
+    "whyStudy": "Study how Wackerman handles progressive metal's compositional demands with a jazz musician's approach. Compare his fills to The Rev's on earlier A7X recordings \u2014 both are excellent, but their different backgrounds produce different musical results.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "new-dark-ages",
+    "title": "New Dark Ages",
+    "artist": "Bad Religion",
+    "drummerId": "brooks-wackerman",
+    "year": 2004,
+    "eraId": "2000s",
+    "genreIds": [
+      "punk",
+      "rock"
+    ],
+    "tempo": 198,
+    "feel": "Bad Religion punk with Wackerman's jazz sophistication lurking beneath the three-chord surface",
+    "complexity": 3,
+    "description": "Brooks Wackerman applying his sophisticated technique to pure punk \u2014 the fills are more musical than typical punk drumming, but the groove remains completely in service of the genre. This is the correct use of advanced technique in a genre context.",
+    "whyStudy": "Study the difference between Wackerman's punk drumming and Tommy Ramone's \u2014 both serve their music correctly, but Wackerman brings more technical vocabulary. The key question is: does that additional technique serve the music? Here it does.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "moore-showcase",
+    "title": "Drummerically Incorrect Showcase",
+    "artist": "Eric Moore II",
+    "drummerId": "eric-moore",
+    "year": 2018,
+    "eraId": "2010s",
+    "genreIds": [
+      "jazz",
+      "funk",
+      "gospel"
+    ],
+    "tempo": 140,
+    "feel": "Eric Moore demonstrating the full range of his gospel-jazz-funk synthesis in one explosive performance",
+    "complexity": 5,
+    "description": "Eric Moore at his most comprehensive \u2014 his gospel technique, jazz vocabulary, and funk groove all present and working together. His personality and joy in playing make this one of the most appealing drum performances in contemporary music.",
+    "whyStudy": "Study Moore's ability to make technically advanced playing feel accessible and joyful. The best drum performances communicate a love for the instrument \u2014 Moore's natural charisma and his technical ability combine to create something that is both instructional and entertaining.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "jungle-boogie-moore",
+    "title": "Jungle Boogie",
+    "artist": "Kool and the Gang",
+    "drummerId": "eric-moore",
+    "year": 2019,
+    "eraId": "2010s",
+    "genreIds": [
+      "funk",
+      "soul"
+    ],
+    "tempo": 132,
+    "feel": "Classic Kool and the Gang material played with modern energy and Moore's unique gospel-funk personality",
+    "complexity": 3,
+    "description": "Eric Moore serving one of funk's most beloved catalogs \u2014 his ability to honor the originals while bringing contemporary energy and his own personality is the model for any drummer tasked with performing classic material.",
+    "whyStudy": "Study how Moore respects the original while making it his own. The groove is faithful to the original but infused with his gospel energy and contemporary sensibility \u2014 understanding where to honor tradition and where to add personality is an advanced performance skill.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "birdland-big-band-igoe",
+    "title": "Birdland (Live)",
+    "artist": "Tommy Igoe Big Band",
+    "drummerId": "tommy-igoe",
+    "year": 2012,
+    "eraId": "2010s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 198,
+    "feel": "Tommy Igoe swinging a big band at one of jazz's most storied venues with complete authority and joy",
+    "complexity": 4,
+    "description": "Tommy Igoe doing what he does best \u2014 making a big band breathe and swing as one organism. His big band drumming draws directly from his deep study of the tradition while sounding completely contemporary.",
+    "whyStudy": "Study how Igoe balances all the different roles a big band drummer must play simultaneously \u2014 timekeeper, colorist, accompanist, and soloist. His 'Groove Essentials' methodology is directly audible in how he approaches each element of the music.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "groove-essentials-live",
+    "title": "Groove Essentials Live Demo",
+    "artist": "Tommy Igoe",
+    "drummerId": "tommy-igoe",
+    "year": 2006,
+    "eraId": "2000s",
+    "genreIds": [
+      "jazz",
+      "funk"
+    ],
+    "tempo": 120,
+    "feel": "The live demonstration of Tommy Igoe's landmark educational work \u2014 every groove style in one performance",
+    "complexity": 4,
+    "description": "Tommy Igoe demonstrating that serious musical education and great musical performance are not in opposition. His ability to shift between jazz, funk, Latin, and pop grooves while maintaining authentic feel across all of them is the result of his systematic study approach.",
+    "whyStudy": "Study the 'Groove Essentials' approach specifically \u2014 Igoe's system for learning grooves across all styles is methodical and comprehensive. Understanding his educational philosophy will accelerate your development in any groove-based style.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "habana-hargrove",
+    "title": "Habana",
+    "artist": "Roy Hargrove Crisol",
+    "drummerId": "greg-hutchinson",
+    "year": 1997,
+    "eraId": "1990s",
+    "genreIds": [
+      "jazz",
+      "latin"
+    ],
+    "tempo": 144,
+    "feel": "Roy Hargrove's landmark Cuban jazz project with Hutchinson navigating Afro-Cuban rhythmic complexity",
+    "complexity": 5,
+    "description": "Greg Hutchinson in one of the decade's most adventurous jazz recordings \u2014 his ability to operate in an Afro-Cuban rhythmic context while maintaining his jazz identity is a demonstration of the breadth of his musical education.",
+    "whyStudy": "Study how Hutchinson navigates the relationship between jazz and Afro-Cuban music. His ability to sit between the two traditions \u2014 understanding both clave and jazz time feel \u2014 is a sophisticated skill that requires study of both traditions.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "strasbourg-st-denis",
+    "title": "Strasbourg/St. Denis",
+    "artist": "Roy Hargrove Quintet",
+    "drummerId": "greg-hutchinson",
+    "year": 2008,
+    "eraId": "2000s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 168,
+    "feel": "Hard bop at its most elegant with Hutchinson's swinging authority at the center",
+    "complexity": 4,
+    "description": "Greg Hutchinson in the pure hard bop context where his instincts are most at home \u2014 his ability to swing at demanding tempos while supporting improvising soloists with complete musical intelligence is the definition of great jazz drumming.",
+    "whyStudy": "Study how Hutchinson supports a soloist \u2014 his comping (accompanying) is as musical as his soloing. The relationship between his ride cymbal, his left hand on the snare, and his kick drum during solos is the model for hard bop accompaniment.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "stray-the-skies",
+    "title": "Stray the Skies",
+    "artist": "VOLA",
+    "drummerId": "aaron-mellergaard",
+    "year": 2018,
+    "eraId": "2010s",
+    "genreIds": [
+      "progressive-rock",
+      "metal",
+      "electronic"
+    ],
+    "tempo": 140,
+    "feel": "Melodic progressive metal with Mellergaard's electronic-influenced acoustic drumming creating maximum impact",
+    "complexity": 5,
+    "description": "Aaron Mellergaard demonstrating his unique synthesis \u2014 the drum sound has the clarity and impact of electronic production but the feel and dynamics of live performance. This is the most sophisticated contemporary progressive metal drumming.",
+    "whyStudy": "Study how Mellergaard achieves his 'electronic acoustic' sound \u2014 his tuning choices, his playing position on the drumhead, and his dynamic approach all contribute to a sound that sits perfectly in the contemporary production landscape.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "napalm-vola",
+    "title": "Napalm",
+    "artist": "VOLA",
+    "drummerId": "aaron-mellergaard",
+    "year": 2021,
+    "eraId": "2010s",
+    "genreIds": [
+      "progressive-rock",
+      "metal"
+    ],
+    "tempo": 155,
+    "feel": "VOLA's most recent work showing Mellergaard's continued evolution as a progressive metal drummer",
+    "complexity": 5,
+    "description": "Mellergaard pushing his approach further \u2014 the rhythmic complexity has increased while the musicality has deepened. This is progressive metal drumming that rewards repeated listening.",
+    "whyStudy": "Compare this to Stray the Skies to hear Mellergaard's development. His ability to continue growing technically while deepening musically rather than simply adding more complexity is the mark of a mature musician.",
+    "songsterrSlug": null
   }
 ]

@@ -3053,5 +3053,953 @@
       "season-of-changes",
       "doctor-jesus"
     ]
+  },
+  {
+    "id": "levon-helm",
+    "name": "Levon Helm",
+    "born": 1940,
+    "died": 2012,
+    "primaryEra": "1960s",
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "rock",
+      "blues",
+      "country"
+    ],
+    "bands": [
+      "The Band",
+      "Levon Helm Band"
+    ],
+    "bio": "The only American-born member of The Band, Levon Helm is one of rock music's great singer-drummers. Born and raised in Arkansas, his drumming was steeped in Southern roots music \u2014 country, R&B, and gospel \u2014 creating a sound that felt ancient and timeless. He played while singing lead vocals, a feat of extraordinary coordination.",
+    "signatureStyle": "Deep pocket Southern feel with a loose, conversational approach. Singing while drumming with perfect independence. Country, blues, and gospel all live in every groove he played.",
+    "bpmMin": 70,
+    "bpmMax": 180,
+    "influence": "Defined what roots-rock drumming sounds like. His behind-the-beat feel and country-influenced ghost note patterns are the foundation of Americana drumming. Almost every roots-rock drummer traces a line back to Levon.",
+    "iconicSongIds": [
+      "the-weight-band",
+      "up-on-cripple-creek"
+    ]
+  },
+  {
+    "id": "paul-motian",
+    "name": "Paul Motian",
+    "born": 1931,
+    "died": 2011,
+    "primaryEra": "1960s",
+    "eras": [
+      "1950s",
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Bill Evans Trio",
+      "Paul Motian Trio",
+      "Electric Bebop Band"
+    ],
+    "bio": "Paul Motian was one of jazz drumming's most radical innovators \u2014 a drummer who spent 50 years redefining what rhythm could mean. Best known for the legendary Bill Evans Trio with Scott LaFaro, his playing there was revolutionary: conversational, painterly, and completely free from the tyranny of keeping strict time.",
+    "signatureStyle": "Atmospheric, conversational playing that treats rhythm as color rather than structure. A master of implied pulse \u2014 creating swing and momentum without explicitly stating the beat.",
+    "bpmMin": 40,
+    "bpmMax": 200,
+    "influence": "The Bill Evans Trio recordings with Motian are among the most studied in jazz drumming history. His concept of 'not keeping time' while still swinging profoundly influenced every avant-garde and modern jazz drummer.",
+    "iconicSongIds": [
+      "waltz-for-debby",
+      "peace-piece-motian"
+    ]
+  },
+  {
+    "id": "jonathan-moffett",
+    "name": "Jonathan Moffett",
+    "born": 1954,
+    "died": null,
+    "primaryEra": "1980s",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "soul",
+      "funk",
+      "pop"
+    ],
+    "bands": [
+      "Michael Jackson Band",
+      "The Jacksons",
+      "Madonna Band"
+    ],
+    "bio": "Known as 'Sugarfoot' for his remarkably precise and light-footed kick drum technique, Jonathan Moffett was the drummer for some of the biggest pop spectacles in history. He toured with Michael Jackson from the Jacksons era through the Bad and Dangerous world tours, playing to audiences of hundreds of thousands.",
+    "signatureStyle": "Ultra-precise kick drum control \u2014 his 'sugarfoot' technique produces extraordinarily controlled bass drum sounds. Pop and funk groove serving the most theatrically demanding live shows in music history.",
+    "bpmMin": 95,
+    "bpmMax": 150,
+    "influence": "The definitive pop-show drummer. His ability to execute perfectly rehearsed parts with total consistency at the highest levels of performance spectacle influenced every drummer who has played large-scale arena productions.",
+    "iconicSongIds": [
+      "thriller-live-moffett",
+      "beat-it-live-moffett"
+    ]
+  },
+  {
+    "id": "marco-minnemann",
+    "name": "Marco Minnemann",
+    "born": 1970,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "progressive-rock",
+      "jazz",
+      "metal",
+      "rock"
+    ],
+    "bands": [
+      "The Aristocrats",
+      "Steven Wilson Band",
+      "Joe Satriani",
+      "The Mute Gods"
+    ],
+    "bio": "German drummer Marco Minnemann is one of the most technically comprehensive musicians alive \u2014 a virtuoso who has recorded entire albums solo, playing all instruments simultaneously. With The Aristocrats alongside Guthrie Govan and Bryan Beller, he brings extraordinary musical intelligence to the most demanding progressive music.",
+    "signatureStyle": "Complete four-limb independence with jazz musician's vocabulary applied to progressive rock and metal. Composer-level understanding of music theory manifest through drumming.",
+    "bpmMin": 80,
+    "bpmMax": 220,
+    "influence": "One of the architects of modern progressive drumming. His ability to make technically impossible parts sound musical rather than gymnastic, and his compositional approach to the drums, have influenced a generation of progressive musicians.",
+    "iconicSongIds": [
+      "antipop-aristocrats",
+      "sweaty-knockers"
+    ]
+  },
+  {
+    "id": "thomas-pridgen",
+    "name": "Thomas Pridgen",
+    "born": 1983,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "progressive-rock",
+      "jazz",
+      "metal",
+      "funk"
+    ],
+    "bands": [
+      "The Mars Volta",
+      "Aftermath",
+      "Timbaland"
+    ],
+    "bio": "Thomas Pridgen joined The Mars Volta at age 23 and immediately established himself as one of progressive music's most explosive and creative drummers. His jazz training gave his playing a melodic, compositional quality that set the Mars Volta's final studio albums apart, while his raw power and energy created some of progressive rock's most intense recorded moments.",
+    "signatureStyle": "Jazz-derived melodic sensibility expressed through maximum physical aggression. Explosive fills that follow the music's melodic contours rather than generic rock patterns. Gospel and jazz meet progressive rock chaos.",
+    "bpmMin": 90,
+    "bpmMax": 240,
+    "influence": "Represents the synthesis of jazz compositional intelligence with progressive rock intensity. His work with the Mars Volta showed how a drummer with genuine jazz vocabulary could transform a rock band's rhythmic language.",
+    "iconicSongIds": [
+      "goliath-mars-volta",
+      "conjugal-burns"
+    ]
+  },
+  {
+    "id": "thomas-lang",
+    "name": "Thomas Lang",
+    "born": 1967,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "jazz",
+      "progressive-rock"
+    ],
+    "bands": [
+      "Robert Plant",
+      "Roger Waters",
+      "Joe Cocker",
+      "Thomas Lang Band"
+    ],
+    "bio": "Austrian drummer Thomas Lang is renowned for having perhaps the most developed four-limb independence of any drummer alive. His decades of study into independence, polyrhythm, and coordination have produced techniques that most drummers consider physically impossible. He has worked with rock legends including Robert Plant and Roger Waters while maintaining a prolific educational output.",
+    "signatureStyle": "Extraordinary four-limb independence \u2014 each limb can play a different independent rhythmic pattern simultaneously. Combines extreme technical sophistication with genuine musical application.",
+    "bpmMin": 80,
+    "bpmMax": 220,
+    "influence": "Has pushed the boundaries of what human coordination can achieve on the drums. His independence studies have influenced an entire generation of advanced drummers seeking to expand the possibilities of the instrument.",
+    "iconicSongIds": [
+      "creative-coordination-lang",
+      "creative-control"
+    ]
+  },
+  {
+    "id": "tony-royster-jr",
+    "name": "Tony Royster Jr.",
+    "born": 1986,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "soul",
+      "funk",
+      "hiphop"
+    ],
+    "bands": [
+      "Jay-Z",
+      "Kenny Garrett",
+      "Tony Royster Jr. Band"
+    ],
+    "bio": "Tony Royster Jr. became famous worldwide at age 12 when a video of him performing a drum solo at the DCI (Drum Corps International) championship went viral \u2014 long before YouTube existed. He demonstrated complete professional-level technique, creativity, and musicality at an age when most students are still learning rudiments. He went on to tour with Jay-Z and establish himself as a serious jazz and funk drummer.",
+    "signatureStyle": "Complete technical vocabulary deployed with extraordinary musicality. Jazz drummer's harmonic intelligence combined with youth, energy, and showmanship. One of the instrument's great natural talents.",
+    "bpmMin": 80,
+    "bpmMax": 220,
+    "influence": "His childhood performance forever changed public perception of what young drummers can achieve. His subsequent career has proven that the early talent was just the beginning of a genuine musical intelligence.",
+    "iconicSongIds": [
+      "royster-jr-solo",
+      "99-problems-live-royster"
+    ]
+  },
+  {
+    "id": "anika-nilles",
+    "name": "Anika Nilles",
+    "born": 1984,
+    "died": null,
+    "primaryEra": "2010s",
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "jazz",
+      "electronic",
+      "progressive-rock"
+    ],
+    "bands": [
+      "Anika Nilles Band",
+      "Joachim K\u00fchn"
+    ],
+    "bio": "German drummer Anika Nilles became a global phenomenon when her video for 'Pikalar' went viral, revealing a drummer of extraordinary technical ability and compositional sophistication. Her music synthesizes jazz, rock, and electronic influences into a completely personal language, and her drumming functions simultaneously as rhythm section, melody, and composition.",
+    "signatureStyle": "Technically sophisticated groove that functions as complete musical composition. Jazz harmonic intelligence expressed through polyrhythmic rock drumming. Unique synthesis of programmed electronic aesthetic and live acoustic performance.",
+    "bpmMin": 85,
+    "bpmMax": 180,
+    "influence": "One of the most influential drummers to emerge from the YouTube era. Her ability to attract a massive audience through purely musical content \u2014 no gimmicks, just extraordinary playing in sophisticated original music \u2014 has opened new possibilities for drumming as a mainstream art form.",
+    "iconicSongIds": [
+      "pikalar",
+      "nevermind-nilles"
+    ]
+  },
+  {
+    "id": "sput-searight",
+    "name": "Robert 'Sput' Searight",
+    "born": 1980,
+    "died": null,
+    "primaryEra": "2010s",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "funk",
+      "soul",
+      "gospel"
+    ],
+    "bands": [
+      "Snarky Puppy",
+      "Kirk Franklin",
+      "D'Angelo"
+    ],
+    "bio": "Robert 'Sput' Searight is the foundation of Snarky Puppy's sound \u2014 the drummer who anchored the ensemble's most celebrated recordings. His playing combines the deep gospel tradition (he has worked extensively with Kirk Franklin) with jazz sophistication and funk pocket, creating a groove that feels both sacred and irresistibly danceable.",
+    "signatureStyle": "Deep gospel-influenced pocket with jazz harmonic awareness. Extraordinary dynamic control \u2014 from whisper-quiet ghost notes to explosive backbeats. Groove that feels like it comes from a higher place.",
+    "bpmMin": 80,
+    "bpmMax": 160,
+    "influence": "One of the defining drummers of the neo-soul and contemporary jazz movement. His work with Snarky Puppy and in the gospel world has created a synthesis of two traditions that has influenced every drummer working in contemporary groove-based music.",
+    "iconicSongIds": [
+      "shofukan-sput",
+      "bent-nails-sput"
+    ]
+  },
+  {
+    "id": "yousef-dayes",
+    "name": "Yousef Dayes",
+    "born": 1997,
+    "died": null,
+    "primaryEra": "2010s",
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "soul",
+      "electronic",
+      "hiphop"
+    ],
+    "bands": [
+      "Yussef Kamaal",
+      "Yousef Dayes Band"
+    ],
+    "bio": "British drummer Yousef Dayes burst onto the UK jazz scene as a teenager and quickly established himself as one of the most compelling voices in contemporary drumming. His synthesis of jazz, electronic music, hip-hop, and UK soul creates a sound that is completely of its generation while drawing on deep musical traditions.",
+    "signatureStyle": "UK jazz-meets-electronic groove with hip-hop pocket sensibility. Young drummer with extraordinary natural feel, drawing from electronic production, jazz, and UK soul simultaneously.",
+    "bpmMin": 75,
+    "bpmMax": 155,
+    "influence": "The leading voice of the UK jazz renaissance in drumming. His ability to merge electronic music sensibility with live jazz drumming has made him the most-watched young drummer in contemporary music.",
+    "iconicSongIds": [
+      "black-classic-dayes",
+      "vol-1-dayes"
+    ]
+  },
+  {
+    "id": "keith-carlock",
+    "name": "Keith Carlock",
+    "born": 1971,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "jazz",
+      "funk"
+    ],
+    "bands": [
+      "Steely Dan",
+      "Sting",
+      "Wayne Krantz",
+      "Toto",
+      "John Mayer"
+    ],
+    "bio": "Keith Carlock is widely regarded as the most versatile and musicianly drummer working in studio and touring contexts today. His work with Steely Dan brought the most sophisticated pop-jazz drumming to the largest possible audience, while his work with Wayne Krantz in small group jazz settings reveals the full depth of his musical intelligence.",
+    "signatureStyle": "Complete fusion of jazz harmonic awareness and rock groove authority. Ghost note mastery at the highest level. A drummer who makes every musician around him sound better through his listening and pocket.",
+    "bpmMin": 80,
+    "bpmMax": 185,
+    "influence": "The definitive studio-era drummer \u2014 his work with Steely Dan, Sting, and John Mayer represents the peak of what sophisticated pop-jazz drumming can be. Every drummer who plays pop-jazz in a studio context studies Keith Carlock.",
+    "iconicSongIds": [
+      "two-against-nature",
+      "gaslighting-abscam"
+    ]
+  },
+  {
+    "id": "aaron-spears",
+    "name": "Aaron Spears",
+    "born": 1978,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "soul",
+      "funk",
+      "gospel",
+      "hiphop"
+    ],
+    "bands": [
+      "Usher",
+      "Ariana Grande",
+      "Britney Spears"
+    ],
+    "bio": "Aaron Spears is famous for bringing gospel drumming's most explosive and technically demanding vocabulary to the pop and R&B world. His 'Triple Diddle' technique \u2014 a gospel-derived rudiment played at superhuman speeds on the bass drum \u2014 became a YouTube sensation and introduced millions to the tradition of gospel drumming.",
+    "signatureStyle": "Gospel-derived technique including the 'Triple Diddle' bass drum technique. Explosive, high-energy pop-show drumming with deep roots in African-American church music tradition.",
+    "bpmMin": 100,
+    "bpmMax": 180,
+    "influence": "Made gospel drumming's most advanced techniques visible to a mainstream audience. His work with Usher and other major pop artists brought extraordinary technique to the most commercially prominent stages in popular music.",
+    "iconicSongIds": [
+      "usher-yeah-spears",
+      "triple-diddle-spears"
+    ]
+  },
+  {
+    "id": "chad-wackerman",
+    "name": "Chad Wackerman",
+    "born": 1960,
+    "died": null,
+    "primaryEra": "1980s",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "progressive-rock",
+      "jazz",
+      "rock"
+    ],
+    "bands": [
+      "Frank Zappa",
+      "The Wackerman Brothers",
+      "Steve Vai",
+      "Chad Wackerman Group"
+    ],
+    "bio": "Chad Wackerman was Frank Zappa's drummer from 1981 to 1988, playing on some of the most rhythmically complex music ever composed. His ability to read and execute Zappa's notation \u2014 which frequently employed irrational rhythmic values and simultaneous polyrhythms \u2014 established him as one of the most technically complete drummers of his generation.",
+    "signatureStyle": "Extraordinary reading ability and rhythmic accuracy on complex notated material. Jazz musician's ears and instincts applied to the most demanding composed music. Clean, precise technique that never sacrifices musicality for accuracy.",
+    "bpmMin": 70,
+    "bpmMax": 220,
+    "influence": "The standard for reading and executing complex composed music. His work with Zappa remains the benchmark for notated drumming \u2014 if you can play Zappa's music correctly, you can play anything.",
+    "iconicSongIds": [
+      "g-spot-tornado",
+      "alien-orifice"
+    ]
+  },
+  {
+    "id": "greg-bisonette",
+    "name": "Greg Bisonette",
+    "born": 1959,
+    "died": null,
+    "primaryEra": "1980s",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "rock",
+      "jazz",
+      "hard-rock"
+    ],
+    "bands": [
+      "David Lee Roth",
+      "Joe Satriani",
+      "Maynard Ferguson",
+      "Toto"
+    ],
+    "bio": "Greg Bisonette is one of the most technically accomplished studio and touring drummers in rock history. His work with David Lee Roth after the Van Halen split showcased his ability to play in an extremely demanding rock context while bringing a jazz musician's sophistication to every fill and groove.",
+    "signatureStyle": "Jazz-trained technique applied to hard rock with tremendous energy and precision. Huge dynamic range from whisper-quiet jazz brushwork to thunderous rock playing. Articulate fills that reflect jazz vocabulary in rock settings.",
+    "bpmMin": 80,
+    "bpmMax": 200,
+    "influence": "One of the great models for how jazz training improves rock drumming. His ability to play in the most demanding rock contexts while always sounding musical \u2014 never gratuitous \u2014 made him one of the most in-demand drummers of the 1980s.",
+    "iconicSongIds": [
+      "yankee-rose",
+      "just-like-paradise-roth"
+    ]
+  },
+  {
+    "id": "nate-wood",
+    "name": "Nate Wood",
+    "born": 1981,
+    "died": null,
+    "primaryEra": "2010s",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "electronic",
+      "funk",
+      "progressive-rock"
+    ],
+    "bands": [
+      "Kneebody",
+      "Forq",
+      "Chris Potter",
+      "Mark Turner"
+    ],
+    "bio": "Nate Wood is one of contemporary music's most unusual musicians \u2014 a drummer who plays bass simultaneously, often recording entire albums by himself. With Kneebody he helped create a new language for jazz-meets-electronic music, and with Forq he developed a synthesis of jazz, funk, and electronic production that represents the cutting edge of contemporary groove.",
+    "signatureStyle": "Simultaneous drums and bass performance. Jazz musician's deep harmonic intelligence expressed through groove-oriented drumming. Electronic production sensibility applied to live acoustic performance.",
+    "bpmMin": 85,
+    "bpmMax": 175,
+    "influence": "Pioneer of the 'drummer-bassist' approach in contemporary music. His ability to function as both rhythm instruments simultaneously \u2014 and to do both at a high level \u2014 has created a completely new paradigm for what one musician can contribute to an ensemble.",
+    "iconicSongIds": [
+      "chicken-noodle-soul",
+      "forq-love"
+    ]
+  },
+  {
+    "id": "eloy-casagrande",
+    "name": "Eloy Casagrande",
+    "born": 1993,
+    "died": null,
+    "primaryEra": "2010s",
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "metal",
+      "progressive-rock"
+    ],
+    "bands": [
+      "Sepultura",
+      "Slipknot"
+    ],
+    "bio": "Brazilian drummer Eloy Casagrande joined Sepultura at age 18 and immediately made his mark as one of metal's most complete technical drummers. His playing combines Brazilian rhythmic sensibility (he grew up playing Afrobeat and samba) with extreme metal technique, creating a uniquely musical approach to brutal music. In 2023 he replaced Jay Weinberg in Slipknot.",
+    "signatureStyle": "Brazilian rhythmic sensibility meets extreme metal precision. Double bass technique informed by samba and Afrobeat foundations. Technically ferocious playing with unexpected musical warmth from South American rhythmic roots.",
+    "bpmMin": 100,
+    "bpmMax": 240,
+    "influence": "The most technically complete drummer to emerge from Brazil's metal scene. His unique ability to bring warmth and rhythmic sophistication to extreme metal \u2014 derived from his Brazilian roots \u2014 has influenced a new generation of metal drummers worldwide.",
+    "iconicSongIds": [
+      "kairos-sepultura",
+      "the-mediator"
+    ]
+  },
+  {
+    "id": "jeff-tain-watts",
+    "name": "Jeff 'Tain' Watts",
+    "born": 1960,
+    "died": null,
+    "primaryEra": "1980s",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Wynton Marsalis Quintet",
+      "McCoy Tyner",
+      "Branford Marsalis Quartet"
+    ],
+    "bio": "Jeff 'Tain' Watts is one of hard bop's most powerful and melodically sophisticated drummers. His work with Wynton Marsalis defined the neo-bop movement of the 1980s, and his subsequent work across jazz's spectrum \u2014 from the most traditional to the most avant-garde \u2014 has demonstrated a musical intelligence that ranks him among the instrument's all-time greats.",
+    "signatureStyle": "Powerful, authoritative hard bop drumming with extraordinary melodic awareness. His fills are composed musical phrases. He swings as hard as any drummer alive while maintaining a compositional approach to every choice.",
+    "bpmMin": 100,
+    "bpmMax": 280,
+    "influence": "One of the most important jazz drummers of his generation. His work with both Marsalis brothers helped define the neo-bop aesthetic of the 1980s, and his subsequent versatility has proven him to be one of jazz's most complete musical minds.",
+    "iconicSongIds": [
+      "black-codes",
+      "think-of-one"
+    ]
+  },
+  {
+    "id": "chris-coleman",
+    "name": "Chris Coleman",
+    "born": 1969,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "funk",
+      "soul",
+      "gospel",
+      "r&b"
+    ],
+    "bands": [
+      "Chaka Khan",
+      "Bootsy Collins",
+      "Christina Aguilera",
+      "Chris Coleman Band"
+    ],
+    "bio": "Chris Coleman is one of the most technically advanced funk and gospel drummers alive, known for his extraordinary independence and the ability to play impossible-seeming patterns with complete rhythmic and musical control. His work with Chaka Khan and in the gospel world represent two very different applications of his extraordinary technical abilities.",
+    "signatureStyle": "Extraordinary four-limb independence in a funk and gospel context. Technical mastery that never loses the groove \u2014 his most advanced patterns still make people dance. Deep roots in gospel drumming tradition.",
+    "bpmMin": 90,
+    "bpmMax": 175,
+    "influence": "The bridge between gospel drumming's technical tradition and mainstream funk and pop application. His ability to deploy advanced technique in service of groove \u2014 never sacrificing feel for flash \u2014 has influenced a generation of contemporary drummers.",
+    "iconicSongIds": [
+      "through-the-fire-chaka",
+      "coleman-showcase"
+    ]
+  },
+  {
+    "id": "mel-lewis",
+    "name": "Mel Lewis",
+    "born": 1929,
+    "died": 1990,
+    "primaryEra": "1960s",
+    "eras": [
+      "1950s",
+      "1960s",
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Thad Jones-Mel Lewis Orchestra",
+      "Mel Lewis Jazz Orchestra",
+      "Stan Kenton Orchestra"
+    ],
+    "bio": "Mel Lewis was one of big band drumming's most complete musicians \u2014 a drummer who understood that his job was to make the orchestra breathe and swing as a single organism. His co-founding of the Thad Jones-Mel Lewis Orchestra created one of jazz history's greatest ensembles, and his Monday night residency at the Village Vanguard became a New York institution that continues today as the Vanguard Jazz Orchestra.",
+    "signatureStyle": "Big band drumming as orchestral conducting. Light touch with heavy impact. Making a 17-piece orchestra swing as one entity through the lightest possible touch on the ride cymbal.",
+    "bpmMin": 110,
+    "bpmMax": 240,
+    "influence": "The definitive post-Basie big band drummer. His approach to making orchestras swing \u2014 using the minimum amount of playing for the maximum amount of effect \u2014 is the standard every big band drummer is measured against.",
+    "iconicSongIds": [
+      "central-park-north-lewis",
+      "village-vanguard-lewis"
+    ]
+  },
+  {
+    "id": "jim-gordon",
+    "name": "Jim Gordon",
+    "born": 1945,
+    "died": null,
+    "primaryEra": "1970s",
+    "eras": [
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "rock",
+      "blues",
+      "country"
+    ],
+    "bands": [
+      "Derek and the Dominos",
+      "Traffic",
+      "Delaney & Bonnie",
+      "John Lennon"
+    ],
+    "bio": "Jim Gordon was one of the most in-demand session drummers of the late 1960s and early 1970s, playing on some of the most beloved recordings in rock history. His most famous contribution is the piano coda he composed and plays at the end of 'Layla,' one of rock's most recognizable musical moments. His life was later derailed by serious illness.",
+    "signatureStyle": "Powerful, authoritative rock drumming with country and R&B influences. Natural, unforced groove that makes complex rhythmic ideas sound simple and inevitable.",
+    "bpmMin": 85,
+    "bpmMax": 170,
+    "influence": "His drumming on Layla and the Derek and the Dominos recordings represents the peak of early 1970s rock drumming. His session work across hundreds of recordings defined the sound of that era.",
+    "iconicSongIds": [
+      "layla-gordon",
+      "let-it-down-gordon"
+    ]
+  },
+  {
+    "id": "jr-robinson",
+    "name": "J.R. Robinson",
+    "born": 1954,
+    "died": null,
+    "primaryEra": "1980s",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "soul",
+      "funk",
+      "pop",
+      "r&b"
+    ],
+    "bands": [
+      "Rufus",
+      "Whitney Houston",
+      "Michael Jackson",
+      "Chaka Khan"
+    ],
+    "bio": "J.R. Robinson is one of the most recorded session drummers in history, appearing on hundreds of platinum-selling albums across four decades. From Rufus with Chaka Khan to Whitney Houston's biggest hits, his ability to create the perfect groove for any commercial recording made him the first call for virtually every major pop and R&B artist of the 1980s and 1990s.",
+    "signatureStyle": "Perfect commercial groove \u2014 never too much, never too little. Pop and R&B pocket at the highest level. The ability to instantly create the groove that a song needs, executed with complete consistency.",
+    "bpmMin": 90,
+    "bpmMax": 150,
+    "influence": "One of the architects of the polished 1980s pop-R&B sound. His work on albums that have sold hundreds of millions of copies worldwide means his drumming has reached more ears than virtually any other musician alive.",
+    "iconicSongIds": [
+      "i-wanna-dance-whitney",
+      "sweet-love-robinson"
+    ]
+  },
+  {
+    "id": "tommy-aldridge",
+    "name": "Tommy Aldridge",
+    "born": 1950,
+    "died": null,
+    "primaryEra": "1980s",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "rock",
+      "hard-rock",
+      "metal"
+    ],
+    "bands": [
+      "Ozzy Osbourne",
+      "Whitesnake",
+      "Pat Travers Band",
+      "Black Oak Arkansas"
+    ],
+    "bio": "Tommy Aldridge is one of hard rock's most physically powerful and visually spectacular drummers, known for his hand drumming \u2014 he regularly performs extensive sections of his solos using bare hands rather than sticks. His work with Ozzy Osbourne and Whitesnake during the 1980s established him as one of the decade's most celebrated rock drummers.",
+    "signatureStyle": "Massive physical power with distinctive hand drumming technique. Classic rock groove with heavy metal intensity. Spectacular showmanship combined with genuine musical authority.",
+    "bpmMin": 100,
+    "bpmMax": 190,
+    "influence": "One of the architects of 1980s hard rock drumming. His work with Ozzy Osbourne and Whitesnake appeared on some of the decade's most commercially successful rock records, and his live performances \u2014 particularly his hand drumming solos \u2014 became legendary.",
+    "iconicSongIds": [
+      "bark-at-the-moon",
+      "here-ill-stay"
+    ]
+  },
+  {
+    "id": "gary-novak",
+    "name": "Gary Novak",
+    "born": 1969,
+    "died": null,
+    "primaryEra": "1990s",
+    "eras": [
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "jazz",
+      "rock",
+      "fusion"
+    ],
+    "bands": [
+      "Chick Corea Elektric Band II",
+      "Alanis Morissette",
+      "Larry Carlton"
+    ],
+    "bio": "Gary Novak studied under Peter Erskine and John Riley, giving him deep jazz roots, and his work with the Chick Corea Elektric Band II established him as one of fusion drumming's most capable practitioners. He later became famous beyond the drumming world as the drummer on Alanis Morissette's 'Jagged Little Pill' tour.",
+    "signatureStyle": "Jazz-trained technique applied to fusion and rock contexts. Clean, articulate playing with a natural time feel derived from serious jazz education. Fusion drumming that swings.",
+    "bpmMin": 95,
+    "bpmMax": 185,
+    "influence": "Bridges the gap between jazz education and mainstream rock success. His ability to bring jazz-quality technique and musical thinking to commercial rock contexts is a model for how a jazz drummer can succeed in popular music without compromising musical standards.",
+    "iconicSongIds": [
+      "beneath-the-mask-corea",
+      "one-hand-in-my-pocket-novak"
+    ]
+  },
+  {
+    "id": "bill-stewart",
+    "name": "Bill Stewart",
+    "born": 1966,
+    "died": null,
+    "primaryEra": "1990s",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "John Scofield",
+      "Lee Konitz",
+      "Pat Metheny",
+      "Jack McDuff"
+    ],
+    "bio": "Bill Stewart is one of the most admired drummers in the New York jazz scene \u2014 a drummer's drummer whose combination of swing, color, and compositional intelligence places him among the best small group jazz drummers of his generation. His extended partnership with John Scofield produced some of the finest small group jazz recordings of the 1990s.",
+    "signatureStyle": "Painterly jazz drumming with extraordinary timbral sensitivity. His ride cymbal sound is unique \u2014 a singing, vocal quality that makes his playing immediately recognizable. Swing feel that encompasses multiple traditions without copying any of them.",
+    "bpmMin": 90,
+    "bpmMax": 240,
+    "influence": "A drummer who is discussed with reverence by other drummers while remaining somewhat under the radar with general audiences. His combination of deep swing, timbral sophistication, and compositional intelligence represents jazz drumming at its most pure.",
+    "iconicSongIds": [
+      "a-go-go-scofield",
+      "quiet-scofield"
+    ]
+  },
+  {
+    "id": "ari-hoenig",
+    "name": "Ari Hoenig",
+    "born": 1973,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Jean-Michel Pilc Trio",
+      "Ari Hoenig Quartet",
+      "Chris Potter Underground"
+    ],
+    "bio": "Ari Hoenig is one of jazz drumming's most radical melodic innovators \u2014 he has developed a system of playing melodies and harmonies on the drum kit that goes further than virtually any other drummer. His approach to treating the drum kit as a pitched, melodic instrument rather than a rhythm machine has created an entirely new conception of what drumming can express.",
+    "signatureStyle": "Melodic drumming \u2014 using the drum kit to play recognizable melodies and imply harmony. Technically advanced jazz drumming with a specific focus on developing melodic and harmonic language through non-pitched instruments.",
+    "bpmMin": 80,
+    "bpmMax": 280,
+    "influence": "The furthest development of Max Roach's melodic drumming concept. His system for playing melodies on the kit has created a new branch of jazz drumming that treats rhythm instruments as fully melodic voices.",
+    "iconicSongIds": [
+      "berts-playground",
+      "matrix-battle"
+    ]
+  },
+  {
+    "id": "dave-king",
+    "name": "Dave King",
+    "born": 1965,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "The Bad Plus",
+      "Dave King Trucking Company",
+      "Happy Apple"
+    ],
+    "bio": "Dave King is the drummer and co-founder of The Bad Plus, the iconoclastic jazz trio that brought alternative rock energy, ironic musical perspective, and genuine jazz improvisation to mainstream audiences. His drumming is aggressive, compositional, and deeply influenced by rock and noise music \u2014 a jazz drummer who grew up on the wrong side of the jazz/rock divide.",
+    "signatureStyle": "Jazz drumming inflected with rock and indie music aggression. Compositional drumming that treats rhythm as one element of a complete musical statement. Punk attitude applied to acoustic jazz.",
+    "bpmMin": 80,
+    "bpmMax": 240,
+    "influence": "One of the architects of the jazz-meets-indie-rock aesthetic that has influenced much of 21st-century jazz. His drumming with The Bad Plus showed a generation of musicians that jazz could incorporate rock energy and aesthetics without losing its improvisational core.",
+    "iconicSongIds": [
+      "giant-bad-plus",
+      "anthem-earnest"
+    ]
+  },
+  {
+    "id": "brooks-wackerman",
+    "name": "Brooks Wackerman",
+    "born": 1977,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "punk",
+      "metal",
+      "rock"
+    ],
+    "bands": [
+      "Avenged Sevenfold",
+      "Bad Religion",
+      "Infectious Grooves"
+    ],
+    "bio": "Brooks Wackerman studied under his brother Chad Wackerman and inherited the family's deep jazz musical education, which he applied to punk and metal drumming with Bad Religion and later Avenged Sevenfold. His jazz training makes his punk drumming unusually sophisticated, and his post-Jimmy Sullivan work with Avenged Sevenfold has produced some of progressive metal's most technically accomplished recordings.",
+    "signatureStyle": "Jazz-trained technique applied to punk and metal with unusual sophistication. The Wackerman family's jazz education audible in every fill. Technical precision combined with punk energy.",
+    "bpmMin": 140,
+    "bpmMax": 220,
+    "influence": "The model for how serious musical education improves genre drumming. His ability to bring jazz-quality technique and musical thinking to punk and metal without losing the genres' essential energy is a template for any drummer seeking cross-genre musicality.",
+    "iconicSongIds": [
+      "the-stage-a7x",
+      "new-dark-ages"
+    ]
+  },
+  {
+    "id": "eric-moore",
+    "name": "Eric Moore II",
+    "born": 1989,
+    "died": null,
+    "primaryEra": "2010s",
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "soul",
+      "gospel",
+      "funk"
+    ],
+    "bands": [
+      "Kool and the Gang",
+      "Eric Moore Band"
+    ],
+    "bio": "Eric Moore II became a global phenomenon through YouTube drumming videos that showcased an extraordinary combination of technical ability, musical intelligence, and personality. His gospel roots, jazz training, and funk sensibility create a synthesis that is uniquely his own, and his work with Kool and the Gang brought his abilities to a mainstream audience.",
+    "signatureStyle": "Gospel-trained technique with extraordinary natural feel. Technical mastery deployed with humor and personality. Jazz, funk, and gospel all present simultaneously.",
+    "bpmMin": 95,
+    "bpmMax": 175,
+    "influence": "One of the most watched drummers in the YouTube era. His ability to combine humor, accessibility, and genuine musical excellence has introduced drumming as a serious art form to audiences who might never seek out traditional music education.",
+    "iconicSongIds": [
+      "moore-showcase",
+      "jungle-boogie-moore"
+    ]
+  },
+  {
+    "id": "tommy-igoe",
+    "name": "Tommy Igoe",
+    "born": 1967,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Tommy Igoe Big Band",
+      "Birdland Big Band",
+      "Harry Connick Jr."
+    ],
+    "bio": "Tommy Igoe is one of the most respected drummer-educators in jazz, best known for his 'Groove Essentials' book and play-along series that became essential study materials for drummers worldwide. His big band drumming with the Birdland Orchestra and his work with Harry Connick Jr. demonstrate the direct application of his educational philosophy in performance.",
+    "signatureStyle": "Big band swing drumming with deep study of groove across all styles. An educator's analytical mind combined with a working musician's musical instincts. Comprehensive knowledge of groove across jazz, Latin, funk, and popular music.",
+    "bpmMin": 90,
+    "bpmMax": 260,
+    "influence": "One of drumming education's most significant contributors. His Groove Essentials series systematically organized drumming's most important patterns across styles in a way that has made jazz and pop drumming accessible to students worldwide.",
+    "iconicSongIds": [
+      "birdland-big-band-igoe",
+      "groove-essentials-live"
+    ]
+  },
+  {
+    "id": "greg-hutchinson",
+    "name": "Greg Hutchinson",
+    "born": 1971,
+    "died": null,
+    "primaryEra": "1990s",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Roy Hargrove Quintet",
+      "Ray Charles",
+      "Cedar Walton",
+      "Betty Carter"
+    ],
+    "bio": "Greg Hutchinson has been one of New York's most in-demand jazz drummers since the 1990s, known for his swinging, authoritative style and his ability to serve any musical context with complete musical intelligence. His extended work with Roy Hargrove produced some of the decade's finest jazz recordings, and his flexibility across hard bop, Latin jazz, and fusion contexts demonstrates exceptional musical range.",
+    "signatureStyle": "Hard bop authority with extraordinary flexibility across styles. His playing swings from the first note to the last. Deep musical intelligence that serves the ensemble without calling attention to itself.",
+    "bpmMin": 110,
+    "bpmMax": 250,
+    "influence": "One of the most respected working jazz drummers of his generation. His work across hundreds of sessions and touring situations demonstrates the qualities that make a great jazz drummer: swing, musical intelligence, and the ability to serve the music above all else.",
+    "iconicSongIds": [
+      "habana-hargrove",
+      "strasbourg-st-denis"
+    ]
+  },
+  {
+    "id": "aaron-mellergaard",
+    "name": "Aaron Mellergaard",
+    "born": 1983,
+    "died": null,
+    "primaryEra": "2010s",
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "progressive-rock",
+      "metal",
+      "electronic"
+    ],
+    "bands": [
+      "VOLA"
+    ],
+    "bio": "Danish drummer Aaron Mellergaard is the rhythmic force behind VOLA, one of progressive metal's most celebrated modern bands. His playing synthesizes progressive metal technique with electronic music's textural sensibility, creating a drum sound that feels simultaneously massive and precise \u2014 influenced by programmed beats while being entirely acoustic.",
+    "signatureStyle": "Progressive metal technique with electronic texture awareness. Massive, clear-toned playing with precise polyrhythmic execution. Electronic music's aesthetic sensibility applied to acoustic drumming.",
+    "bpmMin": 95,
+    "bpmMax": 200,
+    "influence": "One of the most important voices in contemporary progressive metal drumming. His synthesis of electronic production values with live acoustic technique has influenced how progressive metal bands think about drum sound and rhythmic texture.",
+    "iconicSongIds": [
+      "stray-the-skies",
+      "napalm-vola"
+    ]
   }
 ]
