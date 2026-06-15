@@ -1,7 +1,7 @@
 import { Feather } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Platform,
   ScrollView,
@@ -11,29 +11,42 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useSearchAll } from '@workspace/api-client-react';
 import DrummerCard from '@/components/DrummerCard';
 import EraCard from '@/components/EraCard';
 import GenreCard from '@/components/GenreCard';
 import SongCard from '@/components/SongCard';
-import { Drummer, Era, Genre, Song, getDrummerById, searchAll } from '@/constants/data';
+import { Drummer, Era, Genre, Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 
 export default function SearchScreen() {
   const colors = useColors();
   const insets = useSafeAreaInsets();
   const [query, setQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
 
-  const results = searchAll(query);
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedQuery(query.trim()), 400);
+    return () => clearTimeout(timer);
+  }, [query]);
+
+  const { data: results } = useSearchAll(
+    { q: debouncedQuery },
+    { query: { enabled: debouncedQuery.length > 0 } }
+  );
+
+  const drummers = (results?.drummers ?? []) as Drummer[];
+  const songs = (results?.songs ?? []) as Song[];
+  const genres = (results?.genres ?? []) as Genre[];
+  const eras = (results?.eras ?? []) as Era[];
+
   const hasResults =
-    results.drummers.length > 0 ||
-    results.songs.length > 0 ||
-    results.genres.length > 0 ||
-    results.eras.length > 0;
+    drummers.length > 0 || songs.length > 0 || genres.length > 0 || eras.length > 0;
+
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
-      {/* Header */}
       <View
         style={[
           styles.header,
@@ -66,7 +79,7 @@ export default function SearchScreen() {
             testID="search-input"
           />
           {query.length > 0 && (
-            <TouchableOpacity onPress={() => setQuery('')}>
+            <TouchableOpacity onPress={() => { setQuery(''); setDebouncedQuery(''); }}>
               <Feather name="x" size={16} color={colors.mutedForeground} />
             </TouchableOpacity>
           )}
@@ -108,12 +121,12 @@ export default function SearchScreen() {
           </View>
         )}
 
-        {results.drummers.length > 0 && (
+        {drummers.length > 0 && (
           <View style={styles.section}>
             <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
               DRUMMERS
             </Text>
-            {results.drummers.map((d: Drummer) => (
+            {drummers.map((d) => (
               <View key={d.id} style={styles.itemRow}>
                 <DrummerCard
                   drummer={d}
@@ -125,32 +138,28 @@ export default function SearchScreen() {
           </View>
         )}
 
-        {results.songs.length > 0 && (
+        {songs.length > 0 && (
           <View style={styles.section}>
             <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
               SONGS
             </Text>
-            {results.songs.map((s: Song) => {
-              const drummer = getDrummerById(s.drummerId);
-              return (
-                <SongCard
-                  key={s.id}
-                  song={s}
-                  drummerName={drummer?.name}
-                  onPress={(song: Song) => router.push(`/song/${song.id}`)}
-                />
-              );
-            })}
+            {songs.map((s) => (
+              <SongCard
+                key={s.id}
+                song={s}
+                onPress={(song: Song) => router.push(`/song/${song.id}`)}
+              />
+            ))}
           </View>
         )}
 
-        {results.genres.length > 0 && (
+        {genres.length > 0 && (
           <View style={styles.section}>
             <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
               GENRES
             </Text>
             <View style={styles.genreGrid}>
-              {results.genres.map((g: Genre) => (
+              {genres.map((g) => (
                 <GenreCard
                   key={g.id}
                   genre={g}
@@ -161,12 +170,12 @@ export default function SearchScreen() {
           </View>
         )}
 
-        {results.eras.length > 0 && (
+        {eras.length > 0 && (
           <View style={styles.section}>
             <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
               ERAS
             </Text>
-            {results.eras.map((e: Era) => (
+            {eras.map((e) => (
               <EraCard
                 key={e.id}
                 era={e}

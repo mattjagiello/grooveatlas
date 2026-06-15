@@ -79,7 +79,7 @@ export default function DrummerCard({ drummer, onPress, compact }: DrummerCardPr
         </View>
       </View>
       <Text style={[styles.bpm, { color: colors.primary }]}>
-        {drummer.bpmRange[0]}–{drummer.bpmRange[1]} BPM
+        {drummer.bpmMin}–{drummer.bpmMax} BPM
       </Text>
     </TouchableOpacity>
   );

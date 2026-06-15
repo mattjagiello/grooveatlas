@@ -3,6 +3,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React from 'react';
 import {
+  ActivityIndicator,
   Platform,
   ScrollView,
   StyleSheet,
@@ -10,16 +11,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useGetGenre } from '@workspace/api-client-react';
 import DrummerCard from '@/components/DrummerCard';
 import SongCard from '@/components/SongCard';
-import {
-  Drummer,
-  Song,
-  getGenreById,
-  getDrummersByIds,
-  getSongsByIds,
-  getDrummerById,
-} from '@/constants/data';
+import { Drummer, Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 
 export default function GenreDetailScreen() {
@@ -28,17 +23,29 @@ export default function GenreDetailScreen() {
   const insets = useSafeAreaInsets();
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
 
-  const genre = getGenreById(id ?? '');
+  const { data: genre, isLoading } = useGetGenre(id ?? '');
+
+  if (isLoading) {
+    return (
+      <View style={[styles.root, { backgroundColor: colors.background }]}>
+        <ActivityIndicator style={styles.loader} color={colors.primary} />
+      </View>
+    );
+  }
+
   if (!genre) {
     return (
       <View style={[styles.root, { backgroundColor: colors.background }]}>
+        <TouchableOpacity onPress={() => router.back()} style={styles.backBtnAlone}>
+          <Feather name="arrow-left" size={20} color={colors.foreground} />
+        </TouchableOpacity>
         <Text style={{ color: colors.foreground, padding: 20 }}>Genre not found</Text>
       </View>
     );
   }
 
-  const drummers = getDrummersByIds(genre.keyDrummerIds);
-  const songs = getSongsByIds(genre.iconicSongIds);
+  const drummers = (genre.keyDrummers ?? []) as Drummer[];
+  const songs = (genre.iconicSongs ?? []) as Song[];
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
@@ -132,17 +139,13 @@ export default function GenreDetailScreen() {
               Essential Listening
             </Text>
             <View style={styles.songList}>
-              {songs.map((s: Song) => {
-                const drummer = getDrummerById(s.drummerId);
-                return (
-                  <SongCard
-                    key={s.id}
-                    song={s}
-                    drummerName={drummer?.name}
-                    onPress={(song: Song) => router.push(`/song/${song.id}`)}
-                  />
-                );
-              })}
+              {songs.map((s: Song) => (
+                <SongCard
+                  key={s.id}
+                  song={s}
+                  onPress={(song: Song) => router.push(`/song/${song.id}`)}
+                />
+              ))}
             </View>
           </View>
         )}
@@ -156,6 +159,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {},
+  loader: {
+    marginTop: 100,
+  },
+  backBtnAlone: {
+    margin: 20,
+    width: 36,
+    height: 36,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   hero: {
     paddingHorizontal: 20,
     paddingBottom: 20,

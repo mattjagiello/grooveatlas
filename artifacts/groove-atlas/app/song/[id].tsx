@@ -4,6 +4,7 @@ import * as WebBrowser from 'expo-web-browser';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React from 'react';
 import {
+  ActivityIndicator,
   Platform,
   ScrollView,
   StyleSheet,
@@ -11,12 +12,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {
-  getSongById,
-  getDrummerById,
-  getEraById,
-  getGenreById,
-} from '@/constants/data';
+import { useGetSong } from '@workspace/api-client-react';
 import { useColors } from '@/hooks/useColors';
 
 const COMPLEXITY_LABELS = ['Beginner', 'Easy', 'Intermediate', 'Advanced', 'Expert'];
@@ -28,20 +24,31 @@ export default function SongDetailScreen() {
   const insets = useSafeAreaInsets();
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
 
-  const song = getSongById(id ?? '');
+  const { data: song, isLoading } = useGetSong(id ?? '');
+
+  if (isLoading) {
+    return (
+      <View style={[styles.root, { backgroundColor: colors.background }]}>
+        <ActivityIndicator style={styles.loader} color={colors.primary} />
+      </View>
+    );
+  }
+
   if (!song) {
     return (
       <View style={[styles.root, { backgroundColor: colors.background }]}>
+        <TouchableOpacity onPress={() => router.back()} style={styles.backBtnAlone}>
+          <Feather name="arrow-left" size={20} color={colors.foreground} />
+        </TouchableOpacity>
         <Text style={{ color: colors.foreground, padding: 20 }}>Song not found</Text>
       </View>
     );
   }
 
-  const drummer = getDrummerById(song.drummerId);
-  const era = getEraById(song.eraId);
-  const genres = song.genreIds.map((gid) => getGenreById(gid)).filter(Boolean);
-  const complexityColor = COMPLEXITY_COLORS[song.complexity - 1];
-  const complexityLabel = COMPLEXITY_LABELS[song.complexity - 1];
+  const drummer = song.drummer ?? null;
+  const complexityIdx = Math.max(0, Math.min(4, song.complexity - 1));
+  const complexityColor = COMPLEXITY_COLORS[complexityIdx]!;
+  const complexityLabel = COMPLEXITY_LABELS[complexityIdx]!;
 
   const openSongsterr = async () => {
     if (!song.songsterrSlug) return;
@@ -89,21 +96,19 @@ export default function SongDetailScreen() {
 
           {/* Tags */}
           <View style={styles.tags}>
-            {era && (
+            <TouchableOpacity
+              onPress={() => router.push(`/era/${song.eraId}`)}
+              style={[styles.tag, { backgroundColor: colors.primary + '25', borderColor: colors.primary }]}
+            >
+              <Text style={[styles.tagText, { color: colors.primary }]}>{song.eraId}</Text>
+            </TouchableOpacity>
+            {song.genreIds.map((gid) => (
               <TouchableOpacity
-                onPress={() => router.push(`/era/${era.id}`)}
-                style={[styles.tag, { backgroundColor: era.color + '25', borderColor: era.color }]}
+                key={gid}
+                onPress={() => router.push(`/genre/${gid}`)}
+                style={[styles.tag, { backgroundColor: colors.muted, borderColor: colors.border }]}
               >
-                <Text style={[styles.tagText, { color: era.color }]}>{era.name}</Text>
-              </TouchableOpacity>
-            )}
-            {genres.map((g) => g && (
-              <TouchableOpacity
-                key={g.id}
-                onPress={() => router.push(`/genre/${g.id}`)}
-                style={[styles.tag, { backgroundColor: g.color + '25', borderColor: g.color }]}
-              >
-                <Text style={[styles.tagText, { color: g.color }]}>{g.name}</Text>
+                <Text style={[styles.tagText, { color: colors.foreground }]}>{gid}</Text>
               </TouchableOpacity>
             ))}
           </View>
@@ -177,6 +182,22 @@ export default function SongDetailScreen() {
           <Text style={[styles.body, { color: colors.foreground }]}>{song.description}</Text>
         </View>
 
+        {/* Lyrics snippet (Musixmatch) */}
+        {song.lyricsSnippet && (
+          <View style={[styles.lyricsBox, { backgroundColor: colors.card, borderColor: colors.border }]}>
+            <View style={styles.lyricsHeader}>
+              <Feather name="mic" size={14} color={colors.primary} />
+              <Text style={[styles.lyricsTitle, { color: colors.primary }]}>Lyrics</Text>
+            </View>
+            <Text style={[styles.lyricsText, { color: colors.foreground }]}>
+              {song.lyricsSnippet}
+            </Text>
+            <Text style={[styles.lyricsAttr, { color: colors.mutedForeground }]}>
+              via Musixmatch
+            </Text>
+          </View>
+        )}
+
         {/* Why Study */}
         <View style={[styles.studyBox, { backgroundColor: colors.muted, borderColor: colors.border }]}>
           <View style={styles.studyHeader}>
@@ -205,6 +226,16 @@ export default function SongDetailScreen() {
 const styles = StyleSheet.create({
   root: { flex: 1 },
   content: {},
+  loader: {
+    marginTop: 100,
+  },
+  backBtnAlone: {
+    margin: 20,
+    width: 36,
+    height: 36,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   hero: {
     paddingHorizontal: 20,
     paddingBottom: 20,
@@ -337,6 +368,32 @@ const styles = StyleSheet.create({
   body: {
     fontSize: 15,
     lineHeight: 23,
+  },
+  lyricsBox: {
+    marginHorizontal: 20,
+    marginTop: 20,
+    padding: 16,
+    borderRadius: 10,
+    borderWidth: 1,
+    gap: 8,
+  },
+  lyricsHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  lyricsTitle: {
+    fontSize: 13,
+    fontWeight: '700',
+  },
+  lyricsText: {
+    fontSize: 14,
+    lineHeight: 22,
+    fontStyle: 'italic',
+  },
+  lyricsAttr: {
+    fontSize: 10,
+    letterSpacing: 0.5,
   },
   studyBox: {
     marginHorizontal: 20,

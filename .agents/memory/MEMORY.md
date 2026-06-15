@@ -1,0 +1,2 @@
+- [Expo + pnpm monorepo Metro config](expo-metro-monorepo.md) — only `watchFolders` needed; adding `nodeModulesPaths` causes multiple-React-copies errors.
+- [Drizzle numeric type](drizzle-numeric-strings.md) — Drizzle `numeric` columns return JS strings from PostgreSQL; must parse with `Number()` in route handlers.

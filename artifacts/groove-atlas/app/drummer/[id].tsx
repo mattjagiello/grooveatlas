@@ -3,6 +3,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React from 'react';
 import {
+  ActivityIndicator,
   Platform,
   ScrollView,
   StyleSheet,
@@ -10,14 +11,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useGetDrummer } from '@workspace/api-client-react';
 import SongCard from '@/components/SongCard';
-import {
-  Song,
-  getDrummerById,
-  getSongsByIds,
-  getGenreById,
-  getEraById,
-} from '@/constants/data';
+import { Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 
 export default function DrummerDetailScreen() {
@@ -26,28 +22,36 @@ export default function DrummerDetailScreen() {
   const insets = useSafeAreaInsets();
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
 
-  const drummer = getDrummerById(id ?? '');
+  const { data: drummer, isLoading } = useGetDrummer(id ?? '');
+
+  if (isLoading) {
+    return (
+      <View style={[styles.root, { backgroundColor: colors.background }]}>
+        <ActivityIndicator style={styles.loader} color={colors.primary} />
+      </View>
+    );
+  }
+
   if (!drummer) {
     return (
       <View style={[styles.root, { backgroundColor: colors.background }]}>
+        <TouchableOpacity onPress={() => router.back()} style={styles.backBtnAlone}>
+          <Feather name="arrow-left" size={20} color={colors.foreground} />
+        </TouchableOpacity>
         <Text style={{ color: colors.foreground, padding: 20 }}>Drummer not found</Text>
       </View>
     );
   }
 
-  const songs = getSongsByIds(drummer.iconicSongIds);
-  const bpmMin = drummer.bpmRange[0];
-  const bpmMax = drummer.bpmRange[1];
+  const songs = (drummer.iconicSongs ?? []) as Song[];
+  const bpmMin = drummer.bpmMin;
+  const bpmMax = drummer.bpmMax;
 
   const yearsActive = drummer.died
     ? `${drummer.born}–${drummer.died}`
     : `${drummer.born}–present`;
 
-  const genreLabels = drummer.genres
-    .map((gid) => getGenreById(gid)?.name ?? gid)
-    .join(', ');
-
-  const primaryEraObj = getEraById(drummer.primaryEra);
+  const genreLabels = drummer.genres.join(', ');
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
@@ -95,15 +99,13 @@ export default function DrummerDetailScreen() {
               <Text style={[styles.years, { color: colors.mutedForeground }]}>
                 {yearsActive}
               </Text>
-              {primaryEraObj && (
-                <TouchableOpacity onPress={() => router.push(`/era/${primaryEraObj.id}`)}>
-                  <View style={[styles.eraTag, { backgroundColor: primaryEraObj.color + '30', borderColor: primaryEraObj.color }]}>
-                    <Text style={[styles.eraTagText, { color: primaryEraObj.color }]}>
-                      {primaryEraObj.name}
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              )}
+              <TouchableOpacity onPress={() => router.push(`/era/${drummer.primaryEra}`)}>
+                <View style={[styles.eraTag, { backgroundColor: colors.primary + '20', borderColor: colors.primary }]}>
+                  <Text style={[styles.eraTagText, { color: colors.primary }]}>
+                    {drummer.primaryEra}
+                  </Text>
+                </View>
+              </TouchableOpacity>
             </View>
           </View>
           <Text style={[styles.bands, { color: colors.mutedForeground }]}>
@@ -199,6 +201,16 @@ export default function DrummerDetailScreen() {
 const styles = StyleSheet.create({
   root: { flex: 1 },
   content: {},
+  loader: {
+    marginTop: 100,
+  },
+  backBtnAlone: {
+    margin: 20,
+    width: 36,
+    height: 36,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   hero: {
     paddingHorizontal: 20,
     paddingBottom: 20,

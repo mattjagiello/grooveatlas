@@ -1,8 +1,9 @@
 import { Feather } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
+  ActivityIndicator,
   Platform,
   ScrollView,
   StyleSheet,
@@ -10,31 +11,50 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import {
+  useListEras,
+  useListGenres,
+  useListDrummers,
+  useListSongs,
+} from '@workspace/api-client-react';
 import DecadeTimeline from '@/components/DecadeTimeline';
 import DrummerCard from '@/components/DrummerCard';
 import GlobeMap from '@/components/GlobeMap';
 import SongCard from '@/components/SongCard';
-import {
-  Drummer,
-  Era,
-  ERAS,
-  Genre,
-  GENRES,
-  Song,
-  getDrummerById,
-  getDrummersByEra,
-  getSongById,
-  getSongsByEra,
-} from '@/constants/data';
+import { Drummer, Era, Genre, Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 
 export default function ExploreScreen() {
   const colors = useColors();
   const insets = useSafeAreaInsets();
-  const [selectedEra, setSelectedEra] = useState<Era>(ERAS[3]);
+  const [selectedEraId, setSelectedEraId] = useState<string | null>(null);
 
-  const eraDrummers = getDrummersByEra(selectedEra.id);
-  const eraSongs = getSongsByEra(selectedEra.id);
+  const { data: rawEras = [], isLoading: erasLoading } = useListEras();
+  const { data: rawGenres = [] } = useListGenres();
+
+  const eras = rawEras as Era[];
+  const genres = rawGenres as Genre[];
+
+  useEffect(() => {
+    if (eras.length > 0 && !selectedEraId) {
+      const defaultEra = eras[3] ?? eras[0];
+      if (defaultEra) setSelectedEraId(defaultEra.id);
+    }
+  }, [eras, selectedEraId]);
+
+  const selectedEra = eras.find((e) => e.id === selectedEraId) ?? eras[0];
+
+  const { data: rawDrummers = [] } = useListDrummers(
+    selectedEraId ? { eraId: selectedEraId } : undefined,
+    { query: { enabled: !!selectedEraId } }
+  );
+  const { data: rawSongs = [] } = useListSongs(
+    selectedEraId ? { eraId: selectedEraId } : undefined,
+    { query: { enabled: !!selectedEraId } }
+  );
+
+  const eraDrummers = rawDrummers as Drummer[];
+  const eraSongs = rawSongs as Song[];
 
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
 
@@ -68,113 +88,117 @@ export default function ExploreScreen() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={[
-          styles.content,
-          {
-            paddingBottom:
-              insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 100,
-          },
-        ]}
-      >
-        {/* Globe */}
-        <View style={styles.globeSection}>
-          <GlobeMap
-            genres={GENRES}
-            onGenrePress={(g: Genre) => router.push(`/genre/${g.id}`)}
-          />
-          <Text style={[styles.globeHint, { color: colors.mutedForeground }]}>
-            Tap a dot to explore a genre's origin
-          </Text>
-        </View>
-
-        {/* Divider */}
-        <View style={[styles.divider, { backgroundColor: colors.border }]} />
-
-        {/* Timeline */}
-        <View style={styles.section}>
-          <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
-            BROWSE BY ERA
-          </Text>
-          <DecadeTimeline
-            eras={ERAS}
-            selectedEraId={selectedEra.id}
-            onSelectEra={(e: Era) => setSelectedEra(e)}
-          />
-        </View>
-
-        {/* Era info */}
-        <View
-          style={[
-            styles.eraInfo,
-            { backgroundColor: colors.card, borderColor: colors.border, borderLeftColor: selectedEra.color },
+      {erasLoading ? (
+        <ActivityIndicator style={styles.loader} color={colors.primary} />
+      ) : (
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[
+            styles.content,
+            {
+              paddingBottom:
+                insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 100,
+            },
           ]}
         >
-          <Text style={[styles.eraName, { color: selectedEra.color, fontFamily: 'serif' }]}>
-            {selectedEra.name}
-          </Text>
-          <Text style={[styles.eraSubtitle, { color: colors.foreground }]}>
-            {selectedEra.subtitle}
-          </Text>
-          <Text style={[styles.eraDesc, { color: colors.mutedForeground }]} numberOfLines={3}>
-            {selectedEra.description}
-          </Text>
-          <TouchableOpacity
-            onPress={() => router.push(`/era/${selectedEra.id}`)}
-            style={[styles.eraBtn, { borderColor: selectedEra.color }]}
-          >
-            <Text style={[styles.eraBtnText, { color: selectedEra.color }]}>
-              Explore {selectedEra.name}
+          {/* Globe */}
+          <View style={styles.globeSection}>
+            <GlobeMap
+              genres={genres}
+              onGenrePress={(g: Genre) => router.push(`/genre/${g.id}`)}
+            />
+            <Text style={[styles.globeHint, { color: colors.mutedForeground }]}>
+              Tap a dot to explore a genre's origin
             </Text>
-            <Feather name="arrow-right" size={13} color={selectedEra.color} />
-          </TouchableOpacity>
-        </View>
-
-        {/* Key Drummers of Era */}
-        {eraDrummers.length > 0 && (
-          <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
-              Drummers of the {selectedEra.name}
-            </Text>
-            <ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={styles.horizontal}
-            >
-              {eraDrummers.slice(0, 8).map((drummer: Drummer) => (
-                <DrummerCard
-                  key={drummer.id}
-                  drummer={drummer}
-                  onPress={(d: Drummer) => router.push(`/drummer/${d.id}`)}
-                />
-              ))}
-            </ScrollView>
           </View>
-        )}
 
-        {/* Iconic Songs */}
-        {eraSongs.length > 0 && (
-          <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
-              Iconic Recordings
-            </Text>
-            <View style={styles.songList}>
-              {eraSongs.slice(0, 4).map((song: Song) => {
-                const drummer = getDrummerById(song.drummerId);
-                return (
+          {/* Divider */}
+          <View style={[styles.divider, { backgroundColor: colors.border }]} />
+
+          {/* Timeline */}
+          {eras.length > 0 && (
+            <View style={styles.section}>
+              <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
+                BROWSE BY ERA
+              </Text>
+              <DecadeTimeline
+                eras={eras}
+                selectedEraId={selectedEraId ?? ''}
+                onSelectEra={(e: Era) => setSelectedEraId(e.id)}
+              />
+            </View>
+          )}
+
+          {/* Era info */}
+          {selectedEra && (
+            <View
+              style={[
+                styles.eraInfo,
+                { backgroundColor: colors.card, borderColor: colors.border, borderLeftColor: selectedEra.color },
+              ]}
+            >
+              <Text style={[styles.eraName, { color: selectedEra.color, fontFamily: 'serif' }]}>
+                {selectedEra.name}
+              </Text>
+              <Text style={[styles.eraSubtitle, { color: colors.foreground }]}>
+                {selectedEra.subtitle}
+              </Text>
+              <Text style={[styles.eraDesc, { color: colors.mutedForeground }]} numberOfLines={3}>
+                {selectedEra.description}
+              </Text>
+              <TouchableOpacity
+                onPress={() => router.push(`/era/${selectedEra.id}`)}
+                style={[styles.eraBtn, { borderColor: selectedEra.color }]}
+              >
+                <Text style={[styles.eraBtnText, { color: selectedEra.color }]}>
+                  Explore {selectedEra.name}
+                </Text>
+                <Feather name="arrow-right" size={13} color={selectedEra.color} />
+              </TouchableOpacity>
+            </View>
+          )}
+
+          {/* Key Drummers of Era */}
+          {eraDrummers.length > 0 && (
+            <View style={styles.section}>
+              <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
+                Drummers of the {selectedEra?.name}
+              </Text>
+              <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={styles.horizontal}
+              >
+                {eraDrummers.slice(0, 8).map((drummer: Drummer) => (
+                  <DrummerCard
+                    key={drummer.id}
+                    drummer={drummer}
+                    onPress={(d: Drummer) => router.push(`/drummer/${d.id}`)}
+                  />
+                ))}
+              </ScrollView>
+            </View>
+          )}
+
+          {/* Iconic Songs */}
+          {eraSongs.length > 0 && (
+            <View style={styles.section}>
+              <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
+                Iconic Recordings
+              </Text>
+              <View style={styles.songList}>
+                {eraSongs.slice(0, 4).map((song: Song) => (
                   <SongCard
                     key={song.id}
                     song={song}
-                    drummerName={drummer?.name}
                     onPress={(s: Song) => router.push(`/song/${s.id}`)}
                   />
-                );
-              })}
+                ))}
+              </View>
             </View>
-          </View>
-        )}
-      </ScrollView>
+          )}
+        </ScrollView>
+      )}
     </View>
   );
 }
@@ -213,6 +237,9 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingTop: 12,
+  },
+  loader: {
+    marginTop: 100,
   },
   globeSection: {
     alignItems: 'center',

@@ -2,14 +2,24 @@ openapi: 3.1.0
 info:
   # Do not change the title, if the title changes, the import paths will be broken
   title: Api
-  version: 0.1.0
-  description: API specification
+  version: 0.2.0
+  description: Groove Atlas API — drum history and discovery
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
     description: Health operations
+  - name: eras
+    description: Drum history eras
+  - name: genres
+    description: Music genres and origins
+  - name: drummers
+    description: Drummer profiles
+  - name: songs
+    description: Iconic drum recordings
+  - name: search
+    description: Full-text search
 paths:
   /healthz:
     get:
@@ -24,6 +34,213 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+
+  /eras:
+    get:
+      operationId: listEras
+      tags: [eras]
+      summary: List all eras
+      responses:
+        "200":
+          description: List of eras
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Era"
+
+  /eras/{id}:
+    get:
+      operationId: getEra
+      tags: [eras]
+      summary: Get era with embedded drummers and songs
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Era detail with embedded data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EraDetail"
+        "404":
+          description: Era not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotFound"
+
+  /genres:
+    get:
+      operationId: listGenres
+      tags: [genres]
+      summary: List all genres
+      responses:
+        "200":
+          description: List of genres
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Genre"
+
+  /genres/{id}:
+    get:
+      operationId: getGenre
+      tags: [genres]
+      summary: Get genre with embedded drummers and songs
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Genre detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenreDetail"
+        "404":
+          description: Genre not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotFound"
+
+  /drummers:
+    get:
+      operationId: listDrummers
+      tags: [drummers]
+      summary: List drummers, optionally filtered by era or genre
+      parameters:
+        - name: eraId
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: genreId
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of drummers
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Drummer"
+
+  /drummers/{id}:
+    get:
+      operationId: getDrummer
+      tags: [drummers]
+      summary: Get drummer with embedded songs
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Drummer detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DrummerDetail"
+        "404":
+          description: Drummer not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotFound"
+
+  /songs:
+    get:
+      operationId: listSongs
+      tags: [songs]
+      summary: List songs, optionally filtered by era, genre, or drummer
+      parameters:
+        - name: eraId
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: genreId
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: drummerId
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of songs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Song"
+
+  /songs/{id}:
+    get:
+      operationId: getSong
+      tags: [songs]
+      summary: Get song with embedded drummer
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Song detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SongDetail"
+        "404":
+          description: Song not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotFound"
+
+  /search:
+    get:
+      operationId: searchAll
+      tags: [search]
+      summary: Search across drummers, songs, genres, and eras
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Search results
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SearchResults"
+
 components:
   schemas:
     HealthStatus:
@@ -34,3 +251,278 @@ components:
       required:
         - status
 
+    NotFound:
+      type: object
+      properties:
+        message:
+          type: string
+      required:
+        - message
+
+    Era:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        subtitle:
+          type: string
+        years:
+          type: string
+        description:
+          type: string
+        color:
+          type: string
+        characteristics:
+          type: array
+          items:
+            type: string
+        keyDrummerIds:
+          type: array
+          items:
+            type: string
+        iconicSongIds:
+          type: array
+          items:
+            type: string
+      required:
+        - id
+        - name
+        - subtitle
+        - years
+        - description
+        - color
+        - characteristics
+        - keyDrummerIds
+        - iconicSongIds
+
+    EraDetail:
+      allOf:
+        - $ref: "#/components/schemas/Era"
+        - type: object
+          properties:
+            keyDrummers:
+              type: array
+              items:
+                $ref: "#/components/schemas/Drummer"
+            iconicSongs:
+              type: array
+              items:
+                $ref: "#/components/schemas/Song"
+          required:
+            - keyDrummers
+            - iconicSongs
+
+    Genre:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        origin:
+          type: string
+        lat:
+          type: number
+        lng:
+          type: number
+        era:
+          type: string
+        description:
+          type: string
+        color:
+          type: string
+        characteristics:
+          type: array
+          items:
+            type: string
+        keyDrummerIds:
+          type: array
+          items:
+            type: string
+        iconicSongIds:
+          type: array
+          items:
+            type: string
+      required:
+        - id
+        - name
+        - origin
+        - lat
+        - lng
+        - era
+        - description
+        - color
+        - characteristics
+        - keyDrummerIds
+        - iconicSongIds
+
+    GenreDetail:
+      allOf:
+        - $ref: "#/components/schemas/Genre"
+        - type: object
+          properties:
+            keyDrummers:
+              type: array
+              items:
+                $ref: "#/components/schemas/Drummer"
+            iconicSongs:
+              type: array
+              items:
+                $ref: "#/components/schemas/Song"
+          required:
+            - keyDrummers
+            - iconicSongs
+
+    Drummer:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        born:
+          type: integer
+        died:
+          type: integer
+          nullable: true
+        primaryEra:
+          type: string
+        eras:
+          type: array
+          items:
+            type: string
+        genres:
+          type: array
+          items:
+            type: string
+        bands:
+          type: array
+          items:
+            type: string
+        bio:
+          type: string
+        signatureStyle:
+          type: string
+        bpmMin:
+          type: integer
+        bpmMax:
+          type: integer
+        influence:
+          type: string
+        iconicSongIds:
+          type: array
+          items:
+            type: string
+      required:
+        - id
+        - name
+        - born
+        - primaryEra
+        - eras
+        - genres
+        - bands
+        - bio
+        - signatureStyle
+        - bpmMin
+        - bpmMax
+        - influence
+        - iconicSongIds
+
+    DrummerDetail:
+      allOf:
+        - $ref: "#/components/schemas/Drummer"
+        - type: object
+          properties:
+            iconicSongs:
+              type: array
+              items:
+                $ref: "#/components/schemas/Song"
+          required:
+            - iconicSongs
+
+    Song:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        artist:
+          type: string
+        drummerId:
+          type: string
+        year:
+          type: integer
+        eraId:
+          type: string
+        genreIds:
+          type: array
+          items:
+            type: string
+        tempo:
+          type: integer
+        feel:
+          type: string
+        complexity:
+          type: integer
+        description:
+          type: string
+        whyStudy:
+          type: string
+        songsterrSlug:
+          type: string
+          nullable: true
+        lyricsSnippet:
+          type: string
+          nullable: true
+      required:
+        - id
+        - title
+        - artist
+        - drummerId
+        - year
+        - eraId
+        - genreIds
+        - tempo
+        - feel
+        - complexity
+        - description
+        - whyStudy
+
+    SongDetail:
+      allOf:
+        - $ref: "#/components/schemas/Song"
+        - type: object
+          properties:
+            drummer:
+              $ref: "#/components/schemas/Drummer"
+              nullable: true
+          required:
+            - drummer
+
+    SearchResults:
+      type: object
+      properties:
+        drummers:
+          type: array
+          items:
+            $ref: "#/components/schemas/Drummer"
+        songs:
+          type: array
+          items:
+            $ref: "#/components/schemas/Song"
+        genres:
+          type: array
+          items:
+            $ref: "#/components/schemas/Genre"
+        eras:
+          type: array
+          items:
+            $ref: "#/components/schemas/Era"
+      required:
+        - drummers
+        - songs
+        - genres
+        - eras

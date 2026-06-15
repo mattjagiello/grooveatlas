@@ -6,6 +6,8 @@
  * OpenAPI spec version: 0.2.0
  */
 
-export interface HealthStatus {
-  status: string;
-}
+export type ListSongsParams = {
+eraId?: string;
+genreId?: string;
+drummerId?: string;
+};

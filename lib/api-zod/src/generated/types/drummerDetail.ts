@@ -5,7 +5,9 @@
  * Groove Atlas API — drum history and discovery
  * OpenAPI spec version: 0.2.0
  */
+import type { Drummer } from './drummer';
+import type { Song } from './song';
 
-export interface HealthStatus {
-  status: string;
-}
+export type DrummerDetail = Drummer & {
+  iconicSongs: Song[];
+};

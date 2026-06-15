@@ -3,6 +3,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React from 'react';
 import {
+  ActivityIndicator,
   Platform,
   ScrollView,
   StyleSheet,
@@ -10,16 +11,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useGetEra } from '@workspace/api-client-react';
 import DrummerCard from '@/components/DrummerCard';
 import SongCard from '@/components/SongCard';
-import {
-  Drummer,
-  Song,
-  getEraById,
-  getDrummersByIds,
-  getSongsByIds,
-  getDrummerById,
-} from '@/constants/data';
+import { Drummer, Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 
 export default function EraDetailScreen() {
@@ -28,17 +23,29 @@ export default function EraDetailScreen() {
   const insets = useSafeAreaInsets();
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
 
-  const era = getEraById(id ?? '');
+  const { data: era, isLoading } = useGetEra(id ?? '');
+
+  if (isLoading) {
+    return (
+      <View style={[styles.root, { backgroundColor: colors.background }]}>
+        <ActivityIndicator style={styles.loader} color={colors.primary} />
+      </View>
+    );
+  }
+
   if (!era) {
     return (
       <View style={[styles.root, { backgroundColor: colors.background }]}>
+        <TouchableOpacity onPress={() => router.back()} style={styles.backBtnAlone}>
+          <Feather name="arrow-left" size={20} color={colors.foreground} />
+        </TouchableOpacity>
         <Text style={{ color: colors.foreground, padding: 20 }}>Era not found</Text>
       </View>
     );
   }
 
-  const drummers = getDrummersByIds(era.keyDrummerIds);
-  const songs = getSongsByIds(era.iconicSongIds);
+  const drummers = (era.keyDrummers ?? []) as Drummer[];
+  const songs = (era.iconicSongs ?? []) as Song[];
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
@@ -132,17 +139,13 @@ export default function EraDetailScreen() {
               Iconic Recordings
             </Text>
             <View style={styles.songList}>
-              {songs.map((s: Song) => {
-                const drummer = getDrummerById(s.drummerId);
-                return (
-                  <SongCard
-                    key={s.id}
-                    song={s}
-                    drummerName={drummer?.name}
-                    onPress={(song: Song) => router.push(`/song/${song.id}`)}
-                  />
-                );
-              })}
+              {songs.map((s: Song) => (
+                <SongCard
+                  key={s.id}
+                  song={s}
+                  onPress={(song: Song) => router.push(`/song/${song.id}`)}
+                />
+              ))}
             </View>
           </View>
         )}
@@ -156,6 +159,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {},
+  loader: {
+    marginTop: 100,
+  },
+  backBtnAlone: {
+    margin: 20,
+    width: 36,
+    height: 36,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   hero: {
     paddingHorizontal: 20,
     paddingBottom: 20,
