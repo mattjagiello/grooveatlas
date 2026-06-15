@@ -44,7 +44,7 @@ export async function fetchCyaniteAnalysis(
     const res = await fetch(`${API_BASE}/cyanite/analysis?${params.toString()}`);
     const data = await res.json() as Record<string, unknown>;
 
-    if (!res.ok) {
+    if (data.ok === false) {
       return {
         code: (data.code as CyaniteError['code']) ?? 'ERROR',
         message: (data.error as string) ?? 'Unknown error',

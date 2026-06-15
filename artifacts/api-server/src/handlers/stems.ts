@@ -18,13 +18,17 @@ function readBody(req: IncomingMessage): Promise<Buffer> {
   });
 }
 
-function json(res: ServerResponse, status: number, body: unknown) {
+function json(res: ServerResponse, body: unknown) {
   const payload = JSON.stringify(body);
-  res.writeHead(status, {
+  res.writeHead(200, {
     "Content-Type": "application/json",
     "Content-Length": Buffer.byteLength(payload),
   });
   res.end(payload);
+}
+
+function jsonError(res: ServerResponse, code: string, error: string) {
+  return json(res, { ok: false, code, error });
 }
 
 export async function handleStemsExtract(
@@ -32,7 +36,7 @@ export async function handleStemsExtract(
   res: ServerResponse
 ) {
   if (req.method !== "POST") {
-    return json(res, 405, { error: "Method not allowed" });
+    return jsonError(res, "ERROR", "Method not allowed");
   }
 
   let body: { songId?: string };
@@ -40,24 +44,21 @@ export async function handleStemsExtract(
     const raw = await readBody(req);
     body = JSON.parse(raw.toString());
   } catch {
-    return json(res, 400, { error: "Invalid JSON body" });
+    return jsonError(res, "ERROR", "Invalid JSON body");
   }
 
   const { songId } = body;
-  if (!songId) return json(res, 400, { error: "songId required" });
+  if (!songId) return jsonError(res, "ERROR", "songId required");
 
   const song = findSong(songId);
-  if (!song) return json(res, 404, { error: "Song not found" });
+  if (!song) return jsonError(res, "ERROR", "Song not found");
 
   logger.info({ songId, title: song.title }, "Stem extraction requested");
 
   // 1. Find a 30s preview via Deezer (no key needed)
   const preview = await findPreviewUrl(song.title, song.artist);
   if (!preview) {
-    return json(res, 422, {
-      error: "No preview audio found for this track on Deezer",
-      code: "NO_PREVIEW",
-    });
+    return jsonError(res, "NO_PREVIEW", "No preview audio found for this track on Deezer");
   }
 
   logger.info({ previewUrl: preview.previewUrl }, "Deezer preview found");
@@ -70,7 +71,7 @@ export async function handleStemsExtract(
     audioBuffer = Buffer.from(await audioRes.arrayBuffer());
   } catch (err) {
     logger.error({ err }, "Failed to download Deezer preview");
-    return json(res, 502, { error: "Failed to download preview audio" });
+    return jsonError(res, "ERROR", "Failed to download preview audio");
   }
 
   logger.info({ bytes: audioBuffer.length }, "Preview downloaded");
@@ -81,7 +82,7 @@ export async function handleStemsExtract(
     sourceId = await uploadAudio(audioBuffer, `${songId}-preview.mp3`);
   } catch (err) {
     logger.error({ err }, "LALAL upload failed");
-    return json(res, 502, { error: "Failed to upload audio to LALAL.AI" });
+    return jsonError(res, "ERROR", "Failed to upload audio to LALAL.AI");
   }
 
   logger.info({ sourceId }, "Uploaded to LALAL.AI");
@@ -93,13 +94,10 @@ export async function handleStemsExtract(
   } catch (err) {
     if (err instanceof LalalPremiumError) {
       logger.warn("LALAL premium required — key not yet upgraded");
-      return json(res, 402, {
-        error: "Drum isolation requires a premium LALAL.AI license",
-        code: "PREMIUM_REQUIRED",
-      });
+      return jsonError(res, "PREMIUM_REQUIRED", "Drum isolation requires a premium LALAL.AI license");
     }
     logger.error({ err }, "LALAL split request failed");
-    return json(res, 502, { error: "Stem split request failed" });
+    return jsonError(res, "ERROR", "Stem split request failed");
   }
 
   logger.info({ taskId }, "Drum split requested");
@@ -108,7 +106,8 @@ export async function handleStemsExtract(
   try {
     const result = await pollForResult(taskId);
     logger.info({ taskId }, "Drum stem ready");
-    return json(res, 200, {
+    return json(res, {
+      ok: true,
       songId,
       songTitle: song.title,
       artist: song.artist,
@@ -118,6 +117,6 @@ export async function handleStemsExtract(
     });
   } catch (err) {
     logger.error({ err, taskId }, "Polling failed");
-    return json(res, 504, { error: String(err) });
+    return jsonError(res, "ERROR", String(err));
   }
 }

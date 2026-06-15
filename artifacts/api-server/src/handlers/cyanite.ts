@@ -4,31 +4,35 @@ import { fetchTrackMeta } from "../services/musixmatch.js";
 import { analyzeSpotifyTrack, isCyaniteConfigured } from "../services/cyanite.js";
 import { logger } from "../lib/logger.js";
 
-function json(res: ServerResponse, status: number, body: unknown) {
+function json(res: ServerResponse, body: unknown) {
   const payload = JSON.stringify(body);
-  res.writeHead(status, {
+  res.writeHead(200, {
     "Content-Type": "application/json",
     "Content-Length": Buffer.byteLength(payload),
   });
   res.end(payload);
 }
 
+function jsonError(res: ServerResponse, code: string, error: string) {
+  return json(res, { ok: false, code, error });
+}
+
 export async function handleCyaniteAnalysis(
   req: IncomingMessage,
   res: ServerResponse
 ) {
-  if (req.method !== "GET") return json(res, 405, { error: "Method not allowed" });
+  if (req.method !== "GET") return jsonError(res, "ERROR", "Method not allowed");
 
   if (!isCyaniteConfigured()) {
-    return json(res, 503, { error: "Cyanite not yet activated", code: "NOT_CONFIGURED" });
+    return jsonError(res, "NOT_CONFIGURED", "Cyanite not yet activated");
   }
 
   const url = new URL(req.url ?? "/", `http://${req.headers.host}`);
   const songId = url.searchParams.get("songId");
-  if (!songId) return json(res, 400, { error: "songId required" });
+  if (!songId) return jsonError(res, "ERROR", "songId required");
 
   const song = findSong(songId);
-  if (!song) return json(res, 404, { error: "Song not found" });
+  if (!song) return jsonError(res, "ERROR", "Song not found");
 
   let spotifyId = url.searchParams.get("spotifyId") ?? null;
 
@@ -42,19 +46,16 @@ export async function handleCyaniteAnalysis(
   }
 
   if (!spotifyId) {
-    return json(res, 422, {
-      error: "No Spotify ID found for this track",
-      code: "NO_SPOTIFY_ID",
-    });
+    return jsonError(res, "NO_SPOTIFY_ID", "No Spotify ID found for this track");
   }
 
   logger.info({ songId, spotifyId }, "Cyanite: starting analysis");
 
   try {
     const analysis = await analyzeSpotifyTrack(spotifyId);
-    return json(res, 200, { songId, spotifyId, ...analysis });
+    return json(res, { ok: true, songId, spotifyId, ...analysis });
   } catch (err) {
     logger.error({ err, songId }, "Cyanite analysis failed");
-    return json(res, 502, { error: String(err), code: "ANALYSIS_FAILED" });
+    return jsonError(res, "ANALYSIS_FAILED", String(err));
   }
 }

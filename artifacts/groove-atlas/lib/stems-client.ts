@@ -27,7 +27,7 @@ export async function extractDrumStem(
 
     const data = await res.json() as Record<string, unknown>;
 
-    if (!res.ok) {
+    if (data.ok === false) {
       const code = (data.code as string) ?? 'ERROR';
       return {
         code: code as StemError['code'],
