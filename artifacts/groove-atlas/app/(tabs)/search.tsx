@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useSearchAll } from '@workspace/api-client-react';
+import { useSearchAll, getSearchAllQueryKey } from '@workspace/api-client-react';
 import DrummerCard from '@/components/DrummerCard';
 import EraCard from '@/components/EraCard';
 import GenreCard from '@/components/GenreCard';
@@ -30,10 +30,10 @@ export default function SearchScreen() {
     return () => clearTimeout(timer);
   }, [query]);
 
-  const { data: results } = useSearchAll(
-    { q: debouncedQuery },
-    { query: { enabled: debouncedQuery.length > 0 } }
-  );
+  const searchParams = { q: debouncedQuery };
+  const { data: results } = useSearchAll(searchParams, {
+    query: { queryKey: getSearchAllQueryKey(searchParams), enabled: debouncedQuery.length > 0 },
+  });
 
   const drummers = (results?.drummers ?? []) as Drummer[];
   const songs = (results?.songs ?? []) as Song[];

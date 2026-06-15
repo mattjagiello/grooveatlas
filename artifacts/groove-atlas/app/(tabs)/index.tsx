@@ -16,6 +16,8 @@ import {
   useListGenres,
   useListDrummers,
   useListSongs,
+  getListDrummersQueryKey,
+  getListSongsQueryKey,
 } from '@workspace/api-client-react';
 import DecadeTimeline from '@/components/DecadeTimeline';
 import DrummerCard from '@/components/DrummerCard';
@@ -44,14 +46,15 @@ export default function ExploreScreen() {
 
   const selectedEra = eras.find((e) => e.id === selectedEraId) ?? eras[0];
 
-  const { data: rawDrummers = [] } = useListDrummers(
-    selectedEraId ? { eraId: selectedEraId } : undefined,
-    { query: { enabled: !!selectedEraId } }
-  );
-  const { data: rawSongs = [] } = useListSongs(
-    selectedEraId ? { eraId: selectedEraId } : undefined,
-    { query: { enabled: !!selectedEraId } }
-  );
+  const drummerParams = selectedEraId ? { eraId: selectedEraId } : undefined;
+  const songParams = selectedEraId ? { eraId: selectedEraId } : undefined;
+
+  const { data: rawDrummers = [] } = useListDrummers(drummerParams, {
+    query: { queryKey: getListDrummersQueryKey(drummerParams), enabled: !!selectedEraId },
+  });
+  const { data: rawSongs = [] } = useListSongs(songParams, {
+    query: { queryKey: getListSongsQueryKey(songParams), enabled: !!selectedEraId },
+  });
 
   const eraDrummers = rawDrummers as Drummer[];
   const eraSongs = rawSongs as Song[];

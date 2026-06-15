@@ -1,5 +1,5 @@
 import { db, drummersTable, songsTable } from "@workspace/db";
-import { eq, inArray, sql } from "drizzle-orm";
+import { and, eq, inArray, sql } from "drizzle-orm";
 import { Router, type IRouter } from "express";
 
 const router: IRouter = Router();
@@ -10,20 +10,18 @@ router.get("/drummers", async (req, res) => {
     genreId?: string;
   };
 
-  let query = db.select().from(drummersTable);
+  const conditions = [];
+  if (eraId) conditions.push(sql`${eraId} = ANY(${drummersTable.eras})`);
+  if (genreId) conditions.push(sql`${genreId} = ANY(${drummersTable.genres})`);
 
-  if (eraId) {
-    query = query.where(
-      sql`${eraId} = ANY(${drummersTable.eras})`
-    ) as typeof query;
-  }
-  if (genreId) {
-    query = query.where(
-      sql`${genreId} = ANY(${drummersTable.genres})`
-    ) as typeof query;
-  }
+  const drummers =
+    conditions.length > 0
+      ? await db
+          .select()
+          .from(drummersTable)
+          .where(and(...conditions))
+      : await db.select().from(drummersTable);
 
-  const drummers = await query;
   res.json(drummers);
 });
 

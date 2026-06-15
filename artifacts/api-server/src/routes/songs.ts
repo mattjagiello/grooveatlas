@@ -1,5 +1,5 @@
 import { db, songsTable, drummersTable } from "@workspace/db";
-import { eq, sql } from "drizzle-orm";
+import { and, eq, inArray, sql } from "drizzle-orm";
 import { Router, type IRouter } from "express";
 import { fetchLyricsSnippet } from "../services/musixmatch.js";
 
@@ -12,21 +12,19 @@ router.get("/songs", async (req, res) => {
     drummerId?: string;
   };
 
-  let query = db.select().from(songsTable);
+  const conditions = [];
+  if (eraId) conditions.push(eq(songsTable.eraId, eraId));
+  if (genreId) conditions.push(sql`${genreId} = ANY(${songsTable.genreIds})`);
+  if (drummerId) conditions.push(eq(songsTable.drummerId, drummerId));
 
-  if (eraId) {
-    query = query.where(eq(songsTable.eraId, eraId)) as typeof query;
-  }
-  if (genreId) {
-    query = query.where(
-      sql`${genreId} = ANY(${songsTable.genreIds})`
-    ) as typeof query;
-  }
-  if (drummerId) {
-    query = query.where(eq(songsTable.drummerId, drummerId)) as typeof query;
-  }
+  const songs =
+    conditions.length > 0
+      ? await db
+          .select()
+          .from(songsTable)
+          .where(and(...conditions))
+      : await db.select().from(songsTable);
 
-  const songs = await query;
   res.json(songs);
 });
 
