@@ -15,6 +15,9 @@ import {
 import { getCharts } from "../data/charts.js";
 import tsClient from "../typesense/client.js";
 import { logger } from "../lib/logger.js";
+import { fetchLyricsSnippet } from "../services/musixmatch.js";
+
+const lyricsCache = new Map<string, string | null>();
 
 function resolveKeyDrummers(ids: string[]): Drummer[] {
   return ids.flatMap((id) => {
@@ -131,5 +134,11 @@ export const resolvers = {
 
   Song: {
     drummer: (song: Song) => findDrummer(song.drummerId) ?? null,
+    lyricsSnippet: async (song: Song) => {
+      if (lyricsCache.has(song.id)) return lyricsCache.get(song.id) ?? null;
+      const snippet = await fetchLyricsSnippet(song.title, song.artist);
+      lyricsCache.set(song.id, snippet);
+      return snippet;
+    },
   },
 };

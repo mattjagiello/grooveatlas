@@ -1,14 +1,14 @@
 const MUSIXMATCH_BASE = "https://api.musixmatch.com/ws/1.1";
 
 export function isMusixmatchConfigured(): boolean {
-  return Boolean(process.env["MUSIXMATCH_API_KEY"]);
+  return Boolean(process.env["MUSICMATCH_API_KEY"]);
 }
 
 export async function fetchLyricsSnippet(
   trackTitle: string,
   artist: string
 ): Promise<string | null> {
-  const apiKey = process.env["MUSIXMATCH_API_KEY"];
+  const apiKey = process.env["MUSICMATCH_API_KEY"];
   if (!apiKey) return null;
 
   try {
@@ -71,7 +71,7 @@ export async function fetchGenreCharts(
   genreName: string,
   limit: number = 10
 ): Promise<MusixmatchChartTrack[] | null> {
-  const apiKey = process.env["MUSIXMATCH_API_KEY"];
+  const apiKey = process.env["MUSICMATCH_API_KEY"];
   if (!apiKey) return null;
 
   try {
