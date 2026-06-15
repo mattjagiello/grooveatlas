@@ -1,0 +1,65 @@
+Lyric Fingerprint API
+The Lyric Fingerprint API uses its comprehensive database of millions of lyrics and advanced search technology to provide a powerful text-matching service. This enables platforms to detect potential copyrighted musical material at scale.
+Want to integrate Lyric Fingerprint API into your app? Contact us
+In today’s generative AI landscape, platforms face the critical challenge of identifying copyrighted material in user-generated text. Lyric Fingerprint acts as a key component, allowing platforms to proactively flag potential copyright concerns and significantly strengthen their compliance strategies. More information on the Sentinel website. Through a simple POST request to the track.lyrics.fingerprint.post endpoint, developers can submit any text containing at least 10 words and receive a ranked list of matching tracks from the Musixmatch catalog. The size parameter impacts the API performance and latency. It controls the number of candidate lyrics retrieved for comparison against your input. It is set to 10 by default with a maximum of 20, allowing platforms to balance between detection accuracy and processing efficiency. The limit parameter defines how many of the top matching tracks to return in the response.
+
+{
+  "data": {
+    "text": "Was dressed to the nines And we were dancing, dancing Like we're made of starlight, starlight nLike we're made of starlight, starlight"
+  }
+}
+
+    Each track response property includes detailed metadata about the matched track, such as track_name, artist_name, album_name and primary_genres. The same data you would get from a track.get endpoint. The similarity score instead, indicates how closely the input text matches the lyrics of the track, with higher values representing a closer match. 
+
+{
+  "track_list": [
+    {
+      "similarity": 99.23664122137404,
+      "track": {
+        "track_id": 226270199,
+        "track_isrc": "USUG12103675",
+        "commontrack_isrcs": [
+            [
+                "USUG12103675"
+            ]
+        ],
+        "track_spotify_id": "7A2cNLRT0YJc1yjxHlKihs",
+        "track_name": "Starlight (Taylor's Version)",
+        "track_rating": 60,
+        "track_length": 220,
+        "commontrack_id": 135756858,
+        "instrumental": 0,
+        "explicit": 0,
+        "has_lyrics": 1,
+        "has_subtitles": 1,
+        "has_richsync": 1,
+        "num_favourite": 16,
+        "album_id": 47387431,
+        "album_name": "Red (Taylor's Version)",
+        "artist_id": 259675,
+        "artist_name": "Taylor Swift",
+        "album_coverart_100x100": "http://s.mxmcdn.net/images-storage/albums/nocover.png",
+        "album_coverart_350x350": "",
+        "album_coverart_500x500": "",
+        "album_coverart_800x800": "",
+        "track_share_url": "https://www.musixmatch.com/lyrics/Taylor-Swift/Starlight-Taylor-s-Version?utm_source=application&utm_campaign=api&utm_medium=individual%3A1409626377500",
+        "track_edit_url": "https://www.musixmatch.com/lyrics/Taylor-Swift/Starlight-Taylor-s-Version/edit?utm_source=application&utm_campaign=api&utm_medium=individual%3A1409626377500",
+        "restricted": 0,
+        "updated_time": "2021-11-16T05:26:09Z",
+        "primary_genres": {
+            "music_genre_list": [
+                {
+                    "music_genre": {
+                        "music_genre_id": 14,
+                        "music_genre_parent_id": 34,
+                        "music_genre_name": "Pop",
+                        "music_genre_name_extended": "Pop",
+                        "music_genre_vanity": "Pop"
+                    }
+                }
+            ]
+        }
+      }
+    }
+  ]
+}

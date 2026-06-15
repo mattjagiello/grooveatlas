@@ -1,0 +1,191 @@
+The Analysis API by Musixmatch provides detailed insights into song themes, moods, meanings, content ratings, and moderation flags, facilitating scalable song classification and interpretation. With licensed rights from music publishers, Musixmatch uses advanced analysis to create enriched metadata, enhancing the understanding of song lyrics and enabling robust classifications for contextual and thematic insights. Accessible exclusively through the Analysis API, this metadata serves as a powerful tool for applications in content discovery, recommendation, and audience engagement. With a straightforward API call, users can retrieve detailed lyrical metadata for any song by its Musixmatch Track ID or ISRC code, unlocking a world of contextual and thematic information to enhance the listening experience and support diverse use cases. Find below the list of the Lyrics Analysis metadata you will receive for each song.
+​
+Lyrics Analysis metadata overview
+​
+Meaning
+Generates a simple, short explanation of the lyrics’ content. Sample output:
+
+    Title: Flowers
+    Artist: Miley Cyrus
+    Explanation: The song ‘Flowers’ by Miley Cyrus talks about self-love and empowerment after a breakup. The lyrics convey the message of finding inner strength and happiness within oneself, symbolized by buying flowers, painting nails, and enjoying personal activities, emphasizing the ability to love oneself better than relying on someone else.
+
+​
+Moderation
+Identifies a set of content categories that may require moderation. Sample output:
+
+    Title: Look At Me!
+    Artist: XXXTENTACION
+    Categories:
+
+[{
+  "category": "harassment",
+  "is_present": true,
+  "score": 0.8076742617342823
+}, 
+{
+  "category": "hate",
+  "is_present": true,
+  "score": 0.6933337275467522
+},
+{
+  "category": "illicit",
+  "is_present": false,
+  "score": 0.016620672563316466
+},
+{
+  "category": "sexual",
+  "is_present": true,
+  "score": 0.9281824295472227
+},
+{
+  "category": "violence",
+  "is_present": true,
+  "score": 0.6850510703048678
+},
+{
+  "category": "harassment/threatening",
+  "is_present": false,
+  "score": 0.11442913287272342
+},
+{
+   "category": "hate/threatening",
+   "is_present": false,
+   "score": 0.023609190664637875
+},
+{
+  "category": "illicit/violent",
+  "is_present": false,
+  "score": 0.0020301693889894067
+},
+{
+  "category": "self-harm/intent",
+  "is_present": false,
+  “score”: 0.0045969851961812705
+},
+{
+  "category": "self-harm/instructions",
+  "is_present": false,
+  "score": 0.0003475999993060529
+},
+{
+   "category": "self-harm",
+   "is_present": false,
+   "score": 0.040972273201981844
+},
+{
+   "category": "sexual/minors",
+   "is_present": false,
+   "score": 0.0005220125693558398
+},
+{
+    "category": "violence/graphic",
+    "is_present": false,
+    "score": 0.005553221405372517
+}]
+
+​
+Moods
+Extracts a list of an arbitrary number of moods from the lyric corpus to establish a form of lyrics classification through sentiment analysis. Sample output:
+
+    Title: Wish You Were Here
+    Artist: Pink Floyd
+    Main moods: Reflection, Heartbreak, Angst, Nostalgia, Love
+
+​
+Rating
+Assigns to the provided song’s lyrics a parental guide rating, much like the ones from the Motion Picture Association film rating system. Sample output: G, PG, PG-13, R, NC-17
+
+    Title: Lose Yourself
+    Artist: Eminem
+    Audience: R
+    Description: The lyrics contain strong language and themes of struggle, including references to drug use, violence, and adult situations, which are not suitable for children under 17 without parental guidance.
+
+​
+Religions
+Identifies references to religions, religious themes or religious groups within a song’s lyrics. Sample output:
+
+    Title: Il cantico delle creature
+    Artist: Angelo Branduardi
+    Has references: true
+    Referenced religions: “christianity”
+
+​
+Themes
+Extracts a list of the main themes covered by the song’s lyrics, referring to the portion of the songs that better convey such messages. Sample output:
+
+    Title: Beautiful Things
+    Artist: Benson Boone
+    Main themes:
+        “Gratitude and appreciation”:
+            “I found a girl my parents love”,
+            “I thank God every day”
+        “Fear of loss”:
+            “But there’s no man as terrified”,
+            “Oh, I hope I don’t lose you”,
+            “I just might lose it all”
+        “Personal growth and stability”:
+            “I found my mind, I’m feelin’ sane”,
+            “It’s been a while, but I’m finding my faith”
+
+​
+Language Detection
+Identifies the language of a given text. Sample output:
+
+    Title: Mas Que Nada
+    Artist: Sérgio Mendes
+    Languages:
+
+[{ 
+  "is_romanized": false
+  "language_iso_code_1": "pt"
+  "language_iso_code_3": "por"
+  "language_name": "portuguese"
+  "percentage": 100.0
+}]
+
+​
+Entities
+Identifies and categorizes specific elements like names, locations, dates, organizations, and more. Sample output:
+
+"entity_list": [
+    {
+        "entity_name": "Tupac Shakur",
+        "wikidata": {
+            "id": "Q6107",
+            "types": [
+                "human"
+            ],
+            "description": "American rapper (1971–1996)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Tupac_Shakur.jpg/50px-Tupac_Shakur.jpg",
+            "rank": 556934
+        },
+        "categories": [
+            "Things",
+            "People & Groups",
+            "Artists"
+        ],
+        "model_metadata": {
+            "type": "human",
+            "description": "American rapper (1971–1996)"
+        },
+        "matches": [
+            {
+                "matched_text": "Pac",
+                "start_char": 1409,
+                "end_char": 1412
+            },
+            {
+                "matched_text": "Pac",
+                "start_char": 2672,
+                "end_char": 2675
+            }
+        ],
+        "occurrences": 2,
+        "wikipedia": [
+            {
+                "language": "en",
+                "url": "https://en.wikipedia.org/wiki/Tupac_Shakur"
+            }
+        ]
+    }
+]
