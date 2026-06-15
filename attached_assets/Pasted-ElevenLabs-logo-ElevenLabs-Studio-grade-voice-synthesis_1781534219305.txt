@@ -1,0 +1,72 @@
+ElevenLabs logo
+ElevenLabs
+Studio-grade voice synthesis for music apps.
+Claim free ElevenLabs credits through their Discord bot: join the ElevenLabs Discord, open the #coupon-codes channel, hit Start Redemption, pick Musicathon 2026, and enter the email you registered with — the bot sends you a unique coupon code. Async support lives in their #hackathon-support channel.
+
+Text to Speech — Realistic voices in 30+ languages. Stream audio chunks as they're ge…
+Voice Cloning — Create a custom voice from short samples and reuse it across your wh…
+
+    Dubbing & Translation — Translate spoken audio while preserving the original speaker's voice…
+
+Open guide
+Docs
+n8n logo
+n8n
+Visual workflow automation for multi-API music pipelines.
+400 n8n Cloud Pro licenses (1 month each) for Musicathon teams. The vouchers expire right after the event, so redeem yours during the build week. Hit Claim for the step-by-step redemption guide — your voucher code is shared with registered teams via the Musicathon Discord and email.
+
+Visual workflow canvas — Wire together HTTP requests, webhooks, and transforms with a drag-an…
+AI agent nodes — Build autonomous AI agents that call external APIs in loops, handle…
+
+    400+ built-in integrations — Native nodes for Spotify, Google Sheets, Slack, Discord, Postgres, a…
+
+Open guide
+Docs
+Songstats logo
+Songstats
+The same music data the industry uses.
+Free Songstats API access for every Musicathon team during the entire build week — sign up with your Musicathon email and the team provisions your API key.
+
+Track stats — Streams, playlist placements, Shazams, TikTok creates and historical…
+Artist insights — Audience size, growth, top markets and platform breakdown for any ar…
+
+    Playlist intelligence — Discover trending playlists and track every change in real time.
+
+Open guide
+Docs
+LALAL.AI logo
+LALAL.AI
+AI stem separation: vocals, drums, bass, instruments.
+Every team gets a generous LALAL.AI minute package + Voice Cloner credits — register with your Musicathon email and the team grants the credits to your account.
+
+Stem splitter — Separate any audio file into vocals, drums, bass, piano, electric gu…
+Voice Changer & Cloner — Transform a vocal with a voice pack, or build a personalized AI voic…
+
+    Voice cleaner & echo/reverb removal — Strip background music, noise, echo, and reverb to clean up rough re…
+
+Open guide
+Docs
+Cyanite logo
+Cyanite
+AI music tagging — mood, genre, similarity in one API.
+Free Cyanite access for the hackathon. Register at app.cyanite.ai and submit the email you signed up with — the Cyanite team upgrades every participant account to premium in one batch before build week. Need AI Music Detection? Request REST API access separately and they will send you a key.
+
+Auto-tagging — Upload audio or paste a track URL and receive mood, genre, instrumen…
+Similarity search — Find sound-alike tracks across a catalog using vector-based audio em…
+
+    Mood & energy curves — Get time-series mood and energy data per track — perfect for synced…
+
+Open guide
+Docs
+JamBase logo
+JamBase
+Live music data — concerts, setlists, tour dates.
+Free 14-day API trial during the event (no credit card) — just hit 'Free Trial' at data.jambase.com. Need more calls or an extension? Ping JamBase Support. After the event you can keep building free on the Developer plan (1,000 queries/month).
+
+Events search — Query upcoming concerts by artist, city, date range, or genre — glob…
+Setlists — Pull historical setlists per artist or venue for fan apps and analyt…
+
+    Artist & venue catalog — Canonical IDs you can join with Musixmatch metadata for unified arti…
+
+Open guide
+Docs
