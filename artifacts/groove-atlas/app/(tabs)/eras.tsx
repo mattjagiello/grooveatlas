@@ -14,6 +14,8 @@ export default function ErasScreen() {
 
   const { data: eras = [], isLoading } = useEras();
 
+  const reversedEras = [...eras].reverse();
+
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
       <View
@@ -39,7 +41,7 @@ export default function ErasScreen() {
         <ActivityIndicator style={styles.loader} color={colors.primary} />
       ) : (
         <FlatList
-          data={eras as Era[]}
+          data={reversedEras as Era[]}
           keyExtractor={(item) => item.id}
           scrollEnabled={true}
           renderItem={({ item }) => (
