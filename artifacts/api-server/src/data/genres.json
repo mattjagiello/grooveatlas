@@ -6,11 +6,11 @@
     "lat": 29.95,
     "lng": -90.07,
     "era": "1900s–Present",
-    "description": "Jazz drumming revolutionized rhythm by moving the timekeeping pulse from the bass drum to the ride cymbal, enabling unprecedented musical conversation between players. The swing feel — that loose, triplet-based groove — became the heartbeat of American music.",
+    "description": "Jazz drumming revolutionized rhythm by moving the timekeeping pulse from the bass drum to the ride cymbal, enabling unprecedented musical conversation between players. The swing feel — that loose, triplet-based groove — became the heartbeat of American music, evolving from New Orleans second-line through bebop, hard bop, cool jazz, and fusion.",
     "color": "#FFD700",
-    "characteristics": ["Ride cymbal timekeeping", "Swing triplet feel", "Call and response", "Brush technique"],
-    "keyDrummerIds": ["buddy-rich", "gene-krupa", "max-roach"],
-    "iconicSongIds": ["sing-sing-sing", "ko-ko", "birdland"]
+    "characteristics": ["Ride cymbal timekeeping", "Swing triplet feel", "Call and response", "Brush technique", "Melodic use of the kit"],
+    "keyDrummerIds": ["buddy-rich", "gene-krupa", "max-roach", "art-blakey", "elvin-jones", "tony-williams", "steve-gadd", "harvey-mason", "jack-dejohnette", "billy-cobham"],
+    "iconicSongIds": ["sing-sing-sing", "ko-ko", "moanin", "a-love-supreme", "freedom-jazz-dance", "chameleon", "aja", "birds-of-fire"]
   },
   {
     "id": "blues",
@@ -19,11 +19,11 @@
     "lat": 33.0,
     "lng": -90.5,
     "era": "1920s–Present",
-    "description": "Blues drumming is built on feeling over technique — the shuffle groove, the push-and-pull of the pocket, and the space that makes listeners ache. Every note breathes.",
+    "description": "Blues drumming is built on feeling over technique — the shuffle groove, the push-and-pull of the pocket, and the space that makes listeners ache. Every note breathes. From the Mississippi Delta to Chicago electric blues, the drummer's job is to support, respond, and create the undeniable feel that defines the genre.",
     "color": "#191970",
-    "characteristics": ["Shuffle groove", "Deep pocket", "Space and feel", "Straight-ahead 12/8"],
-    "keyDrummerIds": ["earl-palmer"],
-    "iconicSongIds": ["whole-lotta-shakin"]
+    "characteristics": ["Shuffle groove", "Deep pocket", "Space and feel", "Straight-ahead 12/8", "Chicago shuffle"],
+    "keyDrummerIds": ["earl-palmer", "ginger-baker", "charlie-watts"],
+    "iconicSongIds": ["whole-lotta-shakin", "hound-dog", "sunshine-of-your-love"]
   },
   {
     "id": "rock",
@@ -32,11 +32,11 @@
     "lat": 51.5,
     "lng": -0.1,
     "era": "1950s–Present",
-    "description": "Rock drumming took the backbeat from R&B and amplified it to wall-shaking levels. From Ringo's melodic fills to John Bonham's thunderous shuffle to Keith Moon's explosive chaos, rock gave drums a starring role in popular music.",
+    "description": "Rock drumming took the backbeat from R&B and amplified it to wall-shaking levels. From Ringo's melodic fills to John Bonham's thunderous shuffle to Keith Moon's explosive chaos, rock gave drums a starring role in popular music. British Invasion, classic rock, grunge, and alternative each brought new flavors to the backbeat.",
     "color": "#DC143C",
-    "characteristics": ["Strong backbeat", "Power fills", "Dynamic extremes", "Driving eighth notes"],
-    "keyDrummerIds": ["ringo-starr", "keith-moon", "john-bonham", "neil-peart", "dave-grohl", "carter-beauford"],
-    "iconicSongIds": ["come-together", "my-generation", "moby-dick", "smells-like-teen-spirit"]
+    "characteristics": ["Strong backbeat", "Power fills", "Dynamic extremes", "Driving eighth notes", "Crash-ride accent"],
+    "keyDrummerIds": ["ringo-starr", "keith-moon", "john-bonham", "charlie-watts", "mitch-mitchell", "ginger-baker", "mick-fleetwood", "john-densmore", "nick-mason", "phil-collins", "roger-taylor", "dave-grohl", "matt-cameron", "carter-beauford", "chad-smith"],
+    "iconicSongIds": ["come-together", "my-generation", "moby-dick", "smells-like-teen-spirit", "when-the-levee-breaks", "wont-get-fooled-again", "sympathy-for-the-devil", "light-my-fire", "in-the-air-tonight", "bohemian-rhapsody"]
   },
   {
     "id": "funk",
@@ -45,11 +45,11 @@
     "lat": 32.8,
     "lng": -83.6,
     "era": "1960s–Present",
-    "description": "Funk drumming is built on 'the one' — beat one of the bar is the gravitational center of the universe. Ghost notes, syncopated hi-hat patterns, and the interplay between kick and snare create the irresistible groove that makes funk impossible to resist.",
+    "description": "Funk drumming is built on 'the one' — beat one of the bar is the gravitational center of the universe. Ghost notes, syncopated hi-hat patterns, and the interplay between kick and snare create the irresistible groove that makes funk impossible to resist. James Brown, Sly Stone, and Parliament-Funkadelic transformed rhythm into something that demanded physical response.",
     "color": "#FF8C00",
-    "characteristics": ["The 'one' emphasis", "Ghost notes", "Syncopated kick patterns", "Hi-hat interplay"],
-    "keyDrummerIds": ["clyde-stubblefield", "questlove"],
-    "iconicSongIds": ["cold-sweat", "what-is-hip"]
+    "characteristics": ["The 'one' emphasis", "Ghost notes", "Syncopated kick patterns", "Hi-hat interplay", "Pocket lock"],
+    "keyDrummerIds": ["clyde-stubblefield", "al-jackson-jr", "questlove", "bernard-purdie", "zigaboo-modeliste", "david-garibaldi", "sheila-e", "chad-smith"],
+    "iconicSongIds": ["cold-sweat", "funky-drummer", "cissy-strut", "what-is-hip", "give-it-away"]
   },
   {
     "id": "soul",
@@ -58,11 +58,11 @@
     "lat": 42.3,
     "lng": -83.0,
     "era": "1950s–Present",
-    "description": "Soul drumming at Motown and Stax Studios defined precision as a form of expressiveness. Every fill was earned, every accent tasteful, every groove locked tight to the bass. Al Jackson Jr. at Stax and the Funk Brothers at Motown set the standard.",
+    "description": "Soul drumming at Motown and Stax Studios defined precision as a form of expressiveness. Every fill was earned, every accent tasteful, every groove locked tight to the bass. Al Jackson Jr. at Stax and the Funk Brothers at Motown set the standard. Bernard Purdie brought jazz sophistication to soul sessions for Aretha Franklin and Steely Dan.",
     "color": "#B22222",
-    "characteristics": ["Locked pocket", "Tasteful minimal fills", "Accent precision", "Song-first philosophy"],
-    "keyDrummerIds": ["al-jackson-jr", "earl-palmer"],
-    "iconicSongIds": ["green-onions"]
+    "characteristics": ["Locked pocket", "Tasteful minimal fills", "Accent precision", "Song-first philosophy", "Studio discipline"],
+    "keyDrummerIds": ["al-jackson-jr", "earl-palmer", "bernard-purdie", "jeff-porcaro"],
+    "iconicSongIds": ["green-onions", "rosanna", "aja"]
   },
   {
     "id": "hiphop",
@@ -71,11 +71,11 @@
     "lat": 40.8,
     "lng": -73.9,
     "era": "1970s–Present",
-    "description": "Hip-hop broke the rhythm world open by sampling classic drum breaks and looping them into new contexts. Live hip-hop drumming, pioneered by Questlove and the Roots, brought the groove back to the stage.",
+    "description": "Hip-hop broke the rhythm world open by sampling classic drum breaks and looping them into new contexts. The Amen break, the Funky Drummer, the Impeach the President — these loops became the rhythmic DNA of a new culture. Live hip-hop drumming, pioneered by Questlove and the Roots, brought the groove back to the stage.",
     "color": "#800080",
-    "characteristics": ["Sampled breaks", "Laid-back feel", "Boom-bap pocket", "Programmed feel when live"],
-    "keyDrummerIds": ["questlove", "clyde-stubblefield"],
-    "iconicSongIds": ["what-is-hip"]
+    "characteristics": ["Sampled breaks", "Laid-back feel", "Boom-bap pocket", "Programmed feel when live", "Behind-the-beat groove"],
+    "keyDrummerIds": ["questlove", "clyde-stubblefield", "travis-barker"],
+    "iconicSongIds": ["what-is-hip", "uptown-funk", "funky-drummer"]
   },
   {
     "id": "metal",
@@ -84,11 +84,11 @@
     "lat": 52.5,
     "lng": -1.9,
     "era": "1970s–Present",
-    "description": "Metal drumming took rock power and pushed it to extremes of speed, precision, and volume. Double kick drumming enabled machine-gun rhythms. Progressive metal combined technical mastery with creative complexity.",
+    "description": "Metal drumming took rock power and pushed it to extremes of speed, precision, and volume. Black Sabbath created doom-laden heaviness. Thrash metal brought machine-gun double bass and snare speed. Progressive metal combined technical mastery with creative complexity. Death metal pushed blast beats to their physical limit.",
     "color": "#4A4A4A",
-    "characteristics": ["Double kick patterns", "Blast beats", "Speed and precision", "Dynamic power shifts"],
-    "keyDrummerIds": ["neil-peart", "brann-dailor", "matt-cameron"],
-    "iconicSongIds": ["tom-sawyer", "lateralus"]
+    "characteristics": ["Double kick patterns", "Blast beats", "Speed and precision", "Dynamic power shifts", "Extreme tempos"],
+    "keyDrummerIds": ["bill-ward", "neil-peart", "lars-ulrich", "dave-lombardo", "vinnie-paul", "danny-carey", "joey-jordison", "brann-dailor", "matt-cameron"],
+    "iconicSongIds": ["paranoid", "master-of-puppets", "enter-sandman", "lateralus"]
   },
   {
     "id": "reggae",
@@ -97,11 +97,11 @@
     "lat": 17.9,
     "lng": -76.8,
     "era": "1960s–Present",
-    "description": "Reggae drumming created a completely new rhythmic feel by emphasizing the 'and' of beat three (the skank) while leaving spaces where Western music typically places accents. The one-drop pattern is its most iconic contribution.",
+    "description": "Reggae drumming created a completely new rhythmic feel by emphasizing the 'and' of beat three (the skank) while leaving spaces where Western music typically places accents. The one-drop pattern is its most iconic contribution. Carlton Barrett with Bob Marley's Wailers and Sly Dunbar created the sound that would influence musicians worldwide.",
     "color": "#228B22",
-    "characteristics": ["One-drop pattern", "Skank on the 'and'", "Sparse and spacious", "Rim shots on two"],
-    "keyDrummerIds": ["stewart-copeland"],
-    "iconicSongIds": ["roxanne"]
+    "characteristics": ["One-drop pattern", "Skank on the 'and'", "Sparse and spacious", "Rim shots on two", "Steppers pattern"],
+    "keyDrummerIds": ["carlton-barrett", "stewart-copeland"],
+    "iconicSongIds": ["no-woman-no-cry", "roxanne"]
   },
   {
     "id": "afrobeat",
@@ -110,11 +110,11 @@
     "lat": 6.5,
     "lng": 3.4,
     "era": "1970s–Present",
-    "description": "Fela Kuti and Tony Allen created Afrobeat by fusing jazz, funk, and West African rhythmic traditions. Allen's drumming was polyrhythmic genius — multiple independent rhythmic layers that lock together into a hypnotic whole.",
+    "description": "Fela Kuti and Tony Allen created Afrobeat by fusing jazz, funk, and West African rhythmic traditions. Allen's drumming was polyrhythmic genius — multiple independent rhythmic layers that lock together into a hypnotic whole. His patterns feel simultaneously complex and completely natural, built on centuries of African musical tradition.",
     "color": "#FF4500",
-    "characteristics": ["Polyrhythmic layering", "West African traditional rhythms", "Jazz-funk fusion", "Extended grooves"],
-    "keyDrummerIds": ["billy-cobham"],
-    "iconicSongIds": ["birdland"]
+    "characteristics": ["Polyrhythmic layering", "West African traditional rhythms", "Jazz-funk fusion", "Extended grooves", "Circular rhythm"],
+    "keyDrummerIds": ["tony-allen", "alex-acuna"],
+    "iconicSongIds": ["zombie-fela", "birdland"]
   },
   {
     "id": "latin",
@@ -123,10 +123,88 @@
     "lat": 23.1,
     "lng": -82.4,
     "era": "1940s–Present",
-    "description": "Latin drumming draws from centuries of Afro-Cuban rhythmic traditions — clave, montuno, mambo — and fused them with jazz, pop, and rock. The clave pattern underpins everything, and Latin drummers must understand rhythm as a circular, interlocking system.",
+    "description": "Latin drumming draws from centuries of Afro-Cuban rhythmic traditions — clave, montuno, mambo — and fused them with jazz, pop, and rock. The clave pattern underpins everything, and Latin drummers must understand rhythm as a circular, interlocking system. Tito Puente brought timbales to the spotlight; later masters brought these rhythms into fusion and rock.",
     "color": "#9400D3",
-    "characteristics": ["Clave foundation", "Afro-Cuban patterns", "Montuno rhythms", "Layered polyrhythm"],
-    "keyDrummerIds": [],
+    "characteristics": ["Clave foundation", "Afro-Cuban patterns", "Montuno rhythms", "Layered polyrhythm", "Timbale solos"],
+    "keyDrummerIds": ["tito-puente", "antonio-sanchez", "alex-acuna"],
     "iconicSongIds": ["rosanna"]
+  },
+  {
+    "id": "progressive-rock",
+    "name": "Progressive Rock",
+    "origin": "London & Canterbury, England",
+    "lat": 51.3,
+    "lng": 1.1,
+    "era": "1960s–Present",
+    "description": "Progressive rock drummers became composers behind the kit, navigating impossible time signatures and extended pieces that pushed the boundaries of what a drummer could do. Bill Bruford treated the drum kit as a tuned melody instrument. Carl Palmer brought classical piano technique to the drums. Neil Peart elevated the form to its commercial and artistic peak.",
+    "color": "#6A0DAD",
+    "characteristics": ["Odd time signatures", "Extended compositions", "Technical precision", "Musical intelligence", "Kit as melodic voice"],
+    "keyDrummerIds": ["neil-peart", "bill-bruford", "carl-palmer", "gavin-harrison", "brann-dailor"],
+    "iconicSongIds": ["tom-sawyer", "roundabout", "heart-of-the-sunrise", "tarkus"]
+  },
+  {
+    "id": "punk",
+    "name": "Punk",
+    "origin": "London & New York",
+    "lat": 51.5,
+    "lng": -0.12,
+    "era": "1970s–Present",
+    "description": "Punk drumming stripped everything back to pure aggression and speed. No solos, no showmanship — just a relentless, driving beat at maximum velocity. The Ramones codified it: four on the floor, driving eighth notes on the hi-hat, accented snare, loud and fast. Later, Green Day's Travis Barker and Tré Cool evolved punk drumming with hip-hop influences.",
+    "color": "#FF0040",
+    "characteristics": ["Maximum speed", "Pure energy", "No-frills straight beats", "Driving eighth notes", "Raw aggression"],
+    "keyDrummerIds": ["tommy-ramone", "tre-cool", "travis-barker"],
+    "iconicSongIds": ["blitzkrieg-bop", "basket-case"]
+  },
+  {
+    "id": "hard-rock",
+    "name": "Hard Rock",
+    "origin": "Los Angeles, California, USA",
+    "lat": 34.1,
+    "lng": -118.3,
+    "era": "1970s–Present",
+    "description": "Hard rock drumming is built on power, groove, and impact. AC/DC's Phil Rudd showed that perfect locked-in simplicity can be as devastating as any technical showpiece. Deep Purple's Ian Paice combined hard rock power with jazz technique. The Sunset Strip scene in LA birthed a flashier, more theatrical approach.",
+    "color": "#CC0000",
+    "characteristics": ["Power and impact", "Locked groove", "Driving beats", "Strong backbeat", "High-impact fills"],
+    "keyDrummerIds": ["phil-rudd", "ian-paice", "charlie-watts", "mick-fleetwood", "tommy-lee"],
+    "iconicSongIds": ["back-in-black", "highway-star", "we-will-rock-you"]
+  },
+  {
+    "id": "new-wave",
+    "name": "New Wave",
+    "origin": "New York & London",
+    "lat": 40.7,
+    "lng": -74.0,
+    "era": "1977–1990s",
+    "description": "New wave drummers blended punk energy with art-school experimentation and the mechanical pulse of early drum machines. Stewart Copeland's reggae-influenced patterns and post-punk angularity defined the era's rhythmic identity. The hi-hat became a primary creative voice, and angular, syncopated patterns replaced rock's straight-ahead drive.",
+    "color": "#00CED1",
+    "characteristics": ["Reggae-punk hybrid", "Angular patterns", "Drum machine influence", "Sparse precision", "Hi-hat as primary voice"],
+    "keyDrummerIds": ["stewart-copeland"],
+    "iconicSongIds": ["roxanne"]
+  },
+  {
+    "id": "country",
+    "name": "Country",
+    "origin": "Nashville, Tennessee, USA",
+    "lat": 36.2,
+    "lng": -86.8,
+    "era": "1920s–Present",
+    "description": "Country drumming blends rural American musical traditions with a Nashville precision that became one of the most sophisticated session cultures in the world. The Nashville Number System and impeccable feel define country drumming's essence. From train-beat shuffles to the modern country-rock crossover, country drummers are among the world's best sight-readers.",
+    "color": "#D4A017",
+    "characteristics": ["Train beat shuffle", "Nashville precision", "Brush technique", "Two-beat feel", "Understated pocket"],
+    "keyDrummerIds": [],
+    "iconicSongIds": []
+  },
+  {
+    "id": "electronic",
+    "name": "Electronic",
+    "origin": "Detroit & Chicago, USA",
+    "lat": 41.9,
+    "lng": -87.6,
+    "era": "1970s–Present",
+    "description": "Electronic music redefined rhythm by removing the human element — and then made that a feature. The Roland TR-808 and TR-909 drum machines created new rhythmic languages from hip-hop to house to techno that no human drummer could replicate. When Questlove and others brought programmed feels back to live drumming, the circle was complete.",
+    "color": "#00BFFF",
+    "characteristics": ["Machine precision", "Quantized rhythms", "Sub-bass kick", "808 snare snap", "Hypnotic repetition"],
+    "keyDrummerIds": ["questlove", "nate-smith"],
+    "iconicSongIds": ["uptown-funk"]
   }
 ]

@@ -4,10 +4,10 @@
     "name": "1940s",
     "subtitle": "Swing & Bebop",
     "years": "1940–1949",
-    "description": "The big band era gave way to bebop, fundamentally reshaping drumming. Drummers moved timekeeping from the bass drum to the ride cymbal, freeing the rest of the kit for explosive accents. Bebop demanded lightning technique and deep musical conversation.",
+    "description": "The big band era gave way to bebop, fundamentally reshaping drumming. Drummers moved timekeeping from the bass drum to the ride cymbal, freeing the rest of the kit for explosive accents. Bebop demanded lightning technique and deep musical conversation. Gene Krupa made the drummer a celebrity; Max Roach made the drummer a composer.",
     "color": "#8B4513",
     "characteristics": ["Ride cymbal as timekeeper", "Brush technique mastery", "Swinging triplet feel", "Hi-hat on beats 2 and 4", "Conversational interaction"],
-    "keyDrummerIds": ["buddy-rich", "gene-krupa", "max-roach"],
+    "keyDrummerIds": ["buddy-rich", "gene-krupa", "max-roach", "tito-puente"],
     "iconicSongIds": ["sing-sing-sing", "ko-ko"]
   },
   {
@@ -15,76 +15,76 @@
     "name": "1950s",
     "subtitle": "Birth of Rock & Roll",
     "years": "1950–1959",
-    "description": "Rock and roll erupted from rhythm & blues and country, creating a driving backbeat that changed the world. Drumming became simpler, louder, and more physical. The snare on beats 2 and 4 became the pulse of a new generation.",
+    "description": "Rock and roll erupted from rhythm & blues and country, creating a driving backbeat that changed the world. Drumming became simpler, louder, and more physical. The snare on beats 2 and 4 became the pulse of a new generation. Art Blakey's hard bop pushed jazz drumming into exciting new territory simultaneously.",
     "color": "#CD853F",
-    "characteristics": ["Driving backbeat", "Shuffle groove", "Rhythm & blues influence", "Straight 4/4 power", "Simple but locked-in feel"],
-    "keyDrummerIds": ["earl-palmer", "dj-fontana", "gene-krupa"],
-    "iconicSongIds": ["hound-dog", "whole-lotta-shakin"]
+    "characteristics": ["Driving backbeat", "Shuffle groove", "Rhythm & blues influence", "Straight 4/4 power", "Hard bop sophistication"],
+    "keyDrummerIds": ["earl-palmer", "dj-fontana", "gene-krupa", "art-blakey", "jimmy-cobb"],
+    "iconicSongIds": ["hound-dog", "whole-lotta-shakin", "moanin"]
   },
   {
     "id": "1960s",
     "name": "1960s",
-    "subtitle": "British Invasion & Soul",
+    "subtitle": "British Invasion, Soul & Jazz Innovation",
     "years": "1960–1969",
-    "description": "The Beatles and British Invasion brought explosive rock drumming to millions. Simultaneously, Motown and Stax soul created immaculate, pocket-driven grooves with metronomic precision and tasteful fills that served the song above all else.",
+    "description": "The 1960s was drumming's most explosive decade of change. The Beatles and British Invasion brought rock drumming to millions. Motown and Stax soul created immaculate pocket-driven grooves. Simultaneously, Elvin Jones reinvented jazz drumming with John Coltrane, Tony Williams blew minds with Miles Davis, and the first stirrings of funk and heavy rock changed everything by decade's end.",
     "color": "#B8860B",
-    "characteristics": ["Fills as dramatic punctuation", "Tight Motown pocket", "Syncopated soul patterns", "Explosive rock fills", "Serving the song"],
-    "keyDrummerIds": ["ringo-starr", "keith-moon", "al-jackson-jr"],
-    "iconicSongIds": ["come-together", "my-generation", "green-onions"]
+    "characteristics": ["Melodic fills", "Tight Motown pocket", "Bebop evolution into free jazz", "Proto-funk syncopation", "Psychedelic rock power"],
+    "keyDrummerIds": ["ringo-starr", "keith-moon", "al-jackson-jr", "ginger-baker", "charlie-watts", "mitch-mitchell", "john-densmore", "elvin-jones", "tony-williams", "clyde-stubblefield"],
+    "iconicSongIds": ["come-together", "my-generation", "green-onions", "sunshine-of-your-love", "sympathy-for-the-devil", "light-my-fire", "a-love-supreme", "freedom-jazz-dance", "cold-sweat", "cissy-strut", "wipeout", "toad"]
   },
   {
     "id": "1970s",
     "name": "1970s",
     "subtitle": "Funk, Prog Rock & Heavy Metal",
     "years": "1970–1979",
-    "description": "Drumming exploded in every direction in the 1970s. Funk created hypnotic, syncopated grooves with ghost notes and the 'one' as the holy grail. Progressive rock pushed complexity to its limits. Heavy metal brought raw, earth-shaking power.",
+    "description": "Drumming exploded in every direction in the 1970s. Funk created hypnotic, syncopated grooves with ghost notes and 'the one' as the holy grail. Progressive rock pushed complexity to its limits with odd time signatures and extended compositions. Heavy metal and hard rock brought earth-shaking power. Reggae and Afrobeat offered new rhythmic philosophies from outside the Western tradition.",
     "color": "#8B6914",
-    "characteristics": ["Funk syncopation and ghost notes", "Progressive time signatures", "Heavy metal power and speed", "Extended drum solos", "Groove over technique"],
-    "keyDrummerIds": ["john-bonham", "neil-peart", "clyde-stubblefield", "billy-cobham"],
-    "iconicSongIds": ["moby-dick", "tom-sawyer", "cold-sweat", "rosanna"]
+    "characteristics": ["Funk syncopation and ghost notes", "Progressive time signatures", "Heavy metal power", "Extended drum solos", "World music influence"],
+    "keyDrummerIds": ["john-bonham", "neil-peart", "clyde-stubblefield", "bill-bruford", "carl-palmer", "phil-rudd", "ian-paice", "charlie-watts", "carlton-barrett", "tony-allen", "tito-puente", "harvey-mason", "bernard-purdie", "zigaboo-modeliste", "david-garibaldi"],
+    "iconicSongIds": ["moby-dick", "when-the-levee-breaks", "whole-lotta-love", "wont-get-fooled-again", "paranoid", "roundabout", "heart-of-the-sunrise", "tarkus", "we-will-rock-you", "bohemian-rhapsody", "highway-star", "funky-drummer", "no-woman-no-cry", "zombie-fela", "chameleon", "aja", "birds-of-fire", "blitzkrieg-bop"]
   },
   {
     "id": "1980s",
     "name": "1980s",
-    "subtitle": "New Wave, Metal & Hip-Hop",
+    "subtitle": "Studio Precision, Speed Metal & Hip-Hop Roots",
     "years": "1980–1989",
-    "description": "Electronic drum machines entered mainstream music as the Roland TR-808 and TR-909 redefined rhythm. Studio drummers achieved new levels of precision. Speed metal pushed human limits. The gated reverb snare became an icon of the era.",
+    "description": "Electronic drum machines entered mainstream music as the Roland TR-808 and TR-909 redefined rhythm. Studio drummers achieved unprecedented levels of precision. Speed metal pushed human physical limits with Lars Ulrich and Slayer's Dave Lombardo. The gated reverb snare became an icon of the era. Hip-hop's foundational breaks were laid down.",
     "color": "#7B68EE",
-    "characteristics": ["Gated reverb snare sound", "Electronic drum machine influence", "Speed metal precision", "Polished studio technique", "Machine-influenced feel"],
-    "keyDrummerIds": ["stewart-copeland", "jeff-porcaro", "dave-weckl", "sheila-e"],
-    "iconicSongIds": ["roxanne", "rosanna", "lets-go-crazy"]
+    "characteristics": ["Gated reverb snare", "Electronic drum machine influence", "Speed metal precision", "Studio polish", "Machine-influenced feel"],
+    "keyDrummerIds": ["stewart-copeland", "jeff-porcaro", "dave-weckl", "sheila-e", "lars-ulrich", "dave-lombardo", "vinnie-paul", "phil-collins", "roger-taylor", "tommy-lee", "phil-rudd"],
+    "iconicSongIds": ["roxanne", "rosanna", "lets-go-crazy", "back-in-black", "master-of-puppets", "in-the-air-tonight", "tom-sawyer"]
   },
   {
     "id": "1990s",
     "name": "1990s",
-    "subtitle": "Grunge, Hip-Hop & Electronic",
+    "subtitle": "Grunge, Hip-Hop & Alternative Explosion",
     "years": "1990–1999",
-    "description": "Grunge stripped drumming back to primal emotion — loud, raw, and unpolished. Hip-hop producers sampled classic Clyde Stubblefield and Funky Drummer breaks. Electronic music created new rhythmic possibilities outside traditional drumming.",
+    "description": "Grunge stripped drumming back to primal emotion — loud, raw, and unpolished. Dave Grohl's drumming on Nevermind defined a generation. Hip-hop producers sampled classic Clyde Stubblefield and Funky Drummer breaks into new gold. Metal diversified into death metal, nu-metal, and progressive forms. Alternative rock brought new rhythmic vocabularies from indie to Britpop.",
     "color": "#556B2F",
-    "characteristics": ["Raw power and dynamics", "Sampled breaks in hip-hop", "Extreme dynamic contrast", "Back-to-basics rock feel", "Emotional expressiveness"],
-    "keyDrummerIds": ["dave-grohl", "questlove", "carter-beauford", "matt-cameron"],
-    "iconicSongIds": ["smells-like-teen-spirit", "what-is-hip"]
+    "characteristics": ["Raw power and dynamics", "Sampled breaks in hip-hop", "Extreme dynamic contrast", "Back-to-basics rock feel", "Progressive metal evolution"],
+    "keyDrummerIds": ["dave-grohl", "questlove", "carter-beauford", "matt-cameron", "travis-barker", "larry-ulrich", "joey-jordison", "danny-carey", "tre-cool"],
+    "iconicSongIds": ["smells-like-teen-spirit", "enter-sandman", "basket-case", "give-it-away", "lateralus"]
   },
   {
     "id": "2000s",
     "name": "2000s",
     "subtitle": "Digital Age & Post-Rock",
     "years": "2000–2009",
-    "description": "Digital recording and Pro Tools transformed how drums were captured. Drummers faced new demands for quantized precision alongside authentic feel. Post-rock and metal explored polyrhythm and extended technique at extreme tempos.",
+    "description": "Digital recording and Pro Tools transformed how drums were captured and corrected. Drummers faced new demands for quantized precision alongside authentic feel. Post-rock and progressive metal explored polyrhythm and extended technique. YouTube began democratizing drumming education. Hybrid electronic/acoustic setups became commercially viable.",
     "color": "#4682B4",
     "characteristics": ["Studio precision and click tracks", "Polyrhythmic patterns", "Extreme metal tempos", "Hybrid electronic/acoustic setups", "YouTube education culture begins"],
-    "keyDrummerIds": ["travis-barker", "brann-dailor", "antonio-sanchez"],
-    "iconicSongIds": ["all-the-small-things", "lateralus"]
+    "keyDrummerIds": ["travis-barker", "brann-dailor", "antonio-sanchez", "gavin-harrison", "joey-jordison"],
+    "iconicSongIds": ["all-the-small-things"]
   },
   {
     "id": "2010s",
     "name": "2010s",
-    "subtitle": "Streaming & Genre Fusion",
+    "subtitle": "Streaming, Trap & Genre Fusion",
     "years": "2010–2019",
-    "description": "Streaming democratized music discovery and drumming followed. Trap hi-hat patterns from hip-hop infiltrated pop and R&B. Hybrid electronic/acoustic kits blurred the line between live and programmed. Social media created the viral drum moment.",
+    "description": "Streaming democratized music discovery and drumming followed. Trap hi-hat patterns from hip-hop infiltrated pop and R&B. Hybrid electronic/acoustic kits blurred the line between live and programmed performance. Social media created the viral drum moment — Nate Smith, Larnell Lewis, and others became stars through online clips. Genre boundaries dissolved completely.",
     "color": "#2E8B57",
     "characteristics": ["Trap hi-hat subdivisions", "Hybrid electronic kits", "Genre-blending rhythms", "Social media viral moments", "Minimalism in pop production"],
-    "keyDrummerIds": ["nate-smith", "cindy-blackman", "antonio-sanchez"],
-    "iconicSongIds": ["uptown-funk", "birdland"]
+    "keyDrummerIds": ["nate-smith", "cindy-blackman", "antonio-sanchez", "gavin-harrison"],
+    "iconicSongIds": ["uptown-funk"]
   }
 ]
