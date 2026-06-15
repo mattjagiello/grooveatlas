@@ -5,15 +5,28 @@
     "born": 1917,
     "died": 1987,
     "primaryEra": "1950s",
-    "eras": ["1940s", "1950s", "1960s", "1970s", "1980s"],
-    "genres": ["jazz"],
-    "bands": ["Buddy Rich Big Band", "Tommy Dorsey Orchestra"],
+    "eras": [
+      "1940s",
+      "1950s",
+      "1960s",
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Buddy Rich Big Band",
+      "Tommy Dorsey Orchestra"
+    ],
     "bio": "Often called the greatest drummer who ever lived, Buddy Rich was a self-taught prodigy who began performing professionally as a toddler. His big band drumming combined blazing speed, phenomenal power, and an effortless musicality that left audiences stunned for decades. He never read music yet commanded orchestras with absolute authority.",
     "signatureStyle": "Lightning-fast single-stroke rolls, explosive big band power, and effortless swing feel at any tempo.",
     "bpmMin": 120,
     "bpmMax": 300,
     "influence": "Set the technical benchmark for all jazz drumming that followed. His big band recordings remain the definitive example of swing drumming at its most spectacular.",
-    "iconicSongIds": ["sing-sing-sing"]
+    "iconicSongIds": [
+      "sing-sing-sing"
+    ]
   },
   {
     "id": "gene-krupa",
@@ -21,15 +34,25 @@
     "born": 1909,
     "died": 1973,
     "primaryEra": "1940s",
-    "eras": ["1940s", "1950s"],
-    "genres": ["jazz"],
-    "bands": ["Benny Goodman Orchestra", "Gene Krupa Orchestra"],
+    "eras": [
+      "1940s",
+      "1950s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Benny Goodman Orchestra",
+      "Gene Krupa Orchestra"
+    ],
     "bio": "Gene Krupa turned the drum kit into a star attraction. His showmanship and technical brilliance brought the drums to center stage in Benny Goodman's Orchestra, making him the first famous rock star drummer decades before rock existed. His 1937 solo on 'Sing, Sing, Sing' is one of the most celebrated performances in music history.",
     "signatureStyle": "Theatrical showmanship combined with solid swing technique. Krupa made watching the drummer as exciting as hearing the music.",
     "bpmMin": 90,
     "bpmMax": 220,
     "influence": "Elevated the drummer from rhythm section support to featured soloist and public celebrity. Created the visual template for rock drumming.",
-    "iconicSongIds": ["sing-sing-sing"]
+    "iconicSongIds": [
+      "sing-sing-sing"
+    ]
   },
   {
     "id": "max-roach",
@@ -37,15 +60,27 @@
     "born": 1924,
     "died": 2007,
     "primaryEra": "1940s",
-    "eras": ["1940s", "1950s", "1960s", "1970s"],
-    "genres": ["jazz"],
-    "bands": ["Charlie Parker Quintet", "Clifford Brown-Max Roach Quintet"],
+    "eras": [
+      "1940s",
+      "1950s",
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Charlie Parker Quintet",
+      "Clifford Brown-Max Roach Quintet"
+    ],
     "bio": "Max Roach was bebop's rhythmic architect. He developed the modern jazz drumming approach where the ride cymbal carries the time and the rest of the kit is used melodically. His political consciousness led to landmark albums like 'We Insist! Freedom Now Suite,' making him drumming's first activist-artist.",
     "signatureStyle": "Melodic use of the entire drum kit, precise bebop ride cymbal patterns, and a compositional approach to drumming that treats drums as a pitched instrument.",
     "bpmMin": 100,
     "bpmMax": 280,
     "influence": "Defined modern jazz drumming. Every jazz drummer since learns Max Roach's conceptual approach to ride cymbal timekeeping and melodic use of the kit.",
-    "iconicSongIds": ["ko-ko"]
+    "iconicSongIds": [
+      "ko-ko"
+    ]
   },
   {
     "id": "art-blakey",
@@ -53,15 +88,28 @@
     "born": 1919,
     "died": 1990,
     "primaryEra": "1950s",
-    "eras": ["1940s", "1950s", "1960s", "1970s", "1980s"],
-    "genres": ["jazz"],
-    "bands": ["Jazz Messengers", "Billy Eckstine Orchestra"],
-    "bio": "Art Blakey was jazz's greatest bandleader-drummer, running the Jazz Messengers as a finishing school for every major jazz talent from Lee Morgan to Wynton Marsalis. His polyrhythmic approach — drawn from studying African drumming — revolutionized the relationship between jazz drumming and African tradition. His press rolls and explosive fills became essential jazz vocabulary.",
+    "eras": [
+      "1940s",
+      "1950s",
+      "1960s",
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Jazz Messengers",
+      "Billy Eckstine Orchestra"
+    ],
+    "bio": "Art Blakey was jazz's greatest bandleader-drummer, running the Jazz Messengers as a finishing school for every major jazz talent from Lee Morgan to Wynton Marsalis. His polyrhythmic approach \u2014 drawn from studying African drumming \u2014 revolutionized the relationship between jazz drumming and African tradition. His press rolls and explosive fills became essential jazz vocabulary.",
     "signatureStyle": "Explosive press rolls, polyrhythmic left hand independence, powerful swing, and the ability to lift a band to extraordinary heights through sheer rhythmic force.",
     "bpmMin": 120,
     "bpmMax": 280,
     "influence": "Mentored more great jazz musicians than anyone in history through the Jazz Messengers. His hard bop drumming style remains one of jazz's most studied approaches.",
-    "iconicSongIds": ["moanin"]
+    "iconicSongIds": [
+      "moanin"
+    ]
   },
   {
     "id": "elvin-jones",
@@ -69,15 +117,28 @@
     "born": 1927,
     "died": 2004,
     "primaryEra": "1960s",
-    "eras": ["1950s", "1960s", "1970s", "1980s", "1990s"],
-    "genres": ["jazz"],
-    "bands": ["John Coltrane Quartet", "Elvin Jones Jazz Machine"],
+    "eras": [
+      "1950s",
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "John Coltrane Quartet",
+      "Elvin Jones Jazz Machine"
+    ],
     "bio": "Elvin Jones completely reinvented jazz drumming with his 11-year partnership with John Coltrane. Where previous jazz drummers maintained a clear pulse, Elvin created dense, polyrhythmic waves of sound that seemed to breathe and surge like a living organism. His triplet-based patterns played simultaneously across multiple limbs redefined what a jazz drummer could do.",
     "signatureStyle": "Dense polyrhythmic waves, triplets spread across the entire kit, explosive physical power combined with extraordinary swing, and a revolutionary approach to implied pulse.",
     "bpmMin": 100,
     "bpmMax": 300,
     "influence": "Revolutionized jazz drumming's relationship to time and rhythm. His work with Coltrane on A Love Supreme is among the most studied drumming in jazz history.",
-    "iconicSongIds": ["a-love-supreme"]
+    "iconicSongIds": [
+      "a-love-supreme"
+    ]
   },
   {
     "id": "tony-williams",
@@ -85,15 +146,28 @@
     "born": 1945,
     "died": 1997,
     "primaryEra": "1960s",
-    "eras": ["1960s", "1970s", "1980s", "1990s"],
-    "genres": ["jazz", "rock"],
-    "bands": ["Miles Davis Second Great Quintet", "Lifetime"],
-    "bio": "Tony Williams joined Miles Davis's band at 17 and immediately changed jazz drumming forever. His ability to stretch and compress time — making the pulse feel simultaneously suspended and intensely propulsive — was unprecedented. With his band Lifetime he pioneered jazz-rock fusion before it had a name.",
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "jazz",
+      "rock"
+    ],
+    "bands": [
+      "Miles Davis Second Great Quintet",
+      "Lifetime"
+    ],
+    "bio": "Tony Williams joined Miles Davis's band at 17 and immediately changed jazz drumming forever. His ability to stretch and compress time \u2014 making the pulse feel simultaneously suspended and intensely propulsive \u2014 was unprecedented. With his band Lifetime he pioneered jazz-rock fusion before it had a name.",
     "signatureStyle": "Radical manipulation of time and pulse, explosive hi-hat work, ability to make the beat feel simultaneously stretched and driving, revolutionary interaction with soloists.",
     "bpmMin": 120,
     "bpmMax": 340,
     "influence": "The primary influence on virtually every jazz drummer who followed. His work with the Miles Davis Second Great Quintet is the benchmark of interactive jazz drumming.",
-    "iconicSongIds": ["freedom-jazz-dance"]
+    "iconicSongIds": [
+      "freedom-jazz-dance"
+    ]
   },
   {
     "id": "steve-gadd",
@@ -101,15 +175,31 @@
     "born": 1945,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s", "2010s"],
-    "genres": ["jazz", "soul", "rock"],
-    "bands": ["Stuff", "Paul Simon Band", "session musician — Steely Dan, Eric Clapton, James Taylor"],
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "soul",
+      "rock"
+    ],
+    "bands": [
+      "Stuff",
+      "Paul Simon Band",
+      "session musician \u2014 Steely Dan, Eric Clapton, James Taylor"
+    ],
     "bio": "Steve Gadd is widely regarded as the greatest session drummer in music history. The list of iconic recordings he played on reads like a greatest-hits compilation of Western music: Steely Dan's 'Aja,' Paul Simon's '50 Ways to Leave Your Lover,' and Eric Clapton's 'Lay Down Sally.' His groove combines pocket, musicality, and feel in a way that seems effortless.",
     "signatureStyle": "The definitive blend of pocket, feel, and technique. Every accent falls exactly where it should, every fill serves the song perfectly, every groove is deep and musical.",
     "bpmMin": 80,
     "bpmMax": 200,
     "influence": "Defined the gold standard of studio session drumming. His work across hundreds of albums makes him the most influential groove drummer in recording history.",
-    "iconicSongIds": ["aja"]
+    "iconicSongIds": [
+      "aja"
+    ]
   },
   {
     "id": "harvey-mason",
@@ -117,15 +207,28 @@
     "born": 1947,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s"],
-    "genres": ["jazz", "funk"],
-    "bands": ["Herbie Hancock's Headhunters", "session musician"],
-    "bio": "Harvey Mason played the drum groove on Herbie Hancock's 'Chameleon' — one of the most commercially successful jazz-funk recordings ever made. His ability to bridge jazz vocabulary with deep funk pocket made him a sought-after session player throughout the 1970s and 80s. The Headhunters' album is a landmark in the fusion of jazz sophistication with funk sensibility.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "jazz",
+      "funk"
+    ],
+    "bands": [
+      "Herbie Hancock's Headhunters",
+      "session musician"
+    ],
+    "bio": "Harvey Mason played the drum groove on Herbie Hancock's 'Chameleon' \u2014 one of the most commercially successful jazz-funk recordings ever made. His ability to bridge jazz vocabulary with deep funk pocket made him a sought-after session player throughout the 1970s and 80s. The Headhunters' album is a landmark in the fusion of jazz sophistication with funk sensibility.",
     "signatureStyle": "Jazz vocabulary applied to deep funk groove, precise pocket with jazz phrasing, and the ability to keep a sophisticated groove feeling natural and danceable.",
     "bpmMin": 90,
     "bpmMax": 180,
     "influence": "His groove on 'Chameleon' influenced the entire jazz-funk and smooth jazz world. A model for how jazz drummers can work in commercial contexts without losing their voice.",
-    "iconicSongIds": ["chameleon"]
+    "iconicSongIds": [
+      "chameleon"
+    ]
   },
   {
     "id": "jimmy-cobb",
@@ -133,15 +236,30 @@
     "born": 1929,
     "died": 2020,
     "primaryEra": "1950s",
-    "eras": ["1950s", "1960s", "1970s", "1980s", "1990s", "2000s"],
-    "genres": ["jazz"],
-    "bands": ["Miles Davis Sextet", "Cannonball Adderley Quintet"],
-    "bio": "Jimmy Cobb was the drummer on Miles Davis's 'Kind of Blue' — the best-selling jazz album of all time. His understated, flowing approach created the perfect rhythmic backdrop for some of the most important improvisations in jazz history. His seamless, economical playing proved that supporting musicians can be as important as the soloists they serve.",
+    "eras": [
+      "1950s",
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Miles Davis Sextet",
+      "Cannonball Adderley Quintet"
+    ],
+    "bio": "Jimmy Cobb was the drummer on Miles Davis's 'Kind of Blue' \u2014 the best-selling jazz album of all time. His understated, flowing approach created the perfect rhythmic backdrop for some of the most important improvisations in jazz history. His seamless, economical playing proved that supporting musicians can be as important as the soloists they serve.",
     "signatureStyle": "Flowing, economical swing, perfect ride cymbal touch, and the ability to create a supportive rhythmic environment that makes soloists sound their absolute best.",
     "bpmMin": 100,
     "bpmMax": 250,
     "influence": "His drumming on Kind of Blue defines the ideal of supportive, musical jazz drumming. A masterclass in how to serve an ensemble without sacrificing your own voice.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "so-what",
+      "all-blues"
+    ]
   },
   {
     "id": "jack-dejohnette",
@@ -149,31 +267,63 @@
     "born": 1942,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1960s", "1970s", "1980s", "1990s", "2000s", "2010s"],
-    "genres": ["jazz"],
-    "bands": ["Miles Davis", "Keith Jarrett Trio", "Special Edition"],
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Miles Davis",
+      "Keith Jarrett Trio",
+      "Special Edition"
+    ],
     "bio": "Jack DeJohnette succeeded Tony Williams in Miles Davis's band and then forged one of the longest and most celebrated partnerships in jazz as the drummer of the Keith Jarrett Trio. His orchestral approach to the drum kit, his mastery of every jazz style from bebop to free, and his compositional sensibility make him jazz drumming's greatest living master.",
     "signatureStyle": "Orchestral approach to the drum kit, fluid movement between styles, extraordinary ability to respond to and support improvising musicians, and an expansive musical palette.",
     "bpmMin": 70,
     "bpmMax": 280,
     "influence": "Bridges every era of modern jazz drumming. His 40-year partnership with Keith Jarrett and Gary Peacock is one of the defining chamber jazz relationships in history.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "miles-voodoo-down",
+      "shhh-peaceful"
+    ]
   },
   {
     "id": "alex-acuna",
-    "name": "Alex Acuña",
+    "name": "Alex Acu\u00f1a",
     "born": 1944,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s", "2010s"],
-    "genres": ["jazz", "latin", "afrobeat"],
-    "bands": ["Weather Report", "Elvis Presley Band", "session musician"],
-    "bio": "Alex Acuña is one of the most versatile drummers in music, equally at home in Latin jazz, fusion, and rock. As drummer on Weather Report's landmark 'Heavy Weather' album — featuring 'Birdland' — he brought Afro-Cuban rhythmic depth to jazz fusion. Born in Peru, his rhythmic palette draws from South American, African, and jazz traditions simultaneously.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "latin",
+      "afrobeat"
+    ],
+    "bands": [
+      "Weather Report",
+      "Elvis Presley Band",
+      "session musician"
+    ],
+    "bio": "Alex Acu\u00f1a is one of the most versatile drummers in music, equally at home in Latin jazz, fusion, and rock. As drummer on Weather Report's landmark 'Heavy Weather' album \u2014 featuring 'Birdland' \u2014 he brought Afro-Cuban rhythmic depth to jazz fusion. Born in Peru, his rhythmic palette draws from South American, African, and jazz traditions simultaneously.",
     "signatureStyle": "Afro-Cuban rhythmic foundation applied to jazz fusion, extraordinary polyrhythmic independence, and the ability to blend Latin percussion tradition with modern jazz drumming.",
     "bpmMin": 90,
     "bpmMax": 200,
     "influence": "Demonstrated how Latin and Afro-Cuban rhythmic traditions can enrich jazz fusion. His work with Weather Report is a landmark in the meeting of rhythmic cultures.",
-    "iconicSongIds": ["birdland"]
+    "iconicSongIds": [
+      "birdland"
+    ]
   },
   {
     "id": "earl-palmer",
@@ -181,15 +331,29 @@
     "born": 1924,
     "died": 2008,
     "primaryEra": "1950s",
-    "eras": ["1950s", "1960s", "1970s", "1980s"],
-    "genres": ["rock", "blues", "soul"],
-    "bands": ["Session musician — no primary band"],
+    "eras": [
+      "1950s",
+      "1960s",
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "rock",
+      "blues",
+      "soul"
+    ],
+    "bands": [
+      "Session musician \u2014 no primary band"
+    ],
     "bio": "Earl Palmer is the invisible genius behind rock and roll. As the go-to session drummer in New Orleans and later Los Angeles, he played on more hit records than any drummer in history. He invented the rock and roll backbeat as we know it.",
     "signatureStyle": "Invented the modern rock backbeat. Metronomic consistency, perfect pocket, and the ability to adapt to any musical style with complete naturalness.",
     "bpmMin": 80,
     "bpmMax": 180,
     "influence": "The uncredited rhythmic foundation of early rock and roll. His adaptability defined what a professional session drummer means.",
-    "iconicSongIds": ["hound-dog", "whole-lotta-shakin"]
+    "iconicSongIds": [
+      "hound-dog",
+      "whole-lotta-shakin"
+    ]
   },
   {
     "id": "dj-fontana",
@@ -197,15 +361,25 @@
     "born": 1931,
     "died": 2018,
     "primaryEra": "1950s",
-    "eras": ["1950s", "1960s"],
-    "genres": ["rock", "blues"],
-    "bands": ["Elvis Presley's Band"],
+    "eras": [
+      "1950s",
+      "1960s"
+    ],
+    "genres": [
+      "rock",
+      "blues"
+    ],
+    "bands": [
+      "Elvis Presley's Band"
+    ],
     "bio": "D.J. Fontana was the drummer behind Elvis Presley's greatest recordings. His instinctive, muscular playing was the rhythmic backbone of early rock and roll's most iconic performances. He joined Elvis in 1954 and became one of the most recorded drummers in music history.",
     "signatureStyle": "Powerful, instinctive rock and roll playing with explosive snare fills and a driving shuffle feel that perfectly matched Elvis's hip-swinging energy.",
     "bpmMin": 90,
     "bpmMax": 160,
     "influence": "Defined the sound of early rock and roll drumming through his work with Elvis. His instinctive style influenced every rock drummer who followed.",
-    "iconicSongIds": ["hound-dog"]
+    "iconicSongIds": [
+      "hound-dog"
+    ]
   },
   {
     "id": "ringo-starr",
@@ -213,15 +387,24 @@
     "born": 1940,
     "died": null,
     "primaryEra": "1960s",
-    "eras": ["1960s", "1970s"],
-    "genres": ["rock"],
-    "bands": ["The Beatles"],
-    "bio": "Often underestimated, Ringo Starr's drumming is a masterclass in taste, melody, and song-serving. His unconventional patterns — leading fills with his left hand, playing off the snare melody — created unique rhythmic identities for every Beatles song. He is arguably the most influential pop drummer ever recorded.",
+    "eras": [
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "rock"
+    ],
+    "bands": [
+      "The Beatles"
+    ],
+    "bio": "Often underestimated, Ringo Starr's drumming is a masterclass in taste, melody, and song-serving. His unconventional patterns \u2014 leading fills with his left hand, playing off the snare melody \u2014 created unique rhythmic identities for every Beatles song. He is arguably the most influential pop drummer ever recorded.",
     "signatureStyle": "Left-hand led fills, melodic approach to drum patterns, and an uncanny ability to create the perfect rhythmic statement for each song.",
     "bpmMin": 80,
     "bpmMax": 150,
     "influence": "Proved that feel and musicality matter more than technical flash. His work with The Beatles remains a masterclass in creative simplicity.",
-    "iconicSongIds": ["come-together"]
+    "iconicSongIds": [
+      "come-together"
+    ]
   },
   {
     "id": "keith-moon",
@@ -229,15 +412,25 @@
     "born": 1946,
     "died": 1978,
     "primaryEra": "1960s",
-    "eras": ["1960s", "1970s"],
-    "genres": ["rock"],
-    "bands": ["The Who"],
-    "bio": "Keith Moon was drumming's great anarchist — he played melodies on the drums, treated the kit as a lead instrument, and refused to play a static timekeeping role. His explosive, lead-style drumming sounds like nothing before or since. 'Won't Get Fooled Again' showcases his ability to power a band while simultaneously creating melodic counterpoints.",
+    "eras": [
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "rock"
+    ],
+    "bands": [
+      "The Who"
+    ],
+    "bio": "Keith Moon was drumming's great anarchist \u2014 he played melodies on the drums, treated the kit as a lead instrument, and refused to play a static timekeeping role. His explosive, lead-style drumming sounds like nothing before or since. 'Won't Get Fooled Again' showcases his ability to power a band while simultaneously creating melodic counterpoints.",
     "signatureStyle": "Melodic lead drumming, explosive fills that ignore bar lines, simultaneous tom runs and cymbal crashes that create rhythmic chaos from which groove magically emerges.",
     "bpmMin": 100,
     "bpmMax": 200,
     "influence": "Redefined what a drummer could do musically. His approach to drums as a melodic lead instrument opened entirely new creative possibilities.",
-    "iconicSongIds": ["my-generation", "wont-get-fooled-again"]
+    "iconicSongIds": [
+      "my-generation",
+      "wont-get-fooled-again"
+    ]
   },
   {
     "id": "ginger-baker",
@@ -245,15 +438,30 @@
     "born": 1939,
     "died": 2019,
     "primaryEra": "1960s",
-    "eras": ["1960s", "1970s", "1980s"],
-    "genres": ["rock", "jazz", "blues"],
-    "bands": ["Cream", "Blind Faith", "Ginger Baker's Air Force"],
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "rock",
+      "jazz",
+      "blues"
+    ],
+    "bands": [
+      "Cream",
+      "Blind Faith",
+      "Ginger Baker's Air Force"
+    ],
     "bio": "Ginger Baker was the first rock drummer with genuine jazz sophistication and the first to deeply integrate African drumming traditions into rock. His two-bass-drum setup and polyrhythmic independence enabled him to play jazz improvisation at rock volumes. His legendary feud with Jack Bruce was matched only by the extraordinary music they made.",
     "signatureStyle": "Jazz improvisation at rock volumes, two-bass-drum polyrhythm, African drumming patterns within rock context, and marathon solos that built genuine musical narratives.",
     "bpmMin": 80,
     "bpmMax": 220,
     "influence": "Introduced jazz sophistication and African rhythmic thinking to rock drumming. The first rock drummer to be taken seriously as a jazz musician.",
-    "iconicSongIds": ["sunshine-of-your-love", "toad"]
+    "iconicSongIds": [
+      "sunshine-of-your-love",
+      "toad"
+    ]
   },
   {
     "id": "charlie-watts",
@@ -261,15 +469,29 @@
     "born": 1941,
     "died": 2021,
     "primaryEra": "1960s",
-    "eras": ["1960s", "1970s", "1980s", "1990s", "2000s", "2010s"],
-    "genres": ["rock", "blues"],
-    "bands": ["The Rolling Stones"],
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "blues"
+    ],
+    "bands": [
+      "The Rolling Stones"
+    ],
     "bio": "Charlie Watts was the quiet, immovable engine behind the Rolling Stones' 60-year career. A jazz drummer at heart who played in a rock and roll band, his laid-back, behind-the-beat feel created the Stones' signature swing. He consistently proved that restraint, pocket, and feel are worth more than technical showmanship.",
     "signatureStyle": "Laid-back jazz feel in a rock context, behind-the-beat pocket that gives Stones recordings their swagger, minimal fills with maximum impact.",
     "bpmMin": 90,
     "bpmMax": 170,
     "influence": "The defining example of pocket drumming in rock. His 60-year career with the Stones is the longest-running case study in groove-over-technique in popular music.",
-    "iconicSongIds": ["sympathy-for-the-devil"]
+    "iconicSongIds": [
+      "sympathy-for-the-devil"
+    ]
   },
   {
     "id": "mitch-mitchell",
@@ -277,15 +499,26 @@
     "born": 1947,
     "died": 2008,
     "primaryEra": "1960s",
-    "eras": ["1960s", "1970s"],
-    "genres": ["rock", "jazz"],
-    "bands": ["Jimi Hendrix Experience"],
-    "bio": "Mitch Mitchell brought jazz-influenced drumming to the Jimi Hendrix Experience at a moment when rock drumming was still finding its language. His fluid, swinging approach — drawn from Elvin Jones and Tony Williams — created a paradox: a jazz drummer playing rock music who made it sound freer than either genre alone. His interplay with Hendrix remains unmatched.",
+    "eras": [
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "rock",
+      "jazz"
+    ],
+    "bands": [
+      "Jimi Hendrix Experience"
+    ],
+    "bio": "Mitch Mitchell brought jazz-influenced drumming to the Jimi Hendrix Experience at a moment when rock drumming was still finding its language. His fluid, swinging approach \u2014 drawn from Elvin Jones and Tony Williams \u2014 created a paradox: a jazz drummer playing rock music who made it sound freer than either genre alone. His interplay with Hendrix remains unmatched.",
     "signatureStyle": "Jazz-influenced fluidity in rock context, conversational interplay with Hendrix, swinging triplet-based patterns, and the ability to respond spontaneously to Hendrix's improvisations.",
     "bpmMin": 100,
     "bpmMax": 200,
     "influence": "Showed how jazz drumming vocabulary could liberate rock music. His work with Hendrix remains the ultimate example of drummer-guitarist telepathy in rock.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "manic-depression",
+      "fire-hendrix"
+    ]
   },
   {
     "id": "nick-mason",
@@ -293,15 +526,27 @@
     "born": 1944,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1960s", "1970s", "1980s", "1990s"],
-    "genres": ["rock"],
-    "bands": ["Pink Floyd"],
-    "bio": "Nick Mason is proof that a drummer's role in a band can be as much about sound design as rhythmic precision. His work with Pink Floyd favored atmosphere over technique — carefully placed hits, textures created with mallets and unusual implements, and the space to let music breathe. His playing on 'Money' with its 7/4 time signature remains an enduring lesson in making complex time feel natural.",
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "rock"
+    ],
+    "bands": [
+      "Pink Floyd"
+    ],
+    "bio": "Nick Mason is proof that a drummer's role in a band can be as much about sound design as rhythmic precision. His work with Pink Floyd favored atmosphere over technique \u2014 carefully placed hits, textures created with mallets and unusual implements, and the space to let music breathe. His playing on 'Money' with its 7/4 time signature remains an enduring lesson in making complex time feel natural.",
     "signatureStyle": "Atmospheric textures, unconventional implements and techniques, precise placement over density, and the wisdom to serve Pink Floyd's sonic landscapes without over-playing.",
     "bpmMin": 60,
     "bpmMax": 150,
     "influence": "The model for drumming as sound design and texture. His approach showed that atmospheric restraint can be as powerful as explosive technique.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "time-pink-floyd",
+      "money-pink-floyd"
+    ]
   },
   {
     "id": "john-densmore",
@@ -309,15 +554,25 @@
     "born": 1944,
     "died": null,
     "primaryEra": "1960s",
-    "eras": ["1960s", "1970s"],
-    "genres": ["rock", "jazz"],
-    "bands": ["The Doors"],
+    "eras": [
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "rock",
+      "jazz"
+    ],
+    "bands": [
+      "The Doors"
+    ],
     "bio": "John Densmore was The Doors' rhythmic anchor and the only musician who could keep up with Jim Morrison's improvisational wildness while simultaneously keeping the band together. Drawing on jazz drumming and Indian rhythmic concepts, his patterns were unusual enough to be interesting but grounded enough to swing. 'Light My Fire' contains one of rock's most influential groove patterns.",
     "signatureStyle": "Jazz-influenced patterns in rock context, Indian rhythm concepts, ability to follow Morrison's unpredictable performances, and a unique approach to song structure and groove.",
     "bpmMin": 80,
     "bpmMax": 200,
     "influence": "Demonstrated how jazz and world music influences could serve psychedelic rock. The rhythmic backbone of some of the 1960s most enduring recordings.",
-    "iconicSongIds": ["light-my-fire"]
+    "iconicSongIds": [
+      "light-my-fire"
+    ]
   },
   {
     "id": "mick-fleetwood",
@@ -325,15 +580,30 @@
     "born": 1947,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1960s", "1970s", "1980s", "1990s", "2000s", "2010s"],
-    "genres": ["rock", "blues"],
-    "bands": ["Fleetwood Mac"],
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "blues"
+    ],
+    "bands": [
+      "Fleetwood Mac"
+    ],
     "bio": "Mick Fleetwood provided the deep blues-influenced pocket that anchored Fleetwood Mac through 60 years of lineup changes and musical evolution. His playing is rooted in British blues drumming but has an openness and looseness that allowed the band to move from Peter Green's blues to Lindsey Buckingham's pop-rock. His extended tom-based groove on 'The Chain' is instantly recognizable.",
     "signatureStyle": "Deep blues pocket with open, loose feel, tom-based groove patterns, instinctive arrangement sense, and the steady anchor that holds together five very strong musical personalities.",
     "bpmMin": 80,
     "bpmMax": 160,
     "influence": "The rhythmic glue for one of rock's greatest bands across six decades. A model for how a drummer can serve an ever-changing musical vision without losing their own identity.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "the-chain",
+      "go-your-own-way"
+    ]
   },
   {
     "id": "al-jackson-jr",
@@ -341,15 +611,27 @@
     "born": 1935,
     "died": 1975,
     "primaryEra": "1960s",
-    "eras": ["1960s", "1970s"],
-    "genres": ["soul", "funk", "blues"],
-    "bands": ["Booker T. & the MGs", "Stax session band"],
+    "eras": [
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "soul",
+      "funk",
+      "blues"
+    ],
+    "bands": [
+      "Booker T. & the MGs",
+      "Stax session band"
+    ],
     "bio": "Al Jackson Jr. was the heartbeat of Stax Records, playing on virtually every session recorded at the legendary Memphis studio. Called 'The Human Timepiece,' his pocket was immaculate and his fills were never wasted. He played on Otis Redding, Sam & Dave, Albert King, and countless other Stax classics.",
-    "signatureStyle": "The Human Timepiece — unshakeable pocket, minimal fills deployed with maximum impact, and a groove that made every note feel inevitable.",
+    "signatureStyle": "The Human Timepiece \u2014 unshakeable pocket, minimal fills deployed with maximum impact, and a groove that made every note feel inevitable.",
     "bpmMin": 80,
     "bpmMax": 140,
     "influence": "The defining voice of Southern soul drumming. His approach to pocket and minimalism is still the gold standard for groove-first drumming.",
-    "iconicSongIds": ["green-onions"]
+    "iconicSongIds": [
+      "green-onions"
+    ]
   },
   {
     "id": "john-bonham",
@@ -357,15 +639,27 @@
     "born": 1948,
     "died": 1980,
     "primaryEra": "1970s",
-    "eras": ["1970s"],
-    "genres": ["rock", "blues", "funk"],
-    "bands": ["Led Zeppelin"],
-    "bio": "John Bonham redefined what was physically possible on a drum kit. His massive, thunderous sound came not from force but from remarkable technique — a loose wrist stroke that produced an enormous tone. 'When the Levee Breaks,' recorded in a stairwell at Headley Grange, is arguably the greatest drum sound ever captured. The 'Bonham Shuffle' remains rock drumming's most prized technique.",
+    "eras": [
+      "1970s"
+    ],
+    "genres": [
+      "rock",
+      "blues",
+      "funk"
+    ],
+    "bands": [
+      "Led Zeppelin"
+    ],
+    "bio": "John Bonham redefined what was physically possible on a drum kit. His massive, thunderous sound came not from force but from remarkable technique \u2014 a loose wrist stroke that produced an enormous tone. 'When the Levee Breaks,' recorded in a stairwell at Headley Grange, is arguably the greatest drum sound ever captured. The 'Bonham Shuffle' remains rock drumming's most prized technique.",
     "signatureStyle": "Earth-shaking power from relaxed technique, the triplet-based Bonham shuffle, deep bass drum sound, and the ability to swing hard rock with genuine funk feel.",
     "bpmMin": 60,
     "bpmMax": 180,
     "influence": "The defining template for hard rock and heavy metal drumming. His combination of power, feel, and musicality has never been replicated.",
-    "iconicSongIds": ["moby-dick", "when-the-levee-breaks", "whole-lotta-love"]
+    "iconicSongIds": [
+      "moby-dick",
+      "when-the-levee-breaks",
+      "whole-lotta-love"
+    ]
   },
   {
     "id": "clyde-stubblefield",
@@ -373,15 +667,26 @@
     "born": 1943,
     "died": 2017,
     "primaryEra": "1960s",
-    "eras": ["1960s", "1970s"],
-    "genres": ["funk", "soul"],
-    "bands": ["James Brown's Band"],
-    "bio": "Clyde Stubblefield is the most sampled drummer in history. His performance on 'Funky Drummer' in 1969 created a drum break that has been sampled thousands of times in hip-hop, from Public Enemy to Jay-Z. His work with James Brown defined what funk drumming means — complex syncopation, ghost notes, and an ironclad groove.",
+    "eras": [
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "funk",
+      "soul"
+    ],
+    "bands": [
+      "James Brown's Band"
+    ],
+    "bio": "Clyde Stubblefield is the most sampled drummer in history. His performance on 'Funky Drummer' in 1969 created a drum break that has been sampled thousands of times in hip-hop, from Public Enemy to Jay-Z. His work with James Brown defined what funk drumming means \u2014 complex syncopation, ghost notes, and an ironclad groove.",
     "signatureStyle": "Deep funk syncopation, ghost note mastery, and the ability to create intricate rhythmic patterns that still feel locked and funky rather than complicated.",
     "bpmMin": 90,
     "bpmMax": 130,
     "influence": "The most sampled drummer in history. The 'Funky Drummer' break is the rhythmic DNA of hip-hop music.",
-    "iconicSongIds": ["cold-sweat", "funky-drummer"]
+    "iconicSongIds": [
+      "cold-sweat",
+      "funky-drummer"
+    ]
   },
   {
     "id": "bernard-purdie",
@@ -389,15 +694,31 @@
     "born": 1939,
     "died": null,
     "primaryEra": "1960s",
-    "eras": ["1960s", "1970s", "1980s", "1990s", "2000s"],
-    "genres": ["soul", "funk", "jazz"],
-    "bands": ["Aretha Franklin's Band", "Steely Dan", "session musician"],
-    "bio": "Bernard Purdie invented the 'Purdie Shuffle' — a triplet-based half-time feel with ghost notes that has become one of the most imitated grooves in drumming. His session work with Aretha Franklin, Steely Dan, James Brown, and hundreds of others makes him one of the most recorded drummers in music history. He famously and controversially claimed to have re-recorded Beatles drum tracks.",
-    "signatureStyle": "The Purdie Shuffle — a half-time feel with triplet ghost notes that perfectly blends swing and funk — plus extraordinary pocket and groove in any style.",
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "soul",
+      "funk",
+      "jazz"
+    ],
+    "bands": [
+      "Aretha Franklin's Band",
+      "Steely Dan",
+      "session musician"
+    ],
+    "bio": "Bernard Purdie invented the 'Purdie Shuffle' \u2014 a triplet-based half-time feel with ghost notes that has become one of the most imitated grooves in drumming. His session work with Aretha Franklin, Steely Dan, James Brown, and hundreds of others makes him one of the most recorded drummers in music history. He famously and controversially claimed to have re-recorded Beatles drum tracks.",
+    "signatureStyle": "The Purdie Shuffle \u2014 a half-time feel with triplet ghost notes that perfectly blends swing and funk \u2014 plus extraordinary pocket and groove in any style.",
     "bpmMin": 75,
     "bpmMax": 160,
     "influence": "Inventor of the Purdie Shuffle, one of drumming's most studied grooves. His session work defines the sound of American soul and R&B in the 1960s and 70s.",
-    "iconicSongIds": ["aja"]
+    "iconicSongIds": [
+      "aja"
+    ]
   },
   {
     "id": "zigaboo-modeliste",
@@ -405,15 +726,25 @@
     "born": 1947,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1960s", "1970s", "1980s"],
-    "genres": ["funk"],
-    "bands": ["The Meters"],
-    "bio": "Zigaboo Modeliste created New Orleans funk drumming with the Meters. His approach is simultaneously the tightest and the loosest drumming imaginable — precise patterns that feel totally free, second-line rhythms that have the gravity of the deepest pocket. The Meters' recordings are required listening for any drummer studying groove.",
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "funk"
+    ],
+    "bands": [
+      "The Meters"
+    ],
+    "bio": "Zigaboo Modeliste created New Orleans funk drumming with the Meters. His approach is simultaneously the tightest and the loosest drumming imaginable \u2014 precise patterns that feel totally free, second-line rhythms that have the gravity of the deepest pocket. The Meters' recordings are required listening for any drummer studying groove.",
     "signatureStyle": "New Orleans second-line feel within funk context, incredible independence and syncopation, and a unique loose-tight quality that sounds effortless but is fiendishly difficult.",
     "bpmMin": 80,
     "bpmMax": 140,
     "influence": "Created New Orleans funk drumming and influenced everyone from the Red Hot Chili Peppers to virtually every hip-hop producer who ever sampled the Meters.",
-    "iconicSongIds": ["cissy-strut"]
+    "iconicSongIds": [
+      "cissy-strut"
+    ]
   },
   {
     "id": "david-garibaldi",
@@ -421,15 +752,26 @@
     "born": 1946,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s"],
-    "genres": ["funk"],
-    "bands": ["Tower of Power"],
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "funk"
+    ],
+    "bands": [
+      "Tower of Power"
+    ],
     "bio": "David Garibaldi is Tower of Power's engine and one of funk drumming's supreme practitioners. His 16th-note-based patterns with complex ghost note structures and syncopated kick drum created the template for sophisticated funk drumming. 'What Is Hip?' is studied in drum colleges worldwide as the benchmark of tower-of-power Oakland funk.",
     "signatureStyle": "16th-note funk patterns with intricate ghost notes, highly syncopated kick drum, and the kind of pocket that makes Tower of Power's horn section sound inevitable.",
     "bpmMin": 85,
     "bpmMax": 150,
     "influence": "Set the standard for sophisticated funk drumming with precise ghost note technique. Tower of Power recordings are required curriculum in percussion programs worldwide.",
-    "iconicSongIds": ["what-is-hip"]
+    "iconicSongIds": [
+      "what-is-hip"
+    ]
   },
   {
     "id": "neil-peart",
@@ -437,15 +779,27 @@
     "born": 1952,
     "died": 2020,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s"],
-    "genres": ["rock", "progressive-rock"],
-    "bands": ["Rush"],
-    "bio": "Neil Peart is widely considered the greatest rock drummer of all time. His encyclopedic command of odd time signatures, complex rhythmic patterns, and ability to maintain these while playing in service of Rush's compositions made him uniquely influential. He was also Rush's primary lyricist — a combination of musical and literary gifts unparalleled in rock.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "rock",
+      "progressive-rock"
+    ],
+    "bands": [
+      "Rush"
+    ],
+    "bio": "Neil Peart is widely considered the greatest rock drummer of all time. His encyclopedic command of odd time signatures, complex rhythmic patterns, and ability to maintain these while playing in service of Rush's compositions made him uniquely influential. He was also Rush's primary lyricist \u2014 a combination of musical and literary gifts unparalleled in rock.",
     "signatureStyle": "Mastery of complex time signatures, seamlessly integrated electronic and acoustic elements, and the ability to play extraordinarily complex patterns that still feel musical.",
     "bpmMin": 80,
     "bpmMax": 200,
     "influence": "Set the technical and musical standard for progressive rock drumming. His work inspired an entire generation of serious drummers to pursue both technique and musicality.",
-    "iconicSongIds": ["tom-sawyer"]
+    "iconicSongIds": [
+      "tom-sawyer"
+    ]
   },
   {
     "id": "bill-bruford",
@@ -453,15 +807,31 @@
     "born": 1949,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s"],
-    "genres": ["progressive-rock", "jazz"],
-    "bands": ["Yes", "King Crimson", "UK", "Bruford"],
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "progressive-rock",
+      "jazz"
+    ],
+    "bands": [
+      "Yes",
+      "King Crimson",
+      "UK",
+      "Bruford"
+    ],
     "bio": "Bill Bruford is progressive rock drumming's most intellectual voice. He played on Yes's defining recordings ('Roundabout,' 'Heart of the Sunrise') before defecting to King Crimson, where he explored more angular, complex rhythmic territory. He eventually abandoned rock entirely for jazz, recording acclaimed albums with his own ensemble. He treats the drum kit as a tuned melodic instrument.",
     "signatureStyle": "Melodic approach to tuned drums, asymmetrical patterns in odd time signatures, jazz-influenced independence, and a compositional intelligence that treats every drum part as a composed melody.",
     "bpmMin": 80,
     "bpmMax": 240,
     "influence": "The defining voice of British progressive rock drumming. His work with Yes, King Crimson, and UK remains the benchmark for intellectual drumming that serves complex compositions.",
-    "iconicSongIds": ["roundabout", "heart-of-the-sunrise"]
+    "iconicSongIds": [
+      "roundabout",
+      "heart-of-the-sunrise"
+    ]
   },
   {
     "id": "carl-palmer",
@@ -469,15 +839,26 @@
     "born": 1950,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s"],
-    "genres": ["progressive-rock"],
-    "bands": ["Emerson, Lake & Palmer", "Asia"],
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "progressive-rock"
+    ],
+    "bands": [
+      "Emerson, Lake & Palmer",
+      "Asia"
+    ],
     "bio": "Carl Palmer is progressive rock's most technically gifted drummer. A classically trained percussionist, he brought concert timpani, glockenspiel, and studio-quality tuned percussion to rock drumming. With Emerson, Lake & Palmer he performed Copland, Mussorgsky, and original compositions of equivalent ambition on stages with his aluminum drum kit. 'Tarkus' is his magnum opus.",
     "signatureStyle": "Classical percussion technique applied to rock, orchestral approach to the kit, extraordinary rudimental speed, and the ability to navigate symphonic compositions with the power of rock drumming.",
     "bpmMin": 80,
     "bpmMax": 280,
     "influence": "Brought classical percussion technique and sensibility to rock music. His work with ELP remains the most ambitious fusion of classical music and rock drumming ever achieved.",
-    "iconicSongIds": ["tarkus"]
+    "iconicSongIds": [
+      "tarkus"
+    ]
   },
   {
     "id": "gavin-harrison",
@@ -485,15 +866,27 @@
     "born": 1963,
     "died": null,
     "primaryEra": "2000s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["progressive-rock", "rock"],
-    "bands": ["Porcupine Tree", "King Crimson"],
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "progressive-rock",
+      "rock"
+    ],
+    "bands": [
+      "Porcupine Tree",
+      "King Crimson"
+    ],
     "bio": "Gavin Harrison is the defining progressive rock drummer of his generation. His work with Porcupine Tree brought extraordinary polyrhythmic sophistication to heavy progressive music, and his later addition to King Crimson honored a lineage stretching back to Bill Bruford. He is renowned for his ability to play complex polyrhythmic patterns while maintaining an even, unfussed demeanor behind the kit.",
     "signatureStyle": "Complex polyrhythmic independence, extraordinary metric modulation, ability to play in multiple time signatures simultaneously, and a calm technical authority under any rhythmic pressure.",
     "bpmMin": 80,
     "bpmMax": 240,
     "influence": "Revitalized progressive rock drumming for the streaming age. His YouTube analysis videos made complex rhythmic concepts accessible to a generation of drummers worldwide.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "trains",
+      "arriving-somewhere"
+    ]
   },
   {
     "id": "billy-cobham",
@@ -501,15 +894,26 @@
     "born": 1944,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s"],
-    "genres": ["jazz", "rock", "afrobeat"],
-    "bands": ["Mahavishnu Orchestra"],
+    "eras": [
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "jazz",
+      "rock",
+      "afrobeat"
+    ],
+    "bands": [
+      "Mahavishnu Orchestra"
+    ],
     "bio": "Billy Cobham bridged jazz and rock with extraordinary power and musicality in the Mahavishnu Orchestra. Playing open-handed, he developed a unique approach that was simultaneously ferocious and musical. His album 'Spectrum' is considered one of the greatest jazz-fusion drum albums ever recorded. 'Birds of Fire' showcases his ability to play at searing speed while maintaining complete musical control.",
     "signatureStyle": "Open-handed drumming technique, fusion of jazz vocabulary with rock power, and explosive energy that launched jazz-rock fusion as a genre.",
     "bpmMin": 100,
     "bpmMax": 250,
     "influence": "Pioneered jazz-rock fusion drumming and the open-handed technique. His power and musicality influenced generations of fusion and progressive drummers.",
-    "iconicSongIds": ["birds-of-fire"]
+    "iconicSongIds": [
+      "birds-of-fire"
+    ]
   },
   {
     "id": "stewart-copeland",
@@ -517,15 +921,25 @@
     "born": 1952,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s"],
-    "genres": ["rock", "reggae", "new-wave"],
-    "bands": ["The Police"],
+    "eras": [
+      "1980s"
+    ],
+    "genres": [
+      "rock",
+      "reggae",
+      "new-wave"
+    ],
+    "bands": [
+      "The Police"
+    ],
     "bio": "Stewart Copeland created a unique hybrid of reggae, punk, and rock that defined The Police's sound. His use of reggae-influenced rhythms combined with rock energy and punk attitude created something completely original. His hi-hat patterns are studies in rhythmic creativity.",
     "signatureStyle": "Reggae-influenced rhythms played with rock energy, highly syncopated hi-hat patterns, and a distinctive cross-stick snare sound that defined The Police's groove.",
     "bpmMin": 90,
     "bpmMax": 160,
     "influence": "Showed how to blend non-Western rhythmic traditions with rock music. Inspired a generation to look beyond standard rock patterns for inspiration.",
-    "iconicSongIds": ["roxanne"]
+    "iconicSongIds": [
+      "roxanne"
+    ]
   },
   {
     "id": "jeff-porcaro",
@@ -533,15 +947,24 @@
     "born": 1954,
     "died": 1992,
     "primaryEra": "1980s",
-    "eras": ["1980s"],
-    "genres": ["rock", "soul"],
-    "bands": ["Toto"],
-    "bio": "Jeff Porcaro was the definitive studio drummer of the 1980s. His half-time shuffle on Toto's 'Rosanna' — dubbed the 'Rosanna Shuffle' — is considered one of the most sophisticated grooves in rock history. Combining Motown influences with jazz feel and rock precision, Porcaro appeared on more gold records than any drummer of his generation.",
+    "eras": [
+      "1980s"
+    ],
+    "genres": [
+      "rock",
+      "soul"
+    ],
+    "bands": [
+      "Toto"
+    ],
+    "bio": "Jeff Porcaro was the definitive studio drummer of the 1980s. His half-time shuffle on Toto's 'Rosanna' \u2014 dubbed the 'Rosanna Shuffle' \u2014 is considered one of the most sophisticated grooves in rock history. Combining Motown influences with jazz feel and rock precision, Porcaro appeared on more gold records than any drummer of his generation.",
     "signatureStyle": "The Rosanna Shuffle (half-time feel with a swinging ghost note pattern), perfect pocket, and the musical sensitivity to serve any style from pop to rock to R&B.",
     "bpmMin": 80,
     "bpmMax": 150,
     "influence": "Defined 1980s studio drumming. The Rosanna Shuffle is one of the most studied grooves in contemporary drumming education.",
-    "iconicSongIds": ["rosanna"]
+    "iconicSongIds": [
+      "rosanna"
+    ]
   },
   {
     "id": "sheila-e",
@@ -549,15 +972,27 @@
     "born": 1957,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s"],
-    "genres": ["funk", "soul", "rock"],
-    "bands": ["Prince's Band", "Sheila E."],
+    "eras": [
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "funk",
+      "soul",
+      "rock"
+    ],
+    "bands": [
+      "Prince's Band",
+      "Sheila E."
+    ],
     "bio": "Sheila E. brought both extraordinary drumming skill and star power to the 1980s funk-pop scene. As Prince's collaborator and bandleader, she demonstrated that a drummer could be the front person and showstopper. Her playing combines deep funk groove with Latin percussion influence.",
     "signatureStyle": "Deep funk groove meets Latin percussion sensibility, with the stage presence and musicality to lead a band from behind the kit.",
     "bpmMin": 90,
     "bpmMax": 160,
     "influence": "One of drumming's great crossover stars. She demonstrated that a drummer could be a complete entertainer and front-line musical star.",
-    "iconicSongIds": ["lets-go-crazy"]
+    "iconicSongIds": [
+      "lets-go-crazy"
+    ]
   },
   {
     "id": "phil-collins",
@@ -565,15 +1000,27 @@
     "born": 1951,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s"],
-    "genres": ["rock", "soul"],
-    "bands": ["Genesis"],
-    "bio": "Before he was a pop superstar, Phil Collins was one of progressive rock's most creative drummers with Genesis. His work on albums like 'The Lamb Lies Down on Broadway' combined jazz-influenced independence with prog-rock complexity. But it was 'In the Air Tonight' that changed drumming forever — the massive gated reverb snare hit at 3:40 is the most famous drum entrance in pop history.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "rock",
+      "soul"
+    ],
+    "bands": [
+      "Genesis"
+    ],
+    "bio": "Before he was a pop superstar, Phil Collins was one of progressive rock's most creative drummers with Genesis. His work on albums like 'The Lamb Lies Down on Broadway' combined jazz-influenced independence with prog-rock complexity. But it was 'In the Air Tonight' that changed drumming forever \u2014 the massive gated reverb snare hit at 3:40 is the most famous drum entrance in pop history.",
     "signatureStyle": "Jazz-influenced independence in progressive rock context, and the creator of the gated reverb snare sound that defined 1980s drumming aesthetics.",
     "bpmMin": 80,
     "bpmMax": 180,
     "influence": "Created the iconic 'In the Air Tonight' drum fill and the gated reverb snare sound. His drumming with Genesis was among progressive rock's most sophisticated.",
-    "iconicSongIds": ["in-the-air-tonight"]
+    "iconicSongIds": [
+      "in-the-air-tonight"
+    ]
   },
   {
     "id": "roger-taylor",
@@ -581,15 +1028,28 @@
     "born": 1949,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s", "2010s"],
-    "genres": ["rock"],
-    "bands": ["Queen"],
-    "bio": "Roger Taylor is one of rock's most versatile drummers, capable of playing anything from the simple stomp of 'We Will Rock You' to the complex time changes of 'Bohemian Rhapsody.' His work with Queen covered an astonishing range — glam rock, opera, heavy metal, disco, and stadium anthems — all played with the same conviction and power.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock"
+    ],
+    "bands": [
+      "Queen"
+    ],
+    "bio": "Roger Taylor is one of rock's most versatile drummers, capable of playing anything from the simple stomp of 'We Will Rock You' to the complex time changes of 'Bohemian Rhapsody.' His work with Queen covered an astonishing range \u2014 glam rock, opera, heavy metal, disco, and stadium anthems \u2014 all played with the same conviction and power.",
     "signatureStyle": "Adaptability across every rock sub-genre, powerful playing that fills arenas, ability to serve wildly different musical contexts from stomp anthems to operatic rock.",
     "bpmMin": 90,
     "bpmMax": 210,
     "influence": "Demonstrated how a rock drummer could serve the most eclectic band in history without losing power or identity. Queen's diversity is partly a testament to Taylor's range.",
-    "iconicSongIds": ["we-will-rock-you", "bohemian-rhapsody"]
+    "iconicSongIds": [
+      "we-will-rock-you",
+      "bohemian-rhapsody"
+    ]
   },
   {
     "id": "dave-weckl",
@@ -597,15 +1057,27 @@
     "born": 1960,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s", "2000s"],
-    "genres": ["jazz", "rock"],
-    "bands": ["Chick Corea Elektric Band"],
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "jazz",
+      "rock"
+    ],
+    "bands": [
+      "Chick Corea Elektric Band"
+    ],
     "bio": "Dave Weckl is the most technically precise drummer in jazz-fusion history. His work with Chick Corea's Elektric Band redefined what was possible in terms of speed, precision, and musical sensitivity. His instructional videos became the bible of modern drumming technique.",
     "signatureStyle": "Machine-like precision combined with deep musical sensitivity, extraordinary speed and endurance, and comprehensive mastery of jazz, funk, and rock vocabulary.",
     "bpmMin": 80,
     "bpmMax": 280,
     "influence": "Raised the technical bar for all drumming. His instructional materials are widely used in music education worldwide.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "got-a-match",
+      "no-zone"
+    ]
   },
   {
     "id": "phil-rudd",
@@ -613,15 +1085,27 @@
     "born": 1954,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s"],
-    "genres": ["hard-rock", "rock"],
-    "bands": ["AC/DC"],
-    "bio": "Phil Rudd is the metronome behind AC/DC, one of rock's most perfect rhythm sections. His locked, minimal playing style — refusing to add unnecessary fills or decorations — creates a groove so powerful that the entire band hangs off it. 'Back in Black' is studied as the example of how drumming that seems simple is actually the most difficult thing: being perfect.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "hard-rock",
+      "rock"
+    ],
+    "bands": [
+      "AC/DC"
+    ],
+    "bio": "Phil Rudd is the metronome behind AC/DC, one of rock's most perfect rhythm sections. His locked, minimal playing style \u2014 refusing to add unnecessary fills or decorations \u2014 creates a groove so powerful that the entire band hangs off it. 'Back in Black' is studied as the example of how drumming that seems simple is actually the most difficult thing: being perfect.",
     "signatureStyle": "Locked, minimal grooves with zero waste, perfect pocket, and the ability to make absolute simplicity feel like the only right option. Rock drumming as pure groove.",
     "bpmMin": 100,
     "bpmMax": 200,
     "influence": "The supreme example of less-is-more rock drumming. His playing proved that perfection in the basics is more powerful than technical complexity.",
-    "iconicSongIds": ["back-in-black"]
+    "iconicSongIds": [
+      "back-in-black"
+    ]
   },
   {
     "id": "ian-paice",
@@ -629,15 +1113,28 @@
     "born": 1948,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s", "2010s"],
-    "genres": ["hard-rock", "rock"],
-    "bands": ["Deep Purple"],
-    "bio": "Ian Paice has been Deep Purple's drummer since 1968, making him the longest-serving member of one of hard rock's founding bands. His jazz-influenced technique — particularly his extraordinary single-stroke roll speed and his flowing, musical approach to rock — set him apart from contemporaries. On 'Highway Star' he plays one of rock's most precise and powerful performances.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "hard-rock",
+      "rock"
+    ],
+    "bands": [
+      "Deep Purple"
+    ],
+    "bio": "Ian Paice has been Deep Purple's drummer since 1968, making him the longest-serving member of one of hard rock's founding bands. His jazz-influenced technique \u2014 particularly his extraordinary single-stroke roll speed and his flowing, musical approach to rock \u2014 set him apart from contemporaries. On 'Highway Star' he plays one of rock's most precise and powerful performances.",
     "signatureStyle": "Jazz-influenced single-stroke technique in hard rock context, extraordinary roll speed, musical fills that serve the song without excess, and impeccable consistency across a 50-year career.",
     "bpmMin": 100,
     "bpmMax": 220,
     "influence": "Bridged British jazz drumming and hard rock. His 50-year career with Deep Purple is one of the longest in rock, maintaining quality throughout.",
-    "iconicSongIds": ["highway-star"]
+    "iconicSongIds": [
+      "highway-star"
+    ]
   },
   {
     "id": "tommy-lee",
@@ -645,15 +1142,28 @@
     "born": 1962,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s", "2000s", "2010s"],
-    "genres": ["hard-rock", "metal"],
-    "bands": ["Mötley Crüe"],
-    "bio": "Tommy Lee combined raw hard rock power with theatrical showmanship to become one of the 1980s most iconic drummers. His spinning drum kit — literally rotating 360 degrees over the audience — made him the first drummer whose kit setup was as famous as his playing. He also pioneered the use of electronic drums in hard rock and is a skilled electronic music producer.",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "hard-rock",
+      "metal"
+    ],
+    "bands": [
+      "M\u00f6tley Cr\u00fce"
+    ],
+    "bio": "Tommy Lee combined raw hard rock power with theatrical showmanship to become one of the 1980s most iconic drummers. His spinning drum kit \u2014 literally rotating 360 degrees over the audience \u2014 made him the first drummer whose kit setup was as famous as his playing. He also pioneered the use of electronic drums in hard rock and is a skilled electronic music producer.",
     "signatureStyle": "Powerful, straightforward hard rock playing combined with extraordinary showmanship, electronic drum integration, and the natural ability to make any beat feel enormous in an arena context.",
     "bpmMin": 100,
     "bpmMax": 200,
     "influence": "Invented hard rock drumming as spectacle. The rotating drum kit set a standard for live drum performance that the industry still tries to match.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "dr-feelgood-crue",
+      "home-sweet-home"
+    ]
   },
   {
     "id": "chad-smith",
@@ -661,15 +1171,26 @@
     "born": 1961,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s", "2010s"],
-    "genres": ["rock", "funk"],
-    "bands": ["Red Hot Chili Peppers"],
-    "bio": "Chad Smith is the Red Hot Chili Peppers' engine, bringing deep funk sensibility to hard rock drumming. His partnership with Flea creates one of rock's most powerful rhythm sections — simultaneously funky and enormous. His roots in John Bonham-style rock power combined with Sly Stone-influenced funk make him uniquely suited to the Chili Peppers' musical vision.",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "funk"
+    ],
+    "bands": [
+      "Red Hot Chili Peppers"
+    ],
+    "bio": "Chad Smith is the Red Hot Chili Peppers' engine, bringing deep funk sensibility to hard rock drumming. His partnership with Flea creates one of rock's most powerful rhythm sections \u2014 simultaneously funky and enormous. His roots in John Bonham-style rock power combined with Sly Stone-influenced funk make him uniquely suited to the Chili Peppers' musical vision.",
     "signatureStyle": "Hard rock power combined with genuine funk groove, deep pocket that supports Flea's melodic bass playing, and the ability to make complex patterns feel natural and powerful.",
     "bpmMin": 80,
     "bpmMax": 180,
     "influence": "Defined the sound of funk-rock drumming. His partnership with Flea is the rhythm section blueprint for every band that wants to be simultaneously funky and heavy.",
-    "iconicSongIds": ["give-it-away"]
+    "iconicSongIds": [
+      "give-it-away"
+    ]
   },
   {
     "id": "bill-ward",
@@ -677,15 +1198,25 @@
     "born": 1948,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s"],
-    "genres": ["metal", "rock"],
-    "bands": ["Black Sabbath"],
-    "bio": "Bill Ward was heavy metal's founding drummer. With Black Sabbath he created the rhythmic framework for a genre — the slow, crushing riffs and doom-laden tempo changes that became metal's signature vocabulary. Unlike later metal drummers who emphasized speed, Ward was primarily a groove player, bringing a jazz-influenced swing to the heaviest music of the era.",
+    "eras": [
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "metal",
+      "rock"
+    ],
+    "bands": [
+      "Black Sabbath"
+    ],
+    "bio": "Bill Ward was heavy metal's founding drummer. With Black Sabbath he created the rhythmic framework for a genre \u2014 the slow, crushing riffs and doom-laden tempo changes that became metal's signature vocabulary. Unlike later metal drummers who emphasized speed, Ward was primarily a groove player, bringing a jazz-influenced swing to the heaviest music of the era.",
     "signatureStyle": "Jazz-influenced swing applied to crushing slow riffs, ability to make extreme slowness feel powerful rather than plodding, and the rhythmic foundation of heavy metal's foundational language.",
     "bpmMin": 70,
     "bpmMax": 200,
     "influence": "Invented heavy metal drumming with Black Sabbath. Every metal drummer works within a vocabulary he helped establish on those first four Sabbath albums.",
-    "iconicSongIds": ["paranoid"]
+    "iconicSongIds": [
+      "paranoid"
+    ]
   },
   {
     "id": "lars-ulrich",
@@ -693,15 +1224,27 @@
     "born": 1963,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s", "2000s", "2010s"],
-    "genres": ["metal"],
-    "bands": ["Metallica"],
-    "bio": "Lars Ulrich co-founded Metallica and played on the recordings that defined thrash metal. 'Master of Puppets' and 'The Black Album' are two of the best-selling metal albums in history. His playing adapted from frantic thrash tempos on early records to the more controlled, mid-tempo approach of the Black Album — showing a rare willingness to evolve commercially while remaining heavy.",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal"
+    ],
+    "bands": [
+      "Metallica"
+    ],
+    "bio": "Lars Ulrich co-founded Metallica and played on the recordings that defined thrash metal. 'Master of Puppets' and 'The Black Album' are two of the best-selling metal albums in history. His playing adapted from frantic thrash tempos on early records to the more controlled, mid-tempo approach of the Black Album \u2014 showing a rare willingness to evolve commercially while remaining heavy.",
     "signatureStyle": "Thrash metal precision on early recordings, controlled mid-tempo power on later work, hi-hat choke accent that became a thrash signature, and the ability to anchor enormously complex guitar arrangements.",
     "bpmMin": 120,
     "bpmMax": 240,
     "influence": "Co-defined thrash metal drumming. Metallica's recordings are required listening for any metal drummer; Lars's evolving approach documents 40 years of heavy music evolution.",
-    "iconicSongIds": ["master-of-puppets", "enter-sandman"]
+    "iconicSongIds": [
+      "master-of-puppets",
+      "enter-sandman"
+    ]
   },
   {
     "id": "dave-lombardo",
@@ -709,15 +1252,28 @@
     "born": 1965,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s", "2000s"],
-    "genres": ["metal"],
-    "bands": ["Slayer", "Suicidal Tendencies", "Fantômas"],
-    "bio": "Dave Lombardo is the 'Godfather of Double Bass' — the drummer who made thrash metal's machine-gun bass drum rhythms technically viable as performance. With Slayer he played at speeds and densities that seemed physically impossible, yet his patterns were musical rather than purely aggressive. His double bass drumming on 'Raining Blood' is considered the technical benchmark of extreme metal drumming.",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "metal"
+    ],
+    "bands": [
+      "Slayer",
+      "Suicidal Tendencies",
+      "Fant\u00f4mas"
+    ],
+    "bio": "Dave Lombardo is the 'Godfather of Double Bass' \u2014 the drummer who made thrash metal's machine-gun bass drum rhythms technically viable as performance. With Slayer he played at speeds and densities that seemed physically impossible, yet his patterns were musical rather than purely aggressive. His double bass drumming on 'Raining Blood' is considered the technical benchmark of extreme metal drumming.",
     "signatureStyle": "Extreme double bass speed with musical control, ability to maintain groove at superhuman tempos, and the technique to make Slayer's most violent music feel rhythmically organized.",
     "bpmMin": 150,
     "bpmMax": 260,
     "influence": "Set the technical benchmark for extreme metal drumming. Every death metal and thrash metal drummer learns double bass technique in the context Lombardo established with Slayer.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "raining-blood",
+      "angel-of-death"
+    ]
   },
   {
     "id": "vinnie-paul",
@@ -725,15 +1281,28 @@
     "born": 1964,
     "died": 2018,
     "primaryEra": "1990s",
-    "eras": ["1980s", "1990s", "2000s"],
-    "genres": ["metal"],
-    "bands": ["Pantera", "Hellyeah", "Damageplan"],
-    "bio": "Vinnie Paul was the groove anchor of Pantera, the band that created groove metal. While thrash metal emphasized speed, Pantera emphasized heaviness and pocket — and Vinnie Paul's drumming is why their music hits like a truck. His ability to play syncopated, groove-oriented patterns at loud, aggressive volumes created a new template for metal drumming.",
-    "signatureStyle": "Groove metal drumming — powerful, syncopated patterns that emphasize heaviness over speed, deep pocket within metal context, and enormous snare sound.",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "metal"
+    ],
+    "bands": [
+      "Pantera",
+      "Hellyeah",
+      "Damageplan"
+    ],
+    "bio": "Vinnie Paul was the groove anchor of Pantera, the band that created groove metal. While thrash metal emphasized speed, Pantera emphasized heaviness and pocket \u2014 and Vinnie Paul's drumming is why their music hits like a truck. His ability to play syncopated, groove-oriented patterns at loud, aggressive volumes created a new template for metal drumming.",
+    "signatureStyle": "Groove metal drumming \u2014 powerful, syncopated patterns that emphasize heaviness over speed, deep pocket within metal context, and enormous snare sound.",
     "bpmMin": 100,
     "bpmMax": 220,
     "influence": "Co-created groove metal with Pantera. His approach to making heavy music groove rather than just blast influenced an entire subgenre of metal.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "cowboys-from-hell",
+      "walk-pantera"
+    ]
   },
   {
     "id": "danny-carey",
@@ -741,15 +1310,26 @@
     "born": 1961,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s", "2010s"],
-    "genres": ["metal", "progressive-rock"],
-    "bands": ["Tool"],
-    "bio": "Danny Carey is the most advanced rhythmic thinker in heavy music. His interest in sacred geometry, mathematics, and occult numerology directly influences his drumming — he works with prime numbers, polymetric patterns, and Fibonacci sequences as compositional tools. Tool's 'Lateralus' is built on the Fibonacci sequence. His physical power matches his intellectual depth.",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal",
+      "progressive-rock"
+    ],
+    "bands": [
+      "Tool"
+    ],
+    "bio": "Danny Carey is the most advanced rhythmic thinker in heavy music. His interest in sacred geometry, mathematics, and occult numerology directly influences his drumming \u2014 he works with prime numbers, polymetric patterns, and Fibonacci sequences as compositional tools. Tool's 'Lateralus' is built on the Fibonacci sequence. His physical power matches his intellectual depth.",
     "signatureStyle": "Mathematical polyrhythm, sacred geometry-influenced patterns, Fibonacci sequences applied to composition, extraordinary power, and the ability to make intellectual complexity feel emotional.",
     "bpmMin": 80,
     "bpmMax": 200,
     "influence": "The most intellectually sophisticated drummer in heavy music. His ability to blend esoteric mathematical concepts with visceral physical power is unprecedented in any genre.",
-    "iconicSongIds": ["lateralus"]
+    "iconicSongIds": [
+      "lateralus"
+    ]
   },
   {
     "id": "joey-jordison",
@@ -757,15 +1337,28 @@
     "born": 1975,
     "died": 2021,
     "primaryEra": "2000s",
-    "eras": ["1990s", "2000s", "2010s"],
-    "genres": ["metal"],
-    "bands": ["Slipknot", "Murderdolls", "Scar the Martyr"],
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal"
+    ],
+    "bands": [
+      "Slipknot",
+      "Murderdolls",
+      "Scar the Martyr"
+    ],
     "bio": "Joey Jordison was Slipknot's rhythmic foundation and the technical engine behind one of nu-metal's most complex bands. His ability to play at extreme speeds while maintaining musicality, combined with his role as the band's anchor in a nine-person chaos ensemble, made him one of the most remarkable drummers of his generation.",
     "signatureStyle": "Extreme speed with musical control in the context of nu-metal and extreme metal, ambidextrous technique, and the ability to hold together the rhythmic center of a nine-piece band.",
     "bpmMin": 140,
     "bpmMax": 260,
     "influence": "Defined drumming in the nu-metal era and influenced a generation of heavy drummers. His technical ability within an extreme commercial context was genuinely unprecedented.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "duality",
+      "psychosocial"
+    ]
   },
   {
     "id": "tommy-ramone",
@@ -773,31 +1366,51 @@
     "born": 1948,
     "died": 2014,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s"],
-    "genres": ["punk"],
-    "bands": ["Ramones"],
-    "bio": "Tommy Ramone (born Tamás Erdélyi) was the original drummer of the Ramones and the rhythmic inventor of American punk rock. His stripped-back, maximum-speed approach — four on the floor kick, driving eighth-note hi-hat, backbeat snare, all at 180+ BPM — became the universal template for punk drumming. 'Blitzkrieg Bop' is his manifesto.",
-    "signatureStyle": "Maximum tempo, zero ornamentation, four-on-the-floor kick, driving hi-hat, snare backbeat — punk drumming reduced to its most essential, powerful elements.",
+    "eras": [
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "punk"
+    ],
+    "bands": [
+      "Ramones"
+    ],
+    "bio": "Tommy Ramone (born Tam\u00e1s Erd\u00e9lyi) was the original drummer of the Ramones and the rhythmic inventor of American punk rock. His stripped-back, maximum-speed approach \u2014 four on the floor kick, driving eighth-note hi-hat, backbeat snare, all at 180+ BPM \u2014 became the universal template for punk drumming. 'Blitzkrieg Bop' is his manifesto.",
+    "signatureStyle": "Maximum tempo, zero ornamentation, four-on-the-floor kick, driving hi-hat, snare backbeat \u2014 punk drumming reduced to its most essential, powerful elements.",
     "bpmMin": 160,
     "bpmMax": 220,
     "influence": "Invented the punk drum pattern. Every punk drummer since the Ramones plays within the vocabulary Tommy Ramone established on their first album.",
-    "iconicSongIds": ["blitzkrieg-bop"]
+    "iconicSongIds": [
+      "blitzkrieg-bop"
+    ]
   },
   {
     "id": "tre-cool",
-    "name": "Tré Cool",
+    "name": "Tr\u00e9 Cool",
     "born": 1972,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s", "2010s"],
-    "genres": ["punk", "rock"],
-    "bands": ["Green Day"],
-    "bio": "Tré Cool brought energy, technique, and showmanship to punk drumming that elevated Green Day beyond their punk roots into arena rock. His playing combines the raw energy of punk with genuine technique and a natural feel for dynamics. 'Basket Case' is one of the most studied songs in modern punk drumming — deceptively simple, perfectly executed.",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "punk",
+      "rock"
+    ],
+    "bands": [
+      "Green Day"
+    ],
+    "bio": "Tr\u00e9 Cool brought energy, technique, and showmanship to punk drumming that elevated Green Day beyond their punk roots into arena rock. His playing combines the raw energy of punk with genuine technique and a natural feel for dynamics. 'Basket Case' is one of the most studied songs in modern punk drumming \u2014 deceptively simple, perfectly executed.",
     "signatureStyle": "Punk energy with arena rock power, driving eighth-note hi-hat at high tempos, natural feel for song dynamics, and the showmanship to match Green Day's enormous live presence.",
     "bpmMin": 130,
     "bpmMax": 220,
-    "influence": "Evolved punk drumming from garage to arena without losing its authenticity. Green Day's commercial success owes substantially to Tré Cool's ability to make punk sound huge.",
-    "iconicSongIds": ["basket-case"]
+    "influence": "Evolved punk drumming from garage to arena without losing its authenticity. Green Day's commercial success owes substantially to Tr\u00e9 Cool's ability to make punk sound huge.",
+    "iconicSongIds": [
+      "basket-case"
+    ]
   },
   {
     "id": "jimmy-chamberlin",
@@ -805,15 +1418,24 @@
     "born": 1964,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s"],
-    "genres": ["rock"],
-    "bands": ["Smashing Pumpkins"],
-    "bio": "Jimmy Chamberlin was the Smashing Pumpkins' secret weapon — a genuine jazz-influenced powerhouse in a band that wanted to make maximalist alternative rock. His combination of jazz independence, rock power, and intuitive sense for melody created performances on 'Siamese Dream' and 'Mellon Collie' that transcend the genre. He was fired, returned, and remains one of alternative rock's most technically gifted drummers.",
+    "eras": [
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "rock"
+    ],
+    "bands": [
+      "Smashing Pumpkins"
+    ],
+    "bio": "Jimmy Chamberlin was the Smashing Pumpkins' secret weapon \u2014 a genuine jazz-influenced powerhouse in a band that wanted to make maximalist alternative rock. His combination of jazz independence, rock power, and intuitive sense for melody created performances on 'Siamese Dream' and 'Mellon Collie' that transcend the genre. He was fired, returned, and remains one of alternative rock's most technically gifted drummers.",
     "signatureStyle": "Jazz independence and vocabulary in alternative rock context, extraordinary technical facility combined with explosive power, and melodic thinking that turns fills into musical statements.",
     "bpmMin": 90,
     "bpmMax": 200,
     "influence": "Brought genuine jazz musicality to 1990s alternative rock. His technical sophistication within the Pumpkins' maximalist vision helped define the sound of alternative rock drumming.",
-    "iconicSongIds": ["cherub-rock"]
+    "iconicSongIds": [
+      "cherub-rock"
+    ]
   },
   {
     "id": "taylor-hawkins",
@@ -821,15 +1443,26 @@
     "born": 1972,
     "died": 2022,
     "primaryEra": "2000s",
-    "eras": ["1990s", "2000s", "2010s"],
-    "genres": ["rock"],
-    "bands": ["Foo Fighters", "Alanis Morissette"],
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock"
+    ],
+    "bands": [
+      "Foo Fighters",
+      "Alanis Morissette"
+    ],
     "bio": "Taylor Hawkins was the Foo Fighters' drummer from 1997 until his death in 2022, evolving the band from post-grunge into one of rock's premier arena acts. A Roger Taylor fanatic who shared his idol's love of Queen, Hawkins brought anthemic rock instincts, genuine musical joy, and extraordinary stamina to the Foo Fighters' relentless touring schedule. He was beloved by the entire music community.",
     "signatureStyle": "Arena rock power with genuine musical joy, instinct for anthemic dynamics, Roger Taylor-influenced approach to stadium fills, and the ability to anchor Dave Grohl's guitar-fronted band with authority.",
     "bpmMin": 100,
     "bpmMax": 190,
     "influence": "Kept arena rock drumming emotionally resonant in the streaming era. His death in 2022 at 50 produced an outpouring of grief from the drumming community that reflected his unique place in modern rock.",
-    "iconicSongIds": ["the-pretender"]
+    "iconicSongIds": [
+      "the-pretender"
+    ]
   },
   {
     "id": "carlton-barrett",
@@ -837,15 +1470,24 @@
     "born": 1950,
     "died": 1987,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s"],
-    "genres": ["reggae"],
-    "bands": ["Bob Marley & the Wailers"],
+    "eras": [
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "reggae"
+    ],
+    "bands": [
+      "Bob Marley & the Wailers"
+    ],
     "bio": "Carlton Barrett was Bob Marley's drummer and the creator of the definitive reggae one-drop pattern. Along with his brother Aston 'Family Man' Barrett on bass, he created the rhythmic foundation for the most important reggae recordings ever made. His work on 'No Woman No Cry,' 'Exodus,' and 'Redemption Song' is the sound of Jamaican culture reaching the world.",
-    "signatureStyle": "The one-drop pattern — kick and snare on beat three, open hi-hat on the 'and' of two — the defining rhythmic statement of Jamaican reggae drumming.",
+    "signatureStyle": "The one-drop pattern \u2014 kick and snare on beat three, open hi-hat on the 'and' of two \u2014 the defining rhythmic statement of Jamaican reggae drumming.",
     "bpmMin": 65,
     "bpmMax": 100,
     "influence": "Created the definitive reggae drum vocabulary with the Wailers. Every reggae drummer learns Carlton Barrett's one-drop pattern as their foundational skill.",
-    "iconicSongIds": ["no-woman-no-cry"]
+    "iconicSongIds": [
+      "no-woman-no-cry"
+    ]
   },
   {
     "id": "tony-allen",
@@ -853,15 +1495,29 @@
     "born": 1940,
     "died": 2020,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s", "2010s"],
-    "genres": ["afrobeat", "jazz"],
-    "bands": ["Fela Kuti's Africa 70", "Tony Allen & his Afro-Messengers"],
-    "bio": "Tony Allen is the co-inventor of Afrobeat alongside Fela Kuti. Fela himself credited Allen as the engine behind the music: 'Without Tony Allen, there would be no Afrobeat.' His polyrhythmic approach — drawing simultaneously from jazz, funk, and traditional Yoruba drumming — created a rhythmic language that has influenced musicians from Damon Albarn to Brian Eno.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "afrobeat",
+      "jazz"
+    ],
+    "bands": [
+      "Fela Kuti's Africa 70",
+      "Tony Allen & his Afro-Messengers"
+    ],
+    "bio": "Tony Allen is the co-inventor of Afrobeat alongside Fela Kuti. Fela himself credited Allen as the engine behind the music: 'Without Tony Allen, there would be no Afrobeat.' His polyrhythmic approach \u2014 drawing simultaneously from jazz, funk, and traditional Yoruba drumming \u2014 created a rhythmic language that has influenced musicians from Damon Albarn to Brian Eno.",
     "signatureStyle": "Simultaneous polyrhythmic independence across multiple limbs, West African rhythmic traditions fused with jazz improvisation, and a hypnotic feel that makes extended grooves feel inevitable.",
     "bpmMin": 90,
     "bpmMax": 130,
     "influence": "Co-invented Afrobeat and created one of the world's most influential rhythmic vocabularies. His influence on contemporary music spans jazz, hip-hop, and electronic music.",
-    "iconicSongIds": ["zombie-fela"]
+    "iconicSongIds": [
+      "zombie-fela"
+    ]
   },
   {
     "id": "tito-puente",
@@ -869,15 +1525,29 @@
     "born": 1923,
     "died": 2000,
     "primaryEra": "1940s",
-    "eras": ["1940s", "1950s", "1960s", "1970s", "1980s", "1990s"],
-    "genres": ["latin"],
-    "bands": ["Tito Puente Orchestra"],
-    "bio": "Tito Puente — El Rey del Timbal (The King of the Timbales) — was Latin music's most celebrated percussionist and bandleader for six decades. His timbale solos were explosive, virtuosic showpieces that brought Afro-Cuban percussion to mainstream American audiences. 'Oye Cómo Va,' which Santana covered to worldwide fame, was his composition. He recorded over 100 albums across his career.",
+    "eras": [
+      "1940s",
+      "1950s",
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "latin"
+    ],
+    "bands": [
+      "Tito Puente Orchestra"
+    ],
+    "bio": "Tito Puente \u2014 El Rey del Timbal (The King of the Timbales) \u2014 was Latin music's most celebrated percussionist and bandleader for six decades. His timbale solos were explosive, virtuosic showpieces that brought Afro-Cuban percussion to mainstream American audiences. 'Oye C\u00f3mo Va,' which Santana covered to worldwide fame, was his composition. He recorded over 100 albums across his career.",
     "signatureStyle": "Virtuosic timbale playing at high tempos, Afro-Cuban rhythmic vocabulary, mambo and cha-cha arrangements, and the showmanship to make percussion solos the featured attraction.",
     "bpmMin": 140,
     "bpmMax": 240,
     "influence": "The ambassador of Afro-Cuban music to American audiences. His compositions and arrangements are Latin music standards; his timbale technique remains the benchmark.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "oye-como-va",
+      "para-los-rumberos"
+    ]
   },
   {
     "id": "ron-wilson",
@@ -885,15 +1555,23 @@
     "born": 1945,
     "died": 1989,
     "primaryEra": "1960s",
-    "eras": ["1960s"],
-    "genres": ["rock"],
-    "bands": ["The Surfaris"],
-    "bio": "Ron Wilson played the drum solo on 'Wipe Out' — one of the most recognizable percussion performances in popular music history. The track became a global hit in 1963 and introduced millions of listeners to the drum solo as entertainment. Though Wilson played only one famous song, that solo has been cited by countless drummers as the reason they picked up sticks.",
+    "eras": [
+      "1960s"
+    ],
+    "genres": [
+      "rock"
+    ],
+    "bands": [
+      "The Surfaris"
+    ],
+    "bio": "Ron Wilson played the drum solo on 'Wipe Out' \u2014 one of the most recognizable percussion performances in popular music history. The track became a global hit in 1963 and introduced millions of listeners to the drum solo as entertainment. Though Wilson played only one famous song, that solo has been cited by countless drummers as the reason they picked up sticks.",
     "signatureStyle": "Explosive surf rock drum solo, tom-based patterns at high speed, the ability to make a drum feature the centerpiece of a radio hit.",
     "bpmMin": 180,
     "bpmMax": 220,
     "influence": "Introduced the drum solo to a mass popular music audience. 'Wipe Out' remains one of the first drum recordings most people hear in their lives.",
-    "iconicSongIds": ["wipeout"]
+    "iconicSongIds": [
+      "wipeout"
+    ]
   },
   {
     "id": "dave-grohl",
@@ -901,15 +1579,25 @@
     "born": 1969,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s"],
-    "genres": ["rock"],
-    "bands": ["Nirvana", "Foo Fighters"],
+    "eras": [
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "rock"
+    ],
+    "bands": [
+      "Nirvana",
+      "Foo Fighters"
+    ],
     "bio": "Dave Grohl's drumming on Nirvana's 'Nevermind' helped define the grunge movement and proved that pure emotional power could trump technical complexity. His playing is ferocious, loud, and completely in service of the song. After Kurt Cobain's death, he formed Foo Fighters and became one of rock's most beloved figures.",
     "signatureStyle": "Maximum emotional impact, explosive dynamics, powerful backbeat, and fills that land with stunning force at exactly the right musical moment.",
     "bpmMin": 100,
     "bpmMax": 180,
     "influence": "The definitive grunge drummer. Showed that primal power and emotional authenticity are as valid as technical mastery.",
-    "iconicSongIds": ["smells-like-teen-spirit"]
+    "iconicSongIds": [
+      "smells-like-teen-spirit"
+    ]
   },
   {
     "id": "questlove",
@@ -917,15 +1605,27 @@
     "born": 1971,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s", "2010s"],
-    "genres": ["hiphop", "funk", "soul"],
-    "bands": ["The Roots"],
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "hiphop",
+      "funk",
+      "soul"
+    ],
+    "bands": [
+      "The Roots"
+    ],
     "bio": "Questlove is hip-hop's greatest live drummer, bringing the programmed feel of classic boom-bap and the James Brown funk tradition to a live performance context. With The Roots, he demonstrated that hip-hop rhythm could be as deep and soulful in live performance as any recorded track. He is also drumming's foremost cultural historian.",
     "signatureStyle": "Playing hip-hop's laid-back, behind-the-beat feel on a live kit, deeply rooted in funk and soul tradition, with encyclopedic knowledge of drum history.",
     "bpmMin": 80,
     "bpmMax": 120,
     "influence": "Established live hip-hop drumming as a serious pursuit and became drumming's most important cultural scholar and ambassador.",
-    "iconicSongIds": ["uptown-funk"]
+    "iconicSongIds": [
+      "uptown-funk"
+    ]
   },
   {
     "id": "carter-beauford",
@@ -933,15 +1633,26 @@
     "born": 1957,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s"],
-    "genres": ["rock", "jazz"],
-    "bands": ["Dave Matthews Band"],
+    "eras": [
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "rock",
+      "jazz"
+    ],
+    "bands": [
+      "Dave Matthews Band"
+    ],
     "bio": "Carter Beauford plays open-handed (like Billy Cobham), giving him unique ability to lead patterns with his right hand on the hi-hat without crossing his arms. His work with Dave Matthews Band combines jazz sophistication, funk groove, and rock power in a fluid style that feels both complex and completely natural.",
     "signatureStyle": "Open-handed technique, jazz-influenced fluidity within rock context, sophisticated hi-hat independence, and explosive fills that maintain perfect time.",
     "bpmMin": 90,
     "bpmMax": 170,
     "influence": "Popularized open-handed drumming and demonstrated how jazz vocabulary can enrich rock music without sacrificing groove.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "ants-marching",
+      "crash-into-me"
+    ]
   },
   {
     "id": "matt-cameron",
@@ -949,15 +1660,27 @@
     "born": 1962,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s"],
-    "genres": ["rock", "metal"],
-    "bands": ["Soundgarden", "Pearl Jam"],
+    "eras": [
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "rock",
+      "metal"
+    ],
+    "bands": [
+      "Soundgarden",
+      "Pearl Jam"
+    ],
     "bio": "Matt Cameron was grunge's most technically sophisticated drummer. His work with Soundgarden showed how to bring genuine progressive complexity to heavy music without losing its raw power. The combination of jazz-influenced independence and hard rock power is his signature.",
     "signatureStyle": "Progressive independence meets hard rock power, polyrhythmic patterns within heavy musical contexts, and dynamic sensitivity in service of the song.",
     "bpmMin": 80,
     "bpmMax": 200,
     "influence": "The technically elite end of the grunge spectrum. Cameron showed that grunge's rawness and progressive drumming ambition were not mutually exclusive.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "black-hole-sun",
+      "spoonman"
+    ]
   },
   {
     "id": "travis-barker",
@@ -965,15 +1688,26 @@
     "born": 1975,
     "died": null,
     "primaryEra": "2000s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["rock", "hiphop", "punk"],
-    "bands": ["Blink-182"],
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "hiphop",
+      "punk"
+    ],
+    "bands": [
+      "Blink-182"
+    ],
     "bio": "Travis Barker brought hip-hop fluency to punk rock drumming and became a cultural crossover phenomenon. His blazing speed, creative fills, and ability to blend hip-hop rhythmic sensibility with punk rock energy made Blink-182 one of the most rhythmically interesting bands of their era.",
     "signatureStyle": "Hip-hop influenced fills within punk/rock context, extraordinary speed, and the ability to bring street credibility to arena rock drumming.",
     "bpmMin": 120,
     "bpmMax": 220,
     "influence": "Bridged the gap between punk rock and hip-hop drumming, inspiring a generation of young drummers who loved both genres.",
-    "iconicSongIds": ["all-the-small-things"]
+    "iconicSongIds": [
+      "all-the-small-things"
+    ]
   },
   {
     "id": "brann-dailor",
@@ -981,15 +1715,26 @@
     "born": 1975,
     "died": null,
     "primaryEra": "2000s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["metal", "rock"],
-    "bands": ["Mastodon"],
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal",
+      "rock"
+    ],
+    "bands": [
+      "Mastodon"
+    ],
     "bio": "Brann Dailor redefines what a metal drummer can be. His polyrhythmic, jazz-influenced approach to progressive metal involves playing melodic lead lines on the drums while navigating time signatures that challenge even dedicated listeners. Mastodon's music would simply not be possible without his extraordinary playing.",
     "signatureStyle": "Polyrhythmic playing that treats drums as a melody instrument within complex metal contexts, fusing jazz sensibility with extreme metal power.",
     "bpmMin": 80,
     "bpmMax": 240,
     "influence": "Redefined progressive metal drumming by introducing genuine jazz vocabulary and melodic thinking into an extreme metal context.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "blood-and-thunder",
+      "oblivion-mastodon"
+    ]
   },
   {
     "id": "antonio-sanchez",
@@ -997,15 +1742,26 @@
     "born": 1971,
     "died": null,
     "primaryEra": "2010s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["jazz", "rock"],
-    "bands": ["Pat Metheny Group"],
-    "bio": "Antonio Sanchez is the most celebrated jazz drummer of his generation. His Grammy-winning score for the film 'Birdman' — performed entirely on solo drums — brought his art to mainstream audiences. His technical command combines precision with deep jazz musicality.",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "rock"
+    ],
+    "bands": [
+      "Pat Metheny Group"
+    ],
+    "bio": "Antonio Sanchez is the most celebrated jazz drummer of his generation. His Grammy-winning score for the film 'Birdman' \u2014 performed entirely on solo drums \u2014 brought his art to mainstream audiences. His technical command combines precision with deep jazz musicality.",
     "signatureStyle": "Extraordinary technical command paired with deep jazz musicality, the ability to perform solo drum compositions as complete musical statements.",
     "bpmMin": 70,
     "bpmMax": 300,
     "influence": "Brought jazz drumming to mainstream film audiences with 'Birdman'. His technical and musical excellence represents the current peak of jazz drumming.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "birdman-main-titles",
+      "three-times-three"
+    ]
   },
   {
     "id": "nate-smith",
@@ -1013,15 +1769,27 @@
     "born": 1978,
     "died": null,
     "primaryEra": "2010s",
-    "eras": ["2010s"],
-    "genres": ["jazz", "funk", "soul"],
-    "bands": ["NÊST", "Dave Holland Quartet"],
-    "bio": "Nate Smith represents the cutting edge of contemporary drumming. His NÊST project experiments with looping and live electronics while his jazz work with Dave Holland demonstrates classical technique. He bridges traditional jazz drumming with modern production sensibilities seamlessly.",
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "funk",
+      "soul"
+    ],
+    "bands": [
+      "N\u00caST",
+      "Dave Holland Quartet"
+    ],
+    "bio": "Nate Smith represents the cutting edge of contemporary drumming. His N\u00caST project experiments with looping and live electronics while his jazz work with Dave Holland demonstrates classical technique. He bridges traditional jazz drumming with modern production sensibilities seamlessly.",
     "signatureStyle": "Hybrid approach combining live looping electronics with acoustic drumming, deep groove sensibility meeting avant-garde experimentation.",
     "bpmMin": 70,
     "bpmMax": 160,
     "influence": "Leading voice in contemporary drumming's integration of technology with acoustic performance. Expanding what a live drum performance can be.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "dean-town",
+      "birds-of-a-feather-vulf"
+    ]
   },
   {
     "id": "cindy-blackman",
@@ -1029,15 +1797,29 @@
     "born": 1959,
     "died": null,
     "primaryEra": "2010s",
-    "eras": ["1980s", "1990s", "2000s", "2010s"],
-    "genres": ["jazz", "rock"],
-    "bands": ["Lenny Kravitz's Band", "Carlos Santana's Band"],
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "rock"
+    ],
+    "bands": [
+      "Lenny Kravitz's Band",
+      "Carlos Santana's Band"
+    ],
     "bio": "Cindy Blackman Santana brings jazz drumming's highest level of musicality and technique to rock and pop contexts. Her work with Lenny Kravitz brought Tony Williams-influenced jazz drumming to rock arenas. Later joining Carlos Santana's band, she became one of the most visible ambassadors for jazz drumming in popular music.",
     "signatureStyle": "Tony Williams-influenced jazz technique applied to rock and pop contexts, extraordinary power married to jazz vocabulary and musical sensitivity.",
     "bpmMin": 80,
     "bpmMax": 240,
     "influence": "Demonstrated that jazz drumming's highest technical and musical standards can thrive in rock and pop contexts without compromise.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "are-you-gonna-go-my-way",
+      "someday-kravitz"
+    ]
   },
   {
     "id": "papa-jo-jones",
@@ -1045,15 +1827,24 @@
     "born": 1911,
     "died": 1985,
     "primaryEra": "1940s",
-    "eras": ["1940s", "1950s"],
-    "genres": ["jazz"],
-    "bands": ["Count Basie Orchestra"],
+    "eras": [
+      "1940s",
+      "1950s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Count Basie Orchestra"
+    ],
     "bio": "Papa Jo Jones revolutionized jazz drumming by moving the timekeeping pulse from the bass drum to the hi-hat, liberating the bass drum for accents. His light, swinging touch with Count Basie set the template for all big-band drumming. He was the first to demonstrate that subtlety and swing could coexist at the highest level.",
-    "signatureStyle": "Featherlight hi-hat timekeeping, fluid brushwork, and the art of playing in support of the ensemble — the foundational vocabulary of jazz drumming.",
+    "signatureStyle": "Featherlight hi-hat timekeeping, fluid brushwork, and the art of playing in support of the ensemble \u2014 the foundational vocabulary of jazz drumming.",
     "bpmMin": 120,
     "bpmMax": 260,
     "influence": "Revolutionized jazz drumming by moving timekeeping to the hi-hat. Every jazz drummer since plays in his shadow.",
-    "iconicSongIds": ["one-oclock-jump"]
+    "iconicSongIds": [
+      "one-oclock-jump"
+    ]
   },
   {
     "id": "kenny-clarke",
@@ -1061,15 +1852,27 @@
     "born": 1914,
     "died": 1985,
     "primaryEra": "1940s",
-    "eras": ["1940s", "1950s", "1960s"],
-    "genres": ["jazz"],
-    "bands": ["Dizzy Gillespie", "Modern Jazz Quartet"],
-    "bio": "Kenny Clarke is the father of bebop drumming. He was the first to move the steady pulse to the ride cymbal while using the bass drum for melodic 'bombs' — the defining rhythmic gesture of bebop. His work with Dizzy Gillespie on the original bebop recordings of the 1940s created the grammar that all modern jazz drumming speaks.",
-    "signatureStyle": "Ride cymbal timekeeping with explosive bass drum bombs, the founding syntax of bebop drumming — spontaneous, conversational, and harmonically aware.",
+    "eras": [
+      "1940s",
+      "1950s",
+      "1960s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Dizzy Gillespie",
+      "Modern Jazz Quartet"
+    ],
+    "bio": "Kenny Clarke is the father of bebop drumming. He was the first to move the steady pulse to the ride cymbal while using the bass drum for melodic 'bombs' \u2014 the defining rhythmic gesture of bebop. His work with Dizzy Gillespie on the original bebop recordings of the 1940s created the grammar that all modern jazz drumming speaks.",
+    "signatureStyle": "Ride cymbal timekeeping with explosive bass drum bombs, the founding syntax of bebop drumming \u2014 spontaneous, conversational, and harmonically aware.",
     "bpmMin": 140,
     "bpmMax": 300,
     "influence": "Co-invented bebop drumming. Every jazz drummer from Art Blakey to Tony Williams built on his innovations.",
-    "iconicSongIds": ["a-night-in-tunisia", "salt-peanuts"]
+    "iconicSongIds": [
+      "a-night-in-tunisia",
+      "salt-peanuts"
+    ]
   },
   {
     "id": "louis-bellson",
@@ -1077,15 +1880,28 @@
     "born": 1924,
     "died": 2009,
     "primaryEra": "1950s",
-    "eras": ["1940s", "1950s", "1960s", "1970s"],
-    "genres": ["jazz"],
-    "bands": ["Duke Ellington Orchestra", "Tommy Dorsey", "Harry James"],
+    "eras": [
+      "1940s",
+      "1950s",
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Duke Ellington Orchestra",
+      "Tommy Dorsey",
+      "Harry James"
+    ],
     "bio": "Louis Bellson was the first drummer to use a double bass drum setup in a major professional context, pioneering the technique that would later become standard in rock and metal. His big band playing with Duke Ellington was flawless, and he composed and arranged throughout his career, demonstrating that drummers could be complete musicians.",
     "signatureStyle": "Pioneer of double bass drumming, extraordinary big-band swing, and the rare ability to command a large orchestra while maintaining elegant finesse.",
     "bpmMin": 100,
     "bpmMax": 280,
     "influence": "Invented double bass drumming and proved that drummers could be composers and bandleaders of the highest order.",
-    "iconicSongIds": ["caravan"]
+    "iconicSongIds": [
+      "caravan"
+    ]
   },
   {
     "id": "philly-joe-jones",
@@ -1093,15 +1909,26 @@
     "born": 1923,
     "died": 1985,
     "primaryEra": "1950s",
-    "eras": ["1950s", "1960s"],
-    "genres": ["jazz"],
-    "bands": ["Miles Davis Quintet", "Bill Evans Trio"],
+    "eras": [
+      "1950s",
+      "1960s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Miles Davis Quintet",
+      "Bill Evans Trio"
+    ],
     "bio": "Philly Joe Jones was Miles Davis's favorite drummer and a central figure in the development of hard bop. His drumming was aggressive, swinging, and rhythmically adventurous. The combination of sophisticated ride cymbal work and explosive snare punctuation defined the hard bop era. Davis said Jones had 'the kind of fire that I needed.'",
     "signatureStyle": "Aggressive hard bop swing with fire and rhythmic surprise, explosive snare accents against a flowing ride, the heartbeat of the Miles Davis Quintet.",
     "bpmMin": 100,
     "bpmMax": 280,
-    "influence": "The definitive hard bop drummer. Miles Davis's first choice for a reason — he combined groove and spontaneous fire at the highest level.",
-    "iconicSongIds": ["walkin", "four"]
+    "influence": "The definitive hard bop drummer. Miles Davis's first choice for a reason \u2014 he combined groove and spontaneous fire at the highest level.",
+    "iconicSongIds": [
+      "walkin",
+      "four"
+    ]
   },
   {
     "id": "joe-morello",
@@ -1109,15 +1936,25 @@
     "born": 1928,
     "died": 2013,
     "primaryEra": "1950s",
-    "eras": ["1950s", "1960s"],
-    "genres": ["jazz"],
-    "bands": ["Dave Brubeck Quartet"],
-    "bio": "Joe Morello's performance on 'Take Five' is arguably the most famous drum solo in history, introduced the world to 5/4 time, and made jazz accessible to millions. His technical mastery was extraordinary — a former student of George Lawrence Stone — and he could swing in any time signature with natural ease. His work with Dave Brubeck defined jazz for a generation.",
+    "eras": [
+      "1950s",
+      "1960s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Dave Brubeck Quartet"
+    ],
+    "bio": "Joe Morello's performance on 'Take Five' is arguably the most famous drum solo in history, introduced the world to 5/4 time, and made jazz accessible to millions. His technical mastery was extraordinary \u2014 a former student of George Lawrence Stone \u2014 and he could swing in any time signature with natural ease. His work with Dave Brubeck defined jazz for a generation.",
     "signatureStyle": "Extraordinary technique applied to odd time signatures with natural swing, making complex meters feel inevitable and deeply musical.",
     "bpmMin": 80,
     "bpmMax": 200,
     "influence": "Introduced millions of listeners to odd time signatures through Take Five. The most technically accomplished drummer of the classic jazz era.",
-    "iconicSongIds": ["take-five", "blue-rondo-a-la-turk"]
+    "iconicSongIds": [
+      "take-five",
+      "blue-rondo-a-la-turk"
+    ]
   },
   {
     "id": "billy-higgins",
@@ -1125,15 +1962,28 @@
     "born": 1936,
     "died": 2001,
     "primaryEra": "1960s",
-    "eras": ["1950s", "1960s", "1970s", "1980s"],
-    "genres": ["jazz"],
-    "bands": ["Ornette Coleman", "Lee Morgan", "Cedar Walton"],
-    "bio": "Billy Higgins was the most joyful drummer in jazz — his beaming smile on the bandstand matched his generous, bubbling, dancing timekeeping. He was Ornette Coleman's drummer during the free jazz revolution of the late 1950s and also recorded classic hard bop with Lee Morgan. His light touch and natural swing made every band he played with feel like a celebration.",
+    "eras": [
+      "1950s",
+      "1960s",
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Ornette Coleman",
+      "Lee Morgan",
+      "Cedar Walton"
+    ],
+    "bio": "Billy Higgins was the most joyful drummer in jazz \u2014 his beaming smile on the bandstand matched his generous, bubbling, dancing timekeeping. He was Ornette Coleman's drummer during the free jazz revolution of the late 1950s and also recorded classic hard bop with Lee Morgan. His light touch and natural swing made every band he played with feel like a celebration.",
     "signatureStyle": "Joyful, dancing swing with featherlight touch, deep pocket, and the rare ability to play freely while maintaining irresistible forward momentum.",
     "bpmMin": 90,
     "bpmMax": 240,
     "influence": "Bridged hard bop and free jazz with grace and joy. One of the most beloved and musical jazz drummers of any era.",
-    "iconicSongIds": ["the-sidewinder"]
+    "iconicSongIds": [
+      "the-sidewinder"
+    ]
   },
   {
     "id": "roy-haynes",
@@ -1141,15 +1991,34 @@
     "born": 1925,
     "died": null,
     "primaryEra": "1950s",
-    "eras": ["1940s", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s"],
-    "genres": ["jazz"],
-    "bands": ["Charlie Parker", "Sarah Vaughan", "John Coltrane", "Chick Corea"],
-    "bio": "Roy Haynes has played with virtually every jazz giant across eight decades — Charlie Parker, Miles Davis, John Coltrane, Chick Corea, and many more. His style is fiercely modern, rhythmically unpredictable, and always swinging. He invented the 'paddlewheel' ride pattern and continues performing at the very highest level decades after most retire.",
+    "eras": [
+      "1940s",
+      "1950s",
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Charlie Parker",
+      "Sarah Vaughan",
+      "John Coltrane",
+      "Chick Corea"
+    ],
+    "bio": "Roy Haynes has played with virtually every jazz giant across eight decades \u2014 Charlie Parker, Miles Davis, John Coltrane, Chick Corea, and many more. His style is fiercely modern, rhythmically unpredictable, and always swinging. He invented the 'paddlewheel' ride pattern and continues performing at the very highest level decades after most retire.",
     "signatureStyle": "Rhythmically surprising and fiercely modern swing, the 'paddlewheel' ride cymbal pattern, and an adventurous spirit that remains contemporary across any decade.",
     "bpmMin": 80,
     "bpmMax": 300,
-    "influence": "The most versatile and enduring jazz drummer alive — played with everyone from Bird to Corea and sounds modern in every decade.",
-    "iconicSongIds": []
+    "influence": "The most versatile and enduring jazz drummer alive \u2014 played with everyone from Bird to Corea and sounds modern in every decade.",
+    "iconicSongIds": [
+      "snap-crackle",
+      "we-three-haynes"
+    ]
   },
   {
     "id": "hal-blaine",
@@ -1157,15 +2026,27 @@
     "born": 1929,
     "died": 2019,
     "primaryEra": "1960s",
-    "eras": ["1960s", "1970s"],
-    "genres": ["rock", "soul"],
-    "bands": ["The Wrecking Crew"],
+    "eras": [
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "rock",
+      "soul"
+    ],
+    "bands": [
+      "The Wrecking Crew"
+    ],
     "bio": "Hal Blaine is the most recorded drummer in history, appearing on an estimated 35,000 to 40,000 sessions including eight consecutive Grammy Record of the Year winners. As a core member of the Wrecking Crew, he played on hits by The Beach Boys, The Mamas & The Papas, Frank Sinatra, Simon & Garfunkel, and hundreds more. His studio intuition and versatility defined the sound of American pop music.",
-    "signatureStyle": "Encyclopedic studio versatility — able to serve any genre or artist with perfectly calibrated drum parts, impeccable time, and the instinct to find exactly the right feel for each song.",
+    "signatureStyle": "Encyclopedic studio versatility \u2014 able to serve any genre or artist with perfectly calibrated drum parts, impeccable time, and the instinct to find exactly the right feel for each song.",
     "bpmMin": 60,
     "bpmMax": 200,
     "influence": "The most recorded drummer in history. His playing is the invisible backbone of American pop and rock from the 1960s and 70s.",
-    "iconicSongIds": ["be-my-baby", "california-dreamin", "good-vibrations"]
+    "iconicSongIds": [
+      "be-my-baby",
+      "california-dreamin",
+      "good-vibrations"
+    ]
   },
   {
     "id": "jim-keltner",
@@ -1173,15 +2054,29 @@
     "born": 1942,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s", "2000s"],
-    "genres": ["rock", "soul"],
-    "bands": ["Traveling Wilburys", "John Lennon", "George Harrison"],
-    "bio": "Jim Keltner is the session drummer's session drummer — his slightly-behind-the-beat, deeply grooving style is immediately recognizable on hundreds of recordings. He played on John Lennon's 'Imagine,' worked with George Harrison, Bob Dylan, and virtually every rock legend. His nuanced touch and deep time make every recording he appears on feel more human.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "rock",
+      "soul"
+    ],
+    "bands": [
+      "Traveling Wilburys",
+      "John Lennon",
+      "George Harrison"
+    ],
+    "bio": "Jim Keltner is the session drummer's session drummer \u2014 his slightly-behind-the-beat, deeply grooving style is immediately recognizable on hundreds of recordings. He played on John Lennon's 'Imagine,' worked with George Harrison, Bob Dylan, and virtually every rock legend. His nuanced touch and deep time make every recording he appears on feel more human.",
     "signatureStyle": "Deeply behind-the-beat groove with subtle ghost notes, understated fills, and the rare ability to make a recording feel warmer and more human just by sitting in the pocket.",
     "bpmMin": 60,
     "bpmMax": 150,
     "influence": "The most respected session drummer in rock history. His name on a session is a guarantee of musical integrity and feel.",
-    "iconicSongIds": ["imagine"]
+    "iconicSongIds": [
+      "imagine"
+    ]
   },
   {
     "id": "steve-jordan",
@@ -1189,15 +2084,31 @@
     "born": 1957,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s", "2000s", "2010s"],
-    "genres": ["rock", "soul", "funk"],
-    "bands": ["Late Night with David Letterman", "Keith Richards", "Rolling Stones"],
-    "bio": "Steve Jordan is one of the great rock and R&B groove drummers — deep, funky, and always perfect for the song. His partnership with Keith Richards's X-Pensive Winos gave him a platform for his swampy rock feel, and he went on to replace Charlie Watts in the Rolling Stones following Watts's death in 2021, a testament to his stature.",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "soul",
+      "funk"
+    ],
+    "bands": [
+      "Late Night with David Letterman",
+      "Keith Richards",
+      "Rolling Stones"
+    ],
+    "bio": "Steve Jordan is one of the great rock and R&B groove drummers \u2014 deep, funky, and always perfect for the song. His partnership with Keith Richards's X-Pensive Winos gave him a platform for his swampy rock feel, and he went on to replace Charlie Watts in the Rolling Stones following Watts's death in 2021, a testament to his stature.",
     "signatureStyle": "Swampy, behind-the-beat rock groove with deep soul and R&B influence, and the tasteful restraint of a true musical servant.",
     "bpmMin": 70,
     "bpmMax": 160,
-    "influence": "One of rock's great groove merchants. Chosen to replace Charlie Watts in the Rolling Stones — the highest possible testament to his musical values.",
-    "iconicSongIds": []
+    "influence": "One of rock's great groove merchants. Chosen to replace Charlie Watts in the Rolling Stones \u2014 the highest possible testament to his musical values.",
+    "iconicSongIds": [
+      "who-did-you-think-i-was",
+      "try-jmtrio"
+    ]
   },
   {
     "id": "omar-hakim",
@@ -1205,15 +2116,30 @@
     "born": 1959,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s", "2000s"],
-    "genres": ["jazz", "fusion", "soul"],
-    "bands": ["Weather Report", "Sting", "Madonna", "David Bowie"],
-    "bio": "Omar Hakim is one of the most versatile drummers of the 1980s and beyond — equally at home in jazz fusion with Weather Report, sophisticated pop with Sting and David Bowie, and dance music with Madonna. His 'Let's Dance' session with David Bowie became one of the best-selling albums of the era. His combination of groove, technique, and adaptability is extraordinary.",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "jazz",
+      "fusion",
+      "soul"
+    ],
+    "bands": [
+      "Weather Report",
+      "Sting",
+      "Madonna",
+      "David Bowie"
+    ],
+    "bio": "Omar Hakim is one of the most versatile drummers of the 1980s and beyond \u2014 equally at home in jazz fusion with Weather Report, sophisticated pop with Sting and David Bowie, and dance music with Madonna. His 'Let's Dance' session with David Bowie became one of the best-selling albums of the era. His combination of groove, technique, and adaptability is extraordinary.",
     "signatureStyle": "Chameleon versatility across jazz, pop, and R&B with deep groove at the center, and the rare ability to serve vastly different musical masters with equal conviction.",
     "bpmMin": 80,
     "bpmMax": 220,
-    "influence": "Played on some of the best-selling albums of the 1980s across completely different genres — the definition of a versatile elite drummer.",
-    "iconicSongIds": ["lets-dance"]
+    "influence": "Played on some of the best-selling albums of the 1980s across completely different genres \u2014 the definition of a versatile elite drummer.",
+    "iconicSongIds": [
+      "lets-dance"
+    ]
   },
   {
     "id": "peter-erskine",
@@ -1221,15 +2147,29 @@
     "born": 1954,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1970s", "1980s", "1990s", "2000s"],
-    "genres": ["jazz", "fusion"],
-    "bands": ["Weather Report", "Steps Ahead", "Stan Kenton"],
-    "bio": "Peter Erskine succeeded Joe Zawinul's high bar with Weather Report and elevated fusion drumming to a new level of musical sensitivity. His touch is extraordinary — he can be powerful and subtle in the same phrase. His jazz trio recordings demonstrate that he is equally comfortable in purely acoustic contexts, where his brush playing and quartet work are exceptional.",
-    "signatureStyle": "Fusion power met with jazz sensitivity — extraordinary touch and dynamic range, and the ability to play delicately within complex rhythmic frameworks.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "jazz",
+      "fusion"
+    ],
+    "bands": [
+      "Weather Report",
+      "Steps Ahead",
+      "Stan Kenton"
+    ],
+    "bio": "Peter Erskine succeeded Joe Zawinul's high bar with Weather Report and elevated fusion drumming to a new level of musical sensitivity. His touch is extraordinary \u2014 he can be powerful and subtle in the same phrase. His jazz trio recordings demonstrate that he is equally comfortable in purely acoustic contexts, where his brush playing and quartet work are exceptional.",
+    "signatureStyle": "Fusion power met with jazz sensitivity \u2014 extraordinary touch and dynamic range, and the ability to play delicately within complex rhythmic frameworks.",
     "bpmMin": 60,
     "bpmMax": 240,
     "influence": "Raised Weather Report's rhythmic floor to new heights. One of the most musical and versatile of all jazz-fusion drummers.",
-    "iconicSongIds": ["teen-town"]
+    "iconicSongIds": [
+      "teen-town"
+    ]
   },
   {
     "id": "lenny-white",
@@ -1237,15 +2177,28 @@
     "born": 1949,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s"],
-    "genres": ["jazz", "fusion"],
-    "bands": ["Return to Forever", "Miles Davis"],
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "jazz",
+      "fusion"
+    ],
+    "bands": [
+      "Return to Forever",
+      "Miles Davis"
+    ],
     "bio": "Lenny White played on Miles Davis's 'Bitches Brew' and then co-founded Return to Forever with Chick Corea, where his explosive fusion drumming helped define jazz-rock. His combination of jazz vocabulary and rock power created a new template for fusion drumming. He could play with extraordinary velocity while maintaining deep jazz musicality.",
-    "signatureStyle": "Explosive fusion power rooted in bebop vocabulary — jazz time concept wielded with rock ferocity, and the ability to navigate complex changes at blinding tempos.",
+    "signatureStyle": "Explosive fusion power rooted in bebop vocabulary \u2014 jazz time concept wielded with rock ferocity, and the ability to navigate complex changes at blinding tempos.",
     "bpmMin": 100,
     "bpmMax": 320,
     "influence": "Defined jazz-rock fusion drumming through Return to Forever. His combination of jazz roots and rock power set the template for fusion drumming.",
-    "iconicSongIds": ["romantic-warrior", "spain"]
+    "iconicSongIds": [
+      "romantic-warrior",
+      "spain"
+    ]
   },
   {
     "id": "alphonse-mouzon",
@@ -1253,15 +2206,28 @@
     "born": 1948,
     "died": 2016,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s"],
-    "genres": ["jazz", "fusion"],
-    "bands": ["Weather Report", "Herbie Hancock", "McCoy Tyner"],
+    "eras": [
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "jazz",
+      "fusion"
+    ],
+    "bands": [
+      "Weather Report",
+      "Herbie Hancock",
+      "McCoy Tyner"
+    ],
     "bio": "Alphonse Mouzon was a founding member of Weather Report and one of the most powerful drummers of the fusion era. His playing combined R&B earthiness with jazz sophistication and rock power at a level that blew listeners away. He later pursued a solo career and remained an influential voice in jazz-fusion throughout his life.",
-    "signatureStyle": "Powerful, R&B-rooted fusion drumming with jazz sophistication — raw physical force combined with harmonic intelligence and deep groove.",
+    "signatureStyle": "Powerful, R&B-rooted fusion drumming with jazz sophistication \u2014 raw physical force combined with harmonic intelligence and deep groove.",
     "bpmMin": 90,
     "bpmMax": 280,
     "influence": "A founding figure of jazz-fusion drumming through Weather Report. Combined R&B power with jazz complexity in ways that defined the genre.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "funky-snakefoot",
+      "mysterious-traveller-wrtitle"
+    ]
   },
   {
     "id": "airto-moreira",
@@ -1269,15 +2235,30 @@
     "born": 1941,
     "died": null,
     "primaryEra": "1970s",
-    "eras": ["1970s", "1980s", "1990s"],
-    "genres": ["jazz", "latin", "afrobeat"],
-    "bands": ["Miles Davis", "Return to Forever", "Weather Report"],
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "jazz",
+      "latin",
+      "afrobeat"
+    ],
+    "bands": [
+      "Miles Davis",
+      "Return to Forever",
+      "Weather Report"
+    ],
     "bio": "Airto Moreira brought Brazilian percussion traditions into jazz and fusion at the highest level, playing with Miles Davis, Chick Corea, and Weather Report. His arsenal of percussion instruments and improvisational freedom created textures that no drummer with a standard kit could approach. He expanded the definition of what percussion could be in jazz.",
-    "signatureStyle": "Brazilian percussion tradition — cuica, berimbau, shaker, and dozens of other instruments — brought into jazz and fusion with improvisational freedom.",
+    "signatureStyle": "Brazilian percussion tradition \u2014 cuica, berimbau, shaker, and dozens of other instruments \u2014 brought into jazz and fusion with improvisational freedom.",
     "bpmMin": 60,
     "bpmMax": 200,
     "influence": "Introduced Brazilian percussion vocabulary to jazz at the highest level, expanding what rhythm instruments could mean in improvised music.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "tombo-in-7-4",
+      "natural-feelings"
+    ]
   },
   {
     "id": "stanton-moore",
@@ -1285,15 +2266,27 @@
     "born": 1974,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s", "2010s"],
-    "genres": ["funk", "jazz"],
-    "bands": ["Galactic"],
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "funk",
+      "jazz"
+    ],
+    "bands": [
+      "Galactic"
+    ],
     "bio": "Stanton Moore is the foremost exponent of New Orleans second-line drumming in contemporary music. His work with Galactic fuses the Crescent City's unique parade-ground rhythms with rock, funk, and jazz in a style that is completely his own. He is also an accomplished educator whose book 'Groove Alchemy' is a definitive text on New Orleans drumming.",
-    "signatureStyle": "New Orleans second-line drumming fused with funk, rock, and jazz — the parade-ground shuffle rhythm elevated to world-class contemporary performance.",
+    "signatureStyle": "New Orleans second-line drumming fused with funk, rock, and jazz \u2014 the parade-ground shuffle rhythm elevated to world-class contemporary performance.",
     "bpmMin": 80,
     "bpmMax": 180,
     "influence": "The leading practitioner of New Orleans second-line drumming in modern music. An educator and performer who keeps a unique American tradition alive.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "tuck-and-roll",
+      "go-go-galactic"
+    ]
   },
   {
     "id": "vinnie-calliuta",
@@ -1301,15 +2294,31 @@
     "born": 1953,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s", "2000s", "2010s"],
-    "genres": ["jazz", "fusion", "rock"],
-    "bands": ["Frank Zappa", "Sting", "Steve Vai"],
-    "bio": "Widely regarded by fellow musicians as the most technically complete drummer alive, Vinnie Calliuta combines extraordinary facility in jazz, rock, and fusion with deep musicality and feel. His career spans work with Frank Zappa — who demanded the most challenging technical execution from any drummer — Sting, and Steve Vai. He consistently demonstrates flawless technique across any genre without sacrificing musical intention.",
-    "signatureStyle": "Absolute technical mastery across jazz, rock, and fusion executed with ease and musical depth — the textbook example of chops serving the music.",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "fusion",
+      "rock"
+    ],
+    "bands": [
+      "Frank Zappa",
+      "Sting",
+      "Steve Vai"
+    ],
+    "bio": "Widely regarded by fellow musicians as the most technically complete drummer alive, Vinnie Calliuta combines extraordinary facility in jazz, rock, and fusion with deep musicality and feel. His career spans work with Frank Zappa \u2014 who demanded the most challenging technical execution from any drummer \u2014 Sting, and Steve Vai. He consistently demonstrates flawless technique across any genre without sacrificing musical intention.",
+    "signatureStyle": "Absolute technical mastery across jazz, rock, and fusion executed with ease and musical depth \u2014 the textbook example of chops serving the music.",
     "bpmMin": 40,
     "bpmMax": 320,
     "influence": "Universally cited by professional drummers as the most technically complete player alive. Raised the ceiling on what is physically possible.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "city-of-tiny-lites",
+      "let-your-soul"
+    ]
   },
   {
     "id": "dennis-chambers",
@@ -1317,15 +2326,31 @@
     "born": 1959,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s", "2000s", "2010s"],
-    "genres": ["funk", "fusion", "rock"],
-    "bands": ["Parliament-Funkadelic", "Carlos Santana", "John Scofield"],
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "funk",
+      "fusion",
+      "rock"
+    ],
+    "bands": [
+      "Parliament-Funkadelic",
+      "Carlos Santana",
+      "John Scofield"
+    ],
     "bio": "Dennis Chambers combines the deepest funk groove with dazzling technical facility. Coming up through Parliament-Funkadelic, he developed pocket playing at the highest level before bringing it to fusion contexts with John Scofield and rock with Carlos Santana. His foot-hand coordination is superhuman, and his ability to play complex patterns while maintaining infectious groove is unmatched.",
-    "signatureStyle": "Supreme funk pocket fused with fusion-level hand technique — extraordinary foot-hand independence married to irresistible groove that never loses the one.",
+    "signatureStyle": "Supreme funk pocket fused with fusion-level hand technique \u2014 extraordinary foot-hand independence married to irresistible groove that never loses the one.",
     "bpmMin": 70,
     "bpmMax": 280,
     "influence": "The gold standard for groove-plus-technique. Showed that the deepest funk feel and the most demanding fusion vocabulary are not mutually exclusive.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "smooth-santana",
+      "sco-mule"
+    ]
   },
   {
     "id": "steve-smith",
@@ -1333,15 +2358,29 @@
     "born": 1954,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s", "2000s", "2010s"],
-    "genres": ["rock", "jazz", "fusion"],
-    "bands": ["Journey", "Vital Information"],
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "jazz",
+      "fusion"
+    ],
+    "bands": [
+      "Journey",
+      "Vital Information"
+    ],
     "bio": "Steve Smith is the rare drummer who achieved massive commercial success with Journey and is simultaneously regarded as one of the finest jazz drummers alive. His rock playing on 'Don't Stop Believin'' is heard by millions; his jazz playing with Vital Information demonstrates world-class technique and swing. He studies deeply and has kept developing throughout his career.",
-    "signatureStyle": "Commercial rock perfection alongside serious jazz scholarship — the rare player who excels in both worlds without compromising either.",
+    "signatureStyle": "Commercial rock perfection alongside serious jazz scholarship \u2014 the rare player who excels in both worlds without compromising either.",
     "bpmMin": 70,
     "bpmMax": 240,
     "influence": "Proved that commercial rock success and jazz authenticity can coexist. One of the few drummers equally respected by rock and jazz audiences.",
-    "iconicSongIds": ["dont-stop-believin"]
+    "iconicSongIds": [
+      "dont-stop-believin"
+    ]
   },
   {
     "id": "simon-phillips",
@@ -1349,15 +2388,30 @@
     "born": 1957,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s", "2000s", "2010s"],
-    "genres": ["rock", "jazz", "fusion"],
-    "bands": ["Toto", "Mike Oldfield", "Pete Townshend"],
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "jazz",
+      "fusion"
+    ],
+    "bands": [
+      "Toto",
+      "Mike Oldfield",
+      "Pete Townshend"
+    ],
     "bio": "Simon Phillips replaced Jeff Porcaro in Toto and brought his own brand of technically sophisticated, yet deeply groovy rock drumming to the band. His fusion project Protocol showcases his jazz-influenced improvising. He is a master of both the studio environment and live performance, with a technical facility that encompasses any musical style.",
-    "signatureStyle": "Technical sophistication in service of the groove — jazz independence and fusion complexity married to perfect rock time and studio instinct.",
+    "signatureStyle": "Technical sophistication in service of the groove \u2014 jazz independence and fusion complexity married to perfect rock time and studio instinct.",
     "bpmMin": 80,
     "bpmMax": 260,
     "influence": "One of rock's most technically sophisticated players, equally at home in jazz-fusion and stadium rock contexts.",
-    "iconicSongIds": ["pamela"]
+    "iconicSongIds": [
+      "pamela"
+    ]
   },
   {
     "id": "terry-bozzio",
@@ -1365,15 +2419,31 @@
     "born": 1950,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1970s", "1980s", "1990s", "2000s"],
-    "genres": ["progressive-rock", "jazz", "fusion"],
-    "bands": ["Frank Zappa", "Missing Persons", "Jeff Beck"],
-    "bio": "Terry Bozzio plays one of the most elaborate drum setups in history — a massive extended kit with tuned toms covering the full chromatic scale that he uses to compose melodic solo pieces. His work with Frank Zappa placed him in extraordinarily demanding musical situations that forged his technique. His solo concerts are unique events where he performs complete melodic and harmonic compositions on the drum kit.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "progressive-rock",
+      "jazz",
+      "fusion"
+    ],
+    "bands": [
+      "Frank Zappa",
+      "Missing Persons",
+      "Jeff Beck"
+    ],
+    "bio": "Terry Bozzio plays one of the most elaborate drum setups in history \u2014 a massive extended kit with tuned toms covering the full chromatic scale that he uses to compose melodic solo pieces. His work with Frank Zappa placed him in extraordinarily demanding musical situations that forged his technique. His solo concerts are unique events where he performs complete melodic and harmonic compositions on the drum kit.",
     "signatureStyle": "Extended melodic drumming on a chromatically tuned kit, extraordinary independence and coordination, composing complete harmonic and melodic pieces on drums.",
     "bpmMin": 40,
     "bpmMax": 300,
     "influence": "Expanded the conception of drums as a melodic and harmonic instrument. His extended kit and solo compositions are unique in drumming history.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "walking-in-la",
+      "mental-hopscotch"
+    ]
   },
   {
     "id": "mike-portnoy",
@@ -1381,15 +2451,29 @@
     "born": 1967,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s", "2010s"],
-    "genres": ["metal", "progressive-rock"],
-    "bands": ["Dream Theater", "Avenged Sevenfold", "Sons of Apollo"],
-    "bio": "Mike Portnoy co-founded Dream Theater and built it into progressive metal's defining band over two decades. His drumming is technically staggering — navigating Dream Theater's extraordinarily complex compositions with stamina and musical intelligence. He also stepped in for Avenged Sevenfold following the death of The Rev, demonstrating his adaptability and professionalism.",
-    "signatureStyle": "Progressive metal complexity at the highest level — stamina, technical coordination, and the ability to navigate complex compositional structures while maintaining musical flow.",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal",
+      "progressive-rock"
+    ],
+    "bands": [
+      "Dream Theater",
+      "Avenged Sevenfold",
+      "Sons of Apollo"
+    ],
+    "bio": "Mike Portnoy co-founded Dream Theater and built it into progressive metal's defining band over two decades. His drumming is technically staggering \u2014 navigating Dream Theater's extraordinarily complex compositions with stamina and musical intelligence. He also stepped in for Avenged Sevenfold following the death of The Rev, demonstrating his adaptability and professionalism.",
+    "signatureStyle": "Progressive metal complexity at the highest level \u2014 stamina, technical coordination, and the ability to navigate complex compositional structures while maintaining musical flow.",
     "bpmMin": 80,
     "bpmMax": 280,
     "influence": "Defined progressive metal drumming through Dream Theater. The most recognizable face of prog metal drumming for an entire generation.",
-    "iconicSongIds": ["pull-me-under", "the-dance-of-eternity"]
+    "iconicSongIds": [
+      "pull-me-under",
+      "the-dance-of-eternity"
+    ]
   },
   {
     "id": "mike-mangini",
@@ -1397,15 +2481,28 @@
     "born": 1963,
     "died": null,
     "primaryEra": "2000s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["metal", "progressive-rock"],
-    "bands": ["Dream Theater", "Steve Vai", "Annihilator"],
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal",
+      "progressive-rock"
+    ],
+    "bands": [
+      "Dream Theater",
+      "Steve Vai",
+      "Annihilator"
+    ],
     "bio": "Mike Mangini succeeded Mike Portnoy in Dream Theater after a famous audition that showcased his extraordinary technical capabilities. He holds multiple speed records and approaches drumming with an analytical, almost scientific precision. His coordination exercises and practice methods have influenced drummers worldwide through his instructional work.",
-    "signatureStyle": "Scientific precision and extraordinary physical speed — multiple world records, analytical approach to technique, and the ability to execute Dream Theater's complexity with mechanical accuracy.",
+    "signatureStyle": "Scientific precision and extraordinary physical speed \u2014 multiple world records, analytical approach to technique, and the ability to execute Dream Theater's complexity with mechanical accuracy.",
     "bpmMin": 60,
     "bpmMax": 340,
     "influence": "Holds multiple drumming speed records. His analytical approach to technique has influenced a generation of technical drummers.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "on-backs-of-angels",
+      "the-enemy-inside"
+    ]
   },
   {
     "id": "virgil-donati",
@@ -1413,15 +2510,28 @@
     "born": 1965,
     "died": null,
     "primaryEra": "2000s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["fusion", "progressive-rock", "metal"],
-    "bands": ["Planet X", "Derek Sherinian"],
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "fusion",
+      "progressive-rock",
+      "metal"
+    ],
+    "bands": [
+      "Planet X",
+      "Derek Sherinian"
+    ],
     "bio": "Virgil Donati is considered by many musicians to be the most technically demanding drummer alive. His ability to play independent, complex rhythmic patterns in each limb simultaneously defies conventional understanding of coordination. His solo performances are studied by aspiring drummers worldwide as benchmarks of what is physically achievable with extreme practice.",
-    "signatureStyle": "Extreme limb independence — playing completely independent rhythmic voices in each limb simultaneously at speed, pushing the physical limits of what coordination can achieve.",
+    "signatureStyle": "Extreme limb independence \u2014 playing completely independent rhythmic voices in each limb simultaneously at speed, pushing the physical limits of what coordination can achieve.",
     "bpmMin": 60,
     "bpmMax": 340,
     "influence": "Represents the absolute outer frontier of technical drumming. His limb independence is studied as a benchmark of human physical capacity.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "inner-combustion",
+      "moonbabies"
+    ]
   },
   {
     "id": "matt-garstka",
@@ -1429,15 +2539,26 @@
     "born": 1989,
     "died": null,
     "primaryEra": "2010s",
-    "eras": ["2010s"],
-    "genres": ["metal", "progressive-rock", "jazz"],
-    "bands": ["Animals As Leaders"],
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "metal",
+      "progressive-rock",
+      "jazz"
+    ],
+    "bands": [
+      "Animals As Leaders"
+    ],
     "bio": "Matt Garstka is one of the most technically advanced drummers of his generation, playing in the instrumental progressive metal band Animals As Leaders alongside Tosin Abasi's 8-string guitar work. His polymetric independence, jazz-influenced vocabulary within extreme metal contexts, and sheer physical intensity have made him one of the most discussed drummers in contemporary music.",
-    "signatureStyle": "Polymetric independence meeting extreme technical facility in progressive metal — jazz vocabulary in a metal context, with extraordinary physical intensity.",
+    "signatureStyle": "Polymetric independence meeting extreme technical facility in progressive metal \u2014 jazz vocabulary in a metal context, with extraordinary physical intensity.",
     "bpmMin": 60,
     "bpmMax": 300,
     "influence": "One of the most technically advanced drummers of the 2010s. Pushing progressive metal drumming into new territory with jazz-influenced polymetric playing.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "physical-education",
+      "tooth-and-claw"
+    ]
   },
   {
     "id": "larnell-lewis",
@@ -1445,15 +2566,26 @@
     "born": 1985,
     "died": null,
     "primaryEra": "2010s",
-    "eras": ["2010s"],
-    "genres": ["jazz", "funk", "soul"],
-    "bands": ["Snarky Puppy"],
-    "bio": "Larnell Lewis became a global sensation through his YouTube covers — particularly his spontaneous, jaw-dropping performance of Snarky Puppy's 'What About Me?' — demonstrating that viral video can create genuine stars. His playing with Snarky Puppy spans jazz, funk, R&B, and world music. He is simultaneously one of the most technically accomplished and most watchable drummers of his generation.",
-    "signatureStyle": "Joyful technical brilliance spanning jazz, funk, and R&B — spontaneous creative energy that leaps off the screen and sounds equally impressive in person.",
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "funk",
+      "soul"
+    ],
+    "bands": [
+      "Snarky Puppy"
+    ],
+    "bio": "Larnell Lewis became a global sensation through his YouTube covers \u2014 particularly his spontaneous, jaw-dropping performance of Snarky Puppy's 'What About Me?' \u2014 demonstrating that viral video can create genuine stars. His playing with Snarky Puppy spans jazz, funk, R&B, and world music. He is simultaneously one of the most technically accomplished and most watchable drummers of his generation.",
+    "signatureStyle": "Joyful technical brilliance spanning jazz, funk, and R&B \u2014 spontaneous creative energy that leaps off the screen and sounds equally impressive in person.",
     "bpmMin": 70,
     "bpmMax": 240,
     "influence": "A YouTube generation drum star whose genuine musical depth has introduced millions of new fans to serious drumming.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "lingus",
+      "we-like-it-here"
+    ]
   },
   {
     "id": "jojo-mayer",
@@ -1461,15 +2593,26 @@
     "born": 1963,
     "died": null,
     "primaryEra": "2000s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["jazz", "electronic"],
-    "bands": ["Nerve"],
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "electronic"
+    ],
+    "bands": [
+      "Nerve"
+    ],
     "bio": "Jojo Mayer bridges live acoustic drumming and electronic music production in a uniquely sophisticated way. His project Nerve translates the micro-rhythmic feel of drum and bass, jungle, and electronic music onto an acoustic kit with extraordinary precision. He has spent decades studying how electronic music programs groove and has become the leading figure in translating that knowledge to live drumming.",
-    "signatureStyle": "Translating electronic music's micro-rhythmic programming vocabulary onto an acoustic kit — the precise feel of drum-and-bass played by a human with jazz sensibility.",
+    "signatureStyle": "Translating electronic music's micro-rhythmic programming vocabulary onto an acoustic kit \u2014 the precise feel of drum-and-bass played by a human with jazz sensibility.",
     "bpmMin": 140,
     "bpmMax": 300,
     "influence": "The premier bridge between electronic music production and live drumming. Redefined what acoustic drummers can learn from drum machines.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "guts-nerve",
+      "the-last-beat"
+    ]
   },
   {
     "id": "benny-greb",
@@ -1477,15 +2620,27 @@
     "born": 1980,
     "died": null,
     "primaryEra": "2010s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["jazz", "funk"],
-    "bands": ["Solo", "Various"],
-    "bio": "Benny Greb is one of the most respected drummer-educators of his generation, known for his deep investigation of groove, feel, and language. His instructional materials — particularly his 'Language of Drumming' method — have influenced drummers worldwide. As a performer, he brings intellectual rigor and playful musical creativity to everything he does.",
-    "signatureStyle": "Deep groove awareness combined with intellectual investigation of what makes rhythm work — phrasing, subdivision, and feel explored as a complete musical language.",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "funk"
+    ],
+    "bands": [
+      "Solo",
+      "Various"
+    ],
+    "bio": "Benny Greb is one of the most respected drummer-educators of his generation, known for his deep investigation of groove, feel, and language. His instructional materials \u2014 particularly his 'Language of Drumming' method \u2014 have influenced drummers worldwide. As a performer, he brings intellectual rigor and playful musical creativity to everything he does.",
+    "signatureStyle": "Deep groove awareness combined with intellectual investigation of what makes rhythm work \u2014 phrasing, subdivision, and feel explored as a complete musical language.",
     "bpmMin": 60,
     "bpmMax": 200,
     "influence": "One of the most important drummer-educators of the 2010s. His 'Language of Drumming' approach has reshaped how drummers understand groove.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "grebfruit-title",
+      "spl-greb"
+    ]
   },
   {
     "id": "mark-guiliana",
@@ -1493,15 +2648,26 @@
     "born": 1980,
     "died": null,
     "primaryEra": "2010s",
-    "eras": ["2010s"],
-    "genres": ["jazz", "electronic"],
-    "bands": ["Heernt", "Brad Mehldau", "David Bowie"],
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "electronic"
+    ],
+    "bands": [
+      "Heernt",
+      "Brad Mehldau",
+      "David Bowie"
+    ],
     "bio": "Mark Guiliana represents the cutting edge of jazz drumming's engagement with electronic music. His drumming on David Bowie's final album 'Blackstar' introduced his playing to mainstream audiences. His work with Brad Mehldau's beat-oriented project explores the intersection of jazz improvisation, electronic groove, and compositional sophistication. He thinks deeply about rhythm as language.",
-    "signatureStyle": "Electronic music-informed jazz drumming — micro-rhythmic precision, sophisticated subdivision, and the ability to create groove that feels both programmed and deeply human.",
+    "signatureStyle": "Electronic music-informed jazz drumming \u2014 micro-rhythmic precision, sophisticated subdivision, and the ability to create groove that feels both programmed and deeply human.",
     "bpmMin": 60,
     "bpmMax": 200,
     "influence": "The leading figure in jazz drumming's engagement with electronic music aesthetics. His 'Blackstar' work brought experimental jazz drumming to mass audiences.",
-    "iconicSongIds": ["lazarus"]
+    "iconicSongIds": [
+      "lazarus"
+    ]
   },
   {
     "id": "chris-dave",
@@ -1509,15 +2675,27 @@
     "born": 1974,
     "died": null,
     "primaryEra": "2010s",
-    "eras": ["2010s"],
-    "genres": ["jazz", "soul", "hiphop"],
-    "bands": ["The Drumhedz", "Robert Glasper Experiment"],
-    "bio": "Chris Dave is one of contemporary music's most innovative drummers, blending hip-hop, jazz, R&B, and electronic music in a style that is immediately recognizable. His work on Adele's '21' brought his playing to one of the best-selling albums in history. His drumming sounds like it incorporates sequenced patterns and programming while being played live — a seamless fusion of human feel and machine precision.",
-    "signatureStyle": "Hip-hop and electronic music aesthetics played live on an acoustic kit — machine-like precision with deep soul and R&B feel, creating groove that sounds simultaneously programmed and human.",
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "soul",
+      "hiphop"
+    ],
+    "bands": [
+      "The Drumhedz",
+      "Robert Glasper Experiment"
+    ],
+    "bio": "Chris Dave is one of contemporary music's most innovative drummers, blending hip-hop, jazz, R&B, and electronic music in a style that is immediately recognizable. His work on Adele's '21' brought his playing to one of the best-selling albums in history. His drumming sounds like it incorporates sequenced patterns and programming while being played live \u2014 a seamless fusion of human feel and machine precision.",
+    "signatureStyle": "Hip-hop and electronic music aesthetics played live on an acoustic kit \u2014 machine-like precision with deep soul and R&B feel, creating groove that sounds simultaneously programmed and human.",
     "bpmMin": 60,
     "bpmMax": 180,
     "influence": "Defining figure of hip-hop and electronic-influenced jazz drumming. His playing on Adele's '21' brought innovative rhythm to mass audiences.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "adorn",
+      "afro-blue-erykah"
+    ]
   },
   {
     "id": "louis-cole",
@@ -1525,15 +2703,26 @@
     "born": 1985,
     "died": null,
     "primaryEra": "2010s",
-    "eras": ["2010s"],
-    "genres": ["jazz", "funk", "electronic"],
-    "bands": ["KNOWER"],
-    "bio": "Louis Cole is the most viral drummer of the YouTube era — his videos show extraordinary technical facility, comedic energy, and genuine musical creativity in equal measure. With KNOWER, he creates avant-funk music that blends electronic production, jazz, and comedy. His playing is technically staggering, his groove is deep, and his personality makes drumming accessible and joyful.",
-    "signatureStyle": "Avant-funk technical brilliance — extraordinary speed and coordination delivered with comedic energy and a deep groove that makes complicated playing look effortless.",
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "jazz",
+      "funk",
+      "electronic"
+    ],
+    "bands": [
+      "KNOWER"
+    ],
+    "bio": "Louis Cole is the most viral drummer of the YouTube era \u2014 his videos show extraordinary technical facility, comedic energy, and genuine musical creativity in equal measure. With KNOWER, he creates avant-funk music that blends electronic production, jazz, and comedy. His playing is technically staggering, his groove is deep, and his personality makes drumming accessible and joyful.",
+    "signatureStyle": "Avant-funk technical brilliance \u2014 extraordinary speed and coordination delivered with comedic energy and a deep groove that makes complicated playing look effortless.",
     "bpmMin": 80,
     "bpmMax": 300,
     "influence": "The most viral drummer of the YouTube era. Made extraordinary technical drumming accessible and entertaining to mass audiences.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "time-louis-cole",
+      "after-the-fact"
+    ]
   },
   {
     "id": "thomas-haake",
@@ -1541,15 +2730,24 @@
     "born": 1975,
     "died": null,
     "primaryEra": "2000s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["metal"],
-    "bands": ["Meshuggah"],
-    "bio": "Thomas Haake is the architect of Meshuggah's rhythmic world — a terrifying landscape of polymetric patterns where independent meters stack against each other to create music that is simultaneously mathematically precise and viscerally brutal. His playing on 'Bleed' — performing an asymmetrical hi-hat pattern while executing a completely independent kick drum pattern — is considered one of the hardest drum performances ever recorded.",
-    "signatureStyle": "Polymetric extreme metal — multiple independent time signatures layered over each other, combining mathematical precision with brutal power at extreme tempos.",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal"
+    ],
+    "bands": [
+      "Meshuggah"
+    ],
+    "bio": "Thomas Haake is the architect of Meshuggah's rhythmic world \u2014 a terrifying landscape of polymetric patterns where independent meters stack against each other to create music that is simultaneously mathematically precise and viscerally brutal. His playing on 'Bleed' \u2014 performing an asymmetrical hi-hat pattern while executing a completely independent kick drum pattern \u2014 is considered one of the hardest drum performances ever recorded.",
+    "signatureStyle": "Polymetric extreme metal \u2014 multiple independent time signatures layered over each other, combining mathematical precision with brutal power at extreme tempos.",
     "bpmMin": 100,
     "bpmMax": 280,
     "influence": "Created the rhythmic template for djent and polyrhythmic metal. 'Bleed' is considered one of the most technically demanding recorded drum performances.",
-    "iconicSongIds": ["bleed"]
+    "iconicSongIds": [
+      "bleed"
+    ]
   },
   {
     "id": "george-kollias",
@@ -1557,15 +2755,25 @@
     "born": 1977,
     "died": null,
     "primaryEra": "2000s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["metal"],
-    "bands": ["Nile"],
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal"
+    ],
+    "bands": [
+      "Nile"
+    ],
     "bio": "George Kollias is the premier technical death metal drummer, capable of playing blast beats at extreme velocities with hands and feet in perfect coordination. His playing with Nile navigates Egyptian-themed death metal compositions at speeds that seem physically impossible. He is also a serious student of traditional drumming methods and brings genuine technique to an extreme context.",
-    "signatureStyle": "Elite death metal blast beat facility at extreme speeds — perfect hand-foot coordination at tempos that challenge human physical limits, with genuine compositional intent.",
+    "signatureStyle": "Elite death metal blast beat facility at extreme speeds \u2014 perfect hand-foot coordination at tempos that challenge human physical limits, with genuine compositional intent.",
     "bpmMin": 180,
     "bpmMax": 340,
     "influence": "The benchmark for technical death metal drumming. Demonstrated that extreme metal speed can be pursued with the same seriousness as classical music technique.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "annihilation-wicked",
+      "cast-down-heretic"
+    ]
   },
   {
     "id": "gene-hoglan",
@@ -1573,15 +2781,29 @@
     "born": 1967,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s", "2010s"],
-    "genres": ["metal"],
-    "bands": ["Death", "Testament", "Dark Angel", "Strapping Young Lad"],
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal"
+    ],
+    "bands": [
+      "Death",
+      "Testament",
+      "Dark Angel",
+      "Strapping Young Lad"
+    ],
     "bio": "Gene Hoglan earned the nickname 'The Atomic Clock' for his metronomic precision at extreme metal tempos. His work with Chuck Schuldiner in Death is considered some of the most musically sophisticated death metal ever recorded. He later played with Testament and Strapping Young Lad, demonstrating adaptability across extreme metal subgenres. His consistency under pressure is legendary.",
-    "signatureStyle": "Metronomic precision at extreme tempos — 'The Atomic Clock' nickname is earned. Musical intelligence within death metal contexts and the ability to maintain perfect time under extreme physical demands.",
+    "signatureStyle": "Metronomic precision at extreme tempos \u2014 'The Atomic Clock' nickname is earned. Musical intelligence within death metal contexts and the ability to maintain perfect time under extreme physical demands.",
     "bpmMin": 140,
     "bpmMax": 300,
     "influence": "The 'Atomic Clock' of extreme metal. His work with Death elevated the musical standards of death metal drumming.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "darkness-descends-dark-angel",
+      "crystal-mountain"
+    ]
   },
   {
     "id": "chris-adler",
@@ -1589,15 +2811,25 @@
     "born": 1972,
     "died": null,
     "primaryEra": "2000s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["metal"],
-    "bands": ["Lamb of God", "Megadeth"],
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal"
+    ],
+    "bands": [
+      "Lamb of God",
+      "Megadeth"
+    ],
     "bio": "Chris Adler built Lamb of God into one of the defining groove metal bands through drumming that combined thrash metal speed with a deeply syncopated funk-influenced groove. His 'Redneck' performance exemplifies how technical metal drumming can maintain a body-moving groove. He also recorded with Megadeth, demonstrating his chops across different metal contexts.",
-    "signatureStyle": "Groove metal precision — thrash speed combined with syncopated funk-influenced groove, making technical metal music that simultaneously moves the body.",
+    "signatureStyle": "Groove metal precision \u2014 thrash speed combined with syncopated funk-influenced groove, making technical metal music that simultaneously moves the body.",
     "bpmMin": 120,
     "bpmMax": 280,
     "influence": "Defined groove metal drumming through Lamb of God. Showed how thrash velocity and funk syncopation can coexist in heavy music.",
-    "iconicSongIds": ["redneck"]
+    "iconicSongIds": [
+      "redneck"
+    ]
   },
   {
     "id": "mario-duplantier",
@@ -1605,15 +2837,25 @@
     "born": 1983,
     "died": null,
     "primaryEra": "2010s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["metal"],
-    "bands": ["Gojira"],
-    "bio": "Mario Duplantier is the most exciting metal drummer of his generation, playing in the French progressive metal band Gojira alongside his brother Joe on guitar/vocals. His playing combines brutal extreme metal physicality with jazz-influenced creativity and progressive compositional awareness. His visual intensity — he plays with expressions ranging from deep concentration to pure ecstasy — makes him compelling to watch even on video.",
-    "signatureStyle": "Progressive extreme metal drumming with jazz-influenced creativity — brutal power serving sophisticated compositional structures, played with remarkable physical and expressive intensity.",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal"
+    ],
+    "bands": [
+      "Gojira"
+    ],
+    "bio": "Mario Duplantier is the most exciting metal drummer of his generation, playing in the French progressive metal band Gojira alongside his brother Joe on guitar/vocals. His playing combines brutal extreme metal physicality with jazz-influenced creativity and progressive compositional awareness. His visual intensity \u2014 he plays with expressions ranging from deep concentration to pure ecstasy \u2014 makes him compelling to watch even on video.",
+    "signatureStyle": "Progressive extreme metal drumming with jazz-influenced creativity \u2014 brutal power serving sophisticated compositional structures, played with remarkable physical and expressive intensity.",
     "bpmMin": 80,
     "bpmMax": 280,
-    "influence": "The most exciting and creative metal drummer of the 2010s. Gojira's drumming transcends genre — serious, progressive, and brutally powerful.",
-    "iconicSongIds": ["stranded", "the-chant"]
+    "influence": "The most exciting and creative metal drummer of the 2010s. Gojira's drumming transcends genre \u2014 serious, progressive, and brutally powerful.",
+    "iconicSongIds": [
+      "stranded",
+      "the-chant"
+    ]
   },
   {
     "id": "jimmy-sullivan",
@@ -1621,15 +2863,25 @@
     "born": 1981,
     "died": 2009,
     "primaryEra": "2000s",
-    "eras": ["2000s"],
-    "genres": ["metal", "rock"],
-    "bands": ["Avenged Sevenfold"],
+    "eras": [
+      "2000s"
+    ],
+    "genres": [
+      "metal",
+      "rock"
+    ],
+    "bands": [
+      "Avenged Sevenfold"
+    ],
     "bio": "Jimmy Sullivan, known as 'The Rev,' was the drummer and co-songwriter for Avenged Sevenfold, bringing extraordinary technical facility and melodic creativity to their metalcore-to-metal evolution. His drumming combined machine-gun precision with musical sensitivity, and his influence on a generation of drummers through Avenged Sevenfold cannot be overstated. His death in 2009 cut short one of metal's most creative careers.",
-    "signatureStyle": "Technical metal precision combined with melodic musical sensitivity and genuine songwriting craft — an elite drummer who brought compositional thinking to extreme metal drumming.",
+    "signatureStyle": "Technical metal precision combined with melodic musical sensitivity and genuine songwriting craft \u2014 an elite drummer who brought compositional thinking to extreme metal drumming.",
     "bpmMin": 100,
     "bpmMax": 280,
     "influence": "Defined a generation of metal drumming through Avenged Sevenfold. One of the most complete drummer-songwriters in metal history.",
-    "iconicSongIds": ["bat-country", "unholy-confessions"]
+    "iconicSongIds": [
+      "bat-country",
+      "unholy-confessions"
+    ]
   },
   {
     "id": "jon-theodore",
@@ -1637,15 +2889,28 @@
     "born": 1972,
     "died": null,
     "primaryEra": "2000s",
-    "eras": ["2000s", "2010s"],
-    "genres": ["progressive-rock", "rock"],
-    "bands": ["The Mars Volta", "Queens of the Stone Age", "One Day as a Lion"],
-    "bio": "Jon Theodore is one of the most distinctive and original drummers working in rock music, known for his work with The Mars Volta — a band that pushed progressive and psychedelic rock to extremes of complexity and emotion. His playing navigates polyrhythmic landscapes with a jazz-rooted freedom that makes the most complex passages feel like natural outpourings. He later played with Queens of the Stone Age and continues to be one of the most creative drummers in rock.",
-    "signatureStyle": "Polyrhythmic jazz freedom in a progressive rock context — navigating complex compositional structures with improviser's intuition and rock physicality.",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "progressive-rock",
+      "rock"
+    ],
+    "bands": [
+      "The Mars Volta",
+      "Queens of the Stone Age",
+      "One Day as a Lion"
+    ],
+    "bio": "Jon Theodore is one of the most distinctive and original drummers working in rock music, known for his work with The Mars Volta \u2014 a band that pushed progressive and psychedelic rock to extremes of complexity and emotion. His playing navigates polyrhythmic landscapes with a jazz-rooted freedom that makes the most complex passages feel like natural outpourings. He later played with Queens of the Stone Age and continues to be one of the most creative drummers in rock.",
+    "signatureStyle": "Polyrhythmic jazz freedom in a progressive rock context \u2014 navigating complex compositional structures with improviser's intuition and rock physicality.",
     "bpmMin": 60,
     "bpmMax": 280,
     "influence": "One of the most original and creative drummers in rock. His Mars Volta work represents the pinnacle of progressive drumming in 21st-century rock.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "my-god-is-the-sun",
+      "i-sat-by-the-ocean"
+    ]
   },
   {
     "id": "brad-wilk",
@@ -1653,15 +2918,29 @@
     "born": 1968,
     "died": null,
     "primaryEra": "1990s",
-    "eras": ["1990s", "2000s", "2010s"],
-    "genres": ["rock", "metal"],
-    "bands": ["Rage Against the Machine", "Audioslave", "Prophets of Rage"],
-    "bio": "Brad Wilk is the rhythmic engine of Rage Against the Machine — a band that combined hip-hop, funk, and heavy metal in a sound that defined 1990s political rock. His drumming is direct, powerful, and deeply locked with bassist Tim Commerford. The Rage groove is one of the most distinctive in rock history, balancing hip-hop pocket with metal aggression.",
-    "signatureStyle": "Hip-hop pocket and funk groove driving heavy rock — locked rhythmic engine for a band that fused genres that had never been combined so explosively.",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "metal"
+    ],
+    "bands": [
+      "Rage Against the Machine",
+      "Audioslave",
+      "Prophets of Rage"
+    ],
+    "bio": "Brad Wilk is the rhythmic engine of Rage Against the Machine \u2014 a band that combined hip-hop, funk, and heavy metal in a sound that defined 1990s political rock. His drumming is direct, powerful, and deeply locked with bassist Tim Commerford. The Rage groove is one of the most distinctive in rock history, balancing hip-hop pocket with metal aggression.",
+    "signatureStyle": "Hip-hop pocket and funk groove driving heavy rock \u2014 locked rhythmic engine for a band that fused genres that had never been combined so explosively.",
     "bpmMin": 80,
     "bpmMax": 200,
     "influence": "Created the rhythmic foundation for one of the most politically significant bands in rock history. RATM's groove influenced a generation of alternative metal bands.",
-    "iconicSongIds": ["killing-in-the-name", "bulls-on-parade"]
+    "iconicSongIds": [
+      "killing-in-the-name",
+      "bulls-on-parade"
+    ]
   },
   {
     "id": "karen-carpenter",
@@ -1669,15 +2948,25 @@
     "born": 1950,
     "died": 1983,
     "primaryEra": "1970s",
-    "eras": ["1970s"],
-    "genres": ["rock", "soul"],
-    "bands": ["The Carpenters"],
-    "bio": "Karen Carpenter considered herself a drummer first and was an extraordinarily gifted one — earning first place in a 1975 Playboy magazine poll for best rock drummer, ahead of John Bonham and other legends. Buddy Rich praised her playing. She stood behind the kit while singing, coordinating complex drum patterns with lead vocals in a way that remains technically remarkable. The world knew her for her voice; her fellow musicians knew her for her drumming.",
-    "signatureStyle": "Elegant, jazz-influenced pop drumming of extraordinary refinement — playing complex patterns while singing lead vocals, with impeccable time and musical taste.",
+    "eras": [
+      "1970s"
+    ],
+    "genres": [
+      "rock",
+      "soul"
+    ],
+    "bands": [
+      "The Carpenters"
+    ],
+    "bio": "Karen Carpenter considered herself a drummer first and was an extraordinarily gifted one \u2014 earning first place in a 1975 Playboy magazine poll for best rock drummer, ahead of John Bonham and other legends. Buddy Rich praised her playing. She stood behind the kit while singing, coordinating complex drum patterns with lead vocals in a way that remains technically remarkable. The world knew her for her voice; her fellow musicians knew her for her drumming.",
+    "signatureStyle": "Elegant, jazz-influenced pop drumming of extraordinary refinement \u2014 playing complex patterns while singing lead vocals, with impeccable time and musical taste.",
     "bpmMin": 70,
     "bpmMax": 150,
     "influence": "Voted best rock drummer in a 1975 poll ahead of Bonham, praised by Buddy Rich. Her playing is a masterclass in subtle musicality and coordination.",
-    "iconicSongIds": ["we-only-just-begun", "top-of-the-world"]
+    "iconicSongIds": [
+      "we-only-just-begun",
+      "top-of-the-world"
+    ]
   },
   {
     "id": "alex-van-halen",
@@ -1685,15 +2974,28 @@
     "born": 1953,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1970s", "1980s", "1990s"],
-    "genres": ["hard-rock", "rock"],
-    "bands": ["Van Halen"],
-    "bio": "Alex Van Halen provided the rhythmic foundation for one of rock's most explosive bands — often overshadowed by his brother Eddie but universally respected by professional drummers. His playing is powerful, musical, and perfectly calibrated for the band's sound. His ability to play with Eddie's virtuosic, tempo-manipulating guitar work required rhythmic intelligence and flexibility that few drummers could match.",
-    "signatureStyle": "Powerful hard rock drumming with the rhythmic intelligence to support one of the most technically demanding guitarists in rock — muscular, musical, and perfectly in service of the band.",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "hard-rock",
+      "rock"
+    ],
+    "bands": [
+      "Van Halen"
+    ],
+    "bio": "Alex Van Halen provided the rhythmic foundation for one of rock's most explosive bands \u2014 often overshadowed by his brother Eddie but universally respected by professional drummers. His playing is powerful, musical, and perfectly calibrated for the band's sound. His ability to play with Eddie's virtuosic, tempo-manipulating guitar work required rhythmic intelligence and flexibility that few drummers could match.",
+    "signatureStyle": "Powerful hard rock drumming with the rhythmic intelligence to support one of the most technically demanding guitarists in rock \u2014 muscular, musical, and perfectly in service of the band.",
     "bpmMin": 100,
     "bpmMax": 220,
-    "influence": "The rhythmic backbone of Van Halen — underappreciated by the public but universally respected by professional drummers who know what he had to do.",
-    "iconicSongIds": ["eruption", "panama", "jump"]
+    "influence": "The rhythmic backbone of Van Halen \u2014 underappreciated by the public but universally respected by professional drummers who know what he had to do.",
+    "iconicSongIds": [
+      "eruption",
+      "panama",
+      "jump"
+    ]
   },
   {
     "id": "nicko-mcbrain",
@@ -1701,15 +3003,27 @@
     "born": 1952,
     "died": null,
     "primaryEra": "1980s",
-    "eras": ["1980s", "1990s", "2000s"],
-    "genres": ["metal"],
-    "bands": ["Iron Maiden"],
-    "bio": "Nicko McBrain joined Iron Maiden in 1982 and has been their drummer ever since — one of the longest-running partnerships in metal. His playing style features a distinctive shuffle feel and triplet-based patterns that give Iron Maiden their galloping groove. He is beloved by fans for his humor and charisma, and his technical playing on songs like 'The Trooper' and 'Aces High' defines classic British heavy metal.",
-    "signatureStyle": "Galloping triplet-based shuffle patterns that define classic British heavy metal — distinctive rhythmic vocabulary that made Iron Maiden's sound immediately identifiable.",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "metal"
+    ],
+    "bands": [
+      "Iron Maiden"
+    ],
+    "bio": "Nicko McBrain joined Iron Maiden in 1982 and has been their drummer ever since \u2014 one of the longest-running partnerships in metal. His playing style features a distinctive shuffle feel and triplet-based patterns that give Iron Maiden their galloping groove. He is beloved by fans for his humor and charisma, and his technical playing on songs like 'The Trooper' and 'Aces High' defines classic British heavy metal.",
+    "signatureStyle": "Galloping triplet-based shuffle patterns that define classic British heavy metal \u2014 distinctive rhythmic vocabulary that made Iron Maiden's sound immediately identifiable.",
     "bpmMin": 120,
     "bpmMax": 240,
     "influence": "Defined British heavy metal drumming through Iron Maiden. His shuffle-based patterns became a template for an entire subgenre.",
-    "iconicSongIds": ["the-trooper", "aces-high", "run-to-the-hills"]
+    "iconicSongIds": [
+      "the-trooper",
+      "aces-high",
+      "run-to-the-hills"
+    ]
   },
   {
     "id": "brian-blade",
@@ -1717,14 +3031,27 @@
     "born": 1970,
     "died": null,
     "primaryEra": "2000s",
-    "eras": ["1990s", "2000s", "2010s"],
-    "genres": ["jazz"],
-    "bands": ["Brian Blade Fellowship", "Wayne Shorter Quartet", "Joshua Redman"],
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Brian Blade Fellowship",
+      "Wayne Shorter Quartet",
+      "Joshua Redman"
+    ],
     "bio": "Brian Blade is one of the most sensitive and creative jazz drummers of his generation, bringing a gospel-rooted musical spirituality to his playing. His Fellowship Band recordings are among the most celebrated jazz records of the 2000s. His playing with Wayne Shorter's legendary quartet took collective jazz improvisation to new heights. He plays with extraordinary touch and a conversational depth that makes him one of the most musically complete jazz drummers alive.",
-    "signatureStyle": "Gospel-rooted jazz sensitivity — extraordinary touch and musical conversation, playing in service of collective improvisation with spiritual depth and creative generosity.",
+    "signatureStyle": "Gospel-rooted jazz sensitivity \u2014 extraordinary touch and musical conversation, playing in service of collective improvisation with spiritual depth and creative generosity.",
     "bpmMin": 60,
     "bpmMax": 200,
     "influence": "One of the most musically complete and spiritually deep jazz drummers of his generation. His Fellowship Band recordings are jazz masterworks.",
-    "iconicSongIds": []
+    "iconicSongIds": [
+      "season-of-changes",
+      "doctor-jesus"
+    ]
   }
 ]
