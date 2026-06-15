@@ -3,6 +3,7 @@ import { createYoga, createSchema } from "graphql-yoga";
 import { typeDefs } from "./graphql/schema.js";
 import { resolvers } from "./graphql/resolvers.js";
 import { logger } from "./lib/logger.js";
+import { handleStemsExtract } from "./handlers/stems.js";
 
 const schema = createSchema({ typeDefs, resolvers });
 
@@ -24,7 +25,7 @@ function setCorsHeaders(res: ServerResponse) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 }
 
-const server = createServer((req: IncomingMessage, res: ServerResponse) => {
+const server = createServer(async (req: IncomingMessage, res: ServerResponse) => {
   setCorsHeaders(res);
 
   if (req.method === "OPTIONS") {
@@ -38,6 +39,11 @@ const server = createServer((req: IncomingMessage, res: ServerResponse) => {
   if (url.pathname === "/health") {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(JSON.stringify({ status: "ok" }));
+    return;
+  }
+
+  if (url.pathname === "/stems/extract") {
+    await handleStemsExtract(req, res);
     return;
   }
 

@@ -2,7 +2,7 @@ import { Feather } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ActivityIndicator,
   Platform,
@@ -12,9 +12,15 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useAudioPlayer } from 'expo-audio';
 import { useSong } from '@/hooks/useGql';
 import { useColors } from '@/hooks/useColors';
 import type { TrackMeta } from '@/lib/queries';
+import {
+  extractDrumStem,
+  isStemError,
+  type StemResult,
+} from '@/lib/stems-client';
 
 const COMPLEXITY_LABELS = ['Beginner', 'Easy', 'Intermediate', 'Advanced', 'Expert'];
 const COMPLEXITY_COLORS = ['#228B22', '#6B8E23', '#B8860B', '#CD853F', '#8B1A1A'];
@@ -97,6 +103,187 @@ function TrackMetaCard({ meta, colors }: { meta: TrackMeta; colors: ReturnType<t
           <Text style={[styles.spotifyBtnText, { color: colors.mutedForeground }]}>Listen on Spotify</Text>
         </TouchableOpacity>
       ) : null}
+    </View>
+  );
+}
+
+type StemState =
+  | { phase: 'idle' }
+  | { phase: 'loading'; step: string }
+  | { phase: 'ready'; result: StemResult }
+  | { phase: 'premium' }
+  | { phase: 'no_preview' }
+  | { phase: 'error'; message: string };
+
+function StemPlayer({
+  url,
+  label,
+  icon,
+  colors,
+}: {
+  url: string;
+  label: string;
+  icon: 'headphones' | 'volume-2';
+  colors: ReturnType<typeof useColors>;
+}) {
+  const player = useAudioPlayer({ uri: url });
+  const playing = player.playing;
+
+  const toggle = () => {
+    if (playing) {
+      player.pause();
+    } else {
+      player.seekTo(0);
+      player.play();
+    }
+  };
+
+  return (
+    <TouchableOpacity
+      onPress={toggle}
+      style={[styles.stemPlayer, { backgroundColor: colors.muted, borderColor: colors.border }]}
+    >
+      <View style={[styles.stemIconWrap, { backgroundColor: colors.primary + '20' }]}>
+        <Feather name={playing ? 'pause' : icon} size={18} color={colors.primary} />
+      </View>
+      <View style={styles.stemInfo}>
+        <Text style={[styles.stemLabel, { color: colors.foreground }]}>{label}</Text>
+        <Text style={[styles.stemHint, { color: colors.mutedForeground }]}>
+          {playing ? 'Tap to pause' : 'Tap to play'}
+        </Text>
+      </View>
+    </TouchableOpacity>
+  );
+}
+
+function DrumStudySection({
+  songId,
+  colors,
+}: {
+  songId: string;
+  colors: ReturnType<typeof useColors>;
+}) {
+  const [state, setState] = useState<StemState>({ phase: 'idle' });
+
+  const start = async () => {
+    setState({ phase: 'loading', step: 'Finding preview via Deezer…' });
+
+    const result = await extractDrumStem(songId);
+
+    if (isStemError(result)) {
+      if (result.code === 'PREMIUM_REQUIRED') {
+        setState({ phase: 'premium' });
+      } else if (result.code === 'NO_PREVIEW') {
+        setState({ phase: 'no_preview' });
+      } else {
+        setState({ phase: 'error', message: result.message });
+      }
+      return;
+    }
+
+    setState({ phase: 'ready', result });
+  };
+
+  const reset = () => setState({ phase: 'idle' });
+
+  return (
+    <View style={[styles.studySection, { backgroundColor: colors.card, borderColor: colors.border }]}>
+      <View style={styles.studyHeader2}>
+        <Text style={styles.drumEmoji}>🥁</Text>
+        <View style={styles.studyTitleWrap}>
+          <Text style={[styles.studySectionTitle, { color: colors.foreground }]}>Drum Study Mode</Text>
+          <Text style={[styles.studySectionSub, { color: colors.mutedForeground }]}>
+            Isolate the drum track via LALAL.AI
+          </Text>
+        </View>
+      </View>
+
+      {state.phase === 'idle' && (
+        <TouchableOpacity
+          onPress={start}
+          style={[styles.studyBtn, { backgroundColor: colors.primary }]}
+        >
+          <Feather name="scissors" size={15} color="#fff" />
+          <Text style={styles.studyBtnText}>Isolate Drum Track</Text>
+        </TouchableOpacity>
+      )}
+
+      {state.phase === 'loading' && (
+        <View style={styles.studyLoading}>
+          <ActivityIndicator color={colors.primary} />
+          <Text style={[styles.studyLoadingText, { color: colors.mutedForeground }]}>
+            {state.step}
+          </Text>
+          <Text style={[styles.studyLoadingHint, { color: colors.mutedForeground }]}>
+            Using 30s preview · AI separation takes ~30–60s
+          </Text>
+        </View>
+      )}
+
+      {state.phase === 'ready' && (
+        <View style={styles.studyResult}>
+          <Text style={[styles.studyResultNote, { color: colors.mutedForeground }]}>
+            30s preview · "{state.result.previewTitle}"
+          </Text>
+          <StemPlayer
+            url={state.result.drumUrl}
+            label="Drum Track Only"
+            icon="headphones"
+            colors={colors}
+          />
+          {state.result.accompanimentUrl ? (
+            <StemPlayer
+              url={state.result.accompanimentUrl}
+              label="Everything Else"
+              icon="volume-2"
+              colors={colors}
+            />
+          ) : null}
+          <TouchableOpacity onPress={reset} style={styles.resetBtn}>
+            <Text style={[styles.resetText, { color: colors.mutedForeground }]}>↩ Try again</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+
+      {state.phase === 'premium' && (
+        <View style={[styles.studyNotice, { backgroundColor: colors.primary + '12', borderColor: colors.primary + '40' }]}>
+          <Feather name="lock" size={16} color={colors.primary} />
+          <Text style={[styles.studyNoticeText, { color: colors.foreground }]}>
+            Premium license upgrade in progress.{'\n'}This will work automatically once activated.
+          </Text>
+          <TouchableOpacity onPress={reset}>
+            <Text style={[styles.resetText, { color: colors.mutedForeground }]}>Dismiss</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+
+      {state.phase === 'no_preview' && (
+        <View style={[styles.studyNotice, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+          <Feather name="alert-circle" size={16} color={colors.mutedForeground} />
+          <Text style={[styles.studyNoticeText, { color: colors.foreground }]}>
+            No preview audio found for this track on Deezer.
+          </Text>
+          <TouchableOpacity onPress={reset}>
+            <Text style={[styles.resetText, { color: colors.mutedForeground }]}>Dismiss</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+
+      {state.phase === 'error' && (
+        <View style={[styles.studyNotice, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+          <Feather name="alert-triangle" size={16} color={colors.mutedForeground} />
+          <Text style={[styles.studyNoticeText, { color: colors.foreground }]} numberOfLines={3}>
+            {state.message}
+          </Text>
+          <TouchableOpacity onPress={reset}>
+            <Text style={[styles.resetText, { color: colors.mutedForeground }]}>Dismiss</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+
+      <Text style={[styles.studyAttr, { color: colors.mutedForeground }]}>
+        Powered by LALAL.AI · Preview via Deezer
+      </Text>
     </View>
   );
 }
@@ -230,6 +417,8 @@ export default function SongDetailScreen() {
 
         {song.trackMeta && <TrackMetaCard meta={song.trackMeta} colors={colors} />}
 
+        {id && <DrumStudySection songId={id} colors={colors} />}
+
         <View style={[styles.studyBox, { backgroundColor: colors.muted, borderColor: colors.border }]}>
           <View style={styles.studyHeader}>
             <Feather name="book-open" size={16} color={colors.primary} />
@@ -299,6 +488,29 @@ const styles = StyleSheet.create({
   metaGenreText: { fontSize: 11, fontWeight: '600' },
   spotifyBtn: { flexDirection: 'row', alignItems: 'center', gap: 5, paddingVertical: 6, borderTopWidth: StyleSheet.hairlineWidth, marginTop: 4 },
   spotifyBtnText: { fontSize: 12 },
+  studySection: { marginHorizontal: 20, marginTop: 20, borderRadius: 12, borderWidth: 1, overflow: 'hidden' },
+  studyHeader2: { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 16, paddingBottom: 12 },
+  drumEmoji: { fontSize: 28 },
+  studyTitleWrap: { flex: 1 },
+  studySectionTitle: { fontSize: 15, fontWeight: '700' },
+  studySectionSub: { fontSize: 12, marginTop: 2 },
+  studyBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, marginHorizontal: 16, marginBottom: 16, paddingVertical: 12, borderRadius: 8 },
+  studyBtnText: { color: '#fff', fontSize: 14, fontWeight: '700' },
+  studyLoading: { alignItems: 'center', gap: 8, paddingHorizontal: 16, paddingBottom: 16 },
+  studyLoadingText: { fontSize: 13, fontWeight: '500' },
+  studyLoadingHint: { fontSize: 11, textAlign: 'center' },
+  studyResult: { paddingHorizontal: 16, paddingBottom: 12, gap: 8 },
+  studyResultNote: { fontSize: 11, fontStyle: 'italic', marginBottom: 4 },
+  stemPlayer: { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 12, borderRadius: 8, borderWidth: 1 },
+  stemIconWrap: { width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center' },
+  stemInfo: { flex: 1 },
+  stemLabel: { fontSize: 14, fontWeight: '600' },
+  stemHint: { fontSize: 11, marginTop: 2 },
+  resetBtn: { alignItems: 'center', paddingVertical: 4 },
+  resetText: { fontSize: 12 },
+  studyNotice: { flexDirection: 'column', gap: 8, margin: 16, padding: 12, borderRadius: 8, borderWidth: 1, alignItems: 'center' },
+  studyNoticeText: { fontSize: 13, textAlign: 'center', lineHeight: 18 },
+  studyAttr: { fontSize: 10, textAlign: 'center', paddingBottom: 12, letterSpacing: 0.3 },
   studyBox: { marginHorizontal: 20, marginTop: 20, padding: 16, borderRadius: 10, borderWidth: 1, gap: 10 },
   studyHeader: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   studyTitle: { fontSize: 14, fontWeight: '700' },
