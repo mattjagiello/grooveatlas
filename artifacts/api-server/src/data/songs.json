@@ -6252,5 +6252,1086 @@
     "description": "Mellergaard pushing his approach further \u2014 the rhythmic complexity has increased while the musicality has deepened. This is progressive metal drumming that rewards repeated listening.",
     "whyStudy": "Compare this to Stray the Skies to hear Mellergaard's development. His ability to continue growing technically while deepening musically rather than simply adding more complexity is the mark of a mature musician.",
     "songsterrSlug": null
+  },
+  {
+    "id": "sex-machine-starks",
+    "title": "Get Up (I Feel Like Being a) Sex Machine",
+    "artist": "James Brown",
+    "drummerId": "jabo-starks",
+    "year": 1970,
+    "eraId": "1960s",
+    "genreIds": [
+      "funk",
+      "soul"
+    ],
+    "tempo": 120,
+    "feel": "Pure funk pocket \u2014 the groove IS the song, there is nothing else",
+    "complexity": 4,
+    "description": "Jabo Starks at his most elemental \u2014 this groove defines what funk drumming means. The kick, the snare, the hi-hat, the ghost notes, and the spaces between them form a complete compositional statement.",
+    "whyStudy": "Study each limb of Starks's groove in isolation before combining them. The kick pattern is everything. This is the most important funk groove in history \u2014 get it perfectly in your body before moving on.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "super-bad-starks",
+    "title": "Super Bad",
+    "artist": "James Brown",
+    "drummerId": "jabo-starks",
+    "year": 1970,
+    "eraId": "1960s",
+    "genreIds": [
+      "funk",
+      "soul"
+    ],
+    "tempo": 116,
+    "feel": "Two-part James Brown epic with Starks's blues-funk feel driving the entire production",
+    "complexity": 4,
+    "description": "Jabo Starks demonstrating his bluesier approach \u2014 compared to Stubblefield's precision, Starks has more personality and swing in his groove. Both are correct, both are great, and understanding the difference is an advanced funk education.",
+    "whyStudy": "Compare this directly with Clyde Stubblefield's Funky Drummer to hear the two poles of James Brown's rhythmic vision. Starks is bluesier; Stubblefield is tighter. Understanding both is understanding funk.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "lean-on-me-gadson",
+    "title": "Lean on Me",
+    "artist": "Bill Withers",
+    "drummerId": "james-gadson",
+    "year": 1972,
+    "eraId": "1970s",
+    "genreIds": [
+      "soul",
+      "r&b"
+    ],
+    "tempo": 77,
+    "feel": "The most human groove in soul music \u2014 Gadson's feel makes this song feel like a conversation between friends",
+    "complexity": 2,
+    "description": "James Gadson providing the perfect musical environment for one of soul music's most beloved songs. His restraint \u2014 playing the absolute minimum required \u2014 is the most sophisticated thing he could possibly have done.",
+    "whyStudy": "Study Gadson's restraint \u2014 what he doesn't play is as important as what he does. The temptation is always to add more; Lean on Me is the masterclass in playing less and meaning more.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "use-me-gadson",
+    "title": "Use Me",
+    "artist": "Bill Withers",
+    "drummerId": "james-gadson",
+    "year": 1972,
+    "eraId": "1970s",
+    "genreIds": [
+      "funk",
+      "soul"
+    ],
+    "tempo": 112,
+    "feel": "Funky and intimate \u2014 Gadson's groove has the feel of a small room even on a pop record",
+    "complexity": 4,
+    "description": "Gadson in a funkier context \u2014 the groove here is looser and more personal than the polished funk of James Brown's records. This is living-room funk, and it's exactly right for Withers's musical personality.",
+    "whyStudy": "Compare this to the more polished Motown or James Brown grooves \u2014 Gadson's approach is earthier and more personal. Understanding that different soul sub-genres require different pocket approaches is an essential lesson.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "my-girl-benjamin",
+    "title": "My Girl",
+    "artist": "The Temptations",
+    "drummerId": "benny-benjamin",
+    "year": 1964,
+    "eraId": "1960s",
+    "genreIds": [
+      "soul",
+      "r&b"
+    ],
+    "tempo": 108,
+    "feel": "The quintessential Motown groove \u2014 Benny Benjamin's shuffling pattern became the sound of an era",
+    "complexity": 2,
+    "description": "Benny Benjamin making one of the most joyful and infectious grooves in pop history sound effortless. The shuffle feel, the ride pattern, and the way he places the snare all come from jazz, applied to pop music with perfect taste.",
+    "whyStudy": "Study how Benjamin applies jazz vocabulary to pop music. The shuffle feel here comes from a big band tradition, but it serves the song's emotional brightness perfectly. Understanding jazz as the root of Motown drumming illuminates everything.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "cant-help-myself-benjamin",
+    "title": "I Can't Help Myself (Sugar Pie Honey Bunch)",
+    "artist": "Four Tops",
+    "drummerId": "benny-benjamin",
+    "year": 1965,
+    "eraId": "1960s",
+    "genreIds": [
+      "soul",
+      "r&b"
+    ],
+    "tempo": 130,
+    "feel": "Driving Motown energy with Benjamin pushing the tempo with joyful urgency",
+    "complexity": 3,
+    "description": "Benjamin at his most driving \u2014 this groove has a relentless forward momentum that perfectly matches the song's emotional desperation. His ability to push the tempo slightly without rushing is a Motown hallmark.",
+    "whyStudy": "Study Benjamin's relationship with tempo \u2014 Motown grooves often feel slightly ahead of the click, creating urgency and excitement. This is a skill derived from jazz's concept of 'playing on top' of the beat.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "casey-jones-kreutzmann",
+    "title": "Casey Jones",
+    "artist": "Grateful Dead",
+    "drummerId": "bill-kreutzmann",
+    "year": 1970,
+    "eraId": "1960s",
+    "genreIds": [
+      "rock",
+      "blues"
+    ],
+    "tempo": 130,
+    "feel": "Kreutzmann's driving groove powering one of the Dead's most beloved compositions",
+    "complexity": 3,
+    "description": "Bill Kreutzmann finding the perfect pocket for one of the Grateful Dead's most radio-friendly songs. His blues-based approach gives the groove an earthiness that more polished rock drummers couldn't have achieved.",
+    "whyStudy": "Study how Kreutzmann's blues roots inform his rock playing \u2014 the ghost notes, the slightly loose feel, and the way he breathes within the groove all come from blues drumming tradition applied to rock.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "truckin-kreutzmann",
+    "title": "Truckin'",
+    "artist": "Grateful Dead",
+    "drummerId": "bill-kreutzmann",
+    "year": 1970,
+    "eraId": "1970s",
+    "genreIds": [
+      "rock",
+      "blues"
+    ],
+    "tempo": 112,
+    "feel": "American music distilled \u2014 Kreutzmann's groove captures the spirit of 1970s rock at its most authentic",
+    "complexity": 3,
+    "description": "The Grateful Dead at their most accessible, with Kreutzmann's grooving and swinging playing at the center. This is American rock music in its most genuine form \u2014 rooted in blues and country, expressed through rock.",
+    "whyStudy": "Study how Kreutzmann integrates country, blues, and rock vocabulary into a single groove. His ability to draw from multiple American music traditions simultaneously is the foundation of the jam band aesthetic.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "you-keep-me-hangin-on",
+    "title": "You Keep Me Hangin' On",
+    "artist": "Vanilla Fudge",
+    "drummerId": "carmine-appice",
+    "year": 1968,
+    "eraId": "1960s",
+    "genreIds": [
+      "rock"
+    ],
+    "tempo": 72,
+    "feel": "Revolutionary early heavy rock \u2014 a soul hit transformed into psychedelic slowdown by Appice's massive approach",
+    "complexity": 3,
+    "description": "Carmine Appice taking a Supremes hit and turning it into something completely new through sheer rhythmic power and drama. The extreme slowdown of a familiar tempo creates an entirely different emotional quality \u2014 this is the birth of heavy rock.",
+    "whyStudy": "Study how Appice uses volume and drama as compositional elements. His ability to play very quietly and then explode into maximum volume is borrowed from big band dynamics and applied to rock \u2014 this was completely new in 1968.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "do-ya-think-appice",
+    "title": "Do Ya Think I'm Sexy?",
+    "artist": "Rod Stewart",
+    "drummerId": "carmine-appice",
+    "year": 1978,
+    "eraId": "1970s",
+    "genreIds": [
+      "rock",
+      "funk"
+    ],
+    "tempo": 126,
+    "feel": "Late 70s disco-rock crossover with Appice's powerful rock sensibility meeting the dance floor",
+    "complexity": 3,
+    "description": "Appice demonstrating versatility \u2014 from heavy psychedelic rock to disco-influenced pop-rock while maintaining his authoritative presence. His ability to adapt to the era's commercial requirements without losing his essential character is impressive.",
+    "whyStudy": "Study how great drummers adapt to commercial contexts without losing their musical identity. Appice's disco-era work maintains his signature power and confidence while serving a very different musical purpose than his Vanilla Fudge recordings.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "madhouse-benante",
+    "title": "Madhouse",
+    "artist": "Anthrax",
+    "drummerId": "charlie-benante",
+    "year": 1985,
+    "eraId": "1980s",
+    "genreIds": [
+      "metal"
+    ],
+    "tempo": 196,
+    "feel": "Thrash metal with Benante's jazz-influenced fills setting him apart from his contemporaries",
+    "complexity": 4,
+    "description": "Charlie Benante establishing the Anthrax sound \u2014 thrash metal speed with fills that come from a different place than typical metal vocabulary. His jazz influences are audible even at extreme tempos.",
+    "whyStudy": "Study Benante's fills specifically \u2014 they don't follow the typical thrash metal patterns derived from speed metal. His vocabulary comes partially from jazz, making his playing recognizable even within the genre's extreme sonic context.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "indians-benante",
+    "title": "Indians",
+    "artist": "Anthrax",
+    "drummerId": "charlie-benante",
+    "year": 1987,
+    "eraId": "1980s",
+    "genreIds": [
+      "metal",
+      "rock"
+    ],
+    "tempo": 194,
+    "feel": "Anthrax at their most melodically sophisticated with Benante's drumming supporting genuine compositional ambition",
+    "complexity": 4,
+    "description": "Benante in Anthrax's most celebrated composition \u2014 his ability to serve a song with genuine melodic and structural ambition while maintaining thrash metal's energy is the model for technically ambitious metal drumming.",
+    "whyStudy": "Study how Benante supports melody in a metal context \u2014 he's not just keeping time or filling space, he's responding to the song's compositional content. This is the difference between a drummer and a musician who plays drums.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "heart-of-glass-burke",
+    "title": "Heart of Glass",
+    "artist": "Blondie",
+    "drummerId": "clem-burke",
+    "year": 1978,
+    "eraId": "1970s",
+    "genreIds": [
+      "new-wave",
+      "punk",
+      "rock"
+    ],
+    "tempo": 120,
+    "feel": "Disco-punk crossover \u2014 Clem Burke bridging the dance floor and the punk club in one perfect performance",
+    "complexity": 3,
+    "description": "Clem Burke navigating the intersection of disco and punk \u2014 his ability to play a genuine four-on-the-floor disco groove with punk energy and attitude created one of the most influential recordings of the late 1970s.",
+    "whyStudy": "Study how Burke moves between the four-on-the-floor disco feel and his punk-influenced fills. The transition is seamless because he understands both traditions deeply. This genre-crossing fluency is the most valuable skill in commercial pop drumming.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "hanging-on-telephone",
+    "title": "Hanging on the Telephone",
+    "artist": "Blondie",
+    "drummerId": "clem-burke",
+    "year": 1978,
+    "eraId": "1970s",
+    "genreIds": [
+      "punk",
+      "new-wave"
+    ],
+    "tempo": 178,
+    "feel": "Pure punk energy with pop hooks \u2014 Burke's driving groove powering one of new wave's great singles",
+    "complexity": 3,
+    "description": "Burke at his most punk \u2014 relentless energy, perfect time, driving the song forward with complete commitment. His ability to play hard without sacrificing the melodic quality that makes Blondie's music accessible is the essential new wave drumming skill.",
+    "whyStudy": "Study Burke's approach to driving energy in a fast tempo \u2014 he never drags, never rushes, and the groove always serves the song's melodic content. This combination of energy and musicality is harder to achieve than it sounds.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "stargazer-rainbow",
+    "title": "Stargazer",
+    "artist": "Rainbow",
+    "drummerId": "cozy-powell",
+    "year": 1976,
+    "eraId": "1970s",
+    "genreIds": [
+      "hard-rock",
+      "metal"
+    ],
+    "tempo": 112,
+    "feel": "Epic hard rock with Powell's orchestral, dramatic drumming matching Ritchie Blackmore's ambition",
+    "complexity": 5,
+    "description": "Cozy Powell at his most ambitious \u2014 his drumming here is orchestral in scale, matching Rainbow's most grandiose compositional vision. His ability to create drama and narrative arc through drumming is at its maximum.",
+    "whyStudy": "Study how Powell creates dramatic narrative through drumming. His approach to the song's structure \u2014 how he builds tension and releases it \u2014 is the work of a composer, not just a timekeeper. This is drumming as drama.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "over-the-top-powell",
+    "title": "Over the Top",
+    "artist": "Cozy Powell",
+    "drummerId": "cozy-powell",
+    "year": 1979,
+    "eraId": "1970s",
+    "genreIds": [
+      "rock",
+      "hard-rock"
+    ],
+    "tempo": 148,
+    "feel": "Powell's showpiece solo recording \u2014 thunderous power drumming that defined the late-70s rock drum aesthetic",
+    "complexity": 4,
+    "description": "Cozy Powell demonstrating his spectacular soloing ability \u2014 this hit single based on a drum solo brought hard rock drumming to a mainstream audience and showed that drums could carry a pop record.",
+    "whyStudy": "Study Powell's approach to building a drum solo \u2014 he creates tension, themes, and resolution in a way that makes the performance dramatic rather than merely technical. The solo tells a story.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "honey-bucket-crover",
+    "title": "Honey Bucket",
+    "artist": "Melvins",
+    "drummerId": "dale-crover",
+    "year": 1993,
+    "eraId": "1990s",
+    "genreIds": [
+      "metal",
+      "punk"
+    ],
+    "tempo": 88,
+    "feel": "Sludge-metal at its most irresistible \u2014 Crover's massive groove making crushing heaviness feel like it could groove",
+    "complexity": 4,
+    "description": "Dale Crover demonstrating that extreme heaviness and groove are not mutually exclusive. The Melvins' sludge approach \u2014 taking metal to the slowest, heaviest extreme \u2014 required a drummer who could make those tempos feel inevitable rather than dragging.",
+    "whyStudy": "Study how Crover makes slow tempos feel powerful rather than sluggish. His dynamic approach \u2014 every hit at maximum impact \u2014 creates a sense of inevitability that sustains interest across extended slow sections.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "boris-crover",
+    "title": "Boris",
+    "artist": "Melvins",
+    "drummerId": "dale-crover",
+    "year": 1991,
+    "eraId": "1990s",
+    "genreIds": [
+      "metal",
+      "punk"
+    ],
+    "tempo": 52,
+    "feel": "20+ minutes of deliberate crushing heaviness \u2014 Crover sustaining maximum impact across an extreme duration",
+    "complexity": 5,
+    "description": "The most extreme test of a drummer's ability to sustain intent across time \u2014 this track demands absolute commitment to a single sustained groove for over 20 minutes. Crover's concentration and power never waver.",
+    "whyStudy": "Study this track for endurance and intention. Most drummers can play powerfully for two minutes; sustaining that power and concentration for 20 minutes requires a different mental and physical approach that Crover has completely mastered.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "we-got-the-beat",
+    "title": "We Got the Beat",
+    "artist": "The Go-Go's",
+    "drummerId": "gina-schock",
+    "year": 1981,
+    "eraId": "1980s",
+    "genreIds": [
+      "new-wave",
+      "punk",
+      "rock"
+    ],
+    "tempo": 168,
+    "feel": "New wave's most irresistible groove \u2014 Schock's driving beat powering one of the era's great singles",
+    "complexity": 2,
+    "description": "Gina Schock making one of the most infectious grooves in new wave history sound effortless. Her direct, powerful approach is perfect for the song's energy and optimism \u2014 nothing fancy, everything correct.",
+    "whyStudy": "Study Schock's economy \u2014 she plays exactly what the song needs and nothing more. The tempo, the energy, and the consistent drive are all that's required. This is not simplicity from limitation; it's simplicity from absolute musical intelligence.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "vacation-gogo",
+    "title": "Vacation",
+    "artist": "The Go-Go's",
+    "drummerId": "gina-schock",
+    "year": 1982,
+    "eraId": "1980s",
+    "genreIds": [
+      "new-wave",
+      "rock"
+    ],
+    "tempo": 160,
+    "feel": "Summer pop perfection with Schock's energetic drumming capturing the song's carefree spirit",
+    "complexity": 2,
+    "description": "Schock demonstrating her ability to serve the song's emotional content \u2014 this is a summer pop song, and every drumming choice reflects that. Her fills, her dynamics, and her energy all say 'holiday' before the singer opens her mouth.",
+    "whyStudy": "Study how Schock matches her drumming to the song's emotional temperature. Great pop drummers don't just keep time \u2014 they reinforce the emotional experience the song is designed to create.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "roots-bloody-roots",
+    "title": "Roots Bloody Roots",
+    "artist": "Sepultura",
+    "drummerId": "igor-cavalera",
+    "year": 1996,
+    "eraId": "1990s",
+    "genreIds": [
+      "metal",
+      "progressive-rock"
+    ],
+    "tempo": 118,
+    "feel": "Groove metal meets Brazilian tribal percussion \u2014 Igor's most personal and unique recording",
+    "complexity": 4,
+    "description": "Igor Cavalera at his most distinctively Brazilian \u2014 tribal drumming patterns applied to groove metal create something that couldn't have come from any other cultural tradition. The Brazilian rhythmic roots are fully audible here.",
+    "whyStudy": "Study the relationship between the tribal percussion elements and the metal groove \u2014 Igor is layering two traditions simultaneously. Understanding each separately before hearing them together is the key to comprehending his unique approach.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "refuse-resist",
+    "title": "Refuse/Resist",
+    "artist": "Sepultura",
+    "drummerId": "igor-cavalera",
+    "year": 1993,
+    "eraId": "1990s",
+    "genreIds": [
+      "metal"
+    ],
+    "tempo": 174,
+    "feel": "Thrash metal with political urgency \u2014 Igor's drumming as pure energy and conviction",
+    "complexity": 4,
+    "description": "Igor Cavalera making thrash metal feel like a political act. His drumming has the same energy and intention as the song's message \u2014 not just keeping time but expressing something.",
+    "whyStudy": "Study the groove feel Igor maintains even at thrash tempos \u2014 unlike many thrash drummers, his playing retains the Brazilian influence that keeps it from feeling mechanical. The human quality in extreme music is the hardest thing to maintain.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "dig-me-out-weiss",
+    "title": "Dig Me Out",
+    "artist": "Sleater-Kinney",
+    "drummerId": "janet-weiss",
+    "year": 1997,
+    "eraId": "1990s",
+    "genreIds": [
+      "punk",
+      "rock"
+    ],
+    "tempo": 175,
+    "feel": "Punk drumming as melodic counterpoint \u2014 Weiss creating complete musical arguments with her drum parts",
+    "complexity": 4,
+    "description": "Janet Weiss establishing her place as one of rock's great drummers \u2014 her ability to create melodic, compositional drum parts within the energy of punk music is immediately audible. She's not just keeping time; she's co-composing.",
+    "whyStudy": "Study how Weiss's drum parts function melodically as well as rhythmically. Her fills follow melodic contours, her patterns create counterpoint against the guitars. This is drumming as full musical participation.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "one-beat-weiss",
+    "title": "One Beat",
+    "artist": "Sleater-Kinney",
+    "drummerId": "janet-weiss",
+    "year": 2002,
+    "eraId": "2000s",
+    "genreIds": [
+      "punk",
+      "rock"
+    ],
+    "tempo": 168,
+    "feel": "Post-punk sophistication with Weiss's compositional drumming at the band's center",
+    "complexity": 5,
+    "description": "Weiss in Sleater-Kinney's most ambitious album \u2014 her drumming has developed further, and the musical intelligence she brings to the groove creates textures that support the band's most complex compositions.",
+    "whyStudy": "Study the development between Dig Me Out and One Beat \u2014 Weiss's playing grows more compositionally sophisticated while maintaining the essential energy. This kind of development over time is what distinguishes a musician from a technician.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "you-enjoy-myself-fishman",
+    "title": "You Enjoy Myself",
+    "artist": "Phish",
+    "drummerId": "jon-fishman",
+    "year": 1989,
+    "eraId": "1990s",
+    "genreIds": [
+      "rock",
+      "progressive-rock",
+      "jazz"
+    ],
+    "tempo": 176,
+    "feel": "Phish's most famous compositional piece with Fishman navigating complex meter and texture changes",
+    "complexity": 5,
+    "description": "Jon Fishman handling one of rock's most compositionally complex pieces \u2014 complex meter, dramatic textural changes, jazz-influenced improvisation, and the ability to give a band the rhythmic foundation it needs through all of it.",
+    "whyStudy": "Study how Fishman navigates the many distinct sections of this piece \u2014 each requires a different rhythmic approach, and the transitions must be seamless. This is drumming as architectural support for compositional complexity.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "tweezer-fishman",
+    "title": "Tweezer",
+    "artist": "Phish",
+    "drummerId": "jon-fishman",
+    "year": 1990,
+    "eraId": "1990s",
+    "genreIds": [
+      "rock",
+      "funk",
+      "jazz"
+    ],
+    "tempo": 118,
+    "feel": "Funk-jazz-rock improvisation vehicle that Fishman has played thousands of times and never the same way twice",
+    "complexity": 4,
+    "description": "Fishman demonstrating the specific challenge of repeated improvisation \u2014 playing the same song thousands of times while finding something new and genuine each time. His musical intelligence and breadth of vocabulary make this possible.",
+    "whyStudy": "Study the relationship between structure and improvisation in Fishman's playing. The song provides a framework; his creativity fills it. Understanding how to improvise meaningfully within a structure \u2014 neither ignoring the form nor being trapped by it \u2014 is the advanced lesson.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "judith-apc-freese",
+    "title": "Judith",
+    "artist": "A Perfect Circle",
+    "drummerId": "josh-freese",
+    "year": 2000,
+    "eraId": "2000s",
+    "genreIds": [
+      "metal",
+      "rock"
+    ],
+    "tempo": 148,
+    "feel": "Alternative metal with controlled aggression \u2014 Freese's precise groove serving Maynard's intensity",
+    "complexity": 4,
+    "description": "Josh Freese serving A Perfect Circle's specific brand of controlled metal aggression \u2014 his precision and musical intelligence give Maynard James Keenan's songs exactly the rhythmic foundation they need without over-complicating the picture.",
+    "whyStudy": "Study how Freese serves a singular artist vision. His drumming here is completely in service of the song and the singer \u2014 every choice reinforces the emotional content rather than asserting his own personality. This selflessness is a session drummer's greatest skill.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "whip-it-freese",
+    "title": "Whip It",
+    "artist": "Devo",
+    "drummerId": "josh-freese",
+    "year": 2010,
+    "eraId": "2010s",
+    "genreIds": [
+      "new-wave",
+      "rock"
+    ],
+    "tempo": 140,
+    "feel": "Freese seamlessly inhabiting a completely different musical universe \u2014 new wave precision and quirky energy",
+    "complexity": 3,
+    "description": "Freese with Devo demonstrating his complete stylistic range \u2014 from A Perfect Circle's alternative metal to Devo's post-punk electronic aesthetic. His ability to genuinely inhabit both musical worlds is the most impressive thing a session drummer can do.",
+    "whyStudy": "Compare this to his work with A Perfect Circle \u2014 the same drummer making completely different musical choices. Understanding why he makes different choices in different contexts is the key to versatile session playing.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "jack-and-diane-aronoff",
+    "title": "Jack & Diane",
+    "artist": "John Mellencamp",
+    "drummerId": "kenny-aronoff",
+    "year": 1982,
+    "eraId": "1980s",
+    "genreIds": [
+      "rock",
+      "country"
+    ],
+    "tempo": 116,
+    "feel": "American heartland rock with Aronoff's powerful groove making a simple song feel monumental",
+    "complexity": 2,
+    "description": "Kenny Aronoff serving one of America's most beloved rock songs with pure, powerful simplicity. His ability to make the most basic patterns sound authoritative and right is the model for rock drumming in service of songwriting.",
+    "whyStudy": "Study Aronoff's dynamic approach \u2014 the song is simple, but the drumming has tremendous authority and power. The lesson is that how you play is as important as what you play. His confidence and commitment make simple patterns sound essential.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "hurts-so-good-aronoff",
+    "title": "Hurts So Good",
+    "artist": "John Mellencamp",
+    "drummerId": "kenny-aronoff",
+    "year": 1982,
+    "eraId": "1980s",
+    "genreIds": [
+      "rock"
+    ],
+    "tempo": 148,
+    "feel": "Driving rock groove with Aronoff's signature combination of power and pocket",
+    "complexity": 3,
+    "description": "Aronoff at his most driving \u2014 this groove has the relentless energy of the best rock drumming while maintaining complete musicality. His kick drum pattern and the way he sits in the pocket define the heartland rock aesthetic.",
+    "whyStudy": "Study Aronoff's kick drum pattern specifically \u2014 it's the engine of this groove and the defining element of his playing style. His kick drum has more authority than most drummers' entire kit, and understanding how he achieves that authority is the essential lesson.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "ragnarok-periphery",
+    "title": "Ragnarok",
+    "artist": "Periphery",
+    "drummerId": "matt-halpern",
+    "year": 2011,
+    "eraId": "2010s",
+    "genreIds": [
+      "metal",
+      "progressive-rock"
+    ],
+    "tempo": 162,
+    "feel": "Djent's most celebrated track \u2014 Halpern's polyrhythmic precision defining a new metal sub-genre",
+    "complexity": 5,
+    "description": "Matt Halpern establishing the djent aesthetic \u2014 extreme polyrhythmic complexity that still feels like a groove because of his natural time feel and physical authority. This is the most imitated drum performance in contemporary progressive metal.",
+    "whyStudy": "Study Halpern's approach to polyrhythm \u2014 he hears complex patterns as musical phrases, not mathematical puzzles. His ability to feel complex meter rather than count it is the skill that separates great players from technically accurate ones.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "icarus-lives",
+    "title": "Icarus Lives!",
+    "artist": "Periphery",
+    "drummerId": "matt-halpern",
+    "year": 2012,
+    "eraId": "2010s",
+    "genreIds": [
+      "metal",
+      "progressive-rock"
+    ],
+    "tempo": 175,
+    "feel": "Periphery's most accessible track with Halpern's precision making complexity feel inevitable",
+    "complexity": 5,
+    "description": "Halpern demonstrating that technical complexity can coexist with song-serving drumming. His ability to play extremely complex patterns while making them feel right for the song is the mature development of the djent approach.",
+    "whyStudy": "Compare this to Ragnarok \u2014 Halpern is serving a more melodically focused song here, and his complexity level adjusts accordingly. Understanding when to show complexity and when to restrain it is an advanced musical judgment.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "born-to-run-weinberg",
+    "title": "Born to Run",
+    "artist": "Bruce Springsteen",
+    "drummerId": "max-weinberg",
+    "year": 1975,
+    "eraId": "1970s",
+    "genreIds": [
+      "rock"
+    ],
+    "tempo": 168,
+    "feel": "The most epic rock groove ever recorded \u2014 Weinberg's drumming making every moment feel like a moment of destiny",
+    "complexity": 4,
+    "description": "Max Weinberg powering one of rock music's most beloved recordings \u2014 his ability to maintain the song's extraordinary emotional intensity across its entire duration is the drumming achievement that defined his career.",
+    "whyStudy": "Study how Weinberg creates and sustains emotional intensity \u2014 his dynamics, his energy, and his ability to make every moment feel important are the hallmarks of great rock drumming in service of great songwriting.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "hungry-heart-weinberg",
+    "title": "Hungry Heart",
+    "artist": "Bruce Springsteen",
+    "drummerId": "max-weinberg",
+    "year": 1980,
+    "eraId": "1980s",
+    "genreIds": [
+      "rock",
+      "pop"
+    ],
+    "tempo": 144,
+    "feel": "Springsteen's first major pop hit with Weinberg's driving groove serving radio-friendly rock",
+    "complexity": 3,
+    "description": "Weinberg demonstrating his ability to serve a more pop-oriented song while maintaining his rock authority. His ability to dial back the epic scale of Born to Run and serve a tighter pop structure shows genuine musical intelligence.",
+    "whyStudy": "Compare Weinberg's approach here to Born to Run \u2014 same drummer, same band, but calibrated completely differently for a different musical purpose. Understanding this calibration is what makes a session or band drummer truly versatile.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "seven-nation-army-white",
+    "title": "Seven Nation Army",
+    "artist": "The White Stripes",
+    "drummerId": "meg-white",
+    "year": 2003,
+    "eraId": "2000s",
+    "genreIds": [
+      "blues",
+      "rock"
+    ],
+    "tempo": 124,
+    "feel": "One of rock's most famous riffs with Meg White's primitive groove as the perfect and only possible foundation",
+    "complexity": 1,
+    "description": "Meg White providing the exact rhythmic environment that Seven Nation Army's riff needs \u2014 stripped, direct, and completely committed. A more technically sophisticated drummer would have destroyed this song. Her simplicity is the correct answer.",
+    "whyStudy": "Study this track to understand musical context. Meg White's drumming would be 'wrong' in almost any other musical situation \u2014 here it is perfect. Understanding why requires thinking about what the music needs rather than what technique can offer.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "ball-and-biscuit",
+    "title": "Ball and Biscuit",
+    "artist": "The White Stripes",
+    "drummerId": "meg-white",
+    "year": 2003,
+    "eraId": "2000s",
+    "genreIds": [
+      "blues",
+      "rock"
+    ],
+    "tempo": 90,
+    "feel": "Deep blues groove with Meg White's elemental playing serving Jack White's most extended performance",
+    "complexity": 3,
+    "description": "Meg White in the most extended White Stripes context \u2014 her ability to sustain a groove across seven minutes of blues improvisation without a bass player demonstrates that simplicity, when it's truly right, is not boring.",
+    "whyStudy": "Study how White maintains interest across an extended performance with minimal vocabulary. Her consistency and commitment \u2014 never wavering, never trying to add \u2014 create the rhythmic environment that Jack White's extended guitar improvisation requires.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "sacrifice-motorhead",
+    "title": "Sacrifice",
+    "artist": "Mot\u00f6rhead",
+    "drummerId": "mikkey-dee",
+    "year": 1995,
+    "eraId": "1990s",
+    "genreIds": [
+      "metal",
+      "hard-rock"
+    ],
+    "tempo": 212,
+    "feel": "Mot\u00f6rhead's engine at maximum RPM with Mikkey Dee's technique giving the music new precision",
+    "complexity": 4,
+    "description": "Mikkey Dee joining Mot\u00f6rhead and immediately demonstrating why his technical ability elevated the band \u2014 the speed and precision here surpasses anything Mot\u00f6rhead achieved with previous drummers while maintaining the band's essential ferocity.",
+    "whyStudy": "Study the relationship between technical precision and raw energy in Dee's playing. His technique allows him to play Mot\u00f6rhead's extreme tempos with complete control \u2014 the technical ability serves the music rather than replacing the aggression.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "overnight-sensation",
+    "title": "Overnight Sensation",
+    "artist": "Mot\u00f6rhead",
+    "drummerId": "mikkey-dee",
+    "year": 1996,
+    "eraId": "1990s",
+    "genreIds": [
+      "metal",
+      "hard-rock"
+    ],
+    "tempo": 198,
+    "feel": "Mot\u00f6rhead in their commercial late period with Dee's driving groove maintaining the band's essential identity",
+    "complexity": 4,
+    "description": "Dee serving Mot\u00f6rhead's most commercially accessible late-period work \u2014 his ability to maintain the band's essential aggressive character while serving a slightly more polished production shows real musical intelligence.",
+    "whyStudy": "Compare Dee's approach here to the rawer Sacrifice \u2014 he calibrates his aggression to serve each song's context. This ability to adjust intensity level while maintaining authentic energy is the model for playing in a band with a strong stylistic identity.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "sweet-jane-tucker",
+    "title": "Sweet Jane",
+    "artist": "Velvet Underground",
+    "drummerId": "moe-tucker",
+    "year": 1970,
+    "eraId": "1960s",
+    "genreIds": [
+      "rock",
+      "blues"
+    ],
+    "tempo": 115,
+    "feel": "Velvet Underground's most accessible song with Tucker's unconventional approach as the perfect rhythmic foundation",
+    "complexity": 2,
+    "description": "Moe Tucker providing exactly the right rhythmic environment for Sweet Jane \u2014 her deliberate, unconventional approach creates a hypnotic quality that conventional drumming could not have achieved. Sometimes the 'wrong' technique is the right musical choice.",
+    "whyStudy": "Study Tucker's approach to understand that musical rightness is always contextual. Her playing would be 'incorrect' in virtually any other musical context \u2014 here it is perfect. This is the advanced lesson: understanding what a musical context actually needs.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "rock-and-roll-tucker",
+    "title": "Rock and Roll",
+    "artist": "Velvet Underground",
+    "drummerId": "moe-tucker",
+    "year": 1970,
+    "eraId": "1960s",
+    "genreIds": [
+      "rock"
+    ],
+    "tempo": 140,
+    "feel": "Driving rock with Tucker's primitive force giving the song an urgency that sophistication would have destroyed",
+    "complexity": 2,
+    "description": "Tucker in the most 'conventional' Velvet Underground context \u2014 and even here her approach is unique. The mallet sound, her standing playing position, and her pattern choices create a drum track that is instantly recognizable as part of the Velvet Underground's world.",
+    "whyStudy": "Study how Tucker's unconventional tools (mallets) affect the sound and feel. Her choice of instrument is as important as her rhythmic choices \u2014 the sound of mallets on drums creates a different physical and emotional sensation than sticks.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "when-a-man-loves-a-woman",
+    "title": "When a Man Loves a Woman",
+    "artist": "Percy Sledge",
+    "drummerId": "roger-hawkins",
+    "year": 1966,
+    "eraId": "1960s",
+    "genreIds": [
+      "soul",
+      "r&b"
+    ],
+    "tempo": 76,
+    "feel": "Southern soul at its most intimate \u2014 Hawkins's groove as the emotional bedrock",
+    "complexity": 2,
+    "description": "Roger Hawkins providing the perfect rhythmic environment for one of soul music's most naked emotional performances. His ability to play so simply and so warmly \u2014 creating a space for the singer to inhabit \u2014 is the essential quality of Muscle Shoals drumming.",
+    "whyStudy": "Study the space in Hawkins's playing \u2014 what he doesn't play is as important as what he does. The warmth of this groove comes from restraint and from the specific quality of his touch. This is drumming as emotional support.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "i-ll-take-you-there",
+    "title": "I'll Take You There",
+    "artist": "Staple Singers",
+    "drummerId": "roger-hawkins",
+    "year": 1972,
+    "eraId": "1970s",
+    "genreIds": [
+      "soul",
+      "funk",
+      "gospel"
+    ],
+    "tempo": 115,
+    "feel": "Muscle Shoals funk-soul with Hawkins's groove carrying the spirit of gospel music into secular R&B",
+    "complexity": 3,
+    "description": "Hawkins demonstrating how Muscle Shoals groove carries the influence of gospel and church music into R&B. His ability to make a funk groove feel sacred is the defining quality of the Muscle Shoals sound.",
+    "whyStudy": "Study how Hawkins maintains the gospel feel within a secular funk context. The Southern soul tradition he represents draws no sharp line between sacred and secular \u2014 his drumming reflects that continuum.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "fire-and-rain-kunkel",
+    "title": "Fire and Rain",
+    "artist": "James Taylor",
+    "drummerId": "russ-kunkel",
+    "year": 1970,
+    "eraId": "1970s",
+    "genreIds": [
+      "rock",
+      "folk"
+    ],
+    "tempo": 70,
+    "feel": "Intimate acoustic rock with Kunkel's barely-there playing creating the space the song requires",
+    "complexity": 2,
+    "description": "Russ Kunkel providing the most sensitive and restrained of all possible rhythmic accompaniments for James Taylor's most autobiographical song. His ability to be present without intrusion is the most sophisticated thing he could do.",
+    "whyStudy": "Study Kunkel's restraint \u2014 he plays so little that his contribution is almost invisible. Yet without him, the song would lose its rhythmic coherence. This is the paradox of great supporting drumming: the less you notice it, the more it's doing.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "youve-got-a-friend-kunkel",
+    "title": "You've Got a Friend",
+    "artist": "James Taylor",
+    "drummerId": "russ-kunkel",
+    "year": 1971,
+    "eraId": "1970s",
+    "genreIds": [
+      "rock",
+      "folk",
+      "pop"
+    ],
+    "tempo": 78,
+    "feel": "The quintessential Laurel Canyon groove \u2014 warm, natural, and completely in service of the song",
+    "complexity": 2,
+    "description": "Kunkel in his most celebrated context \u2014 the defining sound of early 1970s California singer-songwriter music. His natural, unhurried groove creates a feeling of ease and warmth that is perfectly suited to Taylor's musical personality.",
+    "whyStudy": "Study Kunkel's specific qualities: his hi-hat openings, his brush-like stick control, and his completely natural time feel. The Laurel Canyon sound is inseparable from his approach \u2014 understanding this music requires understanding what he does.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "undertow-warpaint",
+    "title": "Undertow",
+    "artist": "Warpaint",
+    "drummerId": "stella-mozgawa",
+    "year": 2010,
+    "eraId": "2010s",
+    "genreIds": [
+      "rock",
+      "electronic",
+      "new-wave"
+    ],
+    "tempo": 115,
+    "feel": "Atmospheric indie rock with Mozgawa's textural drumming as one continuous sonic environment",
+    "complexity": 4,
+    "description": "Stella Mozgawa demonstrating that drumming can be atmospheric rather than driving \u2014 her approach to this track creates a sonic environment rather than a conventional groove. The drums are as much sound design as rhythm.",
+    "whyStudy": "Study how Mozgawa uses the drum kit as a texture instrument. Her choices about what to dampen, what to let ring, and how hard to strike are as important as her rhythmic choices. Sound and feel are completely integrated in her approach.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "keep-it-healthy",
+    "title": "Keep It Healthy",
+    "artist": "Warpaint",
+    "drummerId": "stella-mozgawa",
+    "year": 2013,
+    "eraId": "2010s",
+    "genreIds": [
+      "rock",
+      "electronic"
+    ],
+    "tempo": 122,
+    "feel": "Warpaint at their most groove-oriented with Mozgawa's electronic-influenced patterns anchoring the band",
+    "complexity": 4,
+    "description": "Mozgawa in a more groove-oriented context \u2014 her electronic sensibility produces a drum pattern that has the feel of a programmed beat while remaining entirely acoustic. The tension between mechanical regularity and human feel creates the song's hypnotic quality.",
+    "whyStudy": "Study how Mozgawa creates an 'electronic' feel with acoustic drums. Her hi-hat patterns in particular come from a conceptual place informed by electronic music production \u2014 understanding electronic music is prerequisite to understanding her approach.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "money-jungle-carrington",
+    "title": "Money Jungle: Provocative in Blue",
+    "artist": "Terri Lyne Carrington",
+    "drummerId": "terri-lyne-carrington",
+    "year": 2013,
+    "eraId": "2010s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 118,
+    "feel": "Grammy-winning jazz with Carrington leading her own project after decades of sideman excellence",
+    "complexity": 5,
+    "description": "Terri Lyne Carrington stepping to the front as a leader \u2014 her Grammy-winning album demonstrates that decades of sideman excellence translate directly to compositional and leadership excellence. Her drumming here is both supportive and compositional.",
+    "whyStudy": "Study the transition from sideman to leader in Carrington's work. The musical intelligence she developed serving Wayne Shorter and Herbie Hancock is fully present here in her own compositional context \u2014 the two roles are not separate, they inform each other.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "radio-music-carrington",
+    "title": "Radio Music Society",
+    "artist": "Esperanza Spalding",
+    "drummerId": "terri-lyne-carrington",
+    "year": 2012,
+    "eraId": "2010s",
+    "genreIds": [
+      "jazz",
+      "soul",
+      "r&b"
+    ],
+    "tempo": 128,
+    "feel": "Contemporary jazz-R&B with Carrington's groove elegantly bridging traditions",
+    "complexity": 4,
+    "description": "Carrington in a jazz-R&B context \u2014 her ability to serve Esperanza Spalding's vision while bringing her own musical personality demonstrates the perfect sideman approach. She's present but not imposing.",
+    "whyStudy": "Study how Carrington calibrates her playing to serve a specific musical vision. Her vocabulary is enormous but her choice here is restrained and purposeful. This selectivity is the most important quality in great accompanying drumming.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "le-freak-thompson",
+    "title": "Le Freak",
+    "artist": "Chic",
+    "drummerId": "tony-thompson",
+    "year": 1978,
+    "eraId": "1970s",
+    "genreIds": [
+      "funk",
+      "soul",
+      "r&b"
+    ],
+    "tempo": 126,
+    "feel": "The most joyful groove in disco history \u2014 Thompson's precision and Chic's compositional intelligence unified",
+    "complexity": 3,
+    "description": "Tony Thompson creating the groove that would define an era \u2014 his ability to play a simple pattern with total commitment and perfect execution makes this groove irresistible. The simplicity is a choice; the execution is art.",
+    "whyStudy": "Study Thompson's consistency \u2014 this groove must be absolutely metronomic while feeling completely natural and human. The ability to achieve machine-like consistency while maintaining human feel is the most demanding quality in dance music drumming.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "good-times-chic",
+    "title": "Good Times",
+    "artist": "Chic",
+    "drummerId": "tony-thompson",
+    "year": 1979,
+    "eraId": "1970s",
+    "genreIds": [
+      "funk",
+      "soul",
+      "r&b"
+    ],
+    "tempo": 110,
+    "feel": "The groove that the Sugarhill Gang sampled for Rapper's Delight \u2014 the moment hip-hop began",
+    "complexity": 4,
+    "description": "Thompson creating what would become hip-hop's foundation \u2014 his groove on Good Times was sampled on Rapper's Delight and launched an entire new music genre. His contribution to music history extends far beyond his own recordings.",
+    "whyStudy": "Study Good Times as a musical artifact that changed history. Thompson's groove was so compelling, so perfectly constructed, that it became the template for hip-hop. Understanding why it works \u2014 the balance of bass and drums, the pocket, the space \u2014 is understanding the foundation of contemporary music.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "rock-the-casbah",
+    "title": "Rock the Casbah",
+    "artist": "The Clash",
+    "drummerId": "topper-headon",
+    "year": 1982,
+    "eraId": "1980s",
+    "genreIds": [
+      "punk",
+      "rock"
+    ],
+    "tempo": 136,
+    "feel": "The song Topper Headon wrote at the piano \u2014 the Clash's biggest hit with Headon's groove at its center",
+    "complexity": 3,
+    "description": "Topper Headon writing and performing one of The Clash's most beloved songs \u2014 his musical breadth (jazz, reggae, soul) combined in a pop-punk package that became the band's only top-10 US hit.",
+    "whyStudy": "Study how Headon's diverse musical background produces a groove that transcends punk orthodoxy. The reggae influences, the funk pocket, and the jazz timing all combine to create something that feels like punk but draws from a much richer tradition.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "train-in-vain",
+    "title": "Train in Vain",
+    "artist": "The Clash",
+    "drummerId": "topper-headon",
+    "year": 1979,
+    "eraId": "1970s",
+    "genreIds": [
+      "punk",
+      "rock",
+      "soul"
+    ],
+    "tempo": 155,
+    "feel": "Punk-soul crossover with Headon's versatility allowing The Clash to legitimately claim the style",
+    "complexity": 3,
+    "description": "Headon demonstrating his soul and R&B vocabulary within a punk context. His ability to switch between punk aggression and soul groove within a single performance \u2014 and make both feel authentic \u2014 is the quality that made The Clash unique.",
+    "whyStudy": "Study how Headon navigates between punk and soul aesthetics within the same song. His jazz training allows him to feel comfortable in multiple genres simultaneously \u2014 the ability to code-switch rhythmically without sounding confused is a specific skill.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "mob-rules-appice",
+    "title": "The Mob Rules",
+    "artist": "Black Sabbath",
+    "drummerId": "vinny-appice",
+    "year": 1981,
+    "eraId": "1980s",
+    "genreIds": [
+      "metal"
+    ],
+    "tempo": 168,
+    "feel": "Black Sabbath's Dio era at its most explosive \u2014 Appice's power driving one of metal's great anthems",
+    "complexity": 4,
+    "description": "Vinny Appice joining Black Sabbath and immediately demonstrating why he was chosen \u2014 his ability to serve the band's monumental sound while bringing his own powerful personality is the definition of fitting into a legendary band.",
+    "whyStudy": "Study how Appice serves Black Sabbath's specific sonic requirements \u2014 the music demands enormity and weight in the drumming. His ability to achieve maximum heaviness while maintaining musical control is the central skill in classic metal drumming.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "holy-diver-appice",
+    "title": "Holy Diver",
+    "artist": "Dio",
+    "drummerId": "vinny-appice",
+    "year": 1983,
+    "eraId": "1980s",
+    "genreIds": [
+      "metal",
+      "hard-rock"
+    ],
+    "tempo": 148,
+    "feel": "Dio's defining song with Appice's theatrical drumming perfectly matched to Ronnie James Dio's operatic vision",
+    "complexity": 4,
+    "description": "Appice serving Dio's most iconic composition \u2014 his ability to match the dramatic scale of Ronnie James Dio's vocal and compositional ambition creates one of metal's most complete musical partnerships.",
+    "whyStudy": "Study how Appice creates theatrical space in metal drumming \u2014 his fills are statements, his dynamics are dramatic, and every choice reinforces the epic quality of the music. Metal drumming at this level is as much about drama as about technique.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "vim-vam-vamoose",
+    "title": "Vim Vam Vamoose",
+    "artist": "Viola Smith Orchestra",
+    "drummerId": "viola-smith",
+    "year": 1945,
+    "eraId": "1940s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 195,
+    "feel": "Viola Smith leading her own orchestra \u2014 proof that women could perform and direct at the highest professional level",
+    "complexity": 4,
+    "description": "Viola Smith at her most assertive \u2014 leading her own orchestra and playing with complete authority. Her drumming here is not exceptional because she's a woman; it's exceptional because she's a great drummer who happens to be a woman.",
+    "whyStudy": "Study Smith's approach historically as well as technically \u2014 understanding what it meant to perform at this level as a woman in 1945 adds context to every note she plays. Her technical ability is real; her courage in performing it is extraordinary.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "smith-orchestra-swing",
+    "title": "Swinging at the Savoy",
+    "artist": "Viola Smith Orchestra",
+    "drummerId": "viola-smith",
+    "year": 1944,
+    "eraId": "1940s",
+    "genreIds": [
+      "jazz"
+    ],
+    "tempo": 180,
+    "feel": "Big band swing from one of jazz's most important pioneer female drummers",
+    "complexity": 4,
+    "description": "Smith demonstrating her complete command of the big band swing tradition \u2014 her playing here is indistinguishable from the best male drummers of her era, which was exactly her point.",
+    "whyStudy": "Study this alongside recordings by Gene Krupa and Buddy Rich from the same era \u2014 Smith's technique and musicality are at the same level. Understanding this equivalence is understanding the injustice of the barriers she faced and broke.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "cult-of-personality-calhoun",
+    "title": "Cult of Personality",
+    "artist": "Living Colour",
+    "drummerId": "will-calhoun",
+    "year": 1988,
+    "eraId": "1980s",
+    "genreIds": [
+      "rock",
+      "funk"
+    ],
+    "tempo": 148,
+    "feel": "One of the most musically ambitious rock singles of the 1980s with Calhoun's jazz-influenced drumming at its center",
+    "complexity": 4,
+    "description": "Will Calhoun announcing Living Colour to the world \u2014 his drumming is more sophisticated than virtually any rock contemporary, drawing on jazz vocabulary and African-American musical traditions to create something new within hard rock.",
+    "whyStudy": "Study Calhoun's fill vocabulary specifically \u2014 his fills come from a jazz tradition rather than a rock tradition. Understanding how jazz vocabulary sounds in a rock context, and why it works here, is the central lesson.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "type-living-colour",
+    "title": "Type",
+    "artist": "Living Colour",
+    "drummerId": "will-calhoun",
+    "year": 1990,
+    "eraId": "1990s",
+    "genreIds": [
+      "rock",
+      "funk"
+    ],
+    "tempo": 130,
+    "feel": "Living Colour at their most diverse with Calhoun's groove demonstrating his functional range",
+    "complexity": 4,
+    "description": "Calhoun in Living Colour's most funk-influenced context \u2014 his jazz and funk backgrounds are both audible as he navigates material that defies simple genre categorization.",
+    "whyStudy": "Study how Calhoun bridges rock and funk vocabulary in this track. His ability to groove in a funk context with rock energy creates the specific Living Colour sound \u2014 neither pure rock nor pure funk, but something genuinely new.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "change-deftones",
+    "title": "Change (In the House of Flies)",
+    "artist": "Deftones",
+    "drummerId": "abe-cunningham",
+    "year": 2000,
+    "eraId": "2000s",
+    "genreIds": [
+      "metal",
+      "rock"
+    ],
+    "tempo": 82,
+    "feel": "Atmospheric metal with Cunningham's dynamic control creating maximum impact from minimum force",
+    "complexity": 4,
+    "description": "Abe Cunningham demonstrating the Deftones' distinctive approach \u2014 the drumming here is restrained and atmospheric, building tension through what it holds back rather than what it delivers. The explosive moments are earned through their contrast with the quiet.",
+    "whyStudy": "Study Cunningham's dynamic arc in this track \u2014 he does not start at full power and stay there. His ability to play very quietly while maintaining intensity is as important as his ability to play loudly. The contrast is the composition.",
+    "songsterrSlug": null
+  },
+  {
+    "id": "my-own-summer",
+    "title": "My Own Summer (Shove It)",
+    "artist": "Deftones",
+    "drummerId": "abe-cunningham",
+    "year": 1997,
+    "eraId": "1990s",
+    "genreIds": [
+      "metal",
+      "rock"
+    ],
+    "tempo": 142,
+    "feel": "Nu-metal aggression with Cunningham's groove maintaining pocket even at maximum intensity",
+    "complexity": 4,
+    "description": "Cunningham in the Deftones' most aggressive context \u2014 his ability to play heavy and loud while maintaining groove rather than just noise is what distinguishes the Deftones from their nu-metal contemporaries.",
+    "whyStudy": "Compare this to Change \u2014 the same drummer at opposite ends of his dynamic range. Understanding how Cunningham calibrates his intensity to serve each song's emotional requirements is the essential lesson in alternative metal drumming.",
+    "songsterrSlug": null
   }
 ]

@@ -4001,5 +4001,899 @@
       "stray-the-skies",
       "napalm-vola"
     ]
+  },
+  {
+    "id": "jabo-starks",
+    "name": "Jabo Starks",
+    "born": 1938,
+    "died": 2018,
+    "primaryEra": "1960s",
+    "eras": [
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "funk",
+      "soul"
+    ],
+    "bands": [
+      "James Brown Band",
+      "Maceo Parker"
+    ],
+    "bio": "John 'Jabo' Starks was one of two primary drummers in James Brown's iconic band \u2014 alongside Clyde Stubblefield \u2014 and together they invented funk drumming as a language. His tenure with the Godfather of Soul produced dozens of foundational recordings. Where Stubblefield was metronomic, Starks brought a slightly looser, bluesier feel rooted in his Alabama upbringing.",
+    "signatureStyle": "Blues-inflected funk groove with natural feel and deep pocket. Less metronomic than Stubblefield, Starks brought a human looseness that made even the tightest grooves feel lived-in.",
+    "bpmMin": 85,
+    "bpmMax": 135,
+    "influence": "Co-inventor of funk drumming alongside Clyde Stubblefield. His recordings with James Brown are among the most sampled in hip-hop history, forming the rhythmic foundation of an entire genre.",
+    "iconicSongIds": [
+      "sex-machine-starks",
+      "super-bad-starks"
+    ]
+  },
+  {
+    "id": "james-gadson",
+    "name": "James Gadson",
+    "born": 1939,
+    "died": null,
+    "primaryEra": "1970s",
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "soul",
+      "funk",
+      "r&b"
+    ],
+    "bands": [
+      "Bill Withers",
+      "Marvin Gaye",
+      "Charles Wright"
+    ],
+    "bio": "James Gadson is one of the most recorded session drummers in soul and R&B history, best known for the indelible grooves he created with Bill Withers on some of the 1970s' most beloved recordings. His drumming has an earthy, natural quality \u2014 deeply rooted in the blues tradition \u2014 that gives even polished studio recordings a sense of humanity.",
+    "signatureStyle": "Earthy, blues-rooted groove with natural time feel. Studio drumming that sounds lived-in rather than processed. Deep R&B pocket with a human quality that no amount of programming can replicate.",
+    "bpmMin": 75,
+    "bpmMax": 125,
+    "influence": "One of soul music's most important drummers. His recordings with Bill Withers are among the most intimate and human-sounding sessions in popular music history, and his work across hundreds of albums defined the sound of 1970s and 1980s soul.",
+    "iconicSongIds": [
+      "lean-on-me-gadson",
+      "use-me-gadson"
+    ]
+  },
+  {
+    "id": "benny-benjamin",
+    "name": "Benny Benjamin",
+    "born": 1925,
+    "died": 1969,
+    "primaryEra": "1960s",
+    "eras": [
+      "1950s",
+      "1960s"
+    ],
+    "genres": [
+      "soul",
+      "r&b",
+      "jazz"
+    ],
+    "bands": [
+      "The Funk Brothers",
+      "Motown"
+    ],
+    "bio": "Benny Benjamin was the primary drummer for the Funk Brothers \u2014 the legendary Motown house band \u2014 and appears on more million-selling recordings than any other drummer in history. Known as 'Papa Zita,' his drumming powered virtually every major Motown hit from the label's founding through the mid-1960s. His death at 43 robbed popular music of one of its greatest rhythmic minds.",
+    "signatureStyle": "Big band jazz vocabulary applied to R&B. Driving, swinging feel that gave Motown's pop music its irresistible rhythmic quality. Ghost notes and dynamics at a level unusual in commercial pop production.",
+    "bpmMin": 110,
+    "bpmMax": 145,
+    "influence": "The most commercially impactful drummer in history by recording count. His drumming literally powered the Motown sound \u2014 the rhythmic quality that made those records unstoppable on the pop charts was his doing.",
+    "iconicSongIds": [
+      "my-girl-benjamin",
+      "cant-help-myself-benjamin"
+    ]
+  },
+  {
+    "id": "bill-kreutzmann",
+    "name": "Bill Kreutzmann",
+    "born": 1946,
+    "died": null,
+    "primaryEra": "1960s",
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "rock",
+      "blues",
+      "jazz"
+    ],
+    "bands": [
+      "Grateful Dead",
+      "Billy and the Kids",
+      "7 Walkers"
+    ],
+    "bio": "Bill Kreutzmann was co-founder of the Grateful Dead and, alongside Mickey Hart, created one of rock music's most famous dual-drummer setups. His drumming is rooted in blues, jazz, and American roots music, providing the rhythmic foundation for thousands of live shows that collectively represent one of the most documented performance archives in music history.",
+    "signatureStyle": "Blues-based rock drumming with jazz feel and improvisational freedom. 30 years of live performance have given his playing a conversational, storytelling quality that no studio environment can replicate.",
+    "bpmMin": 75,
+    "bpmMax": 175,
+    "influence": "One of the architects of the extended rock jam and the live improvisation tradition. His decades with the Grateful Dead produced a performance record unlike any other band's, and his approach to live drumming as ongoing conversation has influenced every jam band that followed.",
+    "iconicSongIds": [
+      "casey-jones-kreutzmann",
+      "truckin-kreutzmann"
+    ]
+  },
+  {
+    "id": "carmine-appice",
+    "name": "Carmine Appice",
+    "born": 1946,
+    "died": null,
+    "primaryEra": "1960s",
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "rock",
+      "hard-rock",
+      "blues"
+    ],
+    "bands": [
+      "Vanilla Fudge",
+      "Cactus",
+      "Jeff Beck Group",
+      "Rod Stewart"
+    ],
+    "bio": "Carmine Appice is one of rock drumming's founding fathers \u2014 among the first drummers to bring big, powerful drumming to a rock context, influencing John Bonham and virtually every hard rock drummer that followed. His work with Vanilla Fudge's psychedelic slow-motion heavy rock was revolutionary, and his subsequent career with Jeff Beck and Rod Stewart produced some of the era's most celebrated recordings.",
+    "signatureStyle": "Powerful, authoritative early heavy rock. Large dynamic contrasts from nearly silent to thunderous. One of the first drummers to treat volume and power as compositional elements in rock music.",
+    "bpmMin": 70,
+    "bpmMax": 160,
+    "influence": "The direct predecessor to John Bonham \u2014 Appice's powerful, dramatic approach to rock drumming created the template that Bonham perfected. His influence on the development of heavy rock drumming is immeasurable.",
+    "iconicSongIds": [
+      "you-keep-me-hangin-on",
+      "do-ya-think-appice"
+    ]
+  },
+  {
+    "id": "charlie-benante",
+    "name": "Charlie Benante",
+    "born": 1962,
+    "died": null,
+    "primaryEra": "1980s",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "metal",
+      "punk"
+    ],
+    "bands": [
+      "Anthrax",
+      "S.O.D."
+    ],
+    "bio": "Charlie Benante is the drummer and primary composer for Anthrax, one of the Big Four of thrash metal. His combination of extreme technical ability, jazz-influenced vocabulary, and genuine compositional intelligence has made him one of thrash metal's most respected musicians \u2014 a drummer who brought sophistication to a genre often valued more for aggression than musicality.",
+    "signatureStyle": "Technical thrash metal drumming with jazz-influenced fill vocabulary. Compositional approach to metal \u2014 fills that follow the song's melodic structure rather than generic metal patterns. Unusual harmonic awareness for the genre.",
+    "bpmMin": 150,
+    "bpmMax": 220,
+    "influence": "One of thrash metal's most musically sophisticated drummers. His ability to bring jazz vocabulary and compositional thinking to extreme metal without compromising the genre's essential energy has influenced every technically oriented metal drummer.",
+    "iconicSongIds": [
+      "madhouse-benante",
+      "indians-benante"
+    ]
+  },
+  {
+    "id": "clem-burke",
+    "name": "Clem Burke",
+    "born": 1955,
+    "died": null,
+    "primaryEra": "1970s",
+    "eras": [
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "punk",
+      "new-wave",
+      "rock"
+    ],
+    "bands": [
+      "Blondie",
+      "The Romantics"
+    ],
+    "bio": "Clem Burke is one of punk and new wave's most important drummers \u2014 the rhythmic engine behind Blondie's extraordinary commercial breakthrough. His playing synthesizes punk energy with a pop musician's sense of melody and swing, creating grooves that work on the dance floor, the radio, and the punk club simultaneously.",
+    "signatureStyle": "High-energy rock with pop sensibility. Influences from Keith Moon and Ringo Starr applied to punk and new wave. Ability to drive a song forward with relentless energy while maintaining melodic awareness.",
+    "bpmMin": 120,
+    "bpmMax": 175,
+    "influence": "The model for drumming in commercially successful punk and new wave. His ability to bring energy and attitude to pop-oriented music without losing the punk aesthetic helped define the sound of late 1970s new wave.",
+    "iconicSongIds": [
+      "heart-of-glass-burke",
+      "hanging-on-telephone"
+    ]
+  },
+  {
+    "id": "cozy-powell",
+    "name": "Cozy Powell",
+    "born": 1947,
+    "died": 1998,
+    "primaryEra": "1970s",
+    "eras": [
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "rock",
+      "hard-rock",
+      "metal"
+    ],
+    "bands": [
+      "Rainbow",
+      "Black Sabbath",
+      "Whitesnake",
+      "Jeff Beck Group"
+    ],
+    "bio": "Colin 'Cozy' Powell was one of British rock's most spectacular and powerful drummers \u2014 a showman who combined maximum physical impact with genuine musicality. His work with Rainbow produced some of hard rock's most dramatic recordings, and his subsequent work with Black Sabbath and Whitesnake extended his influence across heavy metal's most important bands.",
+    "signatureStyle": "Spectacular power drumming with theatrical presentation. Maximum physical impact combined with genuine musical intelligence. Rock drumming as physical spectacle without sacrificing groove or feel.",
+    "bpmMin": 75,
+    "bpmMax": 185,
+    "influence": "One of the direct ancestors of rock's spectacular drumming tradition. His influence is visible in every hard rock and heavy metal drummer who values both power and presentation \u2014 proving that showmanship and musicality are not mutually exclusive.",
+    "iconicSongIds": [
+      "stargazer-rainbow",
+      "over-the-top-powell"
+    ]
+  },
+  {
+    "id": "dale-crover",
+    "name": "Dale Crover",
+    "born": 1967,
+    "died": null,
+    "primaryEra": "1990s",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal",
+      "punk",
+      "rock"
+    ],
+    "bands": [
+      "Melvins",
+      "Nirvana (early demos)",
+      "Altamont"
+    ],
+    "bio": "Dale Crover is one of underground rock's most important drummers \u2014 the bedrock of the Melvins, a band whose sludge-metal innovations directly influenced Nirvana and grunge. He also recorded early Nirvana demos, and his massive, deliberate approach to drumming helped create the sonic template that Mudhoney, Nirvana, and dozens of other Pacific Northwest bands would develop.",
+    "signatureStyle": "Massive, deliberate heaviness with punk aggression. Sludge metal slowness combined with punk's stripped aesthetic. Maximum impact with minimum number of notes \u2014 every hit counts.",
+    "bpmMin": 55,
+    "bpmMax": 160,
+    "influence": "One of the overlooked architects of grunge and alternative metal. His influence through the Melvins \u2014 the band that Nirvana's Kurt Cobain and Krist Novoselic credited as their primary influence \u2014 extends to the entire grunge movement and beyond.",
+    "iconicSongIds": [
+      "honey-bucket-crover",
+      "boris-crover"
+    ]
+  },
+  {
+    "id": "gina-schock",
+    "name": "Gina Schock",
+    "born": 1957,
+    "died": null,
+    "primaryEra": "1980s",
+    "eras": [
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "punk",
+      "new-wave",
+      "rock"
+    ],
+    "bands": [
+      "The Go-Go's"
+    ],
+    "bio": "Gina Schock is the drummer for the Go-Go's \u2014 the first all-female band to write their own songs, play their own instruments, and top the Billboard charts. Her powerful, direct playing style was crucial to making the Go-Go's one of new wave's most commercially successful acts, proving definitively that female musicians could compete at the highest commercial level.",
+    "signatureStyle": "Powerful, direct new wave drumming with genuine rock authority. Punk roots applied to pop songwriting. Proves that directness and power are not gender-specific musical qualities.",
+    "bpmMin": 120,
+    "bpmMax": 165,
+    "influence": "One of rock's most important female drummers \u2014 her work with the Go-Go's demonstrated that female musicians could achieve commercial success at the highest level through genuine musical ability. Her influence on female drummers spans generations.",
+    "iconicSongIds": [
+      "we-got-the-beat",
+      "vacation-gogo"
+    ]
+  },
+  {
+    "id": "igor-cavalera",
+    "name": "Igor Cavalera",
+    "born": 1970,
+    "died": null,
+    "primaryEra": "1990s",
+    "eras": [
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "metal",
+      "progressive-rock"
+    ],
+    "bands": [
+      "Sepultura",
+      "Cavalera Conspiracy"
+    ],
+    "bio": "Igor Cavalera co-founded Sepultura with his brother Max and was the band's drummer through their most important recordings. His drumming synthesizes Brazilian rhythmic tradition with extreme metal, creating a uniquely powerful sound rooted in his homeland's musical heritage. His exploration of tribal percussion and Afrobeat influences within a metal context produced some of the most original recordings in heavy music.",
+    "signatureStyle": "Brazilian rhythmic heritage integrated with extreme metal. Tribal percussion sensibility applied to thrash and groove metal. Unique synthesis of samba, Afrobeat, and metal that produced a completely original approach.",
+    "bpmMin": 100,
+    "bpmMax": 220,
+    "influence": "The pioneer of Brazil's contribution to extreme metal. His synthesis of Brazilian rhythmic traditions with thrash and groove metal created a new aesthetic within heavy music, and his influence is audible in every Brazilian metal drummer.",
+    "iconicSongIds": [
+      "roots-bloody-roots",
+      "refuse-resist"
+    ]
+  },
+  {
+    "id": "janet-weiss",
+    "name": "Janet Weiss",
+    "born": 1965,
+    "died": null,
+    "primaryEra": "1990s",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "punk",
+      "rock"
+    ],
+    "bands": [
+      "Sleater-Kinney",
+      "Quasi",
+      "Wild Flag"
+    ],
+    "bio": "Janet Weiss is one of the most respected drummers in independent music \u2014 the rhythmic anchor of Sleater-Kinney, one of the most critically celebrated bands in rock history. Her playing combines punk energy with sophisticated musical intelligence, and her ability to hold a band together rhythmically while creating complex, melodic drum parts has made her one of indie rock's most admired musicians.",
+    "signatureStyle": "Melodic, compositional punk drumming. Drum parts that function as melodies as well as rhythm. Punk energy combined with sophisticated musical intelligence.",
+    "bpmMin": 130,
+    "bpmMax": 195,
+    "influence": "The standard for indie rock and post-punk drumming. Her work with Sleater-Kinney demonstrated that punk music could be both raw and musically sophisticated simultaneously \u2014 an influence that extends across three decades of independent music.",
+    "iconicSongIds": [
+      "dig-me-out-weiss",
+      "one-beat-weiss"
+    ]
+  },
+  {
+    "id": "jon-fishman",
+    "name": "Jon Fishman",
+    "born": 1969,
+    "died": null,
+    "primaryEra": "1990s",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "jazz",
+      "progressive-rock"
+    ],
+    "bands": [
+      "Phish"
+    ],
+    "bio": "Jon Fishman has been the drummer for Phish since the band's founding, accumulating thousands of live performances across four decades. His playing draws on jazz, classical, funk, and rock traditions to create a completely personal language \u2014 one that can sustain extended improvisation across hours of live performance while maintaining musical interest and genuine swing.",
+    "signatureStyle": "Extended improvisational drumming with jazz foundations. Ability to sustain musical interest across multi-hour live sets. Deep vocabulary drawn from jazz, classical, and American roots music applied to rock improvisation.",
+    "bpmMin": 75,
+    "bpmMax": 220,
+    "influence": "The definitive drummer for extended rock improvisation. His ability to sustain musical quality across thousands of hours of live performance \u2014 finding something new to say within familiar song frameworks \u2014 is one of rock's most extraordinary achievements.",
+    "iconicSongIds": [
+      "you-enjoy-myself-fishman",
+      "tweezer-fishman"
+    ]
+  },
+  {
+    "id": "josh-freese",
+    "name": "Josh Freese",
+    "born": 1972,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "punk",
+      "metal",
+      "new-wave"
+    ],
+    "bands": [
+      "A Perfect Circle",
+      "Devo",
+      "Foo Fighters",
+      "Weezer",
+      "The Vandals"
+    ],
+    "bio": "Josh Freese is the most versatile working drummer in rock music \u2014 appearing on hundreds of albums across virtually every rock subgenre, from punk to progressive rock to alternative pop. He is the consummate chameleon: listen to his work with A Perfect Circle, Devo, and Weezer and you would never believe it's the same drummer \u2014 that versatility is his greatest achievement.",
+    "signatureStyle": "Complete stylistic versatility \u2014 able to serve any rock genre convincingly. Session drummer's discipline and musical intelligence applied across 30 years of diverse recording situations. The ability to completely disappear into a musical context.",
+    "bpmMin": 95,
+    "bpmMax": 200,
+    "influence": "The model for modern rock session drumming. His ability to genuinely serve radically different musical contexts \u2014 not merely approximate them but inhabit them \u2014 has made him the first call for artists ranging from punk legends to progressive rock to alternative pop.",
+    "iconicSongIds": [
+      "judith-apc-freese",
+      "whip-it-freese"
+    ]
+  },
+  {
+    "id": "kenny-aronoff",
+    "name": "Kenny Aronoff",
+    "born": 1953,
+    "died": null,
+    "primaryEra": "1980s",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "country",
+      "pop"
+    ],
+    "bands": [
+      "John Mellencamp",
+      "Smashing Pumpkins",
+      "John Fogerty",
+      "Melissa Etheridge"
+    ],
+    "bio": "Kenny Aronoff is one of American rock's most recorded session drummers \u2014 a musician whose powerful, authoritative style is immediately recognizable across hundreds of albums spanning rock, country, and pop. His decade-plus partnership with John Mellencamp produced some of heartland rock's most iconic recordings, establishing his signature combination of raw power and complete musical service.",
+    "signatureStyle": "Powerful American rock drumming with heartland authenticity. Raw, powerful feel that serves the song rather than displaying technique. The ability to make simple patterns sound absolutely authoritative.",
+    "bpmMin": 95,
+    "bpmMax": 165,
+    "influence": "The definitive heartland rock drummer. His work with John Mellencamp defined the sound of Midwestern rock in the 1980s, and his subsequent session career demonstrates that a powerful, authentic rock feel has applications across virtually every popular music genre.",
+    "iconicSongIds": [
+      "jack-and-diane-aronoff",
+      "hurts-so-good-aronoff"
+    ]
+  },
+  {
+    "id": "matt-halpern",
+    "name": "Matt Halpern",
+    "born": 1984,
+    "died": null,
+    "primaryEra": "2010s",
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "metal",
+      "progressive-rock"
+    ],
+    "bands": [
+      "Periphery"
+    ],
+    "bio": "Matt Halpern is the drummer for Periphery, the band most credited with popularizing 'djent' \u2014 a style of progressive metal characterized by complex polyrhythms, extended techniques, and extreme precision. His ability to execute impossibly complex polyrhythmic patterns with natural groove feel placed him at the forefront of 21st-century progressive metal.",
+    "signatureStyle": "Polyrhythmic extreme precision with natural groove feel. Djent's defining drummer \u2014 complex independent patterns maintaining groove at extreme precision. Electronic music's rhythmic complexity translated to live acoustic performance.",
+    "bpmMin": 95,
+    "bpmMax": 230,
+    "influence": "The definitive voice of djent drumming. His ability to make extreme polyrhythmic complexity feel like a groove rather than a technical exercise has influenced an entire generation of progressive metal drummers.",
+    "iconicSongIds": [
+      "ragnarok-periphery",
+      "icarus-lives"
+    ]
+  },
+  {
+    "id": "max-weinberg",
+    "name": "Max Weinberg",
+    "born": 1951,
+    "died": null,
+    "primaryEra": "1970s",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "rock",
+      "blues"
+    ],
+    "bands": [
+      "E Street Band",
+      "Conan O'Brien Band"
+    ],
+    "bio": "Max Weinberg has been the drummer for Bruce Springsteen's E Street Band since 1974 \u2014 over five decades of some of rock's most celebrated live performances and recordings. His drumming is rooted in the American rock and R&B tradition, and his ability to serve Springsteen's epic, sweeping musical vision with complete authority has made him one of rock's most important long-term partnerships.",
+    "signatureStyle": "Powerful American rock with R&B roots. Driving groove that serves epic songwriting. Consistency and authority over five decades of high-level performance.",
+    "bpmMin": 85,
+    "bpmMax": 165,
+    "influence": "One of the great rock partnerships in music history. His five-decade collaboration with Springsteen has produced some of American rock's most important recordings, and his live drumming has powered some of the longest and most celebrated concert performances in rock history.",
+    "iconicSongIds": [
+      "born-to-run-weinberg",
+      "hungry-heart-weinberg"
+    ]
+  },
+  {
+    "id": "meg-white",
+    "name": "Meg White",
+    "born": 1974,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "2000s"
+    ],
+    "genres": [
+      "blues",
+      "rock"
+    ],
+    "bands": [
+      "The White Stripes"
+    ],
+    "bio": "Meg White's drumming with the White Stripes is one of popular music's most powerful arguments that less is infinitely more. Her primitive, deliberate approach \u2014 often criticized by technically oriented musicians \u2014 created a rhythmic environment that was perfectly suited to Jack White's maximalist guitar playing, proving that the right drummer for a musical context is not always the most technically sophisticated one.",
+    "signatureStyle": "Primitive, deliberate minimalism \u2014 the absolute essentials of drumming, nothing more. Blues drumming at its most elemental. Proof that the right groove for a musical context requires judgment, not just technique.",
+    "bpmMin": 80,
+    "bpmMax": 145,
+    "influence": "One of popular music's most important arguments for minimalism. Her drumming challenged the assumption that more technique always means better music, and her influence is felt in every indie and alternative drummer who has since chosen directness and feel over complexity.",
+    "iconicSongIds": [
+      "seven-nation-army-white",
+      "ball-and-biscuit"
+    ]
+  },
+  {
+    "id": "mikkey-dee",
+    "name": "Mikkey Dee",
+    "born": 1963,
+    "died": null,
+    "primaryEra": "1990s",
+    "eras": [
+      "1990s",
+      "2000s"
+    ],
+    "genres": [
+      "metal",
+      "hard-rock"
+    ],
+    "bands": [
+      "Mot\u00f6rhead",
+      "Scorpions",
+      "Don Dokken"
+    ],
+    "bio": "Swedish drummer Mikkey Dee joined Mot\u00f6rhead in 1992 and became the band's final drummer, playing on their most celebrated late-period recordings. His technical ability \u2014 far exceeding his predecessor Phil Taylor \u2014 gave Mot\u00f6rhead a new rhythmic authority while maintaining the band's essential character. After Lemmy's death he joined the Scorpions.",
+    "signatureStyle": "Power drumming at extreme speed with rock-solid precision. Heavy metal authority combined with genuine musicality. The ability to play Mot\u00f6rhead's extreme music with technique that reveals its sophistication.",
+    "bpmMin": 165,
+    "bpmMax": 250,
+    "influence": "Revitalized Mot\u00f6rhead's rhythmic foundation for their final two decades. His technical ability gave the band's classic material new life in live performance, and his recordings with Lemmy produced some of Mot\u00f6rhead's most celebrated late work.",
+    "iconicSongIds": [
+      "sacrifice-motorhead",
+      "overnight-sensation"
+    ]
+  },
+  {
+    "id": "moe-tucker",
+    "name": "Moe Tucker",
+    "born": 1944,
+    "died": null,
+    "primaryEra": "1960s",
+    "eras": [
+      "1960s",
+      "1970s"
+    ],
+    "genres": [
+      "rock",
+      "blues",
+      "electronic"
+    ],
+    "bands": [
+      "Velvet Underground"
+    ],
+    "bio": "Moe Tucker was the drummer for the Velvet Underground \u2014 one of rock history's most influential bands \u2014 and her unconventional, primitive approach was perfectly suited to Lou Reed and John Cale's avant-garde rock vision. She played standing up, used mallets instead of drumsticks, and deliberately avoided conventional rock drumming patterns, creating a unique rhythmic texture that no amount of conventional technique could have produced.",
+    "signatureStyle": "Deliberately primitive approach using mallets on drums played standing up. Rhythmic drone rather than conventional groove. Avant-garde aesthetic applied to rock music \u2014 the antithesis of technical drumming as the correct musical choice.",
+    "bpmMin": 65,
+    "bpmMax": 130,
+    "influence": "One of the most influential examples of using unconventional approach in service of a musical vision. Her willingness to abandon conventional drumming technique to serve the Velvet Underground's aesthetic created a genuinely unique contribution to rock music.",
+    "iconicSongIds": [
+      "sweet-jane-tucker",
+      "rock-and-roll-tucker"
+    ]
+  },
+  {
+    "id": "roger-hawkins",
+    "name": "Roger Hawkins",
+    "born": 1945,
+    "died": null,
+    "primaryEra": "1960s",
+    "eras": [
+      "1960s",
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "soul",
+      "r&b",
+      "rock"
+    ],
+    "bands": [
+      "Muscle Shoals Rhythm Section"
+    ],
+    "bio": "Roger Hawkins was the drummer for the legendary Muscle Shoals Rhythm Section \u2014 the studio musicians who created some of soul music's most celebrated recordings. His earthy, deeply rooted groove powered sessions with Aretha Franklin, Wilson Pickett, Percy Sledge, and hundreds of other artists, making him one of the most important studio drummers in American music history.",
+    "signatureStyle": "Deep Southern soul groove rooted in gospel, country, and blues simultaneously. Studio drummer's ability to serve any soul or R&B artist. Earthy, unhurried feel that gives Muscle Shoals recordings their distinctive warmth.",
+    "bpmMin": 75,
+    "bpmMax": 130,
+    "influence": "The rhythmic foundation of the Muscle Shoals sound \u2014 one of American music's most distinctive and beloved recording aesthetics. His drumming with Aretha Franklin and Wilson Pickett produced some of soul music's greatest recordings.",
+    "iconicSongIds": [
+      "when-a-man-loves-a-woman",
+      "i-ll-take-you-there"
+    ]
+  },
+  {
+    "id": "russ-kunkel",
+    "name": "Russ Kunkel",
+    "born": 1948,
+    "died": null,
+    "primaryEra": "1970s",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "rock",
+      "folk",
+      "pop"
+    ],
+    "bands": [
+      "James Taylor",
+      "Carole King",
+      "Jackson Browne",
+      "Crosby Stills & Nash"
+    ],
+    "bio": "Russ Kunkel was the session drummer for the Laurel Canyon sound \u2014 the gentle, intimate California folk-rock that dominated the early 1970s. His natural, understated playing on albums by James Taylor, Carole King, and Jackson Browne created the rhythmic template for an entire era of singer-songwriter music, proving that restraint and sensitivity are the most important tools for serving intimate songwriting.",
+    "signatureStyle": "Understated, sensitive playing in service of intimate singer-songwriter music. Natural, unhurried feel. The ability to remain completely in the background while being the reason everything else feels right.",
+    "bpmMin": 65,
+    "bpmMax": 120,
+    "influence": "Defined the rhythmic aesthetic of Laurel Canyon singer-songwriter music. His gentle, sensitive playing created the space that allowed Carole King, James Taylor, and their contemporaries to make their most intimate recordings.",
+    "iconicSongIds": [
+      "fire-and-rain-kunkel",
+      "youve-got-a-friend-kunkel"
+    ]
+  },
+  {
+    "id": "stella-mozgawa",
+    "name": "Stella Mozgawa",
+    "born": 1987,
+    "died": null,
+    "primaryEra": "2010s",
+    "eras": [
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "electronic",
+      "new-wave"
+    ],
+    "bands": [
+      "Warpaint"
+    ],
+    "bio": "Australian drummer Stella Mozgawa is the rhythmic center of Warpaint, one of the most critically admired bands in contemporary indie rock. Her drumming synthesizes electronic music sensibility with organic, textural playing \u2014 creating grooves that feel simultaneously mechanical and deeply human. Her approach is as much about texture and atmosphere as it is about rhythm.",
+    "signatureStyle": "Textural, atmospheric drumming with electronic music sensibility. Groove as sonic texture rather than strict timekeeping. Female perspective on indie rock drumming that has influenced a generation of contemporary players.",
+    "bpmMin": 78,
+    "bpmMax": 148,
+    "influence": "One of the defining voices in contemporary indie rock drumming. Her synthesis of electronic aesthetics with organic, textural playing has influenced the sound of independent music in the 2010s.",
+    "iconicSongIds": [
+      "undertow-warpaint",
+      "keep-it-healthy"
+    ]
+  },
+  {
+    "id": "terri-lyne-carrington",
+    "name": "Terri Lyne Carrington",
+    "born": 1965,
+    "died": null,
+    "primaryEra": "1990s",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Wayne Shorter",
+      "Herbie Hancock",
+      "Stan Getz",
+      "Esperanza Spalding"
+    ],
+    "bio": "Terri Lyne Carrington is one of jazz's most accomplished and versatile drummers \u2014 a musician who has worked with virtually every major jazz figure of the past four decades while maintaining her own distinctive musical voice. She started playing at age 7, was studying at Berklee at 11, and has since become one of the instrument's most celebrated educators as well as performers.",
+    "signatureStyle": "Deeply musical jazz drumming with encyclopedic vocabulary. Conversational, sensitive playing with the technical ability to serve any jazz context. Woman's perspective on the jazz tradition that has influenced generations of younger drummers.",
+    "bpmMin": 85,
+    "bpmMax": 260,
+    "influence": "One of the most important jazz musicians of her generation \u2014 as a drummer, composer, and educator. Her Grammy-winning work demonstrates that technical mastery and musical sensitivity can coexist at the highest level, and her educational work at Berklee has shaped jazz's next generation.",
+    "iconicSongIds": [
+      "money-jungle-carrington",
+      "radio-music-carrington"
+    ]
+  },
+  {
+    "id": "tony-thompson",
+    "name": "Tony Thompson",
+    "born": 1954,
+    "died": 2003,
+    "primaryEra": "1970s",
+    "eras": [
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "funk",
+      "r&b",
+      "soul",
+      "rock"
+    ],
+    "bands": [
+      "Chic",
+      "Power Station",
+      "Duran Duran"
+    ],
+    "bio": "Tony Thompson was the drummer for Chic \u2014 Nile Rodgers and Bernard Edwards's disco-funk band that created some of the genre's most influential recordings. His drumming on 'Le Freak,' 'Good Times,' and dozens of other tracks defined the disco-funk drum sound, and his subsequent rock work with the Power Station demonstrated extraordinary stylistic versatility.",
+    "signatureStyle": "Disco-funk precision with rock authority. Perfect tempo, perfect groove, perfect execution. The drummer who gave disco music its rhythmic credibility and then proved the same skills work in rock.",
+    "bpmMin": 118,
+    "bpmMax": 145,
+    "influence": "The drummer who made disco rhythm credible. His work with Chic produced the most sampled grooves in hip-hop history, and his ability to apply the same precision and authority to rock with the Power Station demonstrated that great groove is universal.",
+    "iconicSongIds": [
+      "le-freak-thompson",
+      "good-times-chic"
+    ]
+  },
+  {
+    "id": "topper-headon",
+    "name": "Topper Headon",
+    "born": 1955,
+    "died": null,
+    "primaryEra": "1970s",
+    "eras": [
+      "1970s",
+      "1980s"
+    ],
+    "genres": [
+      "punk",
+      "rock",
+      "reggae"
+    ],
+    "bands": [
+      "The Clash"
+    ],
+    "bio": "Topper Headon was the drummer for The Clash during their most musically ambitious period \u2014 the years that produced London Calling and Combat Rock. Unlike typical punk drummers, Headon was a genuinely versatile musician who brought jazz, reggae, soul, and funk influences to punk music, creating a rhythmic palette that perfectly served The Clash's musical ambitions. He wrote and played most of 'Rock the Casbah' at the piano.",
+    "signatureStyle": "Versatile punk drummer who brought jazz, reggae, soul, and funk vocabulary to the genre. Genuine musical range that allowed The Clash to explore styles far beyond punk orthodoxy. Songwriter as well as drummer.",
+    "bpmMin": 130,
+    "bpmMax": 190,
+    "influence": "The musical engine that allowed The Clash to transcend punk and create one of rock's most diverse catalogs. His jazz and soul training gave the band access to rhythmic styles that no other punk band could credibly explore.",
+    "iconicSongIds": [
+      "rock-the-casbah",
+      "train-in-vain"
+    ]
+  },
+  {
+    "id": "vinny-appice",
+    "name": "Vinny Appice",
+    "born": 1957,
+    "died": null,
+    "primaryEra": "1980s",
+    "eras": [
+      "1970s",
+      "1980s",
+      "1990s"
+    ],
+    "genres": [
+      "metal",
+      "hard-rock",
+      "rock"
+    ],
+    "bands": [
+      "Black Sabbath",
+      "Dio",
+      "Rod Stewart",
+      "Blue Murder"
+    ],
+    "bio": "Vinny Appice is one of hard rock's most celebrated drummers \u2014 best known for his work with Black Sabbath (replacing Bill Ward) and Dio, where his powerful playing perfectly complemented Ronnie James Dio's operatic metal vocals. The younger brother of Carmine Appice, he followed his brother into the highest levels of rock drumming.",
+    "signatureStyle": "Heavy metal power with classic rock groove sensibility. Large, dramatic playing that serves epic metal songwriting. The Appice family DNA \u2014 big sound, big dynamics, big personality.",
+    "bpmMin": 90,
+    "bpmMax": 185,
+    "influence": "One of heavy metal's foundational drummers. His work with Dio and Black Sabbath during the early 1980s helped define the sound of melodic heavy metal, and his family connection to Carmine Appice places him in rock drumming's most important lineage.",
+    "iconicSongIds": [
+      "mob-rules-appice",
+      "holy-diver-appice"
+    ]
+  },
+  {
+    "id": "viola-smith",
+    "name": "Viola Smith",
+    "born": 1912,
+    "died": 2020,
+    "primaryEra": "1940s",
+    "eras": [
+      "1940s",
+      "1950s"
+    ],
+    "genres": [
+      "jazz"
+    ],
+    "bands": [
+      "Coquettes",
+      "Viola Smith Orchestra",
+      "Clara Smith"
+    ],
+    "bio": "Viola Smith was one of the first women to play drums professionally in America \u2014 a pioneering figure who broke gender barriers in jazz and big band music during the 1930s and 1940s. She played with all-female bands for decades and was famous for her advocacy for women musicians, writing a 1942 Downbeat column titled 'Give Girl Musicians a Break.' She lived to 107, outliving most of the musicians she had inspired.",
+    "signatureStyle": "Swing-era jazz drumming from one of the genre's pioneering female voices. Big band technique developed in decades of professional performance before women were widely accepted in jazz. Historical significance matched by genuine musical ability.",
+    "bpmMin": 110,
+    "bpmMax": 195,
+    "influence": "One of the most historically significant drummers in American music \u2014 a pioneer for female musicians whose decades of advocacy and performance helped open jazz and popular music to women. Her influence is measured not just in notes but in generations of female musicians she inspired.",
+    "iconicSongIds": [
+      "vim-vam-vamoose",
+      "smith-orchestra-swing"
+    ]
+  },
+  {
+    "id": "will-calhoun",
+    "name": "Will Calhoun",
+    "born": 1964,
+    "died": null,
+    "primaryEra": "1980s",
+    "eras": [
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "rock",
+      "jazz",
+      "blues",
+      "funk"
+    ],
+    "bands": [
+      "Living Colour",
+      "Pharoah Sanders",
+      "BB King"
+    ],
+    "bio": "Will Calhoun is the drummer for Living Colour \u2014 the Black rock band that broke significant ground when they emerged in 1988, challenging assumptions about who could play rock music. His drumming is distinctive for its synthesis of hard rock power with jazz harmonic awareness and African-American musical tradition, creating a sound that was immediately identifiable and influential.",
+    "signatureStyle": "Hard rock drumming with jazz harmonic intelligence. African-American musical roots visible in rock context. Power and sophistication combined in a way that challenges rock's traditional demographics.",
+    "bpmMin": 105,
+    "bpmMax": 185,
+    "influence": "One of rock's most musically sophisticated drummers. His work with Living Colour demonstrated that jazz training enhances rather than compromises rock playing, and his advocacy for African-American rock musicians has had cultural significance beyond his considerable musical accomplishments.",
+    "iconicSongIds": [
+      "cult-of-personality-calhoun",
+      "type-living-colour"
+    ]
+  },
+  {
+    "id": "abe-cunningham",
+    "name": "Abe Cunningham",
+    "born": 1982,
+    "died": null,
+    "primaryEra": "2000s",
+    "eras": [
+      "2000s",
+      "2010s"
+    ],
+    "genres": [
+      "metal",
+      "rock"
+    ],
+    "bands": [
+      "Deftones"
+    ],
+    "bio": "Abe Cunningham is the drummer for the Deftones \u2014 one of alternative metal's most critically admired and unique bands. His playing is characterized by an unusual combination of atmospheric sensitivity and explosive power, perfectly matched to the Deftones' signature blend of heavy riffs and dreamy, shoegaze-influenced texture.",
+    "signatureStyle": "Dynamic, atmospheric metal drumming \u2014 from near-silence to explosive force within single songs. Sensitivity and power in equal measure. Alternative metal that draws from shoegaze and dream pop aesthetics.",
+    "bpmMin": 75,
+    "bpmMax": 175,
+    "influence": "One of alternative metal's most distinctive drummers. His ability to navigate the Deftones' extreme dynamic range \u2014 from whispered, atmospheric passages to full-force aggression \u2014 has influenced every drummer working in the space between heavy music and atmospheric rock.",
+    "iconicSongIds": [
+      "change-deftones",
+      "my-own-summer"
+    ]
   }
 ]
