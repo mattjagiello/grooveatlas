@@ -8,12 +8,14 @@ const config = getDefaultConfig(projectRoot);
 
 config.watchFolders = [workspaceRoot];
 
-// Exclude temp directories created by package managers during install
+// Exclude temp directories and removed workspace packages
 config.resolver = config.resolver ?? {};
 const { blockList: existingBlockList } = config.resolver;
 const blockListEntries = [
   /.*_tmp_.*\/cjs$/,
   /.*\/node_modules\/.*_tmp_.*$/,
+  /.*\/lib\/api-client-react\/.*/,
+  /.*\/lib\/api-spec\/.*/,
 ];
 if (existingBlockList) {
   config.resolver.blockList = Array.isArray(existingBlockList)
