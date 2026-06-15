@@ -1,4 +1,4 @@
-import { createServer } from "node:http";
+import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { createYoga, createSchema } from "graphql-yoga";
 import { typeDefs } from "./graphql/schema.js";
 import { resolvers } from "./graphql/resolvers.js";
@@ -9,10 +9,7 @@ const schema = createSchema({ typeDefs, resolvers });
 const yoga = createYoga({
   schema,
   graphiql: process.env.NODE_ENV === "development",
-  cors: {
-    origin: "*",
-    credentials: true,
-  },
+  cors: false,
   logging: {
     debug: (...args) => logger.debug(args),
     info: (...args) => logger.info(args),
@@ -21,7 +18,21 @@ const yoga = createYoga({
   },
 });
 
-const server = createServer((req, res) => {
+function setCorsHeaders(res: ServerResponse) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+}
+
+const server = createServer((req: IncomingMessage, res: ServerResponse) => {
+  setCorsHeaders(res);
+
+  if (req.method === "OPTIONS") {
+    res.writeHead(204);
+    res.end();
+    return;
+  }
+
   const url = new URL(req.url ?? "/", `http://${req.headers.host}`);
 
   if (url.pathname === "/health") {
