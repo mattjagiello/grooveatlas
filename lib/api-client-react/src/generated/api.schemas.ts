@@ -91,6 +91,16 @@ export type SongDetail = Song & ({
   drummer: Drummer | null;
 });
 
+export interface ChartTrack {
+  trackId: string;
+  title: string;
+  artist: string;
+  albumTitle?: string | null;
+  rank: number;
+  /** "musixmatch" or "curated" */
+  source: string;
+}
+
 export interface SearchResults {
   drummers: Drummer[];
   songs: Song[];
@@ -107,6 +117,10 @@ export type ListSongsParams = {
 eraId?: string;
 genreId?: string;
 drummerId?: string;
+};
+
+export type GetGenreChartsParams = {
+limit?: number;
 };
 
 export type SearchAllParams = {

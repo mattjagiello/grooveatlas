@@ -20,6 +20,8 @@ tags:
     description: Iconic drum recordings
   - name: search
     description: Full-text search
+  - name: charts
+    description: Genre-based track charts
 paths:
   /healthz:
     get:
@@ -217,6 +219,39 @@ paths:
                 $ref: "#/components/schemas/SongDetail"
         "404":
           description: Song not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotFound"
+
+  /genres/{id}/charts:
+    get:
+      operationId: getGenreCharts
+      tags: [charts]
+      summary: Top chart tracks for a genre (Musixmatch-backed with curated fallback)
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 10
+      responses:
+        "200":
+          description: Chart tracks for this genre
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ChartTrack"
+        "404":
+          description: Genre not found
           content:
             application/json:
               schema:
@@ -501,6 +536,30 @@ components:
               nullable: true
           required:
             - drummer
+
+    ChartTrack:
+      type: object
+      properties:
+        trackId:
+          type: string
+        title:
+          type: string
+        artist:
+          type: string
+        albumTitle:
+          type: string
+          nullable: true
+        rank:
+          type: integer
+        source:
+          type: string
+          description: '"musixmatch" or "curated"'
+      required:
+        - trackId
+        - title
+        - artist
+        - rank
+        - source
 
     SearchResults:
       type: object

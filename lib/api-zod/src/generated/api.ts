@@ -301,6 +301,30 @@ export const GetSongResponse = zod.object({
 
 
 /**
+ * @summary Top chart tracks for a genre (Musixmatch-backed with curated fallback)
+ */
+export const GetGenreChartsParams = zod.object({
+  "id": zod.coerce.string()
+})
+
+export const getGenreChartsQueryLimitDefault = 10;
+
+export const GetGenreChartsQueryParams = zod.object({
+  "limit": zod.coerce.number().default(getGenreChartsQueryLimitDefault)
+})
+
+export const GetGenreChartsResponseItem = zod.object({
+  "trackId": zod.string(),
+  "title": zod.string(),
+  "artist": zod.string(),
+  "albumTitle": zod.string().nullish(),
+  "rank": zod.number(),
+  "source": zod.string().describe('\"musixmatch\" or \"curated\"')
+})
+export const GetGenreChartsResponse = zod.array(GetGenreChartsResponseItem)
+
+
+/**
  * @summary Search across drummers, songs, genres, and eras
  */
 export const SearchAllQueryParams = zod.object({

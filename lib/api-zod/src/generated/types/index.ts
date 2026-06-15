@@ -6,12 +6,14 @@
  * OpenAPI spec version: 0.2.0
  */
 
+export * from './chartTrack';
 export * from './drummer';
 export * from './drummerDetail';
 export * from './era';
 export * from './eraDetail';
 export * from './genre';
 export * from './genreDetail';
+export * from './getGenreChartsParams';
 export * from './healthStatus';
 export * from './listDrummersParams';
 export * from './listSongsParams';

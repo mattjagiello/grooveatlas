@@ -16,12 +16,14 @@ import type {
 } from '@tanstack/react-query';
 
 import type {
+  ChartTrack,
   Drummer,
   DrummerDetail,
   Era,
   EraDetail,
   Genre,
   GenreDetail,
+  GetGenreChartsParams,
   HealthStatus,
   ListDrummersParams,
   ListSongsParams,
@@ -740,6 +742,95 @@ export function useGetSong<TData = Awaited<ReturnType<typeof getSong>>, TError =
  ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
 
   const queryOptions = getGetSongQueryOptions(id,options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return { ...query, queryKey: queryOptions.queryKey };
+}
+
+
+
+
+
+
+
+export const getGetGenreChartsUrl = (id: string,
+    params?: GetGenreChartsParams,) => {
+  const normalizedParams = new URLSearchParams();
+
+  Object.entries(params || {}).forEach(([key, value]) => {
+
+    if (value !== undefined) {
+      normalizedParams.append(key, value === null ? 'null' : value.toString())
+    }
+  });
+
+  const stringifiedParams = normalizedParams.toString();
+
+  return stringifiedParams.length > 0 ? `/api/genres/${id}/charts?${stringifiedParams}` : `/api/genres/${id}/charts`
+}
+
+/**
+ * @summary Top chart tracks for a genre (Musixmatch-backed with curated fallback)
+ */
+export const getGenreCharts = async (id: string,
+    params?: GetGenreChartsParams, options?: RequestInit): Promise<ChartTrack[]> => {
+
+  return customFetch<ChartTrack[]>(getGetGenreChartsUrl(id,params),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getGetGenreChartsQueryKey = (id: string,
+    params?: GetGenreChartsParams,) => {
+    return [
+    `/api/genres/${id}/charts`, ...(params ? [params] : [])
+    ] as const;
+    }
+
+
+export const getGetGenreChartsQueryOptions = <TData = Awaited<ReturnType<typeof getGenreCharts>>, TError = ErrorType<NotFound>>(id: string,
+    params?: GetGenreChartsParams, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getGenreCharts>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getGetGenreChartsQueryKey(id,params);
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof getGenreCharts>>> = ({ signal }) => getGenreCharts(id,params, { signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, enabled: !!(id), ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof getGenreCharts>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type GetGenreChartsQueryResult = NonNullable<Awaited<ReturnType<typeof getGenreCharts>>>
+export type GetGenreChartsQueryError = ErrorType<NotFound>
+
+
+/**
+ * @summary Top chart tracks for a genre (Musixmatch-backed with curated fallback)
+ */
+
+export function useGetGenreCharts<TData = Awaited<ReturnType<typeof getGenreCharts>>, TError = ErrorType<NotFound>>(
+ id: string,
+    params?: GetGenreChartsParams, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getGenreCharts>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getGetGenreChartsQueryOptions(id,params,options)
 
   const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
 

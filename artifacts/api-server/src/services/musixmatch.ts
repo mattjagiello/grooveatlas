@@ -9,9 +9,7 @@ export async function fetchLyricsSnippet(
   artist: string
 ): Promise<string | null> {
   const apiKey = process.env["MUSIXMATCH_API_KEY"];
-  if (!apiKey) {
-    return null;
-  }
+  if (!apiKey) return null;
 
   try {
     const searchUrl = new URL(`${MUSIXMATCH_BASE}/track.search`);
@@ -56,6 +54,63 @@ export async function fetchLyricsSnippet(
 
     const lines = fullLyrics.split("\n").filter((l) => l.trim().length > 0);
     return lines.slice(0, 4).join("\n") || null;
+  } catch {
+    return null;
+  }
+}
+
+export interface MusixmatchChartTrack {
+  trackId: string;
+  title: string;
+  artist: string;
+  albumTitle: string | null;
+  rank: number;
+}
+
+export async function fetchGenreCharts(
+  genreName: string,
+  limit: number = 10
+): Promise<MusixmatchChartTrack[] | null> {
+  const apiKey = process.env["MUSIXMATCH_API_KEY"];
+  if (!apiKey) return null;
+
+  try {
+    const url = new URL(`${MUSIXMATCH_BASE}/track.search`);
+    url.searchParams.set("apikey", apiKey);
+    url.searchParams.set("q_genre", genreName);
+    url.searchParams.set("page_size", String(Math.min(limit, 10)));
+    url.searchParams.set("s_track_rating", "desc");
+    url.searchParams.set("f_has_lyrics", "1");
+
+    const res = await fetch(url.toString());
+    if (!res.ok) return null;
+
+    const data = (await res.json()) as {
+      message: {
+        header: { status_code: number };
+        body: {
+          track_list: Array<{
+            track: {
+              track_id: number;
+              track_name: string;
+              artist_name: string;
+              album_name: string | null;
+            };
+          }>;
+        };
+      };
+    };
+
+    if (data.message.header.status_code !== 200) return null;
+    const trackList = data.message.body.track_list;
+
+    return trackList.map((item, idx) => ({
+      trackId: String(item.track.track_id),
+      title: item.track.track_name,
+      artist: item.track.artist_name,
+      albumTitle: item.track.album_name ?? null,
+      rank: idx + 1,
+    }));
   } catch {
     return null;
   }
