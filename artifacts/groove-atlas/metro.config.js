@@ -8,4 +8,19 @@ const config = getDefaultConfig(projectRoot);
 
 config.watchFolders = [workspaceRoot];
 
+// Exclude temp directories created by package managers during install
+config.resolver = config.resolver ?? {};
+const { blockList: existingBlockList } = config.resolver;
+const blockListEntries = [
+  /.*_tmp_.*\/cjs$/,
+  /.*\/node_modules\/.*_tmp_.*$/,
+];
+if (existingBlockList) {
+  config.resolver.blockList = Array.isArray(existingBlockList)
+    ? [...existingBlockList, ...blockListEntries]
+    : [existingBlockList, ...blockListEntries];
+} else {
+  config.resolver.blockList = blockListEntries;
+}
+
 module.exports = config;

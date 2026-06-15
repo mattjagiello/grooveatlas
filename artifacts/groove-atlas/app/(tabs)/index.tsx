@@ -11,14 +11,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {
-  useListEras,
-  useListGenres,
-  useListDrummers,
-  useListSongs,
-  getListDrummersQueryKey,
-  getListSongsQueryKey,
-} from '@workspace/api-client-react';
+import { useEras, useGenres, useDrummers, useSongs } from '@/hooks/useGql';
 import DecadeTimeline from '@/components/DecadeTimeline';
 import DrummerCard from '@/components/DrummerCard';
 import GlobeMap from '@/components/GlobeMap';
@@ -31,11 +24,8 @@ export default function ExploreScreen() {
   const insets = useSafeAreaInsets();
   const [selectedEraId, setSelectedEraId] = useState<string | null>(null);
 
-  const { data: rawEras = [], isLoading: erasLoading } = useListEras();
-  const { data: rawGenres = [] } = useListGenres();
-
-  const eras = rawEras as Era[];
-  const genres = rawGenres as Genre[];
+  const { data: eras = [], isLoading: erasLoading } = useEras();
+  const { data: genres = [] } = useGenres();
 
   useEffect(() => {
     if (eras.length > 0 && !selectedEraId) {
@@ -46,24 +36,17 @@ export default function ExploreScreen() {
 
   const selectedEra = eras.find((e) => e.id === selectedEraId) ?? eras[0];
 
-  const drummerParams = selectedEraId ? { eraId: selectedEraId } : undefined;
-  const songParams = selectedEraId ? { eraId: selectedEraId } : undefined;
-
-  const { data: rawDrummers = [] } = useListDrummers(drummerParams, {
-    query: { queryKey: getListDrummersQueryKey(drummerParams), enabled: !!selectedEraId },
-  });
-  const { data: rawSongs = [] } = useListSongs(songParams, {
-    query: { queryKey: getListSongsQueryKey(songParams), enabled: !!selectedEraId },
-  });
-
-  const eraDrummers = rawDrummers as Drummer[];
-  const eraSongs = rawSongs as Song[];
+  const { data: eraDrummers = [] } = useDrummers(
+    selectedEraId ? { eraId: selectedEraId } : undefined,
+  );
+  const { data: eraSongs = [] } = useSongs(
+    selectedEraId ? { eraId: selectedEraId } : undefined,
+  );
 
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
-      {/* Fixed Header */}
       <View
         style={[
           styles.header,
@@ -98,16 +81,12 @@ export default function ExploreScreen() {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={[
             styles.content,
-            {
-              paddingBottom:
-                insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 100,
-            },
+            { paddingBottom: insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 100 },
           ]}
         >
-          {/* Globe */}
           <View style={styles.globeSection}>
             <GlobeMap
-              genres={genres}
+              genres={genres as Genre[]}
               onGenrePress={(g: Genre) => router.push(`/genre/${g.id}`)}
             />
             <Text style={[styles.globeHint, { color: colors.mutedForeground }]}>
@@ -115,24 +94,21 @@ export default function ExploreScreen() {
             </Text>
           </View>
 
-          {/* Divider */}
           <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
-          {/* Timeline */}
           {eras.length > 0 && (
             <View style={styles.section}>
               <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
                 BROWSE BY ERA
               </Text>
               <DecadeTimeline
-                eras={eras}
+                eras={eras as Era[]}
                 selectedEraId={selectedEraId ?? ''}
                 onSelectEra={(e: Era) => setSelectedEraId(e.id)}
               />
             </View>
           )}
 
-          {/* Era info */}
           {selectedEra && (
             <View
               style={[
@@ -161,7 +137,6 @@ export default function ExploreScreen() {
             </View>
           )}
 
-          {/* Key Drummers of Era */}
           {eraDrummers.length > 0 && (
             <View style={styles.section}>
               <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
@@ -172,7 +147,7 @@ export default function ExploreScreen() {
                 showsHorizontalScrollIndicator={false}
                 contentContainerStyle={styles.horizontal}
               >
-                {eraDrummers.slice(0, 8).map((drummer: Drummer) => (
+                {(eraDrummers as Drummer[]).slice(0, 8).map((drummer: Drummer) => (
                   <DrummerCard
                     key={drummer.id}
                     drummer={drummer}
@@ -183,14 +158,13 @@ export default function ExploreScreen() {
             </View>
           )}
 
-          {/* Iconic Songs */}
           {eraSongs.length > 0 && (
             <View style={styles.section}>
               <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
                 Iconic Recordings
               </Text>
               <View style={styles.songList}>
-                {eraSongs.slice(0, 4).map((song: Song) => (
+                {(eraSongs as Song[]).slice(0, 4).map((song: Song) => (
                   <SongCard
                     key={song.id}
                     song={song}
@@ -207,9 +181,7 @@ export default function ExploreScreen() {
 }
 
 const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
+  root: { flex: 1 },
   header: {
     flexDirection: 'row',
     alignItems: 'flex-end',
@@ -217,105 +189,34 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
-  logo: {
-    fontSize: 13,
-    fontWeight: '700',
-    letterSpacing: 4,
-    lineHeight: 16,
-  },
-  logoSub: {
-    fontSize: 26,
-    fontWeight: '700',
-    letterSpacing: 6,
-    lineHeight: 30,
-  },
+  logo: { fontSize: 13, fontWeight: '700', letterSpacing: 4, lineHeight: 16 },
+  logoSub: { fontSize: 26, fontWeight: '700', letterSpacing: 6, lineHeight: 30 },
   searchBtn: {
-    width: 38,
-    height: 38,
-    borderRadius: 19,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 1,
-    marginBottom: 2,
+    width: 38, height: 38, borderRadius: 19,
+    alignItems: 'center', justifyContent: 'center',
+    borderWidth: 1, marginBottom: 2,
   },
-  content: {
-    paddingTop: 12,
-  },
-  loader: {
-    marginTop: 100,
-  },
-  globeSection: {
-    alignItems: 'center',
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-  },
-  globeHint: {
-    fontSize: 11,
-    marginTop: 6,
-    textAlign: 'center',
-  },
-  divider: {
-    height: StyleSheet.hairlineWidth,
-    marginHorizontal: 16,
-    marginVertical: 12,
-  },
-  section: {
-    marginBottom: 20,
-  },
-  sectionLabel: {
-    fontSize: 10,
-    fontWeight: '700',
-    letterSpacing: 2,
-    marginHorizontal: 20,
-    marginBottom: 10,
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    marginHorizontal: 20,
-    marginBottom: 12,
-  },
-  horizontal: {
-    paddingHorizontal: 20,
-  },
+  content: { paddingTop: 12 },
+  loader: { marginTop: 100 },
+  globeSection: { alignItems: 'center', paddingHorizontal: 16, paddingVertical: 8 },
+  globeHint: { fontSize: 11, marginTop: 6, textAlign: 'center' },
+  divider: { height: StyleSheet.hairlineWidth, marginHorizontal: 16, marginVertical: 12 },
+  section: { marginBottom: 20 },
+  sectionLabel: { fontSize: 10, fontWeight: '700', letterSpacing: 2, marginHorizontal: 20, marginBottom: 10 },
+  sectionTitle: { fontSize: 18, fontWeight: '700', marginHorizontal: 20, marginBottom: 12 },
+  horizontal: { paddingHorizontal: 20 },
   eraInfo: {
-    marginHorizontal: 16,
-    marginBottom: 20,
-    padding: 16,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderLeftWidth: 4,
-    gap: 4,
+    marginHorizontal: 16, marginBottom: 20, padding: 16,
+    borderRadius: 10, borderWidth: 1, borderLeftWidth: 4, gap: 4,
   },
-  eraName: {
-    fontSize: 28,
-    fontWeight: '700',
-  },
-  eraSubtitle: {
-    fontSize: 14,
-    fontWeight: '600',
-  },
-  eraDesc: {
-    fontSize: 13,
-    lineHeight: 18,
-    marginTop: 4,
-  },
+  eraName: { fontSize: 28, fontWeight: '700' },
+  eraSubtitle: { fontSize: 14, fontWeight: '600' },
+  eraDesc: { fontSize: 13, lineHeight: 18, marginTop: 4 },
   eraBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-    marginTop: 8,
-    alignSelf: 'flex-start',
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 20,
-    borderWidth: 1,
+    flexDirection: 'row', alignItems: 'center', gap: 4,
+    marginTop: 8, alignSelf: 'flex-start',
+    paddingHorizontal: 12, paddingVertical: 6, borderRadius: 20, borderWidth: 1,
   },
-  eraBtnText: {
-    fontSize: 13,
-    fontWeight: '600',
-  },
-  songList: {
-    paddingHorizontal: 16,
-  },
+  eraBtnText: { fontSize: 13, fontWeight: '600' },
+  songList: { paddingHorizontal: 16 },
 });

@@ -1,2 +1,3 @@
 - [Expo + pnpm monorepo Metro config](expo-metro-monorepo.md) — only `watchFolders` needed; adding `nodeModulesPaths` causes multiple-React-copies errors.
 - [Drizzle numeric type](drizzle-numeric-strings.md) — Drizzle `numeric` columns return JS strings from PostgreSQL; must parse with `Number()` in route handlers.
+- [Groove Atlas stack](groove-atlas-stack.md) — static JSON → Typesense binary (port 8108) → GraphQL Yoga (:8080/graphql) → graphql-request mobile; esbuild must use static `import` not `createRequire` for JSON files.

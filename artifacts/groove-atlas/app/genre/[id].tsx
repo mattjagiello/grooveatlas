@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useGetGenre } from '@workspace/api-client-react';
+import { useGenre } from '@/hooks/useGql';
 import DrummerCard from '@/components/DrummerCard';
 import SongCard from '@/components/SongCard';
 import { Drummer, Song } from '@/constants/data';
@@ -23,7 +23,7 @@ export default function GenreDetailScreen() {
   const insets = useSafeAreaInsets();
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
 
-  const { data: genre, isLoading } = useGetGenre(id ?? '');
+  const { data: genre, isLoading } = useGenre(id ?? '');
 
   if (isLoading) {
     return (
@@ -53,13 +53,9 @@ export default function GenreDetailScreen() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={[
           styles.content,
-          {
-            paddingBottom:
-              insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 40,
-          },
+          { paddingBottom: insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 40 },
         ]}
       >
-        {/* Hero */}
         <View
           style={[
             styles.hero,
@@ -70,11 +66,7 @@ export default function GenreDetailScreen() {
             },
           ]}
         >
-          <TouchableOpacity
-            onPress={() => router.back()}
-            style={styles.backBtn}
-            testID="back-button"
-          >
+          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn} testID="back-button">
             <Feather name="arrow-left" size={20} color={colors.foreground} />
           </TouchableOpacity>
           <View style={[styles.colorBar, { backgroundColor: genre.color }]} />
@@ -88,14 +80,10 @@ export default function GenreDetailScreen() {
           <Text style={[styles.era, { color: colors.mutedForeground }]}>{genre.era}</Text>
         </View>
 
-        {/* Description */}
         <View style={styles.section}>
-          <Text style={[styles.description, { color: colors.foreground }]}>
-            {genre.description}
-          </Text>
+          <Text style={[styles.description, { color: colors.foreground }]}>{genre.description}</Text>
         </View>
 
-        {/* Characteristics */}
         <View style={styles.section}>
           <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
             Rhythmic Characteristics
@@ -110,7 +98,6 @@ export default function GenreDetailScreen() {
           </View>
         </View>
 
-        {/* Key Drummers */}
         {drummers.length > 0 && (
           <View style={styles.section}>
             <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
@@ -132,7 +119,6 @@ export default function GenreDetailScreen() {
           </View>
         )}
 
-        {/* Iconic Songs */}
         {songs.length > 0 && (
           <View style={styles.section}>
             <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
@@ -155,96 +141,27 @@ export default function GenreDetailScreen() {
 }
 
 const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
+  root: { flex: 1 },
   content: {},
-  loader: {
-    marginTop: 100,
-  },
-  backBtnAlone: {
-    margin: 20,
-    width: 36,
-    height: 36,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  hero: {
-    paddingHorizontal: 20,
-    paddingBottom: 20,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    gap: 4,
-  },
-  backBtn: {
-    marginBottom: 12,
-    width: 36,
-    height: 36,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  colorBar: {
-    height: 4,
-    width: 40,
-    borderRadius: 2,
-    marginBottom: 8,
-  },
-  heroName: {
-    fontSize: 38,
-    fontWeight: '700',
-    lineHeight: 44,
-  },
-  originRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-    marginTop: 6,
-  },
-  origin: {
-    fontSize: 14,
-    fontWeight: '600',
-  },
-  era: {
-    fontSize: 13,
-    marginTop: 2,
-  },
-  section: {
-    paddingHorizontal: 20,
-    paddingTop: 24,
-  },
-  description: {
-    fontSize: 15,
-    lineHeight: 22,
-  },
-  sectionTitle: {
-    fontSize: 20,
-    fontWeight: '700',
-    marginBottom: 14,
-  },
-  chips: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 8,
-  },
+  loader: { marginTop: 100 },
+  backBtnAlone: { margin: 20, width: 36, height: 36, alignItems: 'center', justifyContent: 'center' },
+  hero: { paddingHorizontal: 20, paddingBottom: 20, borderBottomWidth: StyleSheet.hairlineWidth, gap: 4 },
+  backBtn: { marginBottom: 12, width: 36, height: 36, alignItems: 'center', justifyContent: 'center' },
+  colorBar: { height: 4, width: 40, borderRadius: 2, marginBottom: 8 },
+  heroName: { fontSize: 38, fontWeight: '700', lineHeight: 44 },
+  originRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 6 },
+  origin: { fontSize: 14, fontWeight: '600' },
+  era: { fontSize: 13, marginTop: 2 },
+  section: { paddingHorizontal: 20, paddingTop: 24 },
+  description: { fontSize: 15, lineHeight: 22 },
+  sectionTitle: { fontSize: 20, fontWeight: '700', marginBottom: 14 },
+  chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   chip: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    paddingHorizontal: 10,
-    paddingVertical: 6,
-    borderRadius: 20,
-    borderWidth: 1,
+    flexDirection: 'row', alignItems: 'center', gap: 6,
+    paddingHorizontal: 10, paddingVertical: 6, borderRadius: 20, borderWidth: 1,
   },
-  chipDot: {
-    width: 6,
-    height: 6,
-    borderRadius: 3,
-  },
-  chipText: {
-    fontSize: 13,
-    fontWeight: '500',
-  },
-  horizontal: {
-    paddingRight: 20,
-  },
+  chipDot: { width: 6, height: 6, borderRadius: 3 },
+  chipText: { fontSize: 13, fontWeight: '500' },
+  horizontal: { paddingRight: 20 },
   songList: {},
 });

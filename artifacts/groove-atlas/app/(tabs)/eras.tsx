@@ -2,7 +2,7 @@ import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React from 'react';
 import { ActivityIndicator, FlatList, Platform, StyleSheet, Text, View } from 'react-native';
-import { useListEras } from '@workspace/api-client-react';
+import { useEras } from '@/hooks/useGql';
 import EraCard from '@/components/EraCard';
 import { Era } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
@@ -12,7 +12,7 @@ export default function ErasScreen() {
   const insets = useSafeAreaInsets();
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
 
-  const { data: eras = [], isLoading } = useListEras();
+  const { data: eras = [], isLoading } = useEras();
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
@@ -50,10 +50,7 @@ export default function ErasScreen() {
           )}
           contentContainerStyle={[
             styles.list,
-            {
-              paddingBottom:
-                insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 100,
-            },
+            { paddingBottom: insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 100 },
           ]}
           showsVerticalScrollIndicator={false}
         />
@@ -63,27 +60,10 @@ export default function ErasScreen() {
 }
 
 const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
-  header: {
-    paddingHorizontal: 20,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-  title: {
-    fontSize: 30,
-    fontWeight: '700',
-    letterSpacing: 1,
-  },
-  subtitle: {
-    fontSize: 13,
-    marginTop: 2,
-    marginBottom: 0,
-  },
-  list: {
-    paddingTop: 16,
-  },
-  loader: {
-    marginTop: 60,
-  },
+  root: { flex: 1 },
+  header: { paddingHorizontal: 20, borderBottomWidth: StyleSheet.hairlineWidth },
+  title: { fontSize: 30, fontWeight: '700', letterSpacing: 1 },
+  subtitle: { fontSize: 13, marginTop: 2, marginBottom: 0 },
+  list: { paddingTop: 16 },
+  loader: { marginTop: 60 },
 });

@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useSearchAll, getSearchAllQueryKey } from '@workspace/api-client-react';
+import { useSearch } from '@/hooks/useGql';
 import DrummerCard from '@/components/DrummerCard';
 import EraCard from '@/components/EraCard';
 import GenreCard from '@/components/GenreCard';
@@ -30,10 +30,7 @@ export default function SearchScreen() {
     return () => clearTimeout(timer);
   }, [query]);
 
-  const searchParams = { q: debouncedQuery };
-  const { data: results } = useSearchAll(searchParams, {
-    query: { queryKey: getSearchAllQueryKey(searchParams), enabled: debouncedQuery.length > 0 },
-  });
+  const { data: results } = useSearch(debouncedQuery);
 
   const drummers = (results?.drummers ?? []) as Drummer[];
   const songs = (results?.songs ?? []) as Song[];
@@ -91,10 +88,7 @@ export default function SearchScreen() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={[
           styles.content,
-          {
-            paddingBottom:
-              insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 100,
-          },
+          { paddingBottom: insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 100 },
         ]}
       >
         {query.length === 0 && (
@@ -123,9 +117,7 @@ export default function SearchScreen() {
 
         {drummers.length > 0 && (
           <View style={styles.section}>
-            <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
-              DRUMMERS
-            </Text>
+            <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>DRUMMERS</Text>
             {drummers.map((d) => (
               <View key={d.id} style={styles.itemRow}>
                 <DrummerCard
@@ -140,9 +132,7 @@ export default function SearchScreen() {
 
         {songs.length > 0 && (
           <View style={styles.section}>
-            <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
-              SONGS
-            </Text>
+            <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>SONGS</Text>
             {songs.map((s) => (
               <SongCard
                 key={s.id}
@@ -155,9 +145,7 @@ export default function SearchScreen() {
 
         {genres.length > 0 && (
           <View style={styles.section}>
-            <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
-              GENRES
-            </Text>
+            <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>GENRES</Text>
             <View style={styles.genreGrid}>
               {genres.map((g) => (
                 <GenreCard
@@ -172,9 +160,7 @@ export default function SearchScreen() {
 
         {eras.length > 0 && (
           <View style={styles.section}>
-            <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
-              ERAS
-            </Text>
+            <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>ERAS</Text>
             {eras.map((e) => (
               <EraCard
                 key={e.id}
@@ -190,67 +176,21 @@ export default function SearchScreen() {
 }
 
 const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
-  header: {
-    paddingHorizontal: 20,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    gap: 10,
-  },
-  title: {
-    fontSize: 30,
-    fontWeight: '700',
-    letterSpacing: 1,
-  },
+  root: { flex: 1 },
+  header: { paddingHorizontal: 20, borderBottomWidth: StyleSheet.hairlineWidth, gap: 10 },
+  title: { fontSize: 30, fontWeight: '700', letterSpacing: 1 },
   searchBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    borderRadius: 10,
-    borderWidth: 1,
-    gap: 8,
+    flexDirection: 'row', alignItems: 'center',
+    paddingHorizontal: 12, paddingVertical: 10,
+    borderRadius: 10, borderWidth: 1, gap: 8,
   },
-  input: {
-    flex: 1,
-    fontSize: 15,
-    padding: 0,
-  },
-  content: {
-    paddingTop: 16,
-  },
-  emptyState: {
-    alignItems: 'center',
-    paddingTop: 60,
-    paddingHorizontal: 40,
-    gap: 12,
-  },
-  emptyTitle: {
-    fontSize: 20,
-    fontWeight: '700',
-  },
-  emptyText: {
-    fontSize: 14,
-    textAlign: 'center',
-    lineHeight: 20,
-  },
-  section: {
-    marginBottom: 24,
-    paddingHorizontal: 16,
-  },
-  sectionLabel: {
-    fontSize: 10,
-    fontWeight: '700',
-    letterSpacing: 2,
-    marginBottom: 10,
-  },
-  itemRow: {
-    marginBottom: 8,
-  },
-  genreGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 10,
-  },
+  input: { flex: 1, fontSize: 15, padding: 0 },
+  content: { paddingTop: 16 },
+  emptyState: { alignItems: 'center', paddingTop: 60, paddingHorizontal: 40, gap: 12 },
+  emptyTitle: { fontSize: 20, fontWeight: '700' },
+  emptyText: { fontSize: 14, textAlign: 'center', lineHeight: 20 },
+  section: { marginBottom: 24, paddingHorizontal: 16 },
+  sectionLabel: { fontSize: 10, fontWeight: '700', letterSpacing: 2, marginBottom: 10 },
+  itemRow: { marginBottom: 8 },
+  genreGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
 });

@@ -1,34 +1,36 @@
-import express, { type Express } from "express";
-import cors from "cors";
-import pinoHttp from "pino-http";
-import router from "./routes";
-import { logger } from "./lib/logger";
+import { createServer } from "node:http";
+import { createYoga, createSchema } from "graphql-yoga";
+import { typeDefs } from "./graphql/schema.js";
+import { resolvers } from "./graphql/resolvers.js";
+import { logger } from "./lib/logger.js";
 
-const app: Express = express();
+const schema = createSchema({ typeDefs, resolvers });
 
-app.use(
-  pinoHttp({
-    logger,
-    serializers: {
-      req(req) {
-        return {
-          id: req.id,
-          method: req.method,
-          url: req.url?.split("?")[0],
-        };
-      },
-      res(res) {
-        return {
-          statusCode: res.statusCode,
-        };
-      },
-    },
-  }),
-);
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+const yoga = createYoga({
+  schema,
+  graphiql: process.env.NODE_ENV === "development",
+  cors: {
+    origin: "*",
+    credentials: true,
+  },
+  logging: {
+    debug: (...args) => logger.debug(args),
+    info: (...args) => logger.info(args),
+    warn: (...args) => logger.warn(args),
+    error: (...args) => logger.error(args),
+  },
+});
 
-app.use("/api", router);
+const server = createServer((req, res) => {
+  const url = new URL(req.url ?? "/", `http://${req.headers.host}`);
 
-export default app;
+  if (url.pathname === "/health") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ status: "ok" }));
+    return;
+  }
+
+  yoga.handle(req, res);
+});
+
+export default server;

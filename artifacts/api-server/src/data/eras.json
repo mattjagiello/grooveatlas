@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1940s",
+    "name": "1940s",
+    "subtitle": "Swing & Bebop",
+    "years": "1940–1949",
+    "description": "The big band era gave way to bebop, fundamentally reshaping drumming. Drummers moved timekeeping from the bass drum to the ride cymbal, freeing the rest of the kit for explosive accents. Bebop demanded lightning technique and deep musical conversation.",
+    "color": "#8B4513",
+    "characteristics": ["Ride cymbal as timekeeper", "Brush technique mastery", "Swinging triplet feel", "Hi-hat on beats 2 and 4", "Conversational interaction"],
+    "keyDrummerIds": ["buddy-rich", "gene-krupa", "max-roach"],
+    "iconicSongIds": ["sing-sing-sing", "ko-ko"]
+  },
+  {
+    "id": "1950s",
+    "name": "1950s",
+    "subtitle": "Birth of Rock & Roll",
+    "years": "1950–1959",
+    "description": "Rock and roll erupted from rhythm & blues and country, creating a driving backbeat that changed the world. Drumming became simpler, louder, and more physical. The snare on beats 2 and 4 became the pulse of a new generation.",
+    "color": "#CD853F",
+    "characteristics": ["Driving backbeat", "Shuffle groove", "Rhythm & blues influence", "Straight 4/4 power", "Simple but locked-in feel"],
+    "keyDrummerIds": ["earl-palmer", "dj-fontana", "gene-krupa"],
+    "iconicSongIds": ["hound-dog", "whole-lotta-shakin"]
+  },
+  {
+    "id": "1960s",
+    "name": "1960s",
+    "subtitle": "British Invasion & Soul",
+    "years": "1960–1969",
+    "description": "The Beatles and British Invasion brought explosive rock drumming to millions. Simultaneously, Motown and Stax soul created immaculate, pocket-driven grooves with metronomic precision and tasteful fills that served the song above all else.",
+    "color": "#B8860B",
+    "characteristics": ["Fills as dramatic punctuation", "Tight Motown pocket", "Syncopated soul patterns", "Explosive rock fills", "Serving the song"],
+    "keyDrummerIds": ["ringo-starr", "keith-moon", "al-jackson-jr"],
+    "iconicSongIds": ["come-together", "my-generation", "green-onions"]
+  },
+  {
+    "id": "1970s",
+    "name": "1970s",
+    "subtitle": "Funk, Prog Rock & Heavy Metal",
+    "years": "1970–1979",
+    "description": "Drumming exploded in every direction in the 1970s. Funk created hypnotic, syncopated grooves with ghost notes and the 'one' as the holy grail. Progressive rock pushed complexity to its limits. Heavy metal brought raw, earth-shaking power.",
+    "color": "#8B6914",
+    "characteristics": ["Funk syncopation and ghost notes", "Progressive time signatures", "Heavy metal power and speed", "Extended drum solos", "Groove over technique"],
+    "keyDrummerIds": ["john-bonham", "neil-peart", "clyde-stubblefield", "billy-cobham"],
+    "iconicSongIds": ["moby-dick", "tom-sawyer", "cold-sweat", "rosanna"]
+  },
+  {
+    "id": "1980s",
+    "name": "1980s",
+    "subtitle": "New Wave, Metal & Hip-Hop",
+    "years": "1980–1989",
+    "description": "Electronic drum machines entered mainstream music as the Roland TR-808 and TR-909 redefined rhythm. Studio drummers achieved new levels of precision. Speed metal pushed human limits. The gated reverb snare became an icon of the era.",
+    "color": "#7B68EE",
+    "characteristics": ["Gated reverb snare sound", "Electronic drum machine influence", "Speed metal precision", "Polished studio technique", "Machine-influenced feel"],
+    "keyDrummerIds": ["stewart-copeland", "jeff-porcaro", "dave-weckl", "sheila-e"],
+    "iconicSongIds": ["roxanne", "rosanna", "lets-go-crazy"]
+  },
+  {
+    "id": "1990s",
+    "name": "1990s",
+    "subtitle": "Grunge, Hip-Hop & Electronic",
+    "years": "1990–1999",
+    "description": "Grunge stripped drumming back to primal emotion — loud, raw, and unpolished. Hip-hop producers sampled classic Clyde Stubblefield and Funky Drummer breaks. Electronic music created new rhythmic possibilities outside traditional drumming.",
+    "color": "#556B2F",
+    "characteristics": ["Raw power and dynamics", "Sampled breaks in hip-hop", "Extreme dynamic contrast", "Back-to-basics rock feel", "Emotional expressiveness"],
+    "keyDrummerIds": ["dave-grohl", "questlove", "carter-beauford", "matt-cameron"],
+    "iconicSongIds": ["smells-like-teen-spirit", "what-is-hip"]
+  },
+  {
+    "id": "2000s",
+    "name": "2000s",
+    "subtitle": "Digital Age & Post-Rock",
+    "years": "2000–2009",
+    "description": "Digital recording and Pro Tools transformed how drums were captured. Drummers faced new demands for quantized precision alongside authentic feel. Post-rock and metal explored polyrhythm and extended technique at extreme tempos.",
+    "color": "#4682B4",
+    "characteristics": ["Studio precision and click tracks", "Polyrhythmic patterns", "Extreme metal tempos", "Hybrid electronic/acoustic setups", "YouTube education culture begins"],
+    "keyDrummerIds": ["travis-barker", "brann-dailor", "antonio-sanchez"],
+    "iconicSongIds": ["all-the-small-things", "lateralus"]
+  },
+  {
+    "id": "2010s",
+    "name": "2010s",
+    "subtitle": "Streaming & Genre Fusion",
+    "years": "2010–2019",
+    "description": "Streaming democratized music discovery and drumming followed. Trap hi-hat patterns from hip-hop infiltrated pop and R&B. Hybrid electronic/acoustic kits blurred the line between live and programmed. Social media created the viral drum moment.",
+    "color": "#2E8B57",
+    "characteristics": ["Trap hi-hat subdivisions", "Hybrid electronic kits", "Genre-blending rhythms", "Social media viral moments", "Minimalism in pop production"],
+    "keyDrummerIds": ["nate-smith", "cindy-blackman", "antonio-sanchez"],
+    "iconicSongIds": ["uptown-funk", "birdland"]
+  }
+]
