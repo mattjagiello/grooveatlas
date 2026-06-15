@@ -22,7 +22,7 @@ export const ERA_DETAIL_QUERY = gql`
       }
       iconicSongs {
         id title artist drummerId year eraId genreIds
-        tempo feel complexity description whyStudy songsterrSlug lyricsSnippet
+        tempo feel complexity description whyStudy songsterrSlug
       }
     }
   }
@@ -48,7 +48,7 @@ export const GENRE_DETAIL_QUERY = gql`
       }
       iconicSongs {
         id title artist drummerId year eraId genreIds
-        tempo feel complexity description whyStudy songsterrSlug lyricsSnippet
+        tempo feel complexity description whyStudy songsterrSlug
       }
       charts(limit: 5) {
         trackId title artist albumTitle rank source
@@ -73,7 +73,7 @@ export const DRUMMER_DETAIL_QUERY = gql`
       bpmMin bpmMax influence iconicSongIds
       iconicSongs {
         id title artist drummerId year eraId genreIds
-        tempo feel complexity description whyStudy songsterrSlug lyricsSnippet
+        tempo feel complexity description whyStudy songsterrSlug
       }
     }
   }
@@ -83,7 +83,7 @@ export const SONGS_QUERY = gql`
   query Songs($eraId: String, $genreId: String, $drummerId: String) {
     songs(eraId: $eraId, genreId: $genreId, drummerId: $drummerId) {
       id title artist drummerId year eraId genreIds
-      tempo feel complexity description whyStudy songsterrSlug lyricsSnippet
+      tempo feel complexity description whyStudy songsterrSlug
     }
   }
 `;
@@ -92,7 +92,10 @@ export const SONG_DETAIL_QUERY = gql`
   query Song($id: ID!) {
     song(id: $id) {
       id title artist drummerId year eraId genreIds
-      tempo feel complexity description whyStudy songsterrSlug lyricsSnippet
+      tempo feel complexity description whyStudy songsterrSlug
+      trackMeta {
+        trackId albumTitle trackRating numFavourite trackLengthSecs genres spotifyId
+      }
       drummer {
         id name born died primaryEra eras genres bands bio signatureStyle
         bpmMin bpmMax influence iconicSongIds
@@ -110,7 +113,7 @@ export const SEARCH_QUERY = gql`
       }
       songs {
         id title artist drummerId year eraId genreIds
-        tempo feel complexity description whyStudy songsterrSlug lyricsSnippet
+        tempo feel complexity description whyStudy songsterrSlug
       }
       genres {
         id name origin lat lng era description color characteristics
@@ -152,8 +155,19 @@ export interface DrummerWithSongs extends Drummer {
   iconicSongs: Song[];
 }
 
+export interface TrackMeta {
+  trackId: string;
+  albumTitle: string | null;
+  trackRating: number;
+  numFavourite: number;
+  trackLengthSecs: number;
+  genres: string[];
+  spotifyId: string | null;
+}
+
 export interface SongWithDrummer extends Song {
   drummer: Drummer | null;
+  trackMeta: TrackMeta | null;
 }
 
 export interface SearchResults {

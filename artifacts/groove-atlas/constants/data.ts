@@ -55,7 +55,6 @@ export type Song = {
   description: string;
   whyStudy: string;
   songsterrSlug?: string | null;
-  lyricsSnippet?: string | null;
 };
 
 export type EraDetail = Era & {

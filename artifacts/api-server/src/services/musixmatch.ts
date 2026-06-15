@@ -4,6 +4,75 @@ export function isMusixmatchConfigured(): boolean {
   return Boolean(process.env["MUSICMATCH_API_KEY"]);
 }
 
+export interface TrackMeta {
+  trackId: string;
+  albumTitle: string | null;
+  trackRating: number;
+  numFavourite: number;
+  trackLengthSecs: number;
+  genres: string[];
+  spotifyId: string | null;
+}
+
+export async function fetchTrackMeta(
+  trackTitle: string,
+  artist: string
+): Promise<TrackMeta | null> {
+  const apiKey = process.env["MUSICMATCH_API_KEY"];
+  if (!apiKey) return null;
+
+  try {
+    const url = new URL(`${MUSIXMATCH_BASE}/matcher.track.get`);
+    url.searchParams.set("apikey", apiKey);
+    url.searchParams.set("q_track", trackTitle);
+    url.searchParams.set("q_artist", artist);
+
+    const res = await fetch(url.toString());
+    if (!res.ok) return null;
+
+    const data = (await res.json()) as {
+      message: {
+        header: { status_code: number };
+        body: {
+          track: {
+            track_id: number;
+            album_name: string;
+            track_rating: number;
+            num_favourite: number;
+            track_length: number;
+            track_spotify_id: string;
+            primary_genres: {
+              music_genre_list: Array<{
+                music_genre: { music_genre_name: string };
+              }>;
+            };
+          };
+        };
+      };
+    };
+
+    if (data.message.header.status_code !== 200) return null;
+    const track = data.message.body.track;
+
+    const genres =
+      track.primary_genres?.music_genre_list?.map(
+        (g) => g.music_genre.music_genre_name
+      ) ?? [];
+
+    return {
+      trackId: String(track.track_id),
+      albumTitle: track.album_name || null,
+      trackRating: track.track_rating ?? 0,
+      numFavourite: track.num_favourite ?? 0,
+      trackLengthSecs: track.track_length ?? 0,
+      genres,
+      spotifyId: track.track_spotify_id || null,
+    };
+  } catch {
+    return null;
+  }
+}
+
 export async function fetchLyricsSnippet(
   trackTitle: string,
   artist: string

@@ -14,9 +14,92 @@ import {
 } from 'react-native';
 import { useSong } from '@/hooks/useGql';
 import { useColors } from '@/hooks/useColors';
+import type { TrackMeta } from '@/lib/queries';
 
 const COMPLEXITY_LABELS = ['Beginner', 'Easy', 'Intermediate', 'Advanced', 'Expert'];
 const COMPLEXITY_COLORS = ['#228B22', '#6B8E23', '#B8860B', '#CD853F', '#8B1A1A'];
+
+function formatDuration(secs: number): string {
+  if (!secs) return '';
+  const m = Math.floor(secs / 60);
+  const s = secs % 60;
+  return `${m}:${String(s).padStart(2, '0')}`;
+}
+
+function TrackMetaCard({ meta, colors }: { meta: TrackMeta; colors: ReturnType<typeof useColors> }) {
+  const openSpotify = async () => {
+    if (!meta.spotifyId) return;
+    await WebBrowser.openBrowserAsync(`https://open.spotify.com/track/${meta.spotifyId}`);
+  };
+
+  return (
+    <View style={[styles.metaCard, { backgroundColor: colors.card, borderColor: colors.border }]}>
+      <View style={styles.metaHeader}>
+        <Feather name="disc" size={14} color={colors.primary} />
+        <Text style={[styles.metaTitle, { color: colors.primary }]}>Track Info</Text>
+        <Text style={[styles.metaSource, { color: colors.mutedForeground }]}>via Musicmatch</Text>
+      </View>
+
+      {meta.albumTitle ? (
+        <View style={styles.metaAlbumRow}>
+          <Feather name="music" size={13} color={colors.mutedForeground} />
+          <Text style={[styles.metaAlbum, { color: colors.foreground }]} numberOfLines={2}>
+            {meta.albumTitle}
+          </Text>
+        </View>
+      ) : null}
+
+      <View style={styles.metaStatsRow}>
+        {meta.trackLengthSecs > 0 && (
+          <View style={styles.metaStat}>
+            <Feather name="clock" size={12} color={colors.mutedForeground} />
+            <Text style={[styles.metaStatValue, { color: colors.foreground }]}>
+              {formatDuration(meta.trackLengthSecs)}
+            </Text>
+            <Text style={[styles.metaStatLabel, { color: colors.mutedForeground }]}>Duration</Text>
+          </View>
+        )}
+        {meta.trackRating > 0 && (
+          <View style={styles.metaStat}>
+            <Feather name="bar-chart-2" size={12} color={colors.mutedForeground} />
+            <Text style={[styles.metaStatValue, { color: colors.foreground }]}>
+              {meta.trackRating}
+            </Text>
+            <Text style={[styles.metaStatLabel, { color: colors.mutedForeground }]}>Rating</Text>
+          </View>
+        )}
+        {meta.numFavourite > 0 && (
+          <View style={styles.metaStat}>
+            <Feather name="heart" size={12} color={colors.mutedForeground} />
+            <Text style={[styles.metaStatValue, { color: colors.foreground }]}>
+              {meta.numFavourite >= 1000
+                ? `${(meta.numFavourite / 1000).toFixed(1)}k`
+                : String(meta.numFavourite)}
+            </Text>
+            <Text style={[styles.metaStatLabel, { color: colors.mutedForeground }]}>Fans</Text>
+          </View>
+        )}
+      </View>
+
+      {meta.genres.length > 0 && (
+        <View style={styles.metaGenreRow}>
+          {meta.genres.map((g) => (
+            <View key={g} style={[styles.metaGenreTag, { backgroundColor: colors.primary + '20', borderColor: colors.primary + '50' }]}>
+              <Text style={[styles.metaGenreText, { color: colors.primary }]}>{g}</Text>
+            </View>
+          ))}
+        </View>
+      )}
+
+      {meta.spotifyId ? (
+        <TouchableOpacity onPress={openSpotify} style={[styles.spotifyBtn, { borderColor: colors.border }]}>
+          <Feather name="external-link" size={12} color={colors.mutedForeground} />
+          <Text style={[styles.spotifyBtnText, { color: colors.mutedForeground }]}>Listen on Spotify</Text>
+        </TouchableOpacity>
+      ) : null}
+    </View>
+  );
+}
 
 export default function SongDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -145,16 +228,7 @@ export default function SongDetailScreen() {
           <Text style={[styles.body, { color: colors.foreground }]}>{song.description}</Text>
         </View>
 
-        {song.lyricsSnippet && (
-          <View style={[styles.lyricsBox, { backgroundColor: colors.card, borderColor: colors.border }]}>
-            <View style={styles.lyricsHeader}>
-              <Feather name="mic" size={14} color={colors.primary} />
-              <Text style={[styles.lyricsTitle, { color: colors.primary }]}>Lyrics</Text>
-            </View>
-            <Text style={[styles.lyricsText, { color: colors.foreground }]}>{song.lyricsSnippet}</Text>
-            <Text style={[styles.lyricsAttr, { color: colors.mutedForeground }]}>via Musixmatch</Text>
-          </View>
-        )}
+        {song.trackMeta && <TrackMetaCard meta={song.trackMeta} colors={colors} />}
 
         <View style={[styles.studyBox, { backgroundColor: colors.muted, borderColor: colors.border }]}>
           <View style={styles.studyHeader}>
@@ -210,11 +284,21 @@ const styles = StyleSheet.create({
   section: { paddingHorizontal: 20, paddingTop: 24 },
   sectionTitle: { fontSize: 20, fontWeight: '700', marginBottom: 10 },
   body: { fontSize: 15, lineHeight: 23 },
-  lyricsBox: { marginHorizontal: 20, marginTop: 20, padding: 16, borderRadius: 10, borderWidth: 1, gap: 8 },
-  lyricsHeader: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  lyricsTitle: { fontSize: 13, fontWeight: '700' },
-  lyricsText: { fontSize: 14, lineHeight: 22, fontStyle: 'italic' },
-  lyricsAttr: { fontSize: 10, letterSpacing: 0.5 },
+  metaCard: { marginHorizontal: 20, marginTop: 20, padding: 16, borderRadius: 10, borderWidth: 1, gap: 12 },
+  metaHeader: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  metaTitle: { fontSize: 13, fontWeight: '700', flex: 1 },
+  metaSource: { fontSize: 10, letterSpacing: 0.5 },
+  metaAlbumRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 6 },
+  metaAlbum: { fontSize: 15, fontWeight: '600', flex: 1, fontStyle: 'italic' },
+  metaStatsRow: { flexDirection: 'row', gap: 20 },
+  metaStat: { alignItems: 'center', gap: 3 },
+  metaStatValue: { fontSize: 16, fontWeight: '700' },
+  metaStatLabel: { fontSize: 9, fontWeight: '600', letterSpacing: 1 },
+  metaGenreRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+  metaGenreTag: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 20, borderWidth: 1 },
+  metaGenreText: { fontSize: 11, fontWeight: '600' },
+  spotifyBtn: { flexDirection: 'row', alignItems: 'center', gap: 5, paddingVertical: 6, borderTopWidth: StyleSheet.hairlineWidth, marginTop: 4 },
+  spotifyBtnText: { fontSize: 12 },
   studyBox: { marginHorizontal: 20, marginTop: 20, padding: 16, borderRadius: 10, borderWidth: 1, gap: 10 },
   studyHeader: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   studyTitle: { fontSize: 14, fontWeight: '700' },

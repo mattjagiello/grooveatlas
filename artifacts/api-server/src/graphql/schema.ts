@@ -48,6 +48,16 @@ export const typeDefs = /* GraphQL */ `
     iconicSongs: [Song!]!
   }
 
+  type TrackMeta {
+    trackId: String!
+    albumTitle: String
+    trackRating: Int!
+    numFavourite: Int!
+    trackLengthSecs: Int!
+    genres: [String!]!
+    spotifyId: String
+  }
+
   type Song {
     id: ID!
     title: String!
@@ -62,8 +72,8 @@ export const typeDefs = /* GraphQL */ `
     description: String!
     whyStudy: String!
     songsterrSlug: String
-    lyricsSnippet: String
     drummer: Drummer
+    trackMeta: TrackMeta
   }
 
   type ChartTrack {
