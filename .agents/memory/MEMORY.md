@@ -2,3 +2,7 @@
 - [Drizzle numeric type](drizzle-numeric-strings.md) — Drizzle `numeric` columns return JS strings from PostgreSQL; must parse with `Number()` in route handlers.
 - [Groove Atlas stack](groove-atlas-stack.md) — static JSON → Typesense binary (port 8108) → GraphQL Yoga (:8080/graphql) → graphql-request mobile; esbuild must use static `import` not `createRequire` for JSON files.
 - [Replit API proxy path prefix](replit-api-proxy-path.md) — api-server artifact has paths=["/api"], so all client URLs need /api prefix (e.g. /api/graphql); proxy strips prefix before forwarding to port 8080.
+- [expo-audio version](expo-audio-version.md) — use 56.0.12, NOT ~1.1.1; downgrading breaks Metro module resolution in pnpm workspace on web
+- [Cyanite API schema](cyanite-schema.md) — schema introspected without auth; spotifyTrackEnqueue mutation → spotifyTrack(id) query; AudioAnalysisV6 union has 6 states; result in AudioAnalysisV6Finished.result
+- [GraphQL + Typesense stack](graphql-typesense-stack.md) — full stack is complete; static JSON → Typesense (port 8108, child process) → GraphQL Yoga (port 8080) → graphql-request mobile client
+- [Typesense binary path](typesense-binary.md) — binary at tools/typesense/typesense-server; data dir at .typesense-data; spawned by startup.ts on api-server boot
