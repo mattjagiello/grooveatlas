@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import { useDrummer } from '@/hooks/useGql';
 import SongCard from '@/components/SongCard';
+import SongstatsCard from '@/components/SongstatsCard';
 import { Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 
@@ -186,6 +187,10 @@ export default function DrummerDetailScreen() {
         <View style={styles.section}>
           <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Legacy & Influence</Text>
           <Text style={[styles.influence, { color: colors.foreground }]}>{drummer.influence}</Text>
+        </View>
+
+        <View style={styles.section}>
+          <SongstatsCard drummerId={drummer.id} />
         </View>
 
         {songs.length > 0 && (
