@@ -1,0 +1,141 @@
+
+Skip to main content
+Cyanite.ai Logo
+Cyanite.ai
+Docs
+Blog
+GraphQL Schema
+GraphiQL
+Send Feedback
+Website
+
+    Getting Started
+        Creating an integration
+        Testing your integration credentials
+        Sending API requests
+        Webhook events
+    Overview
+    Guides
+    Query Builders
+
+    Getting StartedTesting your integration credentials
+
+Testing your integration credentials
+
+The Cyanite.ai HTTP API primarily uses GraphQL. GraphQL is a query language that allows having a fully typed API. It also allows you to specify the data that you want to query for.
+Sending Requests
+
+We are going to test your GraphQL API credentials using embedded GraphiQL, which is a GraphQL Query Editor in your browser.
+
+In the next part of the Getting Started guide we gonna take a look how authenticated GraphQL operations can be sent via HTTP using any client.
+
+Enter your integration access token that you received in the previous step. Then click the run button and take a look at the result.
+
+query LibraryTracksQuery {
+
+  libraryTracks(first: 10) {
+
+    pageInfo {
+
+      hasNextPage
+
+    }
+
+    edges {
+
+      node {
+
+        audioAnalysisV7 {
+
+          __typename
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+​
+
+​
+
+​
+
+Please enter your integration access token
+
+In case you entered an incorrect access token you should receive a response similar to this:
+
+{
+  "errors": [
+    {
+      "message": "Not authorized!",
+      "locations": [
+        {
+          "line": 2,
+          "column": 3
+        }
+      ],
+      "path": ["libraryTracks"],
+      "extensions": {
+        "code": "ERR_NOT_AUTHORIZED"
+      }
+    }
+  ],
+  "data": null
+}
+
+Otherwise, you should receive a list of your uploaded InDepthAnalysis records. In case the list is empty you can create and upload new InDepthAnalysis (library) records over in your library. Just drag and drop your audio files into the browser window.
+
+Screenshot: Library Upload
+
+In case your library is empty you should receive an empty list:
+
+{
+  "data": {
+    "libraryTracks": {
+      "pageInfo": {
+        "hasNextPage": false
+      },
+      "edges": []
+    }
+  }
+}
+
+In case you uploaded some tracks you should have some edges in your response:
+
+{
+  "data": {
+    "libraryTracks": {
+      "pageInfo": {
+        "hasNextPage": true
+      },
+      "edges": [
+        {
+          "node": {
+            "audioAnalysisV7": {
+              "__typename": "AudioAnalysisV7Finished"
+            }
+          }
+        },
+        {
+          "node": {
+            "audioAnalysisV7": {
+              "__typename": "AudioAnalysisV7Finished"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
+Up next we gonna learn how you can send API requests from within your application.
+Previous
+Creating an integration
+Next
+Sending API requests
+Copyright © 2026 Cyanite.ai. Built with Docusaurus.
