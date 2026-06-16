@@ -4,7 +4,7 @@ import { findPreviewUrl } from "../services/deezer.js";
 import {
   uploadAudio,
   requestDrumSplit,
-  pollForResult,
+  checkTask,
   LalalPremiumError,
 } from "../services/lalal.js";
 import { logger } from "../lib/logger.js";
@@ -31,13 +31,12 @@ function jsonError(res: ServerResponse, code: string, error: string) {
   return json(res, { ok: false, code, error });
 }
 
-export async function handleStemsExtract(
+// POST /stems/start — fast: find preview, upload, enqueue split, return taskId immediately
+export async function handleStemsStart(
   req: IncomingMessage,
   res: ServerResponse
 ) {
-  if (req.method !== "POST") {
-    return jsonError(res, "ERROR", "Method not allowed");
-  }
+  if (req.method !== "POST") return jsonError(res, "ERROR", "Method not allowed");
 
   let body: { songId?: string };
   try {
@@ -55,13 +54,12 @@ export async function handleStemsExtract(
 
   logger.info({ songId, title: song.title }, "Stem extraction requested");
 
-  // 1. Find a 30s preview via Deezer (no key needed)
+  // 1. Find a 30s preview via Deezer
   const preview = await findPreviewUrl(song.title, song.artist);
   if (!preview) {
     return jsonError(res, "NO_PREVIEW", "No preview audio found for this track on Deezer");
   }
-
-  logger.info({ previewUrl: preview.previewUrl }, "Deezer preview found");
+  logger.info({ previewTitle: preview.title }, "Deezer preview found");
 
   // 2. Download the preview MP3
   let audioBuffer: Buffer;
@@ -73,7 +71,6 @@ export async function handleStemsExtract(
     logger.error({ err }, "Failed to download Deezer preview");
     return jsonError(res, "ERROR", "Failed to download preview audio");
   }
-
   logger.info({ bytes: audioBuffer.length }, "Preview downloaded");
 
   // 3. Upload to LALAL.AI
@@ -84,39 +81,48 @@ export async function handleStemsExtract(
     logger.error({ err }, "LALAL upload failed");
     return jsonError(res, "ERROR", "Failed to upload audio to LALAL.AI");
   }
-
   logger.info({ sourceId }, "Uploaded to LALAL.AI");
 
-  // 4. Request drum stem split
+  // 4. Request drum stem split — returns task ID immediately
   let taskId: string;
   try {
     taskId = await requestDrumSplit(sourceId);
   } catch (err) {
     if (err instanceof LalalPremiumError) {
-      logger.warn("LALAL premium required — key not yet upgraded");
       return jsonError(res, "PREMIUM_REQUIRED", "Drum isolation requires a premium LALAL.AI license");
     }
     logger.error({ err }, "LALAL split request failed");
     return jsonError(res, "ERROR", "Stem split request failed");
   }
+  logger.info({ taskId }, "Drum split enqueued — returning task ID");
 
-  logger.info({ taskId }, "Drum split requested");
+  return json(res, {
+    ok: true,
+    taskId,
+    previewTitle: preview.title,
+    songId,
+    songTitle: song.title,
+    artist: song.artist,
+  });
+}
 
-  // 5. Poll until done (up to 2 minutes for a 30s clip)
+// GET /stems/status?taskId=xxx — quick poll, returns processing/success/error
+export async function handleStemsStatus(
+  req: IncomingMessage,
+  res: ServerResponse
+) {
+  if (req.method !== "GET") return jsonError(res, "ERROR", "Method not allowed");
+
+  const url = new URL(req.url ?? "/", `http://${req.headers.host}`);
+  const taskId = url.searchParams.get("taskId");
+  if (!taskId) return jsonError(res, "ERROR", "taskId required");
+
   try {
-    const result = await pollForResult(taskId);
-    logger.info({ taskId }, "Drum stem ready");
-    return json(res, {
-      ok: true,
-      songId,
-      songTitle: song.title,
-      artist: song.artist,
-      previewTitle: preview.title,
-      drumUrl: result.drumUrl,
-      accompanimentUrl: result.accompanimentUrl,
-    });
+    const result = await checkTask(taskId);
+    logger.info({ taskId, status: result.status }, "Stem status checked");
+    return json(res, { ok: true, ...result });
   } catch (err) {
-    logger.error({ err, taskId }, "Polling failed");
+    logger.error({ err, taskId }, "Status check failed");
     return jsonError(res, "ERROR", String(err));
   }
 }

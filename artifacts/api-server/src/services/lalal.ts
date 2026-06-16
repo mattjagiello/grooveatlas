@@ -60,57 +60,51 @@ export async function requestDrumSplit(sourceId: string): Promise<string> {
 export interface StemResult {
   drumUrl: string;
   accompanimentUrl: string;
-  progress?: number;
 }
 
-export async function pollForResult(
-  taskId: string,
-  maxWaitMs = 120_000
-): Promise<StemResult> {
-  const deadline = Date.now() + maxWaitMs;
+export type TaskStatus =
+  | { status: "processing" }
+  | { status: "success"; drumUrl: string; accompanimentUrl: string }
+  | { status: "error"; message: string };
 
-  while (Date.now() < deadline) {
-    await new Promise((r) => setTimeout(r, 3000));
+export async function checkTask(taskId: string): Promise<TaskStatus> {
+  const res = await fetch(`${LALAL_BASE}/check/`, {
+    method: "POST",
+    headers: {
+      "X-License-Key": apiKey(),
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ task_ids: [taskId] }),
+  });
 
-    const res = await fetch(`${LALAL_BASE}/check/`, {
-      method: "POST",
-      headers: {
-        "X-License-Key": apiKey(),
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ task_ids: [taskId] }),
-    });
-
-    const data = (await res.json()) as Record<
-      string,
-      Record<
-        string,
-        {
-          status?: string;
-          error?: string;
-          result?: {
-            stems?: {
-              drum?: { url: string };
-              no_drum?: { url: string };
-            };
-          };
-        }
-      >
-    >;
-
-    const task = data?.data?.[taskId];
-    if (!task) continue;
-
-    if (task.error) throw new Error(task.error);
-
-    const stems = task.result?.stems;
-    if (stems?.drum?.url) {
-      return {
-        drumUrl: stems.drum.url,
-        accompanimentUrl: stems.no_drum?.url ?? "",
-      };
-    }
+  if (!res.ok) {
+    return { status: "error", message: `LALAL check failed: HTTP ${res.status}` };
   }
 
-  throw new Error("Timed out waiting for drum stem (120s)");
+  const data = (await res.json()) as {
+    result?: Record<string, {
+      status?: string;
+      error?: string;
+      result?: {
+        tracks?: Array<{ type: string; label: string; url: string }>;
+      };
+    }>;
+  };
+
+  const task = data?.result?.[taskId];
+  if (!task) return { status: "processing" };
+  if (task.error) return { status: "error", message: task.error };
+  if (task.status !== "success") return { status: "processing" };
+
+  const tracks = task.result?.tracks ?? [];
+  const drumTrack = tracks.find((t) => t.label === "drum");
+  const backTrack = tracks.find((t) => t.label === "no_drum");
+
+  if (!drumTrack?.url) return { status: "processing" };
+
+  return {
+    status: "success",
+    drumUrl: drumTrack.url,
+    accompanimentUrl: backTrack?.url ?? "",
+  };
 }

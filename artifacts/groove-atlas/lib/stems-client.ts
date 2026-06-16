@@ -15,32 +15,60 @@ export type StemError =
   | { code: 'NO_PREVIEW'; message: string }
   | { code: 'ERROR'; message: string };
 
-export async function extractDrumStem(
+export function isStemError(r: StemResult | StemError): r is StemError {
+  return 'code' in r;
+}
+
+interface StartResult {
+  taskId: string;
+  previewTitle: string;
+  songId: string;
+  songTitle: string;
+  artist: string;
+}
+
+// Step 1: upload + enqueue. Returns taskId quickly (< 10s).
+export async function startDrumExtraction(
   songId: string
-): Promise<StemResult | StemError> {
+): Promise<StartResult | StemError> {
   try {
-    const res = await fetch(`${API_BASE}/stems/extract`, {
+    const res = await fetch(`${API_BASE}/stems/start`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ songId }),
     });
-
     const data = await res.json() as Record<string, unknown>;
-
     if (data.ok === false) {
-      const code = (data.code as string) ?? 'ERROR';
       return {
-        code: code as StemError['code'],
+        code: (data.code as StemError['code']) ?? 'ERROR',
         message: (data.error as string) ?? 'Unknown error',
       };
     }
-
-    return data as StemResult;
+    return data as StartResult;
   } catch (err) {
     return { code: 'ERROR', message: String(err) };
   }
 }
 
-export function isStemError(r: StemResult | StemError): r is StemError {
-  return 'code' in r;
+// Step 2: poll once. Call repeatedly until status !== 'processing'.
+export async function checkStemStatus(
+  taskId: string
+): Promise<{ status: 'processing' } | StemResult | StemError> {
+  try {
+    const res = await fetch(`${API_BASE}/stems/status?taskId=${encodeURIComponent(taskId)}`);
+    const data = await res.json() as Record<string, unknown>;
+    if (data.ok === false) {
+      return {
+        code: (data.code as StemError['code']) ?? 'ERROR',
+        message: (data.error as string) ?? 'Unknown error',
+      };
+    }
+    if (data.status === 'processing') return { status: 'processing' };
+    if (data.status === 'error') {
+      return { code: 'ERROR', message: (data.message as string) ?? 'Processing failed' };
+    }
+    return data as StemResult;
+  } catch (err) {
+    return { code: 'ERROR', message: String(err) };
+  }
 }

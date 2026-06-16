@@ -17,7 +17,8 @@ import { useSong } from '@/hooks/useGql';
 import { useColors } from '@/hooks/useColors';
 import type { TrackMeta } from '@/lib/queries';
 import {
-  extractDrumStem,
+  startDrumExtraction,
+  checkStemStatus,
   isStemError,
   type StemResult,
 } from '@/lib/stems-client';
@@ -109,7 +110,8 @@ function TrackMetaCard({ meta, colors }: { meta: TrackMeta; colors: ReturnType<t
 
 type StemState =
   | { phase: 'idle' }
-  | { phase: 'loading'; step: string }
+  | { phase: 'starting'; step: string }
+  | { phase: 'polling'; taskId: string; previewTitle: string; elapsed: number }
   | { phase: 'ready'; result: StemResult }
   | { phase: 'premium' }
   | { phase: 'no_preview' }
@@ -166,22 +168,43 @@ function DrumStudySection({
   const [state, setState] = useState<StemState>({ phase: 'idle' });
 
   const start = async () => {
-    setState({ phase: 'loading', step: 'Finding preview via Deezer…' });
+    setState({ phase: 'starting', step: 'Finding preview via Deezer…' });
 
-    const result = await extractDrumStem(songId);
-
-    if (isStemError(result)) {
-      if (result.code === 'PREMIUM_REQUIRED') {
-        setState({ phase: 'premium' });
-      } else if (result.code === 'NO_PREVIEW') {
-        setState({ phase: 'no_preview' });
-      } else {
-        setState({ phase: 'error', message: result.message });
-      }
+    // Step 1: fast — find preview, upload, enqueue split (< 10s)
+    const started = await startDrumExtraction(songId);
+    if (isStemError(started)) {
+      if (started.code === 'PREMIUM_REQUIRED') { setState({ phase: 'premium' }); return; }
+      if (started.code === 'NO_PREVIEW') { setState({ phase: 'no_preview' }); return; }
+      setState({ phase: 'error', message: started.message });
       return;
     }
 
-    setState({ phase: 'ready', result });
+    const { taskId, previewTitle, songTitle, artist } = started;
+    setState({ phase: 'polling', taskId, previewTitle, elapsed: 0 });
+
+    // Step 2: poll from the client every 4s (each check call is < 1s, no long HTTP hold)
+    const startedAt = Date.now();
+    const MAX_WAIT = 3 * 60 * 1000; // 3 minutes
+    while (Date.now() - startedAt < MAX_WAIT) {
+      await new Promise((r) => setTimeout(r, 4000));
+      const elapsed = Math.round((Date.now() - startedAt) / 1000);
+      setState((s) => s.phase === 'polling' ? { ...s, elapsed } : s);
+
+      const status = await checkStemStatus(taskId);
+      if (isStemError(status)) {
+        setState({ phase: 'error', message: status.message });
+        return;
+      }
+      if ('drumUrl' in status) {
+        setState({
+          phase: 'ready',
+          result: { songId, songTitle, artist, previewTitle, drumUrl: status.drumUrl, accompanimentUrl: status.accompanimentUrl },
+        });
+        return;
+      }
+      // status === 'processing' — keep polling
+    }
+    setState({ phase: 'error', message: 'Timed out after 3 minutes — LALAL.AI may be busy.' });
   };
 
   const reset = () => setState({ phase: 'idle' });
@@ -208,14 +231,26 @@ function DrumStudySection({
         </TouchableOpacity>
       )}
 
-      {state.phase === 'loading' && (
+      {state.phase === 'starting' && (
         <View style={styles.studyLoading}>
           <ActivityIndicator color={colors.primary} />
           <Text style={[styles.studyLoadingText, { color: colors.mutedForeground }]}>
             {state.step}
           </Text>
           <Text style={[styles.studyLoadingHint, { color: colors.mutedForeground }]}>
-            Using 30s preview · AI separation takes ~30–60s
+            Finding preview · uploading to LALAL.AI…
+          </Text>
+        </View>
+      )}
+
+      {state.phase === 'polling' && (
+        <View style={styles.studyLoading}>
+          <ActivityIndicator color={colors.primary} />
+          <Text style={[styles.studyLoadingText, { color: colors.mutedForeground }]}>
+            AI separating drums… ({state.elapsed}s)
+          </Text>
+          <Text style={[styles.studyLoadingHint, { color: colors.mutedForeground }]}>
+            "{state.previewTitle}" · usually 20–60s
           </Text>
         </View>
       )}
