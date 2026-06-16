@@ -36,19 +36,21 @@ const server = createServer(async (req: IncomingMessage, res: ServerResponse) =>
   }
 
   const url = new URL(req.url ?? "/", `http://${req.headers.host}`);
+  // Normalize path: strip /api prefix forwarded by the Replit proxy
+  const path = url.pathname.replace(/^\/api/, "") || "/";
 
-  if (url.pathname === "/health") {
+  if (path === "/health") {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(JSON.stringify({ status: "ok" }));
     return;
   }
 
-  if (url.pathname === "/stems/extract") {
+  if (path === "/stems/extract") {
     await handleStemsExtract(req, res);
     return;
   }
 
-  if (url.pathname === "/songstats/artist") {
+  if (path === "/songstats/artist") {
     await handleSongstatsArtist(req, res);
     return;
   }
