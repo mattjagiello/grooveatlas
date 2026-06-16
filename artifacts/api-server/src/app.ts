@@ -4,7 +4,6 @@ import { typeDefs } from "./graphql/schema.js";
 import { resolvers } from "./graphql/resolvers.js";
 import { logger } from "./lib/logger.js";
 import { handleStemsExtract } from "./handlers/stems.js";
-import { handleCyaniteAnalysis } from "./handlers/cyanite.js";
 import { handleSongstatsArtist } from "./handlers/songstats.js";
 
 const schema = createSchema({ typeDefs, resolvers });
@@ -46,11 +45,6 @@ const server = createServer(async (req: IncomingMessage, res: ServerResponse) =>
 
   if (url.pathname === "/stems/extract") {
     await handleStemsExtract(req, res);
-    return;
-  }
-
-  if (url.pathname === "/cyanite/analysis") {
-    await handleCyaniteAnalysis(req, res);
     return;
   }
 
