@@ -14,7 +14,21 @@ export interface CyaniteAnalysis {
   instrumentTags: string[];
 }
 
+export type CyaniteError = { code: string; message: string };
+
+export function isCyaniteError(r: unknown): r is CyaniteError {
+  return typeof r === 'object' && r !== null && 'code' in r;
+}
+
+// Cache hit — analysis is ready immediately
+export interface CyaniteCacheHit {
+  cached: true;
+  analysis: CyaniteAnalysis;
+}
+
+// Cache miss — need to poll
 export interface CyaniteStartResult {
+  cached: false;
   trackId: string;
   previewTitle: string;
   songId: string;
@@ -22,13 +36,9 @@ export interface CyaniteStartResult {
   artist: string;
 }
 
-export type CyaniteError = { code: string; message: string };
-
-export function isCyaniteError(r: unknown): r is CyaniteError {
-  return typeof r === 'object' && r !== null && 'code' in r;
-}
-
-export async function startCyaniteAnalysis(songId: string): Promise<CyaniteStartResult | CyaniteError> {
+export async function startCyaniteAnalysis(
+  songId: string
+): Promise<CyaniteCacheHit | CyaniteStartResult | CyaniteError> {
   try {
     const res = await fetch(`${API_BASE}/cyanite/start`, {
       method: 'POST',
@@ -38,6 +48,9 @@ export async function startCyaniteAnalysis(songId: string): Promise<CyaniteStart
     const data = await res.json() as Record<string, unknown>;
     if (data.ok === false) {
       return { code: (data.code as string) ?? 'ERROR', message: (data.error as string) ?? 'Unknown error' };
+    }
+    if (data.cached === true) {
+      return { cached: true, analysis: data.analysis as CyaniteAnalysis };
     }
     return data as CyaniteStartResult;
   } catch (err) {

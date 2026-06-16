@@ -357,6 +357,11 @@ function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<ty
       setState({ phase: 'error', message: started.message });
       return;
     }
+    // Cache hit — result is ready immediately, no polling needed
+    if (started.cached) {
+      setState({ phase: 'ready', analysis: started.analysis, previewTitle: 'cached' });
+      return;
+    }
     const { trackId, previewTitle } = started;
     setState({ phase: 'polling', trackId, previewTitle, elapsed: 0 });
 

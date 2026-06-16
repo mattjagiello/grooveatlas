@@ -8,7 +8,11 @@ import {
   enqueueLibraryTrack,
   checkAnalysis,
 } from "../services/cyanite.js";
+import { getCached, setCached } from "../lib/cyanite-cache.js";
 import { logger } from "../lib/logger.js";
+
+// In-memory map: trackId → songId, so status endpoint can write to cache
+const pending = new Map<string, string>();
 
 function readBody(req: IncomingMessage): Promise<Buffer> {
   return new Promise((resolve, reject) => {
@@ -29,7 +33,7 @@ function jsonError(res: ServerResponse, code: string, error: string) {
   return json(res, { ok: false, code, error });
 }
 
-// POST /cyanite/start — find preview, upload, create+enqueue → returns trackId quickly
+// POST /cyanite/start
 export async function handleCyaniteStart(req: IncomingMessage, res: ServerResponse) {
   if (req.method !== "POST") return jsonError(res, "ERROR", "Method not allowed");
 
@@ -45,6 +49,13 @@ export async function handleCyaniteStart(req: IncomingMessage, res: ServerRespon
 
   const song = findSong(songId);
   if (!song) return jsonError(res, "ERROR", "Song not found");
+
+  // --- Cache hit: return immediately, no API call needed ---
+  const cached = getCached(songId);
+  if (cached) {
+    logger.info({ songId }, "Cyanite cache hit");
+    return json(res, { ok: true, cached: true, analysis: cached });
+  }
 
   logger.info({ songId, title: song.title }, "Cyanite analysis requested");
 
@@ -74,10 +85,14 @@ export async function handleCyaniteStart(req: IncomingMessage, res: ServerRespon
     logger.error({ err }, "Cyanite upload/enqueue failed");
     return jsonError(res, "ERROR", String(err));
   }
+
+  // Remember which song this track belongs to for cache write on completion
+  pending.set(trackId, songId);
   logger.info({ trackId }, "Cyanite track enqueued");
 
   return json(res, {
     ok: true,
+    cached: false,
     trackId,
     previewTitle: preview.title,
     songId,
@@ -97,6 +112,17 @@ export async function handleCyaniteStatus(req: IncomingMessage, res: ServerRespo
   try {
     const result = await checkAnalysis(trackId);
     logger.info({ trackId, status: result.status }, "Cyanite status checked");
+
+    // Write to cache when analysis is finished
+    if (result.status === "finished") {
+      const songId = pending.get(trackId);
+      if (songId) {
+        setCached(songId, result.analysis);
+        pending.delete(trackId);
+        logger.info({ songId, trackId }, "Cyanite result cached");
+      }
+    }
+
     return json(res, { ok: true, ...result });
   } catch (err) {
     logger.error({ err, trackId }, "Cyanite status check failed");
