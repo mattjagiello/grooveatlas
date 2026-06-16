@@ -128,7 +128,7 @@ function StemPlayer({
   icon: 'headphones' | 'volume-2';
   colors: ReturnType<typeof useColors>;
 }) {
-  const player = useAudioPlayer({ uri: url });
+  const player = useAudioPlayer(url);
   const playing = player.playing;
 
   const toggle = () => {
