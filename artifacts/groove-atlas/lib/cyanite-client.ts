@@ -7,10 +7,15 @@ export interface CyaniteAnalysis {
   arousal: number;
   energyLevel: string;
   energyDynamics: string;
+  musicalEraTag: string;
+  timeSignature: string;
+  transformerCaption: string | null;
+  freeGenreTags: string | null;
   moodTags: string[];
   genreTags: string[];
-  musicalEraTag: string;
-  transformerCaption: string | null;
+  moodAdvancedTags: string[];
+  movementTags: string[];
+  characterTags: string[];
   instrumentTags: string[];
 }
 
@@ -20,13 +25,11 @@ export function isCyaniteError(r: unknown): r is CyaniteError {
   return typeof r === 'object' && r !== null && 'code' in r;
 }
 
-// Cache hit — analysis is ready immediately
 export interface CyaniteCacheHit {
   cached: true;
   analysis: CyaniteAnalysis;
 }
 
-// Cache miss — need to poll
 export interface CyaniteStartResult {
   cached: false;
   trackId: string;

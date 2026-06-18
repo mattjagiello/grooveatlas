@@ -424,6 +424,8 @@ function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<ty
         const energyFill = ENERGY_LEVELS[a.energyLevel.toLowerCase()] ?? 0.5;
         const topMoods = a.moodTags.slice(0, 5);
         const topGenres = a.genreTags.slice(0, 3);
+        const advancedMoods = (a.moodAdvancedTags ?? []).slice(0, 5);
+        const characterVibes = [...(a.movementTags ?? []), ...(a.characterTags ?? [])].slice(0, 5);
         const hasDrums = a.instrumentTags.some((t) =>
           t.toLowerCase().includes('drum') || t.toLowerCase().includes('percuss')
         );
@@ -449,6 +451,16 @@ function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<ty
                     <Text style={[styles.moodChipText, { color: colors.primary }]}>🥁 drums</Text>
                   </View>
                 )}
+              </View>
+            )}
+
+            {advancedMoods.length > 0 && (
+              <View style={[styles.vibeRow, { marginTop: -2 }]}>
+                {advancedMoods.map((m) => (
+                  <View key={m} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+                    <Text style={[styles.vibeTagText, { color: colors.mutedForeground }]}>{m}</Text>
+                  </View>
+                ))}
               </View>
             )}
 
@@ -486,9 +498,15 @@ function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<ty
                   <Text style={[styles.vibeBpmVal, { color: colors.primary }]}>{a.bpm}</Text>
                 </View>
               )}
+              {a.timeSignature ? (
+                <View style={styles.vibeStat}>
+                  <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground }]}>TIME SIG</Text>
+                  <Text style={[styles.vibeBpmVal, { color: colors.primary }]}>{a.timeSignature}</Text>
+                </View>
+              ) : null}
             </View>
 
-            {(topGenres.length > 0 || a.musicalEraTag) && (
+            {(topGenres.length > 0 || a.musicalEraTag || a.freeGenreTags) && (
               <View style={styles.vibeRow}>
                 {topGenres.map((g) => (
                   <View key={g} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
@@ -500,6 +518,22 @@ function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<ty
                     <Text style={[styles.vibeTagText, { color: colors.foreground }]}>{a.musicalEraTag}</Text>
                   </View>
                 ) : null}
+              </View>
+            )}
+
+            {a.freeGenreTags ? (
+              <Text style={[styles.vibeFreeGenre, { color: colors.mutedForeground }]}>
+                {a.freeGenreTags}
+              </Text>
+            ) : null}
+
+            {characterVibes.length > 0 && (
+              <View style={styles.vibeRow}>
+                {characterVibes.map((v) => (
+                  <View key={v} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+                    <Text style={[styles.vibeTagText, { color: colors.mutedForeground }]}>{v}</Text>
+                  </View>
+                ))}
               </View>
             )}
 
@@ -772,6 +806,7 @@ const styles = StyleSheet.create({
   vibeBarFill: { height: 6, borderRadius: 3 },
   vibeTag: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 20, borderWidth: 1 },
   vibeTagText: { fontSize: 11, fontWeight: '600' },
+  vibeFreeGenre: { fontSize: 11, fontStyle: 'italic', marginTop: 2, marginBottom: 4 },
   studyBox: { marginHorizontal: 20, marginTop: 20, padding: 16, borderRadius: 10, borderWidth: 1, gap: 10 },
   studyHeader: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   studyTitle: { fontSize: 14, fontWeight: '700' },

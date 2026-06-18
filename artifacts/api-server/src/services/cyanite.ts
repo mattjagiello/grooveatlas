@@ -73,10 +73,15 @@ export interface CyaniteAnalysis {
   arousal: number;
   energyLevel: string;
   energyDynamics: string;
+  musicalEraTag: string;
+  timeSignature: string;
+  transformerCaption: string | null;
+  freeGenreTags: string | null;
   moodTags: string[];
   genreTags: string[];
-  musicalEraTag: string;
-  transformerCaption: string | null;
+  moodAdvancedTags: string[];
+  movementTags: string[];
+  characterTags: string[];
   instrumentTags: string[];
 }
 
@@ -89,18 +94,23 @@ export async function checkAnalysis(trackId: string): Promise<AnalysisStatus> {
   const data = await gql<{
     libraryTrack: {
       __typename: string;
-      audioAnalysisV6?: {
+      audioAnalysisV7?: {
         __typename: string;
         result?: {
-          bpmPrediction: { value: number };
+          bpmPrediction: { value: number } | null;
           valence: number;
           arousal: number;
           energyLevel: string;
           energyDynamics: string;
+          musicalEraTag: string;
+          timeSignature: string | null;
+          transformerCaption: string | null;
+          freeGenreTags: string | null;
           moodTags: string[];
           genreTags: string[];
-          musicalEraTag: string;
-          transformerCaption: string | null;
+          moodAdvancedTags: string[];
+          movementTags: string[];
+          characterTags: string[];
           advancedInstrumentTags: string[];
         };
         error?: { message: string };
@@ -111,17 +121,19 @@ export async function checkAnalysis(trackId: string): Promise<AnalysisStatus> {
       libraryTrack(id: $id) {
         __typename
         ... on LibraryTrack {
-          audioAnalysisV6 {
+          audioAnalysisV7 {
             __typename
-            ... on AudioAnalysisV6Finished {
+            ... on AudioAnalysisV7Finished {
               result {
                 bpmPrediction { value }
                 valence arousal energyLevel energyDynamics
-                moodTags genreTags musicalEraTag transformerCaption
+                musicalEraTag timeSignature transformerCaption freeGenreTags
+                moodTags genreTags moodAdvancedTags movementTags characterTags
                 advancedInstrumentTags
               }
             }
-            ... on AudioAnalysisV6Failed { error { message } }
+            ... on AudioAnalysisV7Failed { error { message } }
+            ... on AudioAnalysisV7NotAuthorized { __typename }
           }
         }
       }
@@ -132,11 +144,11 @@ export async function checkAnalysis(trackId: string): Promise<AnalysisStatus> {
   const track = data.libraryTrack;
   if (track.__typename !== "LibraryTrack") return { status: "failed", message: "Track not found" };
 
-  const av6 = track.audioAnalysisV6;
-  if (!av6) return { status: "processing" };
+  const av7 = track.audioAnalysisV7;
+  if (!av7) return { status: "processing" };
 
-  if (av6.__typename === "AudioAnalysisV6Finished" && av6.result) {
-    const r = av6.result;
+  if (av7.__typename === "AudioAnalysisV7Finished" && av7.result) {
+    const r = av7.result;
     return {
       status: "finished",
       analysis: {
@@ -145,17 +157,26 @@ export async function checkAnalysis(trackId: string): Promise<AnalysisStatus> {
         arousal: r.arousal ?? 0,
         energyLevel: r.energyLevel ?? "",
         energyDynamics: r.energyDynamics ?? "",
+        musicalEraTag: r.musicalEraTag ?? "",
+        timeSignature: r.timeSignature ?? "",
+        transformerCaption: r.transformerCaption ?? null,
+        freeGenreTags: r.freeGenreTags ?? null,
         moodTags: r.moodTags ?? [],
         genreTags: r.genreTags ?? [],
-        musicalEraTag: r.musicalEraTag ?? "",
-        transformerCaption: r.transformerCaption ?? null,
+        moodAdvancedTags: r.moodAdvancedTags ?? [],
+        movementTags: r.movementTags ?? [],
+        characterTags: r.characterTags ?? [],
         instrumentTags: r.advancedInstrumentTags ?? [],
       },
     };
   }
 
-  if (av6.__typename === "AudioAnalysisV6Failed") {
-    return { status: "failed", message: av6.error?.message ?? "Analysis failed" };
+  if (av7.__typename === "AudioAnalysisV7Failed") {
+    return { status: "failed", message: av7.error?.message ?? "Analysis failed" };
+  }
+
+  if (av7.__typename === "AudioAnalysisV7NotAuthorized") {
+    return { status: "failed", message: "AudioAnalysisV7 not authorized for this account" };
   }
 
   return { status: "processing" };
