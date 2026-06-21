@@ -14,9 +14,10 @@ import {
 } from 'react-native';
 import { useEra } from '@/hooks/useGql';
 import DrummerCard from '@/components/DrummerCard';
-import SongCard from '@/components/SongCard';
+import TrackRow from '@/components/TrackRow';
 import { Drummer, Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
+import { Fonts } from '@/constants/typography';
 
 export default function EraDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -53,54 +54,58 @@ export default function EraDetailScreen() {
     <View style={[styles.root, { backgroundColor: colors.background }]}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={[
-          styles.content,
-          { paddingBottom: insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 40 },
-        ]}
+        contentContainerStyle={{ paddingBottom: insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 48 }}
       >
-        <View
-          style={[
-            styles.hero,
-            {
-              paddingTop: insets.top + webTopPad + 16,
-              borderBottomColor: colors.border,
-              borderLeftColor: era.color,
-            },
-          ]}
-        >
+        {/* ── Header ── */}
+        <View style={[styles.header, { paddingTop: insets.top + webTopPad + 16, borderBottomColor: colors.border }]}>
           <TouchableOpacity onPress={goBack} style={styles.backBtn} testID="back-button">
             <Feather name="arrow-left" size={20} color={colors.foreground} />
           </TouchableOpacity>
-          <View style={styles.heroContent}>
-            <Text style={[styles.heroName, { color: era.color, fontFamily: 'serif' }]}>
-              {era.name}
+          <Text style={[styles.superLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>ERA</Text>
+          <Text style={[styles.heroName, { color: era.color, fontFamily: Fonts.display }]} numberOfLines={2}>
+            {era.name}
+          </Text>
+          <Text style={[styles.heroYears, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
+            {era.years}
+          </Text>
+          <View style={[styles.subtitleQuote, { borderLeftColor: era.color }]}>
+            <Text style={[styles.subtitleText, { color: colors.foreground, fontFamily: Fonts.serifItalic }]}>
+              {era.subtitle}
             </Text>
-            <Text style={[styles.heroYears, { color: colors.mutedForeground }]}>{era.years}</Text>
-            <Text style={[styles.heroSubtitle, { color: colors.foreground }]}>{era.subtitle}</Text>
           </View>
         </View>
 
+        {/* ── Description ── */}
         <View style={styles.section}>
-          <Text style={[styles.description, { color: colors.foreground }]}>{era.description}</Text>
+          <Text style={[styles.body, { color: colors.foreground }]}>{era.description}</Text>
         </View>
 
+        <View style={[styles.divider, { backgroundColor: colors.border }]} />
+
+        {/* ── Defining Characteristics ── */}
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
-            Defining Characteristics
+          <Text style={[styles.capsLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>
+            DEFINING CHARACTERISTICS
           </Text>
-          {era.characteristics.map((c, i) => (
-            <View key={i} style={[styles.characteristicRow, { borderBottomColor: colors.border }]}>
-              <View style={[styles.characteristicDot, { backgroundColor: era.color }]} />
-              <Text style={[styles.characteristicText, { color: colors.foreground }]}>{c}</Text>
-            </View>
-          ))}
+          <View style={styles.charList}>
+            {era.characteristics.map((c, i) => (
+              <View key={i} style={[styles.charRow, { borderBottomColor: colors.border }]}>
+                <View style={[styles.charDot, { backgroundColor: era.color }]} />
+                <Text style={[styles.charText, { color: colors.foreground }]}>{c}</Text>
+              </View>
+            ))}
+          </View>
         </View>
 
+        {/* ── Key Drummers ── */}
         {drummers.length > 0 && (
-          <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
-              Key Drummers
-            </Text>
+          <>
+            <View style={[styles.divider, { backgroundColor: colors.border }]} />
+            <View style={styles.section}>
+              <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>
+                Key Drummers
+              </Text>
+            </View>
             <FlatList
               horizontal
               showsHorizontalScrollIndicator={false}
@@ -118,24 +123,28 @@ export default function EraDetailScreen() {
                 />
               )}
             />
-          </View>
+          </>
         )}
 
+        {/* ── Iconic Recordings ── */}
         {songs.length > 0 && (
-          <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
-              Iconic Recordings
-            </Text>
-            <View style={styles.songList}>
+          <>
+            <View style={[styles.divider, { backgroundColor: colors.border }]} />
+            <View style={styles.section}>
+              <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>
+                Iconic Recordings
+              </Text>
+            </View>
+            <View style={[styles.trackList, { borderTopColor: colors.border }]}>
               {songs.map((s: Song) => (
-                <SongCard
+                <TrackRow
                   key={s.id}
                   song={s}
-                  onPress={(song: Song) => router.push(`/song/${song.id}`)}
+                  onPress={(song) => router.push(`/song/${song.id}`)}
                 />
               ))}
             </View>
-          </View>
+          </>
         )}
       </ScrollView>
     </View>
@@ -144,27 +153,31 @@ export default function EraDetailScreen() {
 
 const styles = StyleSheet.create({
   root: { flex: 1 },
-  content: {},
   loader: { marginTop: 100 },
   backBtnAlone: { margin: 20, width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
-  hero: {
-    paddingHorizontal: 20, paddingBottom: 20,
-    borderBottomWidth: StyleSheet.hairlineWidth, borderLeftWidth: 4,
+  header: {
+    paddingHorizontal: 20, paddingBottom: 22,
+    borderBottomWidth: StyleSheet.hairlineWidth, gap: 4,
   },
-  backBtn: { marginBottom: 16, width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
-  heroContent: { gap: 4 },
-  heroName: { fontSize: 48, fontWeight: '700', lineHeight: 52 },
-  heroYears: { fontSize: 14 },
-  heroSubtitle: { fontSize: 16, fontWeight: '600', marginTop: 4 },
-  section: { paddingHorizontal: 20, paddingTop: 24 },
-  description: { fontSize: 15, lineHeight: 22 },
-  sectionTitle: { fontSize: 20, fontWeight: '700', marginBottom: 14 },
-  characteristicRow: {
-    flexDirection: 'row', alignItems: 'center',
-    paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, gap: 10,
+  backBtn: { marginBottom: 12, width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
+  superLabel: { fontSize: 10, letterSpacing: 2 },
+  heroName: { fontSize: 48, lineHeight: 50, marginTop: 2 },
+  heroYears: { fontSize: 13, marginTop: 2 },
+  subtitleQuote: { borderLeftWidth: 3, paddingLeft: 14, marginTop: 16 },
+  subtitleText: { fontSize: 14, lineHeight: 22 },
+  section: { paddingHorizontal: 20, paddingTop: 20, paddingBottom: 6 },
+  capsLabel: { fontSize: 9, letterSpacing: 2, marginBottom: 12 },
+  body: { fontSize: 15, lineHeight: 24 },
+  sectionTitle: { fontSize: 22, marginBottom: 4 },
+  divider: { height: StyleSheet.hairlineWidth, marginHorizontal: 20, marginVertical: 6 },
+  charList: { gap: 0 },
+  charRow: {
+    flexDirection: 'row', alignItems: 'flex-start',
+    gap: 12, paddingVertical: 10,
+    borderBottomWidth: StyleSheet.hairlineWidth,
   },
-  characteristicDot: { width: 8, height: 8, borderRadius: 4, flexShrink: 0 },
-  characteristicText: { fontSize: 14, flex: 1 },
-  horizontal: { paddingRight: 20 },
-  songList: {},
+  charDot: { width: 7, height: 7, borderRadius: 3.5, marginTop: 4, flexShrink: 0 },
+  charText: { fontSize: 14, lineHeight: 22, flex: 1 },
+  horizontal: { paddingHorizontal: 16, paddingVertical: 12 },
+  trackList: { borderTopWidth: StyleSheet.hairlineWidth },
 });

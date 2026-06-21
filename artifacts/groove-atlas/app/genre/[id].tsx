@@ -14,9 +14,10 @@ import {
 } from 'react-native';
 import { useGenre } from '@/hooks/useGql';
 import DrummerCard from '@/components/DrummerCard';
-import SongCard from '@/components/SongCard';
+import TrackRow from '@/components/TrackRow';
 import { Drummer, Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
+import { Fonts } from '@/constants/typography';
 
 export default function GenreDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -53,46 +54,50 @@ export default function GenreDetailScreen() {
     <View style={[styles.root, { backgroundColor: colors.background }]}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={[
-          styles.content,
-          { paddingBottom: insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 40 },
-        ]}
+        contentContainerStyle={{ paddingBottom: insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 48 }}
       >
+        {/* ── Header — left color accent, no card background ── */}
         <View
           style={[
-            styles.hero,
+            styles.header,
             {
               paddingTop: insets.top + webTopPad + 16,
               borderBottomColor: colors.border,
-              backgroundColor: colors.card,
+              borderLeftColor: genre.color,
             },
           ]}
         >
           <TouchableOpacity onPress={goBack} style={styles.backBtn} testID="back-button">
             <Feather name="arrow-left" size={20} color={colors.foreground} />
           </TouchableOpacity>
-          <View style={[styles.colorBar, { backgroundColor: genre.color }]} />
-          <Text style={[styles.heroName, { color: colors.foreground, fontFamily: 'serif' }]}>
+          <Text style={[styles.superLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>GENRE</Text>
+          <Text style={[styles.heroName, { color: colors.foreground, fontFamily: Fonts.display }]} numberOfLines={2}>
             {genre.name}
           </Text>
           <View style={styles.originRow}>
             <Feather name="map-pin" size={13} color={genre.color} />
-            <Text style={[styles.origin, { color: genre.color }]}>{genre.origin}</Text>
+            <Text style={[styles.origin, { color: genre.color, fontFamily: Fonts.labelRegular }]}>{genre.origin}</Text>
+            <Text style={[styles.eraText, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
+              · {genre.era}
+            </Text>
           </View>
-          <Text style={[styles.era, { color: colors.mutedForeground }]}>{genre.era}</Text>
         </View>
 
+        {/* ── Description ── */}
         <View style={styles.section}>
-          <Text style={[styles.description, { color: colors.foreground }]}>{genre.description}</Text>
+          <Text style={[styles.body, { color: colors.foreground }]}>{genre.description}</Text>
         </View>
 
+        <View style={[styles.divider, { backgroundColor: colors.border }]} />
+
+        {/* ── Rhythmic Characteristics ── */}
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
-            Rhythmic Characteristics
+          <Text style={[styles.capsLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>
+            RHYTHMIC CHARACTERISTICS
           </Text>
           <View style={styles.chips}>
             {genre.characteristics.map((c, i) => (
-              <View key={i} style={[styles.chip, { backgroundColor: colors.muted, borderColor: genre.color }]}>
+              <View key={i} style={[styles.chip, { backgroundColor: genre.color + '18', borderColor: genre.color + '55' }]}>
                 <View style={[styles.chipDot, { backgroundColor: genre.color }]} />
                 <Text style={[styles.chipText, { color: colors.foreground }]}>{c}</Text>
               </View>
@@ -100,11 +105,15 @@ export default function GenreDetailScreen() {
           </View>
         </View>
 
+        {/* ── Key Drummers ── */}
         {drummers.length > 0 && (
-          <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
-              Key Drummers
-            </Text>
+          <>
+            <View style={[styles.divider, { backgroundColor: colors.border }]} />
+            <View style={styles.section}>
+              <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>
+                Key Drummers
+              </Text>
+            </View>
             <FlatList
               horizontal
               showsHorizontalScrollIndicator={false}
@@ -122,24 +131,28 @@ export default function GenreDetailScreen() {
                 />
               )}
             />
-          </View>
+          </>
         )}
 
+        {/* ── Essential Listening ── */}
         {songs.length > 0 && (
-          <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
-              Essential Listening
-            </Text>
-            <View style={styles.songList}>
+          <>
+            <View style={[styles.divider, { backgroundColor: colors.border }]} />
+            <View style={styles.section}>
+              <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>
+                Essential Listening
+              </Text>
+            </View>
+            <View style={[styles.trackList, { borderTopColor: colors.border }]}>
               {songs.map((s: Song) => (
-                <SongCard
+                <TrackRow
                   key={s.id}
                   song={s}
-                  onPress={(song: Song) => router.push(`/song/${song.id}`)}
+                  onPress={(song) => router.push(`/song/${song.id}`)}
                 />
               ))}
             </View>
-          </View>
+          </>
         )}
       </ScrollView>
     </View>
@@ -148,26 +161,32 @@ export default function GenreDetailScreen() {
 
 const styles = StyleSheet.create({
   root: { flex: 1 },
-  content: {},
   loader: { marginTop: 100 },
   backBtnAlone: { margin: 20, width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
-  hero: { paddingHorizontal: 20, paddingBottom: 20, borderBottomWidth: StyleSheet.hairlineWidth, gap: 4 },
+  header: {
+    paddingHorizontal: 20, paddingBottom: 22,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderLeftWidth: 4,
+    gap: 4,
+  },
   backBtn: { marginBottom: 12, width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
-  colorBar: { height: 4, width: 40, borderRadius: 2, marginBottom: 8 },
-  heroName: { fontSize: 38, fontWeight: '700', lineHeight: 44 },
-  originRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 6 },
-  origin: { fontSize: 14, fontWeight: '600' },
-  era: { fontSize: 13, marginTop: 2 },
-  section: { paddingHorizontal: 20, paddingTop: 24 },
-  description: { fontSize: 15, lineHeight: 22 },
-  sectionTitle: { fontSize: 20, fontWeight: '700', marginBottom: 14 },
-  chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  superLabel: { fontSize: 10, letterSpacing: 2 },
+  heroName: { fontSize: 48, lineHeight: 50, marginTop: 2 },
+  originRow: { flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 8 },
+  origin: { fontSize: 13 },
+  eraText: { fontSize: 13 },
+  section: { paddingHorizontal: 20, paddingTop: 20, paddingBottom: 6 },
+  capsLabel: { fontSize: 9, letterSpacing: 2, marginBottom: 12 },
+  body: { fontSize: 15, lineHeight: 24 },
+  sectionTitle: { fontSize: 22, marginBottom: 4 },
+  divider: { height: StyleSheet.hairlineWidth, marginHorizontal: 20, marginVertical: 6 },
+  chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 4 },
   chip: {
     flexDirection: 'row', alignItems: 'center', gap: 6,
     paddingHorizontal: 10, paddingVertical: 6, borderRadius: 20, borderWidth: 1,
   },
   chipDot: { width: 6, height: 6, borderRadius: 3 },
-  chipText: { fontSize: 13, fontWeight: '500' },
-  horizontal: { paddingRight: 20 },
-  songList: {},
+  chipText: { fontSize: 13 },
+  horizontal: { paddingHorizontal: 16, paddingVertical: 12 },
+  trackList: { borderTopWidth: StyleSheet.hairlineWidth },
 });

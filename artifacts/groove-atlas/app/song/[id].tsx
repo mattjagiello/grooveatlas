@@ -17,6 +17,7 @@ import { useAudioPlayer } from 'expo-audio';
 import { useSong, useSimilarSongs } from '@/hooks/useGql';
 import type { SimilarSong } from '@/lib/queries';
 import { useColors } from '@/hooks/useColors';
+import { Fonts } from '@/constants/typography';
 import type { TrackMeta } from '@/lib/queries';
 import {
   startDrumExtraction,
@@ -603,14 +604,14 @@ export default function SongDetailScreen() {
         <View
           style={[
             styles.hero,
-            { paddingTop: insets.top + webTopPad + 16, borderBottomColor: colors.border, backgroundColor: colors.card },
+            { paddingTop: insets.top + webTopPad + 16, borderBottomColor: colors.border },
           ]}
         >
           <TouchableOpacity onPress={goBack} style={styles.backBtn} testID="back-button">
             <Feather name="arrow-left" size={20} color={colors.foreground} />
           </TouchableOpacity>
-          <Text style={[styles.title, { color: colors.foreground, fontFamily: 'serif' }]}>{song.title}</Text>
-          <Text style={[styles.artist, { color: colors.primary }]}>{song.artist}</Text>
+          <Text style={[styles.title, { color: colors.foreground, fontFamily: Fonts.display }]}>{song.title}</Text>
+          <Text style={[styles.artist, { color: colors.primary, fontFamily: Fonts.labelRegular }]}>{song.artist}</Text>
           <Text style={[styles.year, { color: colors.mutedForeground }]}>{song.year}</Text>
           <View style={styles.tags}>
             <TouchableOpacity
@@ -655,34 +656,34 @@ export default function SongDetailScreen() {
         {drummer && (
           <TouchableOpacity
             onPress={() => router.push(`/drummer/${drummer.id}`)}
-            style={[styles.drummerBox, { backgroundColor: colors.card, borderColor: colors.border }]}
+            style={[styles.drummerRow, { borderLeftColor: colors.primary, borderBottomColor: colors.border }]}
           >
             {drummer.photoUrl ? (
               <Image
                 source={{ uri: drummer.photoUrl }}
-                style={[styles.drummerAvatar, { backgroundColor: colors.primary }]}
+                style={styles.drummerAvatar}
                 resizeMode="cover"
               />
             ) : (
-              <View style={[styles.drummerAvatar, { backgroundColor: colors.primary }]}>
-                <Text style={styles.drummerInitials}>
+              <View style={[styles.drummerAvatar, { backgroundColor: colors.primary + '30' }]}>
+                <Text style={[styles.drummerInitials, { color: colors.primary }]}>
                   {drummer.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
                 </Text>
               </View>
             )}
             <View style={styles.drummerInfo}>
-              <Text style={[styles.drummerLabel, { color: colors.mutedForeground }]}>DRUMMER</Text>
-              <Text style={[styles.drummerName, { color: colors.foreground, fontFamily: 'serif' }]}>{drummer.name}</Text>
-              <Text style={[styles.drummerBand, { color: colors.mutedForeground }]} numberOfLines={1}>
+              <Text style={[styles.drummerLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>DRUMMED BY</Text>
+              <Text style={[styles.drummerName, { color: colors.foreground, fontFamily: Fonts.serif }]}>{drummer.name}</Text>
+              <Text style={[styles.drummerBand, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]} numberOfLines={1}>
                 {drummer.bands[0]}
               </Text>
             </View>
-            <Feather name="chevron-right" size={16} color={colors.mutedForeground} />
+            <Feather name="chevron-right" size={14} color={colors.mutedForeground} />
           </TouchableOpacity>
         )}
 
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>The Groove</Text>
+          <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>The Groove</Text>
           <Text style={[styles.body, { color: colors.foreground }]}>{song.description}</Text>
         </View>
 
@@ -692,11 +693,9 @@ export default function SongDetailScreen() {
         {id && <CyaniteCard songId={id} colors={colors} />}
         {id && <SimilarSongsSection songId={id} colors={colors} />}
 
-        <View style={[styles.studyBox, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-          <View style={styles.studyHeader}>
-            <Feather name="book-open" size={16} color={colors.primary} />
-            <Text style={[styles.studyTitle, { color: colors.primary }]}>Why Study This</Text>
-          </View>
+        <View style={[styles.whyDivider, { backgroundColor: colors.border }]} />
+        <View style={styles.section}>
+          <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>Why Study This</Text>
           <Text style={[styles.body, { color: colors.foreground }]}>{song.whyStudy}</Text>
         </View>
 
@@ -722,8 +721,8 @@ const styles = StyleSheet.create({
   backBtnAlone: { margin: 20, width: 36, height: 36, alignItems: 'center', justifyContent: 'center' },
   hero: { paddingHorizontal: 20, paddingBottom: 20, borderBottomWidth: StyleSheet.hairlineWidth, gap: 4 },
   backBtn: { marginBottom: 12, width: 36, height: 36, alignItems: 'center', justifyContent: 'center' },
-  title: { fontSize: 32, fontWeight: '700', lineHeight: 38 },
-  artist: { fontSize: 16, fontWeight: '600', marginTop: 4 },
+  title: { fontSize: 38, lineHeight: 40 },
+  artist: { fontSize: 14, marginTop: 2 },
   year: { fontSize: 13 },
   tags: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 10 },
   tag: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 20, borderWidth: 1 },
@@ -736,15 +735,20 @@ const styles = StyleSheet.create({
   complexityDots: { flexDirection: 'row', gap: 4 },
   complexityDot: { width: 10, height: 10, borderRadius: 5 },
   feelText: { fontSize: 13, fontWeight: '500', textAlign: 'center' },
-  drummerBox: { marginHorizontal: 20, marginTop: 20, padding: 14, borderRadius: 10, borderWidth: 1, flexDirection: 'row', alignItems: 'center', gap: 12 },
-  drummerAvatar: { width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center' },
-  drummerInitials: { color: '#fff', fontSize: 14, fontWeight: '700' },
+  drummerRow: {
+    flexDirection: 'row', alignItems: 'center', gap: 12,
+    paddingHorizontal: 20, paddingVertical: 16,
+    borderLeftWidth: 3, borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+  drummerAvatar: { width: 40, height: 40, borderRadius: 20 },
+  drummerInitials: { fontSize: 13, fontWeight: '700', textAlign: 'center', width: 40, lineHeight: 40 },
   drummerInfo: { flex: 1, gap: 2 },
-  drummerLabel: { fontSize: 9, fontWeight: '700', letterSpacing: 2 },
-  drummerName: { fontSize: 16, fontWeight: '700' },
+  drummerLabel: { fontSize: 9, letterSpacing: 2 },
+  drummerName: { fontSize: 16 },
   drummerBand: { fontSize: 12 },
   section: { paddingHorizontal: 20, paddingTop: 24 },
-  sectionTitle: { fontSize: 20, fontWeight: '700', marginBottom: 10 },
+  sectionTitle: { fontSize: 22, marginBottom: 10 },
+  whyDivider: { height: StyleSheet.hairlineWidth, marginHorizontal: 20, marginTop: 8 },
   body: { fontSize: 15, lineHeight: 23 },
   metaCard: { marginHorizontal: 20, marginTop: 20, padding: 16, borderRadius: 10, borderWidth: 1, gap: 12 },
   metaHeader: { flexDirection: 'row', alignItems: 'center', gap: 6 },
