@@ -24,10 +24,7 @@ import {
   type StemResult,
 } from '@/lib/stems-client';
 import {
-  startCyaniteAnalysis,
-  checkCyaniteStatus,
   peekCyaniteCache,
-  isCyaniteError,
   type CyaniteAnalysis,
 } from '@/lib/cyanite-client';
 
@@ -343,11 +340,9 @@ const ENERGY_LEVELS: Record<string, number> = {
 };
 
 type VibeState =
-  | { phase: 'idle' }
-  | { phase: 'starting' }
-  | { phase: 'polling'; trackId: string; previewTitle: string; elapsed: number }
-  | { phase: 'ready'; analysis: CyaniteAnalysis; previewTitle: string }
-  | { phase: 'error'; message: string };
+  | { phase: 'loading' }
+  | { phase: 'ready'; analysis: CyaniteAnalysis }
+  | { phase: 'unavailable' };
 
 function SimilarSongsSection({
   songId,
@@ -394,45 +389,25 @@ function SimilarSongsSection({
 }
 
 function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<typeof useColors> }) {
-  const [state, setState] = useState<VibeState>({ phase: 'idle' });
+  const [state, setState] = useState<VibeState>({ phase: 'loading' });
 
   useEffect(() => {
     peekCyaniteCache(songId).then((analysis) => {
-      if (analysis) {
-        setState({ phase: 'ready', analysis, previewTitle: 'cached' });
-      }
+      setState(analysis ? { phase: 'ready', analysis } : { phase: 'unavailable' });
     });
   }, [songId]);
 
-  const start = async () => {
-    setState({ phase: 'starting' });
-    const started = await startCyaniteAnalysis(songId);
-    if (isCyaniteError(started)) {
-      setState({ phase: 'error', message: started.message });
-      return;
-    }
-    // Cache hit — result is ready immediately, no polling needed
-    if (started.cached) {
-      setState({ phase: 'ready', analysis: started.analysis, previewTitle: 'cached' });
-      return;
-    }
-    const { trackId, previewTitle } = started;
-    setState({ phase: 'polling', trackId, previewTitle, elapsed: 0 });
+  if (state.phase === 'loading' || state.phase === 'unavailable') return null;
 
-    const startedAt = Date.now();
-    const MAX_WAIT = 4 * 60 * 1000;
-    while (Date.now() - startedAt < MAX_WAIT) {
-      await new Promise((r) => setTimeout(r, 5000));
-      const elapsed = Math.round((Date.now() - startedAt) / 1000);
-      setState((s) => s.phase === 'polling' ? { ...s, elapsed } : s);
-      const status = await checkCyaniteStatus(trackId);
-      if (isCyaniteError(status)) { setState({ phase: 'error', message: status.message }); return; }
-      if (status.status === 'finished') { setState({ phase: 'ready', analysis: status.analysis, previewTitle }); return; }
-    }
-    setState({ phase: 'error', message: 'Timed out — try again in a moment.' });
-  };
-
-  const reset = () => setState({ phase: 'idle' });
+  const a = state.analysis;
+  const energyFill = ENERGY_LEVELS[a.energyLevel.toLowerCase()] ?? 0.5;
+  const topMoods = a.moodTags.slice(0, 5);
+  const topGenres = a.genreTags.slice(0, 3);
+  const advancedMoods = (a.moodAdvancedTags ?? []).slice(0, 5);
+  const characterVibes = [...(a.movementTags ?? []), ...(a.characterTags ?? [])].slice(0, 5);
+  const hasDrums = a.instrumentTags.some((t) =>
+    t.toLowerCase().includes('drum') || t.toLowerCase().includes('percuss')
+  );
 
   return (
     <View style={[styles.studySection, { backgroundColor: colors.card, borderColor: colors.border }]}>
@@ -446,170 +421,117 @@ function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<ty
         </View>
       </View>
 
-      {state.phase === 'idle' && (
-        <TouchableOpacity onPress={start} style={[styles.studyBtn, { backgroundColor: colors.primary }]}>
-          <Feather name="activity" size={15} color="#fff" />
-          <Text style={styles.studyBtnText}>Analyse Vibe</Text>
-        </TouchableOpacity>
-      )}
-
-      {state.phase === 'starting' && (
-        <View style={styles.studyLoading}>
-          <ActivityIndicator color={colors.primary} />
-          <Text style={[styles.studyLoadingText, { color: colors.mutedForeground }]}>Uploading preview…</Text>
-        </View>
-      )}
-
-      {state.phase === 'polling' && (
-        <View style={styles.studyLoading}>
-          <ActivityIndicator color={colors.primary} />
-          <Text style={[styles.studyLoadingText, { color: colors.mutedForeground }]}>
-            Analysing… ({state.elapsed}s)
+      <View style={styles.vibeResult}>
+        {a.transformerCaption ? (
+          <Text style={[styles.vibeCaption, { color: colors.foreground, borderColor: colors.border }]}>
+            "{a.transformerCaption}"
           </Text>
-          <Text style={[styles.studyLoadingHint, { color: colors.mutedForeground }]}>
-            "{state.previewTitle}" · usually 20–60s
-          </Text>
-        </View>
-      )}
+        ) : null}
 
-      {state.phase === 'ready' && (() => {
-        const a = state.analysis;
-        const energyFill = ENERGY_LEVELS[a.energyLevel.toLowerCase()] ?? 0.5;
-        const topMoods = a.moodTags.slice(0, 5);
-        const topGenres = a.genreTags.slice(0, 3);
-        const advancedMoods = (a.moodAdvancedTags ?? []).slice(0, 5);
-        const characterVibes = [...(a.movementTags ?? []), ...(a.characterTags ?? [])].slice(0, 5);
-        const hasDrums = a.instrumentTags.some((t) =>
-          t.toLowerCase().includes('drum') || t.toLowerCase().includes('percuss')
-        );
-        return (
-          <View style={styles.vibeResult}>
-            {a.transformerCaption ? (
-              <Text style={[styles.vibeCaption, { color: colors.foreground, borderColor: colors.border }]}>
-                "{a.transformerCaption}"
-              </Text>
-            ) : null}
-
-            {topMoods.length > 0 && (
-              <View style={styles.vibeRow}>
-                {topMoods.map((m) => (
-                  <View key={m} style={[styles.moodChip, { backgroundColor: (MOOD_COLORS[m.toLowerCase()] ?? colors.primary) + '22', borderColor: (MOOD_COLORS[m.toLowerCase()] ?? colors.primary) + '66' }]}>
-                    <Text style={[styles.moodChipText, { color: MOOD_COLORS[m.toLowerCase()] ?? colors.primary }]}>
-                      {m}
-                    </Text>
-                  </View>
-                ))}
-                {hasDrums && (
-                  <View style={[styles.moodChip, { backgroundColor: colors.primary + '22', borderColor: colors.primary + '66' }]}>
-                    <Text style={[styles.moodChipText, { color: colors.primary }]}>🥁 drums</Text>
-                  </View>
-                )}
+        {topMoods.length > 0 && (
+          <View style={styles.vibeRow}>
+            {topMoods.map((m) => (
+              <View key={m} style={[styles.moodChip, { backgroundColor: (MOOD_COLORS[m.toLowerCase()] ?? colors.primary) + '22', borderColor: (MOOD_COLORS[m.toLowerCase()] ?? colors.primary) + '66' }]}>
+                <Text style={[styles.moodChipText, { color: MOOD_COLORS[m.toLowerCase()] ?? colors.primary }]}>
+                  {m}
+                </Text>
+              </View>
+            ))}
+            {hasDrums && (
+              <View style={[styles.moodChip, { backgroundColor: colors.primary + '22', borderColor: colors.primary + '66' }]}>
+                <Text style={[styles.moodChipText, { color: colors.primary }]}>🥁 drums</Text>
               </View>
             )}
-
-            {advancedMoods.length > 0 && (
-              <View style={[styles.vibeRow, { marginTop: -2 }]}>
-                {advancedMoods.map((m) => (
-                  <View key={m} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-                    <Text style={[styles.vibeTagText, { color: colors.mutedForeground }]}>{m}</Text>
-                  </View>
-                ))}
-              </View>
-            )}
-
-            <View style={[styles.vibeGrid, { borderColor: colors.border }]}>
-              <View style={styles.vibeGridLabels}>
-                <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>INTENSE</Text>
-                <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>HAPPY</Text>
-              </View>
-              <View style={[styles.vibeGridInner, { borderColor: colors.border + '80' }]}>
-                <View style={[StyleSheet.absoluteFillObject, styles.vibeGridHLine, { borderColor: colors.border + '60' }]} />
-                <View style={[StyleSheet.absoluteFillObject, styles.vibeGridVLine, { borderColor: colors.border + '60' }]} />
-                <View style={[styles.vibeGridDot, {
-                  backgroundColor: colors.primary,
-                  left: `${Math.round(a.valence * 100)}%` as unknown as number,
-                  top: `${Math.round((1 - a.arousal) * 100)}%` as unknown as number,
-                }]} />
-              </View>
-              <View style={styles.vibeGridLabels}>
-                <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>DARK</Text>
-                <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>CALM</Text>
-              </View>
-            </View>
-
-            <View style={styles.vibeStatRow}>
-              <View style={styles.vibeStat}>
-                <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground }]}>ENERGY</Text>
-                <View style={[styles.vibeBarTrack, { backgroundColor: colors.border }]}>
-                  <View style={[styles.vibeBarFill, { backgroundColor: colors.primary, width: `${Math.round(energyFill * 100)}%` as unknown as number }]} />
-                </View>
-                <Text style={[styles.vibeStatVal, { color: colors.foreground }]}>{a.energyLevel || '—'}</Text>
-              </View>
-              {a.bpm > 0 && (
-                <View style={styles.vibeStat}>
-                  <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground }]}>BPM</Text>
-                  <Text style={[styles.vibeBpmVal, { color: colors.primary }]}>{a.bpm}</Text>
-                </View>
-              )}
-              {a.timeSignature ? (
-                <View style={styles.vibeStat}>
-                  <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground }]}>TIME SIG</Text>
-                  <Text style={[styles.vibeBpmVal, { color: colors.primary }]}>{a.timeSignature}</Text>
-                </View>
-              ) : null}
-            </View>
-
-            {(topGenres.length > 0 || a.musicalEraTag || a.freeGenreTags) && (
-              <View style={styles.vibeRow}>
-                {topGenres.map((g) => (
-                  <View key={g} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-                    <Text style={[styles.vibeTagText, { color: colors.foreground }]}>{g}</Text>
-                  </View>
-                ))}
-                {a.musicalEraTag ? (
-                  <View style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-                    <Text style={[styles.vibeTagText, { color: colors.foreground }]}>{a.musicalEraTag}</Text>
-                  </View>
-                ) : null}
-              </View>
-            )}
-
-            {a.freeGenreTags ? (
-              <Text style={[styles.vibeFreeGenre, { color: colors.mutedForeground }]}>
-                {a.freeGenreTags}
-              </Text>
-            ) : null}
-
-            {characterVibes.length > 0 && (
-              <View style={styles.vibeRow}>
-                {characterVibes.map((v) => (
-                  <View key={v} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-                    <Text style={[styles.vibeTagText, { color: colors.mutedForeground }]}>{v}</Text>
-                  </View>
-                ))}
-              </View>
-            )}
-
-            <TouchableOpacity onPress={reset} style={styles.resetBtn}>
-              <Text style={[styles.resetText, { color: colors.mutedForeground }]}>↩ Re-analyse</Text>
-            </TouchableOpacity>
           </View>
-        );
-      })()}
+        )}
 
-      {state.phase === 'error' && (
-        <View style={[styles.studyNotice, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-          <Feather name="alert-triangle" size={16} color={colors.mutedForeground} />
-          <Text style={[styles.studyNoticeText, { color: colors.foreground }]} numberOfLines={3}>{state.message}</Text>
-          <TouchableOpacity onPress={reset}>
-            <Text style={[styles.resetText, { color: colors.mutedForeground }]}>Dismiss</Text>
-          </TouchableOpacity>
+        {advancedMoods.length > 0 && (
+          <View style={[styles.vibeRow, { marginTop: -2 }]}>
+            {advancedMoods.map((m) => (
+              <View key={m} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+                <Text style={[styles.vibeTagText, { color: colors.mutedForeground }]}>{m}</Text>
+              </View>
+            ))}
+          </View>
+        )}
+
+        <View style={[styles.vibeGrid, { borderColor: colors.border }]}>
+          <View style={styles.vibeGridLabels}>
+            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>INTENSE</Text>
+            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>HAPPY</Text>
+          </View>
+          <View style={[styles.vibeGridInner, { borderColor: colors.border + '80' }]}>
+            <View style={[StyleSheet.absoluteFillObject, styles.vibeGridHLine, { borderColor: colors.border + '60' }]} />
+            <View style={[StyleSheet.absoluteFillObject, styles.vibeGridVLine, { borderColor: colors.border + '60' }]} />
+            <View style={[styles.vibeGridDot, {
+              backgroundColor: colors.primary,
+              left: `${Math.round(a.valence * 100)}%` as unknown as number,
+              top: `${Math.round((1 - a.arousal) * 100)}%` as unknown as number,
+            }]} />
+          </View>
+          <View style={styles.vibeGridLabels}>
+            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>DARK</Text>
+            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>CALM</Text>
+          </View>
         </View>
-      )}
 
-      <Text style={[styles.studyAttr, { color: colors.mutedForeground }]}>
-        Powered by Cyanite · Preview via Deezer
-      </Text>
+        <View style={styles.vibeStatRow}>
+          <View style={styles.vibeStat}>
+            <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground }]}>ENERGY</Text>
+            <View style={[styles.vibeBarTrack, { backgroundColor: colors.border }]}>
+              <View style={[styles.vibeBarFill, { backgroundColor: colors.primary, width: `${Math.round(energyFill * 100)}%` as unknown as number }]} />
+            </View>
+            <Text style={[styles.vibeStatVal, { color: colors.foreground }]}>{a.energyLevel || '—'}</Text>
+          </View>
+          {a.bpm > 0 && (
+            <View style={styles.vibeStat}>
+              <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground }]}>BPM</Text>
+              <Text style={[styles.vibeBpmVal, { color: colors.primary }]}>{a.bpm}</Text>
+            </View>
+          )}
+          {a.timeSignature ? (
+            <View style={styles.vibeStat}>
+              <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground }]}>TIME SIG</Text>
+              <Text style={[styles.vibeBpmVal, { color: colors.primary }]}>{a.timeSignature}</Text>
+            </View>
+          ) : null}
+        </View>
+
+        {(topGenres.length > 0 || a.musicalEraTag || a.freeGenreTags) && (
+          <View style={styles.vibeRow}>
+            {topGenres.map((g) => (
+              <View key={g} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+                <Text style={[styles.vibeTagText, { color: colors.foreground }]}>{g}</Text>
+              </View>
+            ))}
+            {a.musicalEraTag ? (
+              <View style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+                <Text style={[styles.vibeTagText, { color: colors.foreground }]}>{a.musicalEraTag}</Text>
+              </View>
+            ) : null}
+          </View>
+        )}
+
+        {a.freeGenreTags ? (
+          <Text style={[styles.vibeFreeGenre, { color: colors.mutedForeground }]}>
+            {a.freeGenreTags}
+          </Text>
+        ) : null}
+
+        {characterVibes.length > 0 && (
+          <View style={styles.vibeRow}>
+            {characterVibes.map((v) => (
+              <View key={v} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+                <Text style={[styles.vibeTagText, { color: colors.mutedForeground }]}>{v}</Text>
+              </View>
+            ))}
+          </View>
+        )}
+
+        <Text style={[styles.studyAttr, { color: colors.mutedForeground }]}>
+          Powered by Cyanite · Preview via Deezer
+        </Text>
+      </View>
     </View>
   );
 }
