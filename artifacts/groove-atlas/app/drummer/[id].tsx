@@ -254,7 +254,9 @@ export default function DrummerDetailScreen() {
               </TouchableOpacity>
             </View>
           </View>
-          <Text style={[styles.bands, { color: colors.mutedForeground }]}>{drummer.bands.join(' · ')}</Text>
+          <Text style={[styles.bands, { color: colors.mutedForeground }]}>
+            <Text style={{ fontWeight: '600' }}>with </Text>{drummer.bands.join(' · ')}
+          </Text>
           {genreLabels.length > 0 && (
             <Text style={[styles.genres, { color: colors.primary }]}>{genreLabels}</Text>
           )}
