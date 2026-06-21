@@ -94,7 +94,7 @@ export const SONG_DETAIL_QUERY = gql`
       id title artist drummerId year eraId genreIds
       tempo feel complexity description whyStudy songsterrSlug
       trackMeta {
-        trackId albumTitle trackRating numFavourite trackLengthSecs genres spotifyId
+        trackId trackName albumTitle trackRating numFavourite trackLengthSecs genres spotifyId
       }
       drummer {
         id name born died primaryEra eras genres bands bio signatureStyle
@@ -179,6 +179,7 @@ export interface DrummerWithSongs extends Drummer {
 
 export interface TrackMeta {
   trackId: string;
+  trackName: string | null;
   albumTitle: string | null;
   trackRating: number;
   numFavourite: number;

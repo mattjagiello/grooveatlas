@@ -50,6 +50,7 @@ export const typeDefs = /* GraphQL */ `
 
   type TrackMeta {
     trackId: String!
+    trackName: String
     albumTitle: String
     trackRating: Int!
     numFavourite: Int!

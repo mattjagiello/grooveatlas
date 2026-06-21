@@ -38,11 +38,14 @@ function formatDuration(secs: number): string {
   return `${m}:${String(s).padStart(2, '0')}`;
 }
 
-function TrackMetaCard({ meta, colors }: { meta: TrackMeta; colors: ReturnType<typeof useColors> }) {
+function TrackMetaCard({ meta, songTitle, colors }: { meta: TrackMeta; songTitle: string; colors: ReturnType<typeof useColors> }) {
   const openSpotify = async () => {
     if (!meta.spotifyId) return;
     await WebBrowser.openBrowserAsync(`https://open.spotify.com/track/${meta.spotifyId}`);
   };
+
+  const namesDiffer = meta.trackName &&
+    meta.trackName.toLowerCase().trim() !== songTitle.toLowerCase().trim();
 
   return (
     <View style={[styles.metaCard, { backgroundColor: colors.card, borderColor: colors.border }]}>
@@ -52,11 +55,20 @@ function TrackMetaCard({ meta, colors }: { meta: TrackMeta; colors: ReturnType<t
         <Text style={[styles.metaSource, { color: colors.mutedForeground }]}>via Musicmatch</Text>
       </View>
 
+      {namesDiffer ? (
+        <View style={styles.metaAlbumRow}>
+          <Feather name="alert-circle" size={13} color={colors.mutedForeground} />
+          <Text style={[styles.metaAlbum, { color: colors.mutedForeground }]} numberOfLines={1}>
+            Matched as: <Text style={{ color: colors.foreground }}>{meta.trackName}</Text>
+          </Text>
+        </View>
+      ) : null}
+
       {meta.albumTitle ? (
         <View style={styles.metaAlbumRow}>
-          <Feather name="music" size={13} color={colors.mutedForeground} />
-          <Text style={[styles.metaAlbum, { color: colors.foreground }]} numberOfLines={2}>
-            {meta.albumTitle}
+          <Feather name="layers" size={13} color={colors.mutedForeground} />
+          <Text style={[styles.metaAlbum, { color: colors.mutedForeground }]} numberOfLines={2}>
+            Album: <Text style={{ color: colors.foreground }}>{meta.albumTitle}</Text>
           </Text>
         </View>
       ) : null}
@@ -663,7 +675,7 @@ export default function SongDetailScreen() {
           <Text style={[styles.body, { color: colors.foreground }]}>{song.description}</Text>
         </View>
 
-        {song.trackMeta && <TrackMetaCard meta={song.trackMeta} colors={colors} />}
+        {song.trackMeta && <TrackMetaCard meta={song.trackMeta} songTitle={song.title} colors={colors} />}
 
         {id && <DrumStudySection songId={id} colors={colors} />}
         {id && <CyaniteCard songId={id} colors={colors} />}

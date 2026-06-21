@@ -6,6 +6,7 @@ export function isMusixmatchConfigured(): boolean {
 
 export interface TrackMeta {
   trackId: string;
+  trackName: string | null;
   albumTitle: string | null;
   trackRating: number;
   numFavourite: number;
@@ -36,6 +37,7 @@ export async function fetchTrackMeta(
         body: {
           track: {
             track_id: number;
+            track_name: string;
             album_name: string;
             track_rating: number;
             num_favourite: number;
@@ -61,6 +63,7 @@ export async function fetchTrackMeta(
 
     return {
       trackId: String(track.track_id),
+      trackName: track.track_name || null,
       albumTitle: track.album_name || null,
       trackRating: track.track_rating ?? 0,
       numFavourite: track.num_favourite ?? 0,
