@@ -1,28 +1,79 @@
 import { Feather } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
-  ActivityIndicator,
   FlatList,
   Platform,
+  RefreshControl,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useQueryClient } from '@tanstack/react-query';
 import { useEras, useDrummers, useSongs, useGenres } from '@/hooks/useGql';
 import EraHeroCarousel from '@/components/EraHeroCarousel';
 import DrummerCard from '@/components/DrummerCard';
 import SongCard from '@/components/SongCard';
+import { Skeleton } from '@/components/Skeleton';
 import { Drummer, Era, Genre, Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
+
+function HomeSkeleton({ colors, insets }: { colors: ReturnType<typeof useColors>; insets: { top: number } }) {
+  const webTopPad = Platform.OS === 'web' ? 67 : 0;
+  return (
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{ paddingTop: 12, paddingBottom: 120 }}
+    >
+      {/* Era carousel skeleton */}
+      <View style={{ marginBottom: 20 }}>
+        <Skeleton width="35%" height={10} style={{ marginHorizontal: 20, marginBottom: 10 }} />
+        <Skeleton width="auto" height={188} borderRadius={14} style={{ marginHorizontal: 16 }} />
+        <View style={{ flexDirection: 'row', justifyContent: 'center', gap: 6, marginTop: 10 }}>
+          {[1, 2, 3, 4].map((i) => (
+            <Skeleton key={i} width={i === 1 ? 16 : 7} height={7} borderRadius={4} />
+          ))}
+        </View>
+      </View>
+
+      {/* Drummers section skeleton */}
+      <View style={{ marginBottom: 24 }}>
+        <Skeleton width="55%" height={20} style={{ marginHorizontal: 20, marginBottom: 14 }} />
+        <View style={{ flexDirection: 'row', paddingHorizontal: 20, gap: 10 }}>
+          {[1, 2, 3].map((i) => (
+            <Skeleton key={i} width={130} height={130} borderRadius={10} />
+          ))}
+        </View>
+      </View>
+
+      {/* Songs section skeleton */}
+      <View style={{ marginBottom: 24 }}>
+        <Skeleton width="45%" height={20} style={{ marginHorizontal: 20, marginBottom: 14 }} />
+        {[1, 2, 3].map((i) => (
+          <Skeleton key={i} width="auto" height={82} borderRadius={10} style={{ marginHorizontal: 16, marginBottom: 8 }} />
+        ))}
+      </View>
+
+      {/* Genre strip skeleton */}
+      <Skeleton width="40%" height={20} style={{ marginHorizontal: 20, marginBottom: 14 }} />
+      <View style={{ flexDirection: 'row', paddingHorizontal: 20, gap: 8 }}>
+        {[80, 100, 70, 90].map((w, i) => (
+          <Skeleton key={i} width={w} height={40} borderRadius={22} />
+        ))}
+      </View>
+    </ScrollView>
+  );
+}
 
 export default function ExploreScreen() {
   const colors = useColors();
   const insets = useSafeAreaInsets();
+  const queryClient = useQueryClient();
   const [selectedEraId, setSelectedEraId] = useState<string | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
 
   const { data: eras = [], isLoading: erasLoading } = useEras();
   const { data: genres = [] } = useGenres();
@@ -65,6 +116,17 @@ export default function ExploreScreen() {
     [selectedEraId, eraSongs.length],
   );
 
+  const onRefresh = useCallback(async () => {
+    setRefreshing(true);
+    await Promise.all([
+      queryClient.invalidateQueries({ queryKey: ['eras'] }),
+      queryClient.invalidateQueries({ queryKey: ['genres'] }),
+      queryClient.invalidateQueries({ queryKey: ['drummers'] }),
+      queryClient.invalidateQueries({ queryKey: ['songs'] }),
+    ]);
+    setRefreshing(false);
+  }, [queryClient]);
+
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
 
   return (
@@ -98,7 +160,7 @@ export default function ExploreScreen() {
       </View>
 
       {erasLoading ? (
-        <ActivityIndicator style={styles.loader} color={colors.primary} />
+        <HomeSkeleton colors={colors} insets={insets} />
       ) : (
         <ScrollView
           showsVerticalScrollIndicator={false}
@@ -106,6 +168,14 @@ export default function ExploreScreen() {
             styles.content,
             { paddingBottom: insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 100 },
           ]}
+          refreshControl={
+            <RefreshControl
+              refreshing={refreshing}
+              onRefresh={onRefresh}
+              tintColor={colors.primary}
+              colors={[colors.primary]}
+            />
+          }
         >
           <View style={styles.carouselSection}>
             <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
@@ -236,7 +306,6 @@ const styles = StyleSheet.create({
     marginBottom: 2,
   },
   content: { paddingTop: 12 },
-  loader: { marginTop: 100 },
   carouselSection: { marginBottom: 20 },
   sectionLabel: {
     fontSize: 10,

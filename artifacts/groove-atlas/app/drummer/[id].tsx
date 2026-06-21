@@ -1,9 +1,9 @@
 import { Feather } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React from 'react';
 import {
-  ActivityIndicator,
   Image,
   Platform,
   ScrollView,
@@ -15,9 +15,12 @@ import {
 import { useDrummer, useDrummerVibe } from '@/hooks/useGql';
 import SongCard from '@/components/SongCard';
 import SongstatsCard from '@/components/SongstatsCard';
+import { Skeleton } from '@/components/Skeleton';
 import { Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 import type { DrummerVibe } from '@/lib/queries';
+
+const HERO_HEIGHT = 260;
 
 const MOOD_COLORS: Record<string, string> = {
   aggressive: '#DC2626', energetic: '#EA580C', happy: '#D97706',
@@ -185,6 +188,23 @@ function BpmSparkline({ bpmMin, bpmMax, primaryColor, trackColor, mutedColor }: 
   );
 }
 
+function DrummerDetailSkeleton({ colors }: { colors: ReturnType<typeof useColors> }) {
+  const insets = useSafeAreaInsets();
+  const webTopPad = Platform.OS === 'web' ? 67 : 0;
+  return (
+    <View style={[styles.root, { backgroundColor: colors.background }]}>
+      <Skeleton width="100%" height={HERO_HEIGHT + insets.top + webTopPad} borderRadius={0} />
+      <View style={{ padding: 20, gap: 12, marginTop: 16 }}>
+        <Skeleton width="60%" height={22} />
+        <Skeleton width="40%" height={14} />
+        <Skeleton width="100%" height={80} style={{ marginTop: 8 }} />
+        <Skeleton width="100%" height={80} />
+        <Skeleton width="100%" height={60} />
+      </View>
+    </View>
+  );
+}
+
 export default function DrummerDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const colors = useColors();
@@ -194,21 +214,19 @@ export default function DrummerDetailScreen() {
   const { data: drummer, isLoading } = useDrummer(id ?? '');
   const { data: vibe } = useDrummerVibe(id ?? '');
 
-  if (isLoading) {
-    return (
-      <View style={[styles.root, { backgroundColor: colors.background }]}>
-        <ActivityIndicator style={styles.loader} color={colors.primary} />
-      </View>
-    );
-  }
-
   const goBack = () => router.canGoBack() ? router.back() : router.replace('/(tabs)' as never);
+
+  if (isLoading && !drummer) {
+    return <DrummerDetailSkeleton colors={colors} />;
+  }
 
   if (!drummer) {
     return (
       <View style={[styles.root, { backgroundColor: colors.background }]}>
-        <TouchableOpacity onPress={goBack} style={styles.backBtnAlone}>
-          <Feather name="arrow-left" size={20} color={colors.foreground} />
+        <TouchableOpacity onPress={goBack} style={[styles.heroBackBtn, { top: insets.top + webTopPad + 12 }]}>
+          <View style={styles.heroBackBtnInner}>
+            <Feather name="arrow-left" size={20} color={colors.foreground} />
+          </View>
         </TouchableOpacity>
         <Text style={{ color: colors.foreground, padding: 20 }}>Drummer not found</Text>
       </View>
@@ -218,6 +236,7 @@ export default function DrummerDetailScreen() {
   const songs = (drummer.iconicSongs ?? []) as Song[];
   const yearsActive = drummer.died ? `${drummer.born}–${drummer.died}` : `${drummer.born}–present`;
   const genreLabels = drummer.genres.join(', ');
+  const initials = drummer.name.split(' ').map((n) => n[0]).join('').slice(0, 2);
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
@@ -228,49 +247,77 @@ export default function DrummerDetailScreen() {
           { paddingBottom: insets.bottom + (Platform.OS === 'web' ? 34 : 0) + 40 },
         ]}
       >
-        <View
-          style={[
-            styles.hero,
-            { paddingTop: insets.top + webTopPad + 16, borderBottomColor: colors.border, backgroundColor: colors.card },
-          ]}
-        >
-          <TouchableOpacity onPress={goBack} style={styles.backBtn} testID="back-button">
-            <Feather name="arrow-left" size={20} color={colors.foreground} />
-          </TouchableOpacity>
-          <View style={styles.heroRow}>
-            {drummer.photoUrl ? (
-              <Image
-                source={{ uri: drummer.photoUrl }}
-                style={[styles.avatar, styles.avatarImg]}
-                resizeMode="cover"
+        {/* ── Cinematic hero ── */}
+        <View style={{ height: HERO_HEIGHT }}>
+          {drummer.photoUrl ? (
+            <Image
+              source={{ uri: drummer.photoUrl }}
+              style={StyleSheet.absoluteFillObject}
+              resizeMode="cover"
+            />
+          ) : (
+            <>
+              <LinearGradient
+                colors={[colors.primary + '80', colors.background] as const}
+                style={StyleSheet.absoluteFillObject}
               />
-            ) : (
-              <View style={[styles.avatar, { backgroundColor: colors.primary }]}>
-                <Text style={styles.avatarText}>
-                  {drummer.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
-                </Text>
+              <View style={[StyleSheet.absoluteFillObject, { alignItems: 'center', justifyContent: 'center' }]}>
+                <Text style={[styles.heroInitials, { color: colors.primary }]}>{initials}</Text>
               </View>
-            )}
-            <View style={styles.heroInfo}>
-              <Text style={[styles.name, { color: colors.foreground, fontFamily: 'serif' }]} numberOfLines={2}>
-                {drummer.name}
-              </Text>
-              <Text style={[styles.years, { color: colors.mutedForeground }]}>{yearsActive}</Text>
-              <TouchableOpacity onPress={() => router.push(`/era/${drummer.primaryEra}`)}>
-                <View style={[styles.eraTag, { backgroundColor: colors.primary + '20', borderColor: colors.primary }]}>
-                  <Text style={[styles.eraTagText, { color: colors.primary }]}>{drummer.primaryEra}</Text>
-                </View>
-              </TouchableOpacity>
-            </View>
-          </View>
-          <Text style={[styles.bands, { color: colors.mutedForeground }]}>
-            <Text style={{ fontWeight: '600' }}>with </Text>{drummer.bands.join(' · ')}
-          </Text>
-          {genreLabels.length > 0 && (
-            <Text style={[styles.genres, { color: colors.primary }]}>{genreLabels}</Text>
+            </>
           )}
+
+          {/* Darken the photo slightly for text legibility */}
+          {drummer.photoUrl && (
+            <View style={[StyleSheet.absoluteFillObject, { backgroundColor: 'rgba(0,0,0,0.28)' }]} />
+          )}
+
+          {/* Gradient fade from image into page background */}
+          <LinearGradient
+            colors={['transparent', colors.background] as const}
+            style={styles.heroGradient}
+          />
+
+          {/* Floating back button */}
+          <TouchableOpacity
+            onPress={goBack}
+            testID="back-button"
+            style={[styles.heroBackBtn, { top: insets.top + webTopPad + 12 }]}
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          >
+            <View style={styles.heroBackBtnInner}>
+              <Feather name="arrow-left" size={20} color="#fff" />
+            </View>
+          </TouchableOpacity>
+
+          {/* Name + years at bottom of hero */}
+          <View style={styles.heroNameArea}>
+            <Text style={[styles.name, { fontFamily: 'serif' }]} numberOfLines={2}>
+              {drummer.name}
+            </Text>
+            <Text style={styles.heroYears}>{yearsActive}</Text>
+          </View>
         </View>
 
+        {/* ── Meta strip below hero ── */}
+        <View style={[styles.heroMeta, { backgroundColor: colors.card, borderBottomColor: colors.border }]}>
+          <View style={styles.heroMetaRow}>
+            <TouchableOpacity onPress={() => router.push(`/era/${drummer.primaryEra}`)}>
+              <View style={[styles.eraTag, { backgroundColor: colors.primary + '20', borderColor: colors.primary }]}>
+                <Text style={[styles.eraTagText, { color: colors.primary }]}>{drummer.primaryEra}</Text>
+              </View>
+            </TouchableOpacity>
+            {genreLabels.length > 0 && (
+              <Text style={[styles.genres, { color: colors.mutedForeground }]}>{genreLabels}</Text>
+            )}
+          </View>
+          <Text style={[styles.bands, { color: colors.mutedForeground }]}>
+            <Text style={{ fontWeight: '700', color: colors.foreground }}>with </Text>
+            {drummer.bands.join(' · ')}
+          </Text>
+        </View>
+
+        {/* ── Content sections ── */}
         <View style={styles.section}>
           <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Biography</Text>
           <Text style={[styles.bio, { color: colors.foreground }]}>{drummer.bio}</Text>
@@ -362,21 +409,26 @@ const spark = StyleSheet.create({
 const styles = StyleSheet.create({
   root: { flex: 1 },
   content: {},
-  loader: { marginTop: 100 },
-  backBtnAlone: { margin: 20, width: 36, height: 36, alignItems: 'center', justifyContent: 'center' },
-  hero: { paddingHorizontal: 20, paddingBottom: 20, borderBottomWidth: StyleSheet.hairlineWidth, gap: 6 },
-  backBtn: { marginBottom: 12, width: 36, height: 36, alignItems: 'center', justifyContent: 'center' },
-  heroRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 14 },
-  avatar: { width: 64, height: 64, borderRadius: 32, alignItems: 'center', justifyContent: 'center', flexShrink: 0 },
-  avatarImg: { overflow: 'hidden' },
-  avatarText: { color: '#fff', fontSize: 22, fontWeight: '700' },
-  heroInfo: { flex: 1, gap: 4 },
-  name: { fontSize: 28, fontWeight: '700', lineHeight: 32 },
-  years: { fontSize: 13 },
-  eraTag: { alignSelf: 'flex-start', paddingHorizontal: 8, paddingVertical: 3, borderRadius: 4, borderWidth: 1, marginTop: 2 },
+  heroGradient: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 110 },
+  heroBackBtn: { position: 'absolute', left: 16 },
+  heroBackBtnInner: {
+    width: 36, height: 36, borderRadius: 18,
+    backgroundColor: 'rgba(0,0,0,0.42)',
+    alignItems: 'center', justifyContent: 'center',
+  },
+  heroInitials: { fontSize: 80, fontWeight: '800', opacity: 0.25, fontFamily: 'serif' },
+  heroNameArea: { position: 'absolute', bottom: 14, left: 20, right: 20 },
+  name: { fontSize: 32, fontWeight: '800', lineHeight: 36, color: '#fff' },
+  heroYears: { fontSize: 13, color: 'rgba(255,255,255,0.80)', marginTop: 2 },
+  heroMeta: {
+    paddingHorizontal: 20, paddingVertical: 14,
+    borderBottomWidth: StyleSheet.hairlineWidth, gap: 6,
+  },
+  heroMetaRow: { flexDirection: 'row', alignItems: 'center', gap: 10, flexWrap: 'wrap' },
+  eraTag: { alignSelf: 'flex-start', paddingHorizontal: 8, paddingVertical: 4, borderRadius: 4, borderWidth: 1 },
   eraTagText: { fontSize: 11, fontWeight: '700' },
-  bands: { fontSize: 13, marginTop: 4 },
-  genres: { fontSize: 12, fontWeight: '600' },
+  genres: { fontSize: 12, fontWeight: '500' },
+  bands: { fontSize: 13 },
   section: { paddingHorizontal: 20, paddingTop: 24 },
   sectionTitle: { fontSize: 20, fontWeight: '700', marginBottom: 12 },
   bio: { fontSize: 15, lineHeight: 23 },
