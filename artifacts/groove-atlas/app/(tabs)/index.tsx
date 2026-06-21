@@ -1,7 +1,7 @@
 import { Feather } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   ActivityIndicator,
   Platform,
@@ -41,6 +41,27 @@ export default function ExploreScreen() {
   );
   const { data: eraSongs = [] } = useSongs(
     selectedEraId ? { eraId: selectedEraId } : undefined,
+  );
+
+  function shuffle<T>(arr: T[]): T[] {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j]!, a[i]!];
+    }
+    return a;
+  }
+
+  const displayDrummers = useMemo(
+    () => shuffle(eraDrummers as Drummer[]).slice(0, 8),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [selectedEraId, eraDrummers.length],
+  );
+
+  const displaySongs = useMemo(
+    () => shuffle(eraSongs as Song[]).slice(0, 5),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [selectedEraId, eraSongs.length],
   );
 
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
@@ -98,7 +119,7 @@ export default function ExploreScreen() {
             )}
           </View>
 
-          {eraDrummers.length > 0 && (
+          {displayDrummers.length > 0 && (
             <View style={styles.section}>
               <View style={styles.sectionHeader}>
                 <Text
@@ -115,7 +136,7 @@ export default function ExploreScreen() {
                 showsHorizontalScrollIndicator={false}
                 contentContainerStyle={styles.horizontal}
               >
-                {(eraDrummers as Drummer[]).slice(0, 10).map((drummer: Drummer) => (
+                {displayDrummers.map((drummer: Drummer) => (
                   <DrummerCard
                     key={drummer.id}
                     drummer={drummer}
@@ -126,15 +147,17 @@ export default function ExploreScreen() {
             </View>
           )}
 
-          {eraSongs.length > 0 && (
+          {displaySongs.length > 0 && (
             <View style={styles.section}>
-              <Text
-                style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}
-              >
-                Iconic Recordings
-              </Text>
+              <View style={styles.sectionHeader}>
+                <Text
+                  style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}
+                >
+                  Iconic Recordings
+                </Text>
+              </View>
               <View style={styles.songList}>
-                {(eraSongs as Song[]).slice(0, 5).map((song: Song) => (
+                {displaySongs.map((song: Song) => (
                   <SongCard
                     key={song.id}
                     song={song}

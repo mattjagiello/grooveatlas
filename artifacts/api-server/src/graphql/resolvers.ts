@@ -188,7 +188,7 @@ export const resolvers = {
       { eraId, genreId }: { eraId?: string; genreId?: string },
     ) => {
       return drummers.filter((d) => {
-        if (eraId && !d.eras.includes(eraId)) return false;
+        if (eraId && d.primaryEra !== eraId) return false;
         if (genreId && !d.genres.includes(genreId)) return false;
         return true;
       });
