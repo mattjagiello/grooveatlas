@@ -31,7 +31,7 @@ export default function GenreCard({ genre, onPress }: GenreCardProps) {
         <Text style={[styles.origin, { color: colors.mutedForeground }]} numberOfLines={1}>
           {genre.origin}
         </Text>
-        <Text style={[styles.era, { color: genre.color }]}>{genre.era}</Text>
+        <Text style={[styles.era, { color: colors.mutedForeground }]}>{genre.era}</Text>
         <Text style={[styles.drummers, { color: colors.mutedForeground }]}>
           {genre.keyDrummerIds.length} drummers
         </Text>

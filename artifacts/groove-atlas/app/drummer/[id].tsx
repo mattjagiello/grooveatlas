@@ -220,11 +220,11 @@ export default function DrummerDetailScreen() {
               <Text style={[page.eraChipText, { color: colors.primary, fontFamily: Fonts.label }]}>{drummer.primaryEra}</Text>
             </View>
           </TouchableOpacity>
-          {drummer.genres.map((g, i) => (
+          {drummer.genres.map((g) => (
             <TouchableOpacity key={g} onPress={() => router.push(`/genre/${g}`)}>
-              <Text style={[page.genreLink, { color: colors.mutedForeground }]}>
-                {g}{i < drummer.genres.length - 1 ? ' ·' : ''}
-              </Text>
+              <View style={[page.genreChip, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+                <Text style={[page.genreChipText, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>{g}</Text>
+              </View>
             </TouchableOpacity>
           ))}
         </View>
@@ -462,7 +462,8 @@ const page = StyleSheet.create({
     paddingHorizontal: 8, paddingVertical: 3, borderRadius: 4, borderWidth: 1,
   },
   eraChipText: { fontSize: 11 },
-  genreLink: { fontSize: 12, textDecorationLine: 'underline', textDecorationStyle: 'dotted' },
+  genreChip: { paddingHorizontal: 9, paddingVertical: 3, borderRadius: 12, borderWidth: 1 },
+  genreChipText: { fontSize: 12 },
 
   bandsRow: {
     flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start',

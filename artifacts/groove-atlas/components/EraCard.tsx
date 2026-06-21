@@ -43,8 +43,8 @@ export default function EraCard({ era, onPress }: EraCardProps) {
             </View>
           ))}
         </View>
-        <Text style={[styles.drummers, { color: colors.primary, fontFamily: Fonts.labelRegular }]}>
-          {era.keyDrummerIds.length} key drummers · {era.iconicSongIds.length} iconic songs
+        <Text style={[styles.drummers, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
+          {era.keyDrummerIds.length} drummers · {era.iconicSongIds.length} songs
         </Text>
       </View>
     </TouchableOpacity>

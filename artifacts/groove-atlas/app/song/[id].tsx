@@ -54,7 +54,6 @@ function TrackMetaCard({ meta, songTitle, colors }: { meta: TrackMeta; songTitle
       <View style={styles.metaHeader}>
         <Feather name="disc" size={14} color={colors.primary} />
         <Text style={[styles.metaTitle, { color: colors.primary }]}>Track Info</Text>
-        <Text style={[styles.metaSource, { color: colors.mutedForeground }]}>via Musicmatch</Text>
       </View>
 
       {namesDiffer ? (
@@ -87,9 +86,9 @@ function TrackMetaCard({ meta, songTitle, colors }: { meta: TrackMeta; songTitle
         )}
         {meta.trackRating > 0 && (
           <View style={styles.metaStat}>
-            <Feather name="bar-chart-2" size={12} color={colors.mutedForeground} />
+            <Feather name="star" size={12} color={colors.mutedForeground} />
             <Text style={[styles.metaStatValue, { color: colors.foreground }]}>
-              {meta.trackRating}
+              {meta.trackRating}<Text style={{ fontSize: 10, color: colors.mutedForeground }}>/100</Text>
             </Text>
             <Text style={[styles.metaStatLabel, { color: colors.mutedForeground }]}>Rating</Text>
           </View>
@@ -652,7 +651,6 @@ export default function SongDetailScreen() {
           <View style={[styles.statDivider, { backgroundColor: colors.border }]} />
           <View style={[styles.stat, { flex: 2 }]}>
             <Text style={[styles.feelText, { color: colors.foreground }]} numberOfLines={2}>{song.feel}</Text>
-            <Text style={[styles.statLabel, { color: colors.mutedForeground }]}>Feel</Text>
           </View>
         </View>
 
