@@ -342,10 +342,6 @@ function DrumStudySection({
   );
 }
 
-const ENERGY_LEVELS: Record<string, number> = {
-  low: 0.25, medium: 0.6, high: 0.9,
-};
-
 type VibeState =
   | { phase: 'loading' }
   | { phase: 'ready'; analysis: CyaniteAnalysis }
@@ -682,7 +678,6 @@ const styles = StyleSheet.create({
   drummerBand: { fontSize: 12 },
   section: { paddingHorizontal: 20, paddingTop: 24 },
   sectionTitle: { fontSize: 22, marginBottom: 10 },
-  whyDivider: { height: StyleSheet.hairlineWidth, marginHorizontal: 20, marginTop: 8 },
   body: { fontSize: 15, lineHeight: 23 },
   metaCard: { marginHorizontal: 20, marginTop: 20, padding: 16, borderRadius: 10, borderWidth: 1, gap: 12 },
   metaHeader: { flexDirection: 'row', alignItems: 'center', gap: 6 },
@@ -724,9 +719,6 @@ const styles = StyleSheet.create({
   studyAttr: { fontSize: 10, textAlign: 'center', paddingBottom: 12, letterSpacing: 0.3 },
   vibeResult: { paddingHorizontal: 16, paddingBottom: 12, gap: 12 },
   vibeCaption: { fontSize: 13, fontStyle: 'italic', lineHeight: 20, borderLeftWidth: 3, paddingLeft: 10 },
-  vibeRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
-  moodChip: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 16, borderWidth: 1 },
-  moodChipText: { fontSize: 12, fontWeight: '600' },
   vibeGrid: { borderRadius: 8, borderWidth: 1, overflow: 'hidden', gap: 2 },
   vibeGridLabels: { flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 6, paddingVertical: 3 },
   vibeGridLabel: { fontSize: 9, fontWeight: '700', letterSpacing: 1 },
@@ -734,16 +726,9 @@ const styles = StyleSheet.create({
   vibeGridHLine: { top: '50%', height: StyleSheet.hairlineWidth, borderTopWidth: StyleSheet.hairlineWidth },
   vibeGridVLine: { left: '50%', width: StyleSheet.hairlineWidth, borderLeftWidth: StyleSheet.hairlineWidth },
   vibeGridDot: { position: 'absolute', width: 12, height: 12, borderRadius: 6, marginLeft: -6, marginTop: -6 },
-  vibeStatRow: { flexDirection: 'row', gap: 16, alignItems: 'flex-end' },
   vibeStat: { flex: 1, gap: 4 },
   vibeStatLabel: { fontSize: 9, fontWeight: '700', letterSpacing: 1 },
-  vibeStatVal: { fontSize: 11, fontWeight: '600' },
   vibeBpmVal: { fontSize: 28, fontWeight: '700', lineHeight: 32 },
-  vibeBarTrack: { height: 6, borderRadius: 3, overflow: 'hidden' },
-  vibeBarFill: { height: 6, borderRadius: 3 },
-  vibeTag: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 20, borderWidth: 1 },
-  vibeTagText: { fontSize: 11, fontWeight: '600' },
-  vibeFreeGenre: { fontSize: 11, fontStyle: 'italic', marginTop: 2, marginBottom: 4 },
   similarCard: { flexDirection: 'row', alignItems: 'center', padding: 12, borderRadius: 10, borderWidth: 1, marginBottom: 8, gap: 10 },
   similarInfo: { flex: 1, gap: 3 },
   similarTitle: { fontSize: 14, fontWeight: '600' },
@@ -751,9 +736,6 @@ const styles = StyleSheet.create({
   similarTags: { flexDirection: 'row', flexWrap: 'wrap', gap: 4, marginTop: 4 },
   similarTag: { paddingHorizontal: 8, paddingVertical: 2, borderRadius: 12, borderWidth: 1 },
   similarTagText: { fontSize: 10, fontWeight: '600' },
-  studyBox: { marginHorizontal: 20, marginTop: 20, padding: 16, borderRadius: 10, borderWidth: 1, gap: 10 },
-  studyHeader: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  studyTitle: { fontSize: 14, fontWeight: '700' },
   tabsBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, marginHorizontal: 20, marginTop: 16, paddingVertical: 13, borderRadius: 10, borderWidth: 1 },
   tabsBtnText: { fontSize: 15, fontWeight: '700' },
   vibeHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 16, paddingTop: 16, paddingBottom: 4 },

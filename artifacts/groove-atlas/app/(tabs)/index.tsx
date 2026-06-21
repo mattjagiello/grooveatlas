@@ -305,13 +305,6 @@ const styles = StyleSheet.create({
   },
   content: { paddingTop: 12 },
   carouselSection: { marginBottom: 20 },
-  sectionLabel: {
-    fontSize: 10,
-    fontWeight: '700',
-    letterSpacing: 2,
-    marginHorizontal: 20,
-    marginBottom: 10,
-  },
   section: { marginBottom: 24 },
   sectionHeader: {
     flexDirection: 'row',
