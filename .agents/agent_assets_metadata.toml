@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "lpqprtO3J4-IVepnGvncS"
@@ -12,3 +11,15 @@ id = "YzMmnRvG7XA6zk0Efwx48"
 uri = "file://artifacts/groove-atlas/assets/images/splash.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "KSKnD96VfHOyHHOHiRZOB"
+uri = "file://attached_assets/generated_images/groove-atlas-cover.png"
+type = "image"
+title = "groove atlas cover 16x9"
+
+[[outputs]]
+id = "2XnYichnU5rMEiesOwsBi"
+uri = "file://attached_assets/generated_images/groove-atlas-cover.png"
+type = "image"
+title = "Groove Atlas — Cover Image (16:9)"
