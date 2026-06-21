@@ -179,9 +179,6 @@ export default function ExploreScreen() {
           }
         >
           <View style={styles.carouselSection}>
-            <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
-              BROWSE BY ERA
-            </Text>
             {reversedEras.length > 0 && selectedEraId && (
               <EraHeroCarousel
                 eras={reversedEras}

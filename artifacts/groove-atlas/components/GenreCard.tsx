@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Genre } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
+import { Fonts } from '@/constants/typography';
 
 type GenreCardProps = {
   genre: Genre;
@@ -25,14 +26,13 @@ export default function GenreCard({ genre, onPress }: GenreCardProps) {
     >
       <View style={[styles.colorBar, { backgroundColor: genre.color }]} />
       <View style={styles.content}>
-        <Text style={[styles.name, { color: colors.foreground, fontFamily: 'serif' }]}>
+        <Text style={[styles.name, { color: colors.foreground, fontFamily: Fonts.display }]}>
           {genre.name}
         </Text>
-        <Text style={[styles.origin, { color: colors.mutedForeground }]} numberOfLines={1}>
+        <Text style={[styles.origin, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]} numberOfLines={1}>
           {genre.origin}
         </Text>
-        <Text style={[styles.era, { color: colors.mutedForeground }]}>{genre.era}</Text>
-        <Text style={[styles.drummers, { color: colors.mutedForeground }]}>
+        <Text style={[styles.drummers, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
           {genre.keyDrummerIds.length} drummers
         </Text>
       </View>
@@ -46,30 +46,25 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     overflow: 'hidden',
-    minHeight: 100,
+    minHeight: 95,
   },
   colorBar: {
-    height: 4,
+    height: 6,
   },
   content: {
     padding: 12,
-    gap: 2,
+    gap: 3,
   },
   name: {
-    fontSize: 16,
-    fontWeight: '700',
+    fontSize: 22,
+    lineHeight: 22,
   },
   origin: {
     fontSize: 11,
     marginTop: 2,
   },
-  era: {
-    fontSize: 10,
-    fontWeight: '600',
-    marginTop: 4,
-  },
   drummers: {
     fontSize: 10,
-    marginTop: 2,
+    marginTop: 1,
   },
 });

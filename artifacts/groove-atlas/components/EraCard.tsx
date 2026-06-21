@@ -27,22 +27,14 @@ export default function EraCard({ era, onPress }: EraCardProps) {
       <View style={[styles.accent, { backgroundColor: era.color }]} />
       <View style={styles.content}>
         <View style={styles.header}>
-          <Text style={[styles.name, { color: colors.foreground, fontFamily: Fonts.serif }]}>
+          <Text style={[styles.name, { color: colors.foreground, fontFamily: Fonts.display }]}>
             {era.name}
           </Text>
           <Text style={[styles.years, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>{era.years}</Text>
         </View>
-        <Text style={[styles.subtitle, { color: era.color, fontFamily: Fonts.label }]}>{era.subtitle}</Text>
-        <Text style={[styles.description, { color: colors.mutedForeground }]} numberOfLines={2}>
-          {era.description}
+        <Text style={[styles.subtitle, { color: era.color, fontFamily: Fonts.labelRegular }]} numberOfLines={1}>
+          {era.subtitle}
         </Text>
-        <View style={styles.characteristics}>
-          {era.characteristics.slice(0, 2).map((c, i) => (
-            <View key={i} style={[styles.chip, { backgroundColor: colors.muted }]}>
-              <Text style={[styles.chipText, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>{c}</Text>
-            </View>
-          ))}
-        </View>
         <Text style={[styles.drummers, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
           {era.keyDrummerIds.length} drummers · {era.iconicSongIds.length} songs
         </Text>
@@ -61,13 +53,14 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   accent: {
-    width: 4,
+    width: 5,
     flexShrink: 0,
   },
   content: {
     flex: 1,
-    padding: 14,
-    gap: 4,
+    paddingVertical: 12,
+    paddingHorizontal: 14,
+    gap: 3,
   },
   header: {
     flexDirection: 'row',
@@ -75,36 +68,17 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
   },
   name: {
-    fontSize: 22,
+    fontSize: 34,
+    lineHeight: 34,
   },
   years: {
     fontSize: 12,
   },
   subtitle: {
     fontSize: 12,
-    letterSpacing: 0.5,
-  },
-  description: {
-    fontSize: 13,
-    lineHeight: 18,
-    marginTop: 2,
-  },
-  characteristics: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 6,
-    marginTop: 4,
-  },
-  chip: {
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 4,
-  },
-  chipText: {
-    fontSize: 10,
   },
   drummers: {
-    fontSize: 12,
-    marginTop: 4,
+    fontSize: 11,
+    marginTop: 2,
   },
 });

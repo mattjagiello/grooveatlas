@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { Era } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
+import { Fonts } from '@/constants/typography';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
@@ -69,89 +70,53 @@ export default function EraHeroCarousel({ eras, selectedEraId, onSelectEra, onEx
           offset: SCREEN_WIDTH * index,
           index,
         })}
-        renderItem={({ item: era }) => {
-          const isSelected = era.id === selectedEraId;
-          return (
-            <View style={[styles.page, { width: SCREEN_WIDTH }]}>
-              <View
-                style={[
-                  styles.card,
-                  {
-                    backgroundColor: colors.card,
-                    borderColor: colors.border,
-                    borderLeftColor: era.color,
-                    shadowColor: era.color,
-                  },
-                ]}
-              >
-                <View style={[styles.colorBar, { backgroundColor: era.color }]} />
-                <View style={styles.cardBody}>
-                  <View style={styles.topRow}>
-                    <View style={styles.titleBlock}>
-                      <Text
-                        style={[
-                          styles.eraName,
-                          { color: era.color, fontFamily: 'serif' },
-                        ]}
-                      >
-                        {era.name}
-                      </Text>
-                      <Text style={[styles.years, { color: colors.mutedForeground }]}>
-                        {era.years}
-                      </Text>
-                    </View>
-                    <View
-                      style={[
-                        styles.subtitleBadge,
-                        { backgroundColor: era.color + '18', borderColor: era.color + '40' },
-                      ]}
-                    >
-                      <Text style={[styles.subtitleText, { color: era.color }]}>
-                        {era.subtitle}
-                      </Text>
-                    </View>
-                  </View>
-
-                  <Text
-                    style={[styles.description, { color: colors.mutedForeground }]}
-                    numberOfLines={3}
-                  >
-                    {era.description}
-                  </Text>
-
-                  <View style={styles.chips}>
-                    {era.characteristics.slice(0, 3).map((c, i) => (
-                      <View key={i} style={[styles.chip, { backgroundColor: colors.muted }]}>
-                        <Text style={[styles.chipText, { color: colors.mutedForeground }]}>
-                          {c}
-                        </Text>
-                      </View>
-                    ))}
-                  </View>
-
-                  <View style={styles.footer}>
-                    <Text style={[styles.stats, { color: colors.mutedForeground }]}>
-                      {era.keyDrummerIds.length} drummers · {era.iconicSongIds.length} recordings
+        renderItem={({ item: era }) => (
+          <View style={[styles.page, { width: SCREEN_WIDTH }]}>
+            <TouchableOpacity
+              activeOpacity={0.85}
+              onPress={() => {
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                onExploreEra(era);
+              }}
+              style={[
+                styles.card,
+                {
+                  backgroundColor: colors.card,
+                  borderColor: colors.border,
+                  shadowColor: era.color,
+                },
+              ]}
+            >
+              <View style={[styles.colorBar, { backgroundColor: era.color }]} />
+              <View style={styles.cardBody}>
+                <View style={styles.topRow}>
+                  <View style={styles.titleBlock}>
+                    <Text style={[styles.eraName, { color: era.color, fontFamily: Fonts.display }]}>
+                      {era.name}
                     </Text>
-                    <TouchableOpacity
-                      onPress={() => {
-                        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                        onExploreEra(era);
-                      }}
-                      style={[styles.exploreBtn, { borderColor: era.color }]}
-                      hitSlop={{ top: 10, bottom: 10, left: 8, right: 8 }}
-                    >
-                      <Text style={[styles.exploreBtnText, { color: era.color }]}>
-                        Explore
+                    <Text style={[styles.subtitle, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
+                      {era.subtitle}
+                    </Text>
+                  </View>
+                  <View style={styles.metaRight}>
+                    <Text style={[styles.years, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
+                      {era.years}
+                    </Text>
+                    <Text style={[styles.stats, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
+                      {era.keyDrummerIds.length} drummers
+                    </Text>
+                    <View style={[styles.exploreBtn, { borderColor: era.color }]}>
+                      <Text style={[styles.exploreBtnText, { color: era.color, fontFamily: Fonts.label }]}>
+                        EXPLORE
                       </Text>
-                      <Feather name="arrow-right" size={12} color={era.color} />
-                    </TouchableOpacity>
+                      <Feather name="arrow-right" size={11} color={era.color} />
+                    </View>
                   </View>
                 </View>
               </View>
-            </View>
-          );
-        }}
+            </TouchableOpacity>
+          </View>
+        )}
       />
 
       <View style={styles.dots}>
@@ -202,77 +167,47 @@ const styles = StyleSheet.create({
   cardBody: {
     flex: 1,
     padding: 16,
-    gap: 10,
   },
   topRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    gap: 8,
+    alignItems: 'flex-end',
+    gap: 12,
   },
   titleBlock: {
     flex: 1,
   },
+  metaRight: {
+    alignItems: 'flex-end',
+    gap: 6,
+    paddingBottom: 2,
+  },
   eraName: {
-    fontSize: 42,
-    fontWeight: '800',
-    lineHeight: 44,
+    fontSize: 52,
+    lineHeight: 50,
+  },
+  subtitle: {
+    fontSize: 12,
+    marginTop: 4,
   },
   years: {
     fontSize: 12,
-    marginTop: 2,
-  },
-  subtitleBadge: {
-    borderRadius: 8,
-    borderWidth: 1,
-    paddingHorizontal: 8,
-    paddingVertical: 5,
-    maxWidth: 130,
-    alignSelf: 'flex-start',
-  },
-  subtitleText: {
-    fontSize: 11,
-    fontWeight: '700',
-    textAlign: 'center',
-  },
-  description: {
-    fontSize: 13,
-    lineHeight: 19,
-  },
-  chips: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 6,
-  },
-  chip: {
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 4,
-  },
-  chipText: {
-    fontSize: 10,
-    fontWeight: '500',
-  },
-  footer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
   },
   stats: {
-    fontSize: 12,
+    fontSize: 11,
   },
   exploreBtn: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
     borderRadius: 20,
     borderWidth: 1,
+    marginTop: 2,
   },
   exploreBtnText: {
-    fontSize: 12,
-    fontWeight: '700',
+    fontSize: 10,
   },
   dots: {
     flexDirection: 'row',
