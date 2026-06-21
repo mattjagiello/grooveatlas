@@ -23,7 +23,7 @@ export async function uploadAudio(
       "X-License-Key": apiKey(),
       "Content-Disposition": `attachment; filename=${filename}`,
     },
-    body: audioBuffer,
+    body: audioBuffer as unknown as BodyInit,
   });
 
   const data = (await res.json()) as { id?: string; detail?: string };

@@ -25,7 +25,7 @@ export async function uploadToS3(audioBuffer: Buffer, uploadUrl: string): Promis
   const res = await fetch(uploadUrl, {
     method: "PUT",
     headers: { "Content-Type": "audio/mpeg" },
-    body: audioBuffer,
+    body: audioBuffer as unknown as BodyInit,
   });
   if (!res.ok) throw new Error(`S3 upload failed: ${res.status}`);
 }

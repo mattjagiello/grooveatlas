@@ -33,6 +33,16 @@ function jsonError(res: ServerResponse, code: string, error: string) {
   return json(res, { ok: false, code, error });
 }
 
+// GET /cyanite/peek?songId=xxx — instant cache check, no analysis triggered
+export function handleCyanitePeek(req: IncomingMessage, res: ServerResponse) {
+  if (req.method !== "GET") return jsonError(res, "ERROR", "Method not allowed");
+  const url = new URL(req.url ?? "/", `http://${req.headers.host}`);
+  const songId = url.searchParams.get("songId");
+  if (!songId) return jsonError(res, "ERROR", "songId required");
+  const cached = getCached(songId);
+  return json(res, { ok: true, cached: !!cached, analysis: cached ?? null });
+}
+
 // POST /cyanite/start
 export async function handleCyaniteStart(req: IncomingMessage, res: ServerResponse) {
   if (req.method !== "POST") return jsonError(res, "ERROR", "Method not allowed");

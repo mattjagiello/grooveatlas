@@ -92,6 +92,25 @@ export const typeDefs = /* GraphQL */ `
     eras: [Era!]!
   }
 
+  type DrummerVibe {
+    drummerId: ID!
+    songCount: Int!
+    analysedCount: Int!
+    avgBpm: Int
+    dominantEnergy: String
+    topMoods: [String!]!
+    topGenres: [String!]!
+    topCharacter: [String!]!
+    freeGenreText: String
+    transformerCaptions: [String!]!
+  }
+
+  type SimilarSong {
+    song: Song!
+    score: Int!
+    sharedTags: [String!]!
+  }
+
   type Query {
     eras: [Era!]!
     era(id: ID!): Era
@@ -102,5 +121,7 @@ export const typeDefs = /* GraphQL */ `
     songs(eraId: String, genreId: String, drummerId: String): [Song!]!
     song(id: ID!): Song
     search(q: String!): SearchResults!
+    drummerVibe(id: ID!): DrummerVibe
+    similarSongs(id: ID!, limit: Int): [SimilarSong!]!
   }
 `;

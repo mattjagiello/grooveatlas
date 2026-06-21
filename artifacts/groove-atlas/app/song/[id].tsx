@@ -2,7 +2,7 @@ import { Feather } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   ActivityIndicator,
   Platform,
@@ -13,7 +13,8 @@ import {
   View,
 } from 'react-native';
 import { useAudioPlayer } from 'expo-audio';
-import { useSong } from '@/hooks/useGql';
+import { useSong, useSimilarSongs } from '@/hooks/useGql';
+import type { SimilarSong } from '@/lib/queries';
 import { useColors } from '@/hooks/useColors';
 import type { TrackMeta } from '@/lib/queries';
 import {
@@ -25,6 +26,7 @@ import {
 import {
   startCyaniteAnalysis,
   checkCyaniteStatus,
+  peekCyaniteCache,
   isCyaniteError,
   type CyaniteAnalysis,
 } from '@/lib/cyanite-client';
@@ -347,8 +349,60 @@ type VibeState =
   | { phase: 'ready'; analysis: CyaniteAnalysis; previewTitle: string }
   | { phase: 'error'; message: string };
 
+function SimilarSongsSection({
+  songId,
+  colors,
+}: {
+  songId: string;
+  colors: ReturnType<typeof useColors>;
+}) {
+  const { data: similar } = useSimilarSongs(songId, 4);
+  if (!similar || similar.length === 0) return null;
+  return (
+    <View style={styles.section}>
+      <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
+        Sounds Like
+      </Text>
+      {similar.map(({ song, sharedTags }: SimilarSong) => (
+        <TouchableOpacity
+          key={song.id}
+          onPress={() => router.push(`/song/${song.id}`)}
+          style={[styles.similarCard, { backgroundColor: colors.card, borderColor: colors.border }]}
+        >
+          <View style={styles.similarInfo}>
+            <Text style={[styles.similarTitle, { color: colors.foreground }]} numberOfLines={1}>
+              {song.title}
+            </Text>
+            <Text style={[styles.similarArtist, { color: colors.mutedForeground }]} numberOfLines={1}>
+              {song.artist} · {song.year}
+            </Text>
+            {sharedTags.length > 0 && (
+              <View style={styles.similarTags}>
+                {sharedTags.map((t) => (
+                  <View key={t} style={[styles.similarTag, { backgroundColor: colors.primary + '18', borderColor: colors.primary + '40' }]}>
+                    <Text style={[styles.similarTagText, { color: colors.primary }]}>{t}</Text>
+                  </View>
+                ))}
+              </View>
+            )}
+          </View>
+          <Feather name="chevron-right" size={14} color={colors.mutedForeground} />
+        </TouchableOpacity>
+      ))}
+    </View>
+  );
+}
+
 function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<typeof useColors> }) {
   const [state, setState] = useState<VibeState>({ phase: 'idle' });
+
+  useEffect(() => {
+    peekCyaniteCache(songId).then((analysis) => {
+      if (analysis) {
+        setState({ phase: 'ready', analysis, previewTitle: 'cached' });
+      }
+    });
+  }, [songId]);
 
   const start = async () => {
     setState({ phase: 'starting' });
@@ -691,6 +745,7 @@ export default function SongDetailScreen() {
 
         {id && <DrumStudySection songId={id} colors={colors} />}
         {id && <CyaniteCard songId={id} colors={colors} />}
+        {id && <SimilarSongsSection songId={id} colors={colors} />}
 
         <View style={[styles.studyBox, { backgroundColor: colors.muted, borderColor: colors.border }]}>
           <View style={styles.studyHeader}>
@@ -806,6 +861,13 @@ const styles = StyleSheet.create({
   vibeTag: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 20, borderWidth: 1 },
   vibeTagText: { fontSize: 11, fontWeight: '600' },
   vibeFreeGenre: { fontSize: 11, fontStyle: 'italic', marginTop: 2, marginBottom: 4 },
+  similarCard: { flexDirection: 'row', alignItems: 'center', padding: 12, borderRadius: 10, borderWidth: 1, marginBottom: 8, gap: 10 },
+  similarInfo: { flex: 1, gap: 3 },
+  similarTitle: { fontSize: 14, fontWeight: '600' },
+  similarArtist: { fontSize: 12 },
+  similarTags: { flexDirection: 'row', flexWrap: 'wrap', gap: 4, marginTop: 4 },
+  similarTag: { paddingHorizontal: 8, paddingVertical: 2, borderRadius: 12, borderWidth: 1 },
+  similarTagText: { fontSize: 10, fontWeight: '600' },
   studyBox: { marginHorizontal: 20, marginTop: 20, padding: 16, borderRadius: 10, borderWidth: 1, gap: 10 },
   studyHeader: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   studyTitle: { fontSize: 14, fontWeight: '700' },

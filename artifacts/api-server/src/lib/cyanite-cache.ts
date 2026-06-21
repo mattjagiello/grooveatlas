@@ -1,10 +1,9 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
-import { join, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import { join } from "node:path";
 import type { CyaniteAnalysis } from "../services/cyanite.js";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-export const CACHE_PATH = join(__dirname, "../data/cyanite-cache.json");
+// process.cwd() = artifacts/api-server/ whether running from src/ or dist/
+export const CACHE_PATH = join(process.cwd(), "src/data/cyanite-cache.json");
 
 type Cache = Record<string, CyaniteAnalysis>;
 

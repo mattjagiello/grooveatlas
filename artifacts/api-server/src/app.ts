@@ -5,7 +5,7 @@ import { resolvers } from "./graphql/resolvers.js";
 import { logger } from "./lib/logger.js";
 import { handleStemsStart, handleStemsStatus } from "./handlers/stems.js";
 import { handleSongstatsArtist } from "./handlers/songstats.js";
-import { handleCyaniteStart, handleCyaniteStatus } from "./handlers/cyanite.js";
+import { handleCyaniteStart, handleCyaniteStatus, handleCyanitePeek } from "./handlers/cyanite.js";
 
 const schema = createSchema({ typeDefs, resolvers });
 
@@ -58,6 +58,11 @@ const server = createServer(async (req: IncomingMessage, res: ServerResponse) =>
 
   if (path === "/songstats/artist") {
     await handleSongstatsArtist(req, res);
+    return;
+  }
+
+  if (path === "/cyanite/peek") {
+    handleCyanitePeek(req, res);
     return;
   }
 

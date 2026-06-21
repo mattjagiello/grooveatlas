@@ -10,11 +10,15 @@ import {
   SONGS_QUERY,
   SONG_DETAIL_QUERY,
   SEARCH_QUERY,
+  DRUMMER_VIBE_QUERY,
+  SIMILAR_SONGS_QUERY,
   type EraWithNested,
   type GenreWithNested,
   type DrummerWithSongs,
   type SongWithDrummer,
   type SearchResults,
+  type DrummerVibe,
+  type SimilarSong,
 } from '@/lib/queries';
 import type { Era, Genre, Drummer, Song } from '@/constants/data';
 
@@ -112,5 +116,27 @@ export function useSearch(q: string) {
         .request<{ search: SearchResults }>(SEARCH_QUERY, { q })
         .then((d) => d.search),
     enabled: q.length > 0,
+  });
+}
+
+export function useDrummerVibe(id: string) {
+  return useQuery<DrummerVibe | null>({
+    queryKey: ['drummerVibe', id],
+    queryFn: () =>
+      gqlClient
+        .request<{ drummerVibe: DrummerVibe | null }>(DRUMMER_VIBE_QUERY, { id })
+        .then((d) => d.drummerVibe),
+    enabled: !!id,
+  });
+}
+
+export function useSimilarSongs(id: string, limit = 4) {
+  return useQuery<SimilarSong[]>({
+    queryKey: ['similarSongs', id, limit],
+    queryFn: () =>
+      gqlClient
+        .request<{ similarSongs: SimilarSong[] }>(SIMILAR_SONGS_QUERY, { id, limit })
+        .then((d) => d.similarSongs),
+    enabled: !!id,
   });
 }

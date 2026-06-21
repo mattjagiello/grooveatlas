@@ -127,6 +127,28 @@ export const SEARCH_QUERY = gql`
   }
 `;
 
+export const DRUMMER_VIBE_QUERY = gql`
+  query DrummerVibe($id: ID!) {
+    drummerVibe(id: $id) {
+      drummerId songCount analysedCount avgBpm dominantEnergy
+      topMoods topGenres topCharacter freeGenreText transformerCaptions
+    }
+  }
+`;
+
+export const SIMILAR_SONGS_QUERY = gql`
+  query SimilarSongs($id: ID!, $limit: Int) {
+    similarSongs(id: $id, limit: $limit) {
+      song {
+        id title artist year eraId genreIds tempo feel complexity
+        description whyStudy songsterrSlug drummerId
+      }
+      score
+      sharedTags
+    }
+  }
+`;
+
 // ─── Response types ──────────────────────────────────────────────────────────
 
 import type { Era, Genre, Drummer, Song } from '@/constants/data';
@@ -175,4 +197,23 @@ export interface SearchResults {
   songs: Song[];
   genres: Genre[];
   eras: Era[];
+}
+
+export interface DrummerVibe {
+  drummerId: string;
+  songCount: number;
+  analysedCount: number;
+  avgBpm: number | null;
+  dominantEnergy: string | null;
+  topMoods: string[];
+  topGenres: string[];
+  topCharacter: string[];
+  freeGenreText: string | null;
+  transformerCaptions: string[];
+}
+
+export interface SimilarSong {
+  song: Song;
+  score: number;
+  sharedTags: string[];
 }

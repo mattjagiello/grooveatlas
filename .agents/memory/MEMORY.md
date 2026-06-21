@@ -1,2 +1,3 @@
 - [Replit proxy strips non-200 bodies](replit-proxy-non200.md) — REST handlers must always return HTTP 200; non-200 responses lose their body at the proxy layer.
+- [esbuild bundle path resolution](esbuild-path-resolution.md) — use `process.cwd()` not `__dirname` for data file paths; esbuild puts `import.meta.url` in `dist/` so `__dirname`-based paths silently miss the real `src/data/` files.
 - [Replit proxy keeps /api prefix](replit-api-prefix.md) — proxy forwards /api/* to port 8080 WITHOUT stripping the prefix; REST route checks must account for this.

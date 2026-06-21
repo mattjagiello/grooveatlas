@@ -66,6 +66,19 @@ export type CyaniteStatusResult =
   | { status: 'finished'; analysis: CyaniteAnalysis }
   | CyaniteError;
 
+export async function peekCyaniteCache(
+  songId: string
+): Promise<CyaniteAnalysis | null> {
+  try {
+    const res = await fetch(`${API_BASE}/cyanite/peek?songId=${encodeURIComponent(songId)}`);
+    const data = await res.json() as Record<string, unknown>;
+    if (data.cached && data.analysis) return data.analysis as CyaniteAnalysis;
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 export async function checkCyaniteStatus(trackId: string): Promise<CyaniteStatusResult> {
   try {
     const res = await fetch(`${API_BASE}/cyanite/status?trackId=${encodeURIComponent(trackId)}`);

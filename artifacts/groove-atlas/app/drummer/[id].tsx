@@ -11,11 +11,108 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useDrummer } from '@/hooks/useGql';
+import { useDrummer, useDrummerVibe } from '@/hooks/useGql';
 import SongCard from '@/components/SongCard';
 import SongstatsCard from '@/components/SongstatsCard';
 import { Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
+import type { DrummerVibe } from '@/lib/queries';
+
+const MOOD_COLORS: Record<string, string> = {
+  aggressive: '#DC2626', energetic: '#EA580C', happy: '#D97706',
+  romantic: '#DB2777', sad: '#2563EB', relaxed: '#059669',
+  dark: '#7C3AED', ethereal: '#0891B2', melancholic: '#6366F1',
+  uplifting: '#16A34A', epic: '#9A3412', mysterious: '#6D28D9',
+  cheerful: '#D97706', positive: '#16A34A', bright: '#CA8A04',
+  powerful: '#9A3412', groovy: '#0D9488', cool: '#0284C7',
+};
+
+const ENERGY_ICONS: Record<string, string> = { low: '🌊', medium: '🔥', high: '⚡' };
+
+function DrummerVibeCard({
+  vibe,
+  colors,
+}: {
+  vibe: DrummerVibe;
+  colors: ReturnType<typeof useColors>;
+}) {
+  if (vibe.analysedCount === 0) return null;
+  const topMoods = vibe.topMoods.slice(0, 5);
+  const topGenres = vibe.topGenres.slice(0, 4);
+  const topChar = vibe.topCharacter.slice(0, 4);
+  const energyIcon = ENERGY_ICONS[vibe.dominantEnergy?.toLowerCase() ?? ''] ?? '🎵';
+
+  return (
+    <View style={[vibeStyles.card, { backgroundColor: colors.card, borderColor: colors.border }]}>
+      <View style={vibeStyles.header}>
+        <Text style={vibeStyles.emoji}>🎚</Text>
+        <View style={{ flex: 1 }}>
+          <Text style={[vibeStyles.title, { color: colors.foreground }]}>Sonic Fingerprint</Text>
+          <Text style={[vibeStyles.sub, { color: colors.mutedForeground }]}>
+            {vibe.analysedCount} of {vibe.songCount} recordings analysed via Cyanite
+          </Text>
+        </View>
+      </View>
+
+      {topMoods.length > 0 && (
+        <View style={vibeStyles.row}>
+          {topMoods.map((m) => (
+            <View key={m} style={[vibeStyles.moodChip, { backgroundColor: (MOOD_COLORS[m.toLowerCase()] ?? colors.primary) + '22', borderColor: (MOOD_COLORS[m.toLowerCase()] ?? colors.primary) + '66' }]}>
+              <Text style={[vibeStyles.moodChipText, { color: MOOD_COLORS[m.toLowerCase()] ?? colors.primary }]}>{m}</Text>
+            </View>
+          ))}
+        </View>
+      )}
+
+      <View style={vibeStyles.statsRow}>
+        {vibe.avgBpm !== null && (
+          <View style={[vibeStyles.statBox, { backgroundColor: colors.primary + '15', borderColor: colors.primary + '30' }]}>
+            <Text style={[vibeStyles.statVal, { color: colors.primary }]}>{vibe.avgBpm}</Text>
+            <Text style={[vibeStyles.statLabel, { color: colors.mutedForeground }]}>AVG BPM</Text>
+          </View>
+        )}
+        {vibe.dominantEnergy && (
+          <View style={[vibeStyles.statBox, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+            <Text style={vibeStyles.statEmoji}>{energyIcon}</Text>
+            <Text style={[vibeStyles.statLabel, { color: colors.mutedForeground }]}>{vibe.dominantEnergy} energy</Text>
+          </View>
+        )}
+      </View>
+
+      {topGenres.length > 0 && (
+        <View style={vibeStyles.row}>
+          {topGenres.map((g) => (
+            <View key={g} style={[vibeStyles.tag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+              <Text style={[vibeStyles.tagText, { color: colors.foreground }]}>{g}</Text>
+            </View>
+          ))}
+        </View>
+      )}
+
+      {topChar.length > 0 && (
+        <View style={vibeStyles.row}>
+          {topChar.map((c) => (
+            <View key={c} style={[vibeStyles.tag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+              <Text style={[vibeStyles.tagText, { color: colors.mutedForeground }]}>{c}</Text>
+            </View>
+          ))}
+        </View>
+      )}
+
+      {vibe.freeGenreText ? (
+        <Text style={[vibeStyles.freeGenre, { color: colors.mutedForeground }]}>
+          {vibe.freeGenreText}
+        </Text>
+      ) : null}
+
+      {vibe.transformerCaptions.length > 0 && (
+        <Text style={[vibeStyles.caption, { color: colors.mutedForeground, borderColor: colors.border }]}>
+          "{vibe.transformerCaptions[0]}"
+        </Text>
+      )}
+    </View>
+  );
+}
 
 const BPM_MIN_SCALE = 40;
 const BPM_MAX_SCALE = 320;
@@ -94,6 +191,7 @@ export default function DrummerDetailScreen() {
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
 
   const { data: drummer, isLoading } = useDrummer(id ?? '');
+  const { data: vibe } = useDrummerVibe(id ?? '');
 
   if (isLoading) {
     return (
@@ -184,6 +282,13 @@ export default function DrummerDetailScreen() {
           </View>
         </View>
 
+        {vibe && (
+          <View style={{ paddingHorizontal: 20, paddingTop: 24 }}>
+            <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Sonic Fingerprint</Text>
+            <DrummerVibeCard vibe={vibe} colors={colors} />
+          </View>
+        )}
+
         <View style={styles.section}>
           <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Legacy & Influence</Text>
           <Text style={[styles.influence, { color: colors.foreground }]}>{drummer.influence}</Text>
@@ -205,6 +310,26 @@ export default function DrummerDetailScreen() {
     </View>
   );
 }
+
+const vibeStyles = StyleSheet.create({
+  card: { borderRadius: 12, borderWidth: 1, padding: 16, gap: 10 },
+  header: { flexDirection: 'row', alignItems: 'flex-start', gap: 12 },
+  emoji: { fontSize: 26 },
+  title: { fontSize: 15, fontWeight: '700' },
+  sub: { fontSize: 11, marginTop: 2 },
+  row: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+  moodChip: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 16, borderWidth: 1 },
+  moodChipText: { fontSize: 12, fontWeight: '600' },
+  statsRow: { flexDirection: 'row', gap: 10 },
+  statBox: { flex: 1, alignItems: 'center', paddingVertical: 10, borderRadius: 8, borderWidth: 1, gap: 2 },
+  statVal: { fontSize: 26, fontWeight: '700', lineHeight: 30 },
+  statEmoji: { fontSize: 22 },
+  statLabel: { fontSize: 9, fontWeight: '600', letterSpacing: 1 },
+  tag: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 20, borderWidth: 1 },
+  tagText: { fontSize: 11, fontWeight: '600' },
+  freeGenre: { fontSize: 11, fontStyle: 'italic' },
+  caption: { fontSize: 12, fontStyle: 'italic', lineHeight: 18, borderLeftWidth: 3, paddingLeft: 10 },
+});
 
 const spark = StyleSheet.create({
   wrapper: { gap: 8 },

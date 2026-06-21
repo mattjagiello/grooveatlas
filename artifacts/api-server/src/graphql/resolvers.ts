@@ -16,6 +16,7 @@ import { getCharts } from "../data/charts.js";
 import tsClient from "../typesense/client.js";
 import { logger } from "../lib/logger.js";
 import { fetchTrackMeta, type TrackMeta } from "../services/musixmatch.js";
+import { getCached } from "../lib/cyanite-cache.js";
 
 const trackMetaCache = new Map<string, TrackMeta | null>();
 
@@ -44,7 +45,7 @@ async function multiSearch(q: string) {
       ],
     } as any);
 
-    const [drResult, soResult, gnResult, erResult] = result.results as any[];
+    const [drResult, soResult, gnResult, erResult] = (result as any).results as any[];
 
     return {
       drummers: (drResult?.hits ?? []).map((h: any) => findDrummer(h.document.id)).filter(Boolean) as Drummer[],
@@ -70,6 +71,108 @@ async function multiSearch(q: string) {
       eras: eras.filter((e) => e.name.toLowerCase().includes(ql)).slice(0, 3),
     };
   }
+}
+
+// ─── Vibe helpers ────────────────────────────────────────────────────────────
+
+function topN(counts: Record<string, number>, n: number): string[] {
+  return Object.entries(counts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, n)
+    .map(([t]) => t);
+}
+
+function aggregateDrummerVibe(drummerId: string) {
+  const drummerSongs = songs.filter((s) => s.drummerId === drummerId);
+  const analysed = drummerSongs.filter((s) => {
+    const c = getCached(s.id);
+    return c && (c.bpm > 0 || (c.moodTags?.length ?? 0) > 0 || (c.genreTags?.length ?? 0) > 0);
+  });
+  if (analysed.length === 0) return null;
+
+  const moodCounts: Record<string, number> = {};
+  const genreCounts: Record<string, number> = {};
+  const charCounts: Record<string, number> = {};
+  const energyCounts: Record<string, number> = {};
+  const captions: string[] = [];
+  let totalBpm = 0, bpmCount = 0;
+  const freeGenreParts: string[] = [];
+
+  for (const song of analysed) {
+    const c = getCached(song.id)!;
+    for (const t of c.moodTags ?? []) moodCounts[t] = (moodCounts[t] ?? 0) + 2;
+    for (const t of c.moodAdvancedTags ?? []) moodCounts[t] = (moodCounts[t] ?? 0) + 1;
+    for (const t of c.genreTags ?? []) genreCounts[t] = (genreCounts[t] ?? 0) + 1;
+    for (const t of [...(c.characterTags ?? []), ...(c.movementTags ?? [])])
+      charCounts[t] = (charCounts[t] ?? 0) + 1;
+    if (c.energyLevel) energyCounts[c.energyLevel] = (energyCounts[c.energyLevel] ?? 0) + 1;
+    if (c.bpm > 0) { totalBpm += c.bpm; bpmCount++; }
+    if (c.transformerCaption) captions.push(c.transformerCaption);
+    if (c.freeGenreTags) {
+      for (const t of c.freeGenreTags.split(",").map((x: string) => x.trim()).filter(Boolean))
+        freeGenreParts.push(t);
+    }
+  }
+
+  const freeGenreCounts: Record<string, number> = {};
+  for (const t of freeGenreParts) freeGenreCounts[t] = (freeGenreCounts[t] ?? 0) + 1;
+
+  return {
+    drummerId,
+    songCount: drummerSongs.length,
+    analysedCount: analysed.length,
+    avgBpm: bpmCount > 0 ? Math.round(totalBpm / bpmCount) : null,
+    dominantEnergy: topN(energyCounts, 1)[0] ?? null,
+    topMoods: topN(moodCounts, 5),
+    topGenres: topN(genreCounts, 4),
+    topCharacter: topN(charCounts, 4),
+    freeGenreText: topN(freeGenreCounts, 6).join(", ") || null,
+    transformerCaptions: [...new Set(captions)].slice(0, 3),
+  };
+}
+
+function computeSimilarSongs(songId: string, limit: number) {
+  const targetCache = getCached(songId);
+  if (!targetCache) return [];
+
+  const targetSong = findSong(songId);
+  const targetMoods = new Set(targetCache.moodTags ?? []);
+  const targetGenres = new Set(targetCache.genreTags ?? []);
+  const targetChars = new Set([
+    ...(targetCache.characterTags ?? []),
+    ...(targetCache.movementTags ?? []),
+  ]);
+  const targetAdvanced = new Set(targetCache.moodAdvancedTags ?? []);
+
+  const scored: Array<{ song: Song; score: number; sharedTags: string[] }> = [];
+
+  for (const song of songs) {
+    if (song.id === songId) continue;
+    const c = getCached(song.id);
+    if (!c || (c.bpm === 0 && !(c.moodTags?.length))) continue;
+
+    const shared: string[] = [];
+    let score = 0;
+
+    for (const t of c.moodTags ?? []) {
+      if (targetMoods.has(t)) { score += 3; shared.push(t); }
+    }
+    for (const t of c.genreTags ?? []) {
+      if (targetGenres.has(t)) { score += 2; if (!shared.includes(t)) shared.push(t); }
+    }
+    for (const t of [...(c.characterTags ?? []), ...(c.movementTags ?? [])]) {
+      if (targetChars.has(t)) { score += 1; if (!shared.includes(t)) shared.push(t); }
+    }
+    for (const t of c.moodAdvancedTags ?? []) {
+      if (targetAdvanced.has(t)) score += 1;
+    }
+    if (targetSong && song.eraId === targetSong.eraId) score += 1;
+
+    if (score > 0) scored.push({ song, score, sharedTags: shared.slice(0, 4) });
+  }
+
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, limit);
 }
 
 export const resolvers = {
@@ -113,6 +216,12 @@ export const resolvers = {
     song: (_: unknown, { id }: { id: string }) => findSong(id) ?? null,
 
     search: (_: unknown, { q }: { q: string }) => multiSearch(q),
+
+    drummerVibe: (_: unknown, { id }: { id: string }) =>
+      aggregateDrummerVibe(id),
+
+    similarSongs: (_: unknown, { id, limit = 4 }: { id: string; limit?: number }) =>
+      computeSimilarSongs(id, limit),
   },
 
   Era: {
