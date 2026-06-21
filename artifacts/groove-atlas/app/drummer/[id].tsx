@@ -4,6 +4,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React from 'react';
 import {
+  FlatList,
   Image,
   Platform,
   ScrollView,
@@ -14,8 +15,10 @@ import {
 } from 'react-native';
 import { useDrummer, useDrummerVibe } from '@/hooks/useGql';
 import SongstatsCard from '@/components/SongstatsCard';
+import DrummerCard from '@/components/DrummerCard';
+import TrackRow from '@/components/TrackRow';
 import { Skeleton } from '@/components/Skeleton';
-import { Song } from '@/constants/data';
+import { Song, Drummer } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 import { Fonts } from '@/constants/typography';
 import type { DrummerVibe } from '@/lib/queries';
@@ -112,35 +115,6 @@ function Divider({ color }: { color: string }) {
   return <View style={[div.line, { backgroundColor: color }]} />;
 }
 
-// ─── Track row (used instead of SongCard) ────────────────────────────────────
-
-const COMPLEXITY_LABELS = ['Beginner', 'Easy', 'Intermediate', 'Advanced', 'Expert'];
-
-function TrackRow({ song, onPress, colors }: { song: Song; onPress: () => void; colors: ReturnType<typeof useColors> }) {
-  const dots = Array.from({ length: 5 }, (_, i) => i < song.complexity);
-  return (
-    <TouchableOpacity onPress={onPress} style={track.row} activeOpacity={0.7}>
-      <View style={track.left}>
-        <Text style={[track.title, { color: colors.foreground, fontFamily: Fonts.serif }]} numberOfLines={1}>
-          {song.title}
-        </Text>
-        <View style={track.meta}>
-          <Text style={[track.artist, { color: colors.mutedForeground }]}>{song.artist} · {song.year}</Text>
-          <View style={track.dots}>
-            {dots.map((filled, i) => (
-              <View key={i} style={[track.dot, { backgroundColor: filled ? colors.primary : colors.border }]} />
-            ))}
-          </View>
-        </View>
-      </View>
-      <View style={track.right}>
-        <Text style={[track.bpm, { color: colors.primary, fontFamily: Fonts.label }]}>{song.tempo}</Text>
-        <Text style={[track.bpmUnit, { color: colors.mutedForeground }]}>BPM</Text>
-      </View>
-    </TouchableOpacity>
-  );
-}
-
 // ─── Skeleton ─────────────────────────────────────────────────────────────────
 
 function DrummerDetailSkeleton({ colors }: { colors: ReturnType<typeof useColors> }) {
@@ -189,7 +163,10 @@ export default function DrummerDetailScreen() {
     );
   }
 
-  const songs = (drummer.iconicSongs ?? []) as Song[];
+  const iconicSongs = (drummer.iconicSongs ?? []) as Song[];
+  const allSongs = (drummer.allSongs ?? []) as Song[];
+  const contemporaries = (drummer.contemporaries ?? []) as Drummer[];
+  const displaySongs = allSongs.length > 0 ? allSongs : iconicSongs;
   const yearsActive = `b. ${drummer.born}`;
   const initials = drummer.name.split(' ').map((n) => n[0]).join('').slice(0, 2);
 
@@ -362,30 +339,62 @@ export default function DrummerDetailScreen() {
 
         <Divider color={colors.border} />
 
+        {/* ── Contemporaries — graph-computed from shared eras + genres ── */}
+        {contemporaries.length > 0 && (
+          <>
+            <View style={page.section}>
+              <Text style={[page.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>Contemporaries</Text>
+              <Text style={[page.capsLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>
+                DRUMMERS ACTIVE IN THE SAME ERAS & GENRES
+              </Text>
+            </View>
+            <FlatList
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              data={contemporaries}
+              keyExtractor={(d) => d.id}
+              initialNumToRender={3}
+              maxToRenderPerBatch={4}
+              windowSize={3}
+              removeClippedSubviews={Platform.OS !== 'web'}
+              contentContainerStyle={page.horizontal}
+              renderItem={({ item }) => (
+                <DrummerCard
+                  drummer={item}
+                  onPress={(d: Drummer) => router.push(`/drummer/${d.id}`)}
+                />
+              )}
+            />
+            <Divider color={colors.border} />
+          </>
+        )}
+
         {/* ── Streaming stats ── */}
         <View style={page.section}>
           <SongstatsCard drummerId={drummer.id} />
         </View>
 
-        {/* ── Essential Recordings — clean track listing ── */}
-        {songs.length > 0 && (
+        {/* ── Recordings ── */}
+        {displaySongs.length > 0 && (
           <>
             <Divider color={colors.border} />
             <View style={page.section}>
-              <Text style={[page.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>Essential Recordings</Text>
+              <Text style={[page.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>
+                {allSongs.length > iconicSongs.length ? 'All Recordings' : 'Essential Recordings'}
+              </Text>
+              {allSongs.length > iconicSongs.length && (
+                <Text style={[page.capsLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>
+                  {displaySongs.length} TRACKS IN DATASET
+                </Text>
+              )}
             </View>
-            <View style={[page.trackList, { borderTopColor: colors.border, borderBottomColor: colors.border }]}>
-              {songs.map((s: Song, idx: number) => (
-                <View key={s.id}>
-                  <TrackRow
-                    song={s}
-                    colors={colors}
-                    onPress={() => router.push(`/song/${s.id}`)}
-                  />
-                  {idx < songs.length - 1 && (
-                    <View style={[track.separator, { backgroundColor: colors.border }]} />
-                  )}
-                </View>
+            <View style={[page.trackList, { borderTopColor: colors.border }]}>
+              {displaySongs.map((s: Song) => (
+                <TrackRow
+                  key={s.id}
+                  song={s}
+                  onPress={(song) => router.push(`/song/${song.id}`)}
+                />
               ))}
             </View>
           </>
@@ -492,9 +501,11 @@ const page = StyleSheet.create({
 
   cyaniteSource: { fontSize: 10, marginTop: 4, fontStyle: 'italic' },
 
+  capsLabel: { fontSize: 9, letterSpacing: 2, marginTop: 4 },
+  horizontal: { paddingHorizontal: 16, paddingVertical: 12 },
+
   trackList: {
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderBottomWidth: StyleSheet.hairlineWidth,
     marginTop: 4,
   },
 });

@@ -69,6 +69,8 @@ export const DRUMMER_DETAIL_QUERY = gql`
     drummer(id: $id) {
       ${DRUMMER_DETAIL}
       iconicSongs { ${SONG_CARD} }
+      allSongs { ${SONG_CARD} }
+      contemporaries(limit: 8) { ${DRUMMER_CARD} }
     }
   }
 `;
@@ -89,6 +91,8 @@ export const SONG_DETAIL_QUERY = gql`
         trackId trackName albumTitle trackRating numFavourite trackLengthSecs genres spotifyId
       }
       drummer { ${DRUMMER_CARD} }
+      era { id name color years subtitle }
+      resolvedGenres { id name color }
     }
   }
 `;
@@ -163,6 +167,8 @@ export interface GenreWithNested extends Genre {
 
 export interface DrummerWithSongs extends Drummer {
   iconicSongs: Song[];
+  allSongs: Song[];
+  contemporaries: Drummer[];
 }
 
 export interface TrackMeta {
@@ -179,6 +185,8 @@ export interface TrackMeta {
 export interface SongWithDrummer extends Song {
   drummer: Drummer | null;
   trackMeta: TrackMeta | null;
+  era: { id: string; name: string; color: string; years: string; subtitle: string } | null;
+  resolvedGenres: { id: string; name: string; color: string }[];
 }
 
 export interface SearchResults {

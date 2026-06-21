@@ -616,17 +616,19 @@ export default function SongDetailScreen() {
           <View style={styles.tags}>
             <TouchableOpacity
               onPress={() => router.push(`/era/${song.eraId}`)}
-              style={[styles.tag, { backgroundColor: colors.primary + '25', borderColor: colors.primary }]}
+              style={[styles.tag, { backgroundColor: (song.era?.color ?? colors.primary) + '25', borderColor: song.era?.color ?? colors.primary }]}
             >
-              <Text style={[styles.tagText, { color: colors.primary }]}>{song.eraId}</Text>
+              <Text style={[styles.tagText, { color: song.era?.color ?? colors.primary }]}>
+                {song.era?.name ?? song.eraId}
+              </Text>
             </TouchableOpacity>
-            {song.genreIds.map((gid) => (
+            {(song.resolvedGenres?.length ? song.resolvedGenres : song.genreIds.map(id => ({ id, name: id, color: colors.mutedForeground }))).map((g) => (
               <TouchableOpacity
-                key={gid}
-                onPress={() => router.push(`/genre/${gid}`)}
-                style={[styles.tag, { backgroundColor: colors.muted, borderColor: colors.border }]}
+                key={g.id}
+                onPress={() => router.push(`/genre/${g.id}`)}
+                style={[styles.tag, { backgroundColor: g.color + '18', borderColor: g.color + '55' }]}
               >
-                <Text style={[styles.tagText, { color: colors.foreground }]}>{gid}</Text>
+                <Text style={[styles.tagText, { color: g.color }]}>{g.name}</Text>
               </TouchableOpacity>
             ))}
           </View>

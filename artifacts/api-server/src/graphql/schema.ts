@@ -47,6 +47,8 @@ export const typeDefs = /* GraphQL */ `
     photoUrl: String
     iconicSongIds: [String!]!
     iconicSongs: [Song!]!
+    allSongs: [Song!]!
+    contemporaries(limit: Int): [Drummer!]!
   }
 
   type TrackMeta {
@@ -75,6 +77,8 @@ export const typeDefs = /* GraphQL */ `
     whyStudy: String!
     songsterrSlug: String
     drummer: Drummer
+    era: Era
+    resolvedGenres: [Genre!]!
     trackMeta: TrackMeta
   }
 

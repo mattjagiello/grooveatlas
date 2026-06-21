@@ -242,10 +242,35 @@ export const resolvers = {
   Drummer: {
     iconicSongs: (drummer: Drummer) =>
       resolveIconicSongs(drummer.iconicSongIds),
+
+    allSongs: (drummer: Drummer) =>
+      songs.filter((s) => s.drummerId === drummer.id),
+
+    contemporaries: (drummer: Drummer, { limit = 8 }: { limit?: number }) => {
+      const erasSet = new Set(drummer.eras);
+      const genresSet = new Set(drummer.genres);
+      return drummers
+        .filter((d) => d.id !== drummer.id)
+        .map((d) => {
+          const sharedEras = d.eras.filter((e) => erasSet.has(e)).length;
+          const sharedGenres = d.genres.filter((g) => genresSet.has(g)).length;
+          return { d, score: sharedEras * 2 + sharedGenres };
+        })
+        .filter(({ score }) => score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, limit)
+        .map(({ d }) => d);
+    },
   },
 
   Song: {
     drummer: (song: Song) => findDrummer(song.drummerId) ?? null,
+    era: (song: Song) => findEra(song.eraId) ?? null,
+    resolvedGenres: (song: Song) =>
+      song.genreIds.flatMap((id) => {
+        const g = findGenre(id);
+        return g ? [g] : [];
+      }),
     trackMeta: async (song: Song) => {
       if (trackMetaCache.has(song.id)) return trackMetaCache.get(song.id) ?? null;
       const meta = await fetchTrackMeta(song.title, song.artist);
