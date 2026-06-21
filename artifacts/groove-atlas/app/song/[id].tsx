@@ -456,14 +456,14 @@ function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<ty
           )}
           {a.bpm > 0 && <View style={[styles.vibeStatDivider, { backgroundColor: colors.border }]} />}
           <View style={styles.vibeStat}>
-            <Text style={[styles.vibeBpmVal, { color: colors.foreground, fontFamily: Fonts.display }]}>{(a.energyLevel || 'MED').toUpperCase()}</Text>
+            <Text style={[styles.vibeTextVal, { color: colors.foreground, fontFamily: Fonts.label }]}>{(a.energyLevel || 'MED').toUpperCase()}</Text>
             <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>energy</Text>
           </View>
           {a.timeSignature ? (
             <>
               <View style={[styles.vibeStatDivider, { backgroundColor: colors.border }]} />
               <View style={styles.vibeStat}>
-                <Text style={[styles.vibeBpmVal, { color: colors.foreground, fontFamily: Fonts.display }]}>{a.timeSignature}</Text>
+                <Text style={[styles.vibeTextVal, { color: colors.foreground, fontFamily: Fonts.label }]}>{a.timeSignature}</Text>
                 <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>time sig</Text>
               </View>
             </>
@@ -578,10 +578,14 @@ export default function SongDetailScreen() {
             </View>
             <Text style={[styles.statLabel, { color: colors.mutedForeground }]}>{complexityLabel}</Text>
           </View>
-          <View style={[styles.statDivider, { backgroundColor: colors.border }]} />
-          <View style={[styles.stat, { flex: 2 }]}>
-            <Text style={[styles.feelText, { color: colors.foreground }]} numberOfLines={2}>{song.feel}</Text>
-          </View>
+          {song.feel ? (
+            <>
+              <View style={[styles.statDivider, { backgroundColor: colors.border }]} />
+              <View style={[styles.stat, { flex: 2, alignItems: 'flex-start', paddingLeft: 8 }]}>
+                <Text style={[styles.feelText, { color: colors.foreground }]}>{song.feel}</Text>
+              </View>
+            </>
+          ) : null}
         </View>
 
         {drummer && (
@@ -664,7 +668,7 @@ const styles = StyleSheet.create({
   statDivider: { width: 1, height: 36, marginHorizontal: 8 },
   complexityDots: { flexDirection: 'row', gap: 4 },
   complexityDot: { width: 10, height: 10, borderRadius: 5 },
-  feelText: { fontSize: 13, fontWeight: '500', textAlign: 'center' },
+  feelText: { fontSize: 13, fontWeight: '500', lineHeight: 18 },
   drummerRow: {
     flexDirection: 'row', alignItems: 'center', gap: 12,
     paddingHorizontal: 20, paddingVertical: 16,
@@ -758,4 +762,5 @@ const styles = StyleSheet.create({
   vibeStatsRow: { flexDirection: 'row', alignItems: 'center' },
   vibeStatDivider: { width: StyleSheet.hairlineWidth, height: 36, marginHorizontal: 8 },
   vibeGenreText: { fontSize: 12, paddingBottom: 4 },
+  vibeTextVal: { fontSize: 18, letterSpacing: 1 },
 });
