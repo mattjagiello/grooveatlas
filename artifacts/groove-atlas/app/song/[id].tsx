@@ -452,14 +452,14 @@ function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<ty
           )}
           {a.bpm > 0 && <View style={[styles.vibeStatDivider, { backgroundColor: colors.border }]} />}
           <View style={styles.vibeStat}>
-            <Text style={[styles.vibeTextVal, { color: colors.foreground, fontFamily: Fonts.label }]}>{(a.energyLevel || 'MED').toUpperCase()}</Text>
+            <Text style={[styles.vibeBpmVal, { color: colors.foreground, fontFamily: Fonts.display }]}>{(a.energyLevel || 'MED').toUpperCase()}</Text>
             <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>energy</Text>
           </View>
           {a.timeSignature ? (
             <>
               <View style={[styles.vibeStatDivider, { backgroundColor: colors.border }]} />
               <View style={styles.vibeStat}>
-                <Text style={[styles.vibeTextVal, { color: colors.foreground, fontFamily: Fonts.label }]}>{a.timeSignature}</Text>
+                <Text style={[styles.vibeBpmVal, { color: colors.foreground, fontFamily: Fonts.display }]}>{a.timeSignature}</Text>
                 <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>time sig</Text>
               </View>
             </>
