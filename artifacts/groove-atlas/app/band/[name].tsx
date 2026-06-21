@@ -1,7 +1,7 @@
 import { Feather } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   ActivityIndicator,
   FlatList,
@@ -25,6 +25,12 @@ export default function BandScreen() {
 
   const bandName = name ? decodeURIComponent(name) : '';
   const { data: drummers, isLoading } = useDrummersByBand(bandName);
+
+  useEffect(() => {
+    if (!isLoading && drummers && drummers.length === 1) {
+      router.replace(`/drummer/${drummers[0].id}`);
+    }
+  }, [isLoading, drummers]);
 
   const goBack = () => router.canGoBack() ? router.back() : router.replace('/(tabs)' as never);
 

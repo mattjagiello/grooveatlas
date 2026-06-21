@@ -232,11 +232,9 @@ export default function DrummerDetailScreen() {
           <Text style={[page.bandsLabel, { color: colors.foreground }]}>with </Text>
           <View style={page.bandsList}>
             {drummer.bands.map((band, i) => (
-              <TouchableOpacity key={band} onPress={() => router.push(`/band/${encodeURIComponent(band)}`)}>
-                <Text style={[page.bandLink, { color: colors.mutedForeground }]}>
-                  {band}{i < drummer.bands.length - 1 ? ', ' : ''}
-                </Text>
-              </TouchableOpacity>
+              <Text key={band} style={[page.bandLink, { color: colors.mutedForeground }]}>
+                {band}{i < drummer.bands.length - 1 ? ', ' : ''}
+              </Text>
             ))}
           </View>
         </View>
@@ -473,7 +471,7 @@ const page = StyleSheet.create({
   },
   bandsLabel: { fontSize: 13, fontWeight: '700' },
   bandsList: { flexDirection: 'row', flexWrap: 'wrap', flex: 1 },
-  bandLink: { fontSize: 13, textDecorationLine: 'underline', textDecorationStyle: 'dotted' },
+  bandLink: { fontSize: 13 },
 
   section: { paddingHorizontal: 20, paddingTop: 22, paddingBottom: 6 },
   sectionTitle: { fontSize: 22, marginBottom: 10 },
