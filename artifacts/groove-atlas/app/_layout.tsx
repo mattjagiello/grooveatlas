@@ -15,7 +15,6 @@ import {
   Oswald_400Regular,
   Oswald_600SemiBold,
 } from "@expo-google-fonts/oswald";
-import { Feather } from "@expo/vector-icons";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
@@ -69,7 +68,6 @@ export default function RootLayout() {
     PlayfairDisplay_700Bold,
     Oswald_400Regular,
     Oswald_600SemiBold,
-    ...Feather.font,
   });
 
   useEffect(() => {
