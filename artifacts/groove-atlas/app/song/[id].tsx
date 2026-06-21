@@ -342,13 +342,6 @@ function DrumStudySection({
   );
 }
 
-const MOOD_COLORS: Record<string, string> = {
-  aggressive: '#DC2626', energetic: '#EA580C', happy: '#D97706',
-  romantic: '#DB2777', sad: '#2563EB', relaxed: '#059669',
-  dark: '#7C3AED', ethereal: '#0891B2', melancholic: '#6366F1',
-  uplifting: '#16A34A', epic: '#9A3412', mysterious: '#6D28D9',
-};
-
 const ENERGY_LEVELS: Record<string, number> = {
   low: 0.25, medium: 0.6, high: 0.9,
 };
@@ -414,65 +407,30 @@ function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<ty
   if (state.phase === 'loading' || state.phase === 'unavailable') return null;
 
   const a = state.analysis;
-  const energyFill = ENERGY_LEVELS[a.energyLevel.toLowerCase()] ?? 0.5;
-  const topMoods = a.moodTags.slice(0, 5);
-  const topGenres = a.genreTags.slice(0, 3);
-  const advancedMoods = (a.moodAdvancedTags ?? []).slice(0, 5);
-  const characterVibes = [...(a.movementTags ?? []), ...(a.characterTags ?? [])].slice(0, 5);
-  const hasDrums = a.instrumentTags.some((t) =>
-    t.toLowerCase().includes('drum') || t.toLowerCase().includes('percuss')
-  );
+  const topGenres = [...a.genreTags.slice(0, 3), ...(a.musicalEraTag ? [a.musicalEraTag] : [])];
 
   return (
     <View style={[styles.studySection, { backgroundColor: colors.card, borderColor: colors.border }]}>
-      <View style={styles.studyHeader2}>
-        <Text style={styles.drumEmoji}>🎛</Text>
-        <View style={styles.studyTitleWrap}>
-          <Text style={[styles.studySectionTitle, { color: colors.foreground }]}>Vibe Analysis</Text>
-          <Text style={[styles.studySectionSub, { color: colors.mutedForeground }]}>
-            AI audio fingerprint via Cyanite
-          </Text>
-        </View>
+      <View style={styles.vibeHeader}>
+        <Text style={[styles.vibeLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>
+          VIBE ANALYSIS
+        </Text>
+        <Text style={[styles.vibeSource, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
+          via Cyanite AI
+        </Text>
       </View>
 
       <View style={styles.vibeResult}>
         {a.transformerCaption ? (
-          <Text style={[styles.vibeCaption, { color: colors.foreground, borderColor: colors.border }]}>
+          <Text style={[styles.vibeCaption, { color: colors.mutedForeground, borderColor: colors.primary + '60', fontFamily: Fonts.serifItalic }]}>
             "{a.transformerCaption}"
           </Text>
         ) : null}
 
-        {topMoods.length > 0 && (
-          <View style={styles.vibeRow}>
-            {topMoods.map((m) => (
-              <View key={m} style={[styles.moodChip, { backgroundColor: (MOOD_COLORS[m.toLowerCase()] ?? colors.primary) + '22', borderColor: (MOOD_COLORS[m.toLowerCase()] ?? colors.primary) + '66' }]}>
-                <Text style={[styles.moodChipText, { color: MOOD_COLORS[m.toLowerCase()] ?? colors.primary }]}>
-                  {m}
-                </Text>
-              </View>
-            ))}
-            {hasDrums && (
-              <View style={[styles.moodChip, { backgroundColor: colors.primary + '22', borderColor: colors.primary + '66' }]}>
-                <Text style={[styles.moodChipText, { color: colors.primary }]}>🥁 drums</Text>
-              </View>
-            )}
-          </View>
-        )}
-
-        {advancedMoods.length > 0 && (
-          <View style={[styles.vibeRow, { marginTop: -2 }]}>
-            {advancedMoods.map((m) => (
-              <View key={m} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-                <Text style={[styles.vibeTagText, { color: colors.mutedForeground }]}>{m}</Text>
-              </View>
-            ))}
-          </View>
-        )}
-
         <View style={[styles.vibeGrid, { borderColor: colors.border }]}>
           <View style={styles.vibeGridLabels}>
-            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>INTENSE</Text>
-            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>HAPPY</Text>
+            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>INTENSE</Text>
+            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>HAPPY</Text>
           </View>
           <View style={[styles.vibeGridInner, { borderColor: colors.border + '80' }]}>
             <View style={[StyleSheet.absoluteFillObject, styles.vibeGridHLine, { borderColor: colors.border + '60' }]} />
@@ -484,67 +442,39 @@ function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<ty
             }]} />
           </View>
           <View style={styles.vibeGridLabels}>
-            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>DARK</Text>
-            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground }]}>CALM</Text>
+            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>DARK</Text>
+            <Text style={[styles.vibeGridLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>CALM</Text>
           </View>
         </View>
 
-        <View style={styles.vibeStatRow}>
-          <View style={styles.vibeStat}>
-            <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground }]}>ENERGY</Text>
-            <View style={[styles.vibeBarTrack, { backgroundColor: colors.border }]}>
-              <View style={[styles.vibeBarFill, { backgroundColor: colors.primary, width: `${Math.round(energyFill * 100)}%` as unknown as number }]} />
-            </View>
-            <Text style={[styles.vibeStatVal, { color: colors.foreground }]}>{a.energyLevel || '—'}</Text>
-          </View>
+        <View style={styles.vibeStatsRow}>
           {a.bpm > 0 && (
             <View style={styles.vibeStat}>
-              <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground }]}>BPM</Text>
-              <Text style={[styles.vibeBpmVal, { color: colors.primary }]}>{a.bpm}</Text>
+              <Text style={[styles.vibeBpmVal, { color: colors.primary, fontFamily: Fonts.display }]}>{a.bpm}</Text>
+              <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>BPM</Text>
             </View>
           )}
+          {a.bpm > 0 && <View style={[styles.vibeStatDivider, { backgroundColor: colors.border }]} />}
+          <View style={styles.vibeStat}>
+            <Text style={[styles.vibeBpmVal, { color: colors.foreground, fontFamily: Fonts.display }]}>{(a.energyLevel || 'MED').toUpperCase()}</Text>
+            <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>energy</Text>
+          </View>
           {a.timeSignature ? (
-            <View style={styles.vibeStat}>
-              <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground }]}>TIME SIG</Text>
-              <Text style={[styles.vibeBpmVal, { color: colors.primary }]}>{a.timeSignature}</Text>
-            </View>
+            <>
+              <View style={[styles.vibeStatDivider, { backgroundColor: colors.border }]} />
+              <View style={styles.vibeStat}>
+                <Text style={[styles.vibeBpmVal, { color: colors.foreground, fontFamily: Fonts.display }]}>{a.timeSignature}</Text>
+                <Text style={[styles.vibeStatLabel, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>time sig</Text>
+              </View>
+            </>
           ) : null}
         </View>
 
-        {(topGenres.length > 0 || a.musicalEraTag || a.freeGenreTags) && (
-          <View style={styles.vibeRow}>
-            {topGenres.map((g) => (
-              <View key={g} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-                <Text style={[styles.vibeTagText, { color: colors.foreground }]}>{g}</Text>
-              </View>
-            ))}
-            {a.musicalEraTag ? (
-              <View style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-                <Text style={[styles.vibeTagText, { color: colors.foreground }]}>{a.musicalEraTag}</Text>
-              </View>
-            ) : null}
-          </View>
-        )}
-
-        {a.freeGenreTags ? (
-          <Text style={[styles.vibeFreeGenre, { color: colors.mutedForeground }]}>
-            {a.freeGenreTags}
+        {topGenres.length > 0 && (
+          <Text style={[styles.vibeGenreText, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
+            {topGenres.join(' · ')}
           </Text>
-        ) : null}
-
-        {characterVibes.length > 0 && (
-          <View style={styles.vibeRow}>
-            {characterVibes.map((v) => (
-              <View key={v} style={[styles.vibeTag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-                <Text style={[styles.vibeTagText, { color: colors.mutedForeground }]}>{v}</Text>
-              </View>
-            ))}
-          </View>
         )}
-
-        <Text style={[styles.studyAttr, { color: colors.mutedForeground }]}>
-          Powered by Cyanite · Preview via Deezer
-        </Text>
       </View>
     </View>
   );
@@ -688,13 +618,6 @@ export default function SongDetailScreen() {
           <Text style={[styles.body, { color: colors.foreground }]}>{song.description}</Text>
         </View>
 
-        {song.trackMeta && <TrackMetaCard meta={song.trackMeta} songTitle={song.title} colors={colors} />}
-
-        {id && <DrumStudySection songId={id} colors={colors} />}
-        {id && <CyaniteCard songId={id} colors={colors} />}
-        {id && <SimilarSongsSection songId={id} colors={colors} />}
-
-        <View style={[styles.whyDivider, { backgroundColor: colors.border }]} />
         <View style={styles.section}>
           <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>Why Study This</Text>
           <Text style={[styles.body, { color: colors.foreground }]}>{song.whyStudy}</Text>
@@ -703,13 +626,19 @@ export default function SongDetailScreen() {
         {song.songsterrSlug && (
           <TouchableOpacity
             onPress={openSongsterr}
-            style={[styles.tabsBtn, { backgroundColor: colors.primary }]}
+            style={[styles.tabsBtn, { borderColor: colors.primary }]}
           >
-            <Feather name="music" size={16} color="#fff" />
-            <Text style={styles.tabsBtnText}>View Tabs on Songsterr</Text>
-            <Feather name="external-link" size={14} color="rgba(255,255,255,0.7)" />
+            <Feather name="music" size={16} color={colors.primary} />
+            <Text style={[styles.tabsBtnText, { color: colors.primary }]}>View Tabs on Songsterr</Text>
+            <Feather name="external-link" size={14} color={colors.primary} />
           </TouchableOpacity>
         )}
+
+        {song.trackMeta && <TrackMetaCard meta={song.trackMeta} songTitle={song.title} colors={colors} />}
+
+        {id && <DrumStudySection songId={id} colors={colors} />}
+        {id && <CyaniteCard songId={id} colors={colors} />}
+        {id && <SimilarSongsSection songId={id} colors={colors} />}
       </ScrollView>
     </View>
   );
@@ -821,6 +750,12 @@ const styles = StyleSheet.create({
   studyBox: { marginHorizontal: 20, marginTop: 20, padding: 16, borderRadius: 10, borderWidth: 1, gap: 10 },
   studyHeader: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   studyTitle: { fontSize: 14, fontWeight: '700' },
-  tabsBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, marginHorizontal: 20, marginTop: 20, paddingVertical: 14, borderRadius: 10 },
-  tabsBtnText: { color: '#fff', fontSize: 15, fontWeight: '700' },
+  tabsBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, marginHorizontal: 20, marginTop: 16, paddingVertical: 13, borderRadius: 10, borderWidth: 1 },
+  tabsBtnText: { fontSize: 15, fontWeight: '700' },
+  vibeHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 16, paddingTop: 16, paddingBottom: 4 },
+  vibeLabel: { fontSize: 9, letterSpacing: 2 },
+  vibeSource: { fontSize: 11 },
+  vibeStatsRow: { flexDirection: 'row', alignItems: 'center' },
+  vibeStatDivider: { width: StyleSheet.hairlineWidth, height: 36, marginHorizontal: 8 },
+  vibeGenreText: { fontSize: 12, paddingBottom: 4 },
 });
