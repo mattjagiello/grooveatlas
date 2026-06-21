@@ -4,6 +4,32 @@ export function isMusixmatchConfigured(): boolean {
   return Boolean(process.env["MUSICMATCH_API_KEY"]);
 }
 
+function normalizeTitle(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/\(remaster(ed)?\s*[\d]*\)/gi, '')
+    .replace(/\([\d]{4}\s*remaster\)/gi, '')
+    .replace(/\[.*?\]/g, '')
+    .replace(/[^a-z0-9\s]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function titlesAreSimilarEnough(query: string, returned: string): boolean {
+  const q = normalizeTitle(query);
+  const r = normalizeTitle(returned);
+  if (!q || !r) return false;
+  if (q === r) return true;
+  // One fully contains the other (handles parenthetical differences)
+  if (q.includes(r) || r.includes(q)) return true;
+  // Word-overlap: at least 60% of the meaningful query words appear in the result
+  const qWords = q.split(' ').filter(w => w.length > 2);
+  if (qWords.length === 0) return false;
+  const rWordSet = new Set(r.split(' ').filter(w => w.length > 2));
+  const overlap = qWords.filter(w => rWordSet.has(w)).length;
+  return overlap / qWords.length >= 0.6;
+}
+
 export interface TrackMeta {
   trackId: string;
   trackName: string | null;
@@ -55,6 +81,11 @@ export async function fetchTrackMeta(
 
     if (data.message.header.status_code !== 200) return null;
     const track = data.message.body.track;
+
+    // Reject the match if the returned title is too different from what we queried
+    if (track.track_name && !titlesAreSimilarEnough(trackTitle, track.track_name)) {
+      return null;
+    }
 
     const genres =
       track.primary_genres?.music_genre_list?.map(
