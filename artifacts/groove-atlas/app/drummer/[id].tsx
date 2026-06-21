@@ -22,6 +22,8 @@ import type { DrummerVibe } from '@/lib/queries';
 
 const HERO_HEIGHT = 260;
 
+// ─── Colour maps ──────────────────────────────────────────────────────────────
+
 const MOOD_COLORS: Record<string, string> = {
   aggressive: '#DC2626', energetic: '#EA580C', happy: '#D97706',
   romantic: '#DB2777', sad: '#2563EB', relaxed: '#059669',
@@ -33,90 +35,7 @@ const MOOD_COLORS: Record<string, string> = {
 
 const ENERGY_ICONS: Record<string, string> = { low: '🌊', medium: '🔥', high: '⚡' };
 
-function DrummerVibeCard({
-  vibe,
-  colors,
-}: {
-  vibe: DrummerVibe;
-  colors: ReturnType<typeof useColors>;
-}) {
-  if (vibe.analysedCount === 0) return null;
-  const topMoods = vibe.topMoods.slice(0, 5);
-  const topGenres = vibe.topGenres.slice(0, 4);
-  const topChar = vibe.topCharacter.slice(0, 4);
-  const energyIcon = ENERGY_ICONS[vibe.dominantEnergy?.toLowerCase() ?? ''] ?? '🎵';
-
-  return (
-    <View style={[vibeStyles.card, { backgroundColor: colors.card, borderColor: colors.border }]}>
-      <View style={vibeStyles.header}>
-        <Text style={vibeStyles.emoji}>🎚</Text>
-        <View style={{ flex: 1 }}>
-          <Text style={[vibeStyles.title, { color: colors.foreground }]}>Sonic Fingerprint</Text>
-          <Text style={[vibeStyles.sub, { color: colors.mutedForeground }]}>
-            {vibe.analysedCount} of {vibe.songCount} recordings analysed via Cyanite
-          </Text>
-        </View>
-      </View>
-
-      {topMoods.length > 0 && (
-        <View style={vibeStyles.row}>
-          {topMoods.map((m) => (
-            <View key={m} style={[vibeStyles.moodChip, { backgroundColor: (MOOD_COLORS[m.toLowerCase()] ?? colors.primary) + '22', borderColor: (MOOD_COLORS[m.toLowerCase()] ?? colors.primary) + '66' }]}>
-              <Text style={[vibeStyles.moodChipText, { color: MOOD_COLORS[m.toLowerCase()] ?? colors.primary }]}>{m}</Text>
-            </View>
-          ))}
-        </View>
-      )}
-
-      <View style={vibeStyles.statsRow}>
-        {vibe.avgBpm !== null && (
-          <View style={[vibeStyles.statBox, { backgroundColor: colors.primary + '15', borderColor: colors.primary + '30' }]}>
-            <Text style={[vibeStyles.statVal, { color: colors.primary }]}>{vibe.avgBpm}</Text>
-            <Text style={[vibeStyles.statLabel, { color: colors.mutedForeground }]}>AVG BPM</Text>
-          </View>
-        )}
-        {vibe.dominantEnergy && (
-          <View style={[vibeStyles.statBox, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-            <Text style={vibeStyles.statEmoji}>{energyIcon}</Text>
-            <Text style={[vibeStyles.statLabel, { color: colors.mutedForeground }]}>{vibe.dominantEnergy} energy</Text>
-          </View>
-        )}
-      </View>
-
-      {topGenres.length > 0 && (
-        <View style={vibeStyles.row}>
-          {topGenres.map((g) => (
-            <View key={g} style={[vibeStyles.tag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-              <Text style={[vibeStyles.tagText, { color: colors.foreground }]}>{g}</Text>
-            </View>
-          ))}
-        </View>
-      )}
-
-      {topChar.length > 0 && (
-        <View style={vibeStyles.row}>
-          {topChar.map((c) => (
-            <View key={c} style={[vibeStyles.tag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-              <Text style={[vibeStyles.tagText, { color: colors.mutedForeground }]}>{c}</Text>
-            </View>
-          ))}
-        </View>
-      )}
-
-      {vibe.freeGenreText ? (
-        <Text style={[vibeStyles.freeGenre, { color: colors.mutedForeground }]}>
-          {vibe.freeGenreText}
-        </Text>
-      ) : null}
-
-      {vibe.transformerCaptions.length > 0 && (
-        <Text style={[vibeStyles.caption, { color: colors.mutedForeground, borderColor: colors.border }]}>
-          "{vibe.transformerCaptions[0]}"
-        </Text>
-      )}
-    </View>
-  );
-}
+// ─── BPM zone sparkline ───────────────────────────────────────────────────────
 
 const BPM_MIN_SCALE = 40;
 const BPM_MAX_SCALE = 320;
@@ -129,28 +48,31 @@ const BPM_ZONES = [
 ];
 
 function bpmPct(bpm: number) {
-  return ((bpm - BPM_MIN_SCALE) / (BPM_MAX_SCALE - BPM_MIN_SCALE)) * 100;
+  return Math.min(100, Math.max(0, ((bpm - BPM_MIN_SCALE) / (BPM_MAX_SCALE - BPM_MIN_SCALE)) * 100));
 }
 
 function zoneOverlap(zMin: number, zMax: number, dMin: number, dMax: number) {
   return dMin < zMax && dMax > zMin;
 }
 
-interface BpmSparklineProps {
+interface BpmZoneBarProps {
   bpmMin: number;
   bpmMax: number;
+  avgBpm: number | null;
   primaryColor: string;
   trackColor: string;
-  textColor: string;
   mutedColor: string;
+  dividerColor: string;
 }
 
-function BpmSparkline({ bpmMin, bpmMax, primaryColor, trackColor, mutedColor }: BpmSparklineProps) {
+function BpmZoneBar({ bpmMin, bpmMax, avgBpm, primaryColor, trackColor, mutedColor, dividerColor }: BpmZoneBarProps) {
   const fillLeft = `${bpmPct(bpmMin)}%` as const;
   const fillWidth = `${Math.max(bpmPct(bpmMax) - bpmPct(bpmMin), 2)}%` as const;
+  const avgLeft = avgBpm !== null ? `${bpmPct(avgBpm)}%` : null;
 
   return (
     <View style={spark.wrapper}>
+      {/* Zone labels */}
       <View style={spark.zonesRow}>
         {BPM_ZONES.map((zone) => {
           const active = zoneOverlap(zone.min, zone.max, bpmMin, bpmMax);
@@ -164,29 +86,139 @@ function BpmSparkline({ bpmMin, bpmMax, primaryColor, trackColor, mutedColor }: 
           );
         })}
       </View>
+
+      {/* Zone bar with range fill + avg marker */}
       <View style={[spark.track, { backgroundColor: trackColor }]}>
-        <View style={[spark.fill, { backgroundColor: primaryColor, left: fillLeft, width: fillWidth }]} />
+        <View style={[spark.fill, { backgroundColor: primaryColor + '50', left: fillLeft, width: fillWidth }]} />
         {BPM_ZONES.map((zone, idx) => (
           idx < BPM_ZONES.length - 1 && (
-            <View
-              key={zone.label}
-              style={[
-                spark.divider,
-                { left: `${bpmPct(zone.max)}%` as any, backgroundColor: trackColor === '#E8D5B0' ? '#C4A060' : '#444' },
-              ]}
-            />
+            <View key={zone.label} style={[spark.divider, { left: `${bpmPct(zone.max)}%` as any, backgroundColor: dividerColor }]} />
           )
         ))}
+        {/* Avg BPM pin */}
+        {avgLeft && (
+          <View style={[spark.avgPin, { left: avgLeft as any, backgroundColor: primaryColor }]} />
+        )}
       </View>
-      <View style={spark.bpmRow}>
-        <Text style={[spark.bpmVal, { color: primaryColor }]}>{bpmMin}</Text>
-        <Text style={[spark.bpmSep, { color: mutedColor }]}>—</Text>
-        <Text style={[spark.bpmVal, { color: primaryColor }]}>{bpmMax}</Text>
-        <Text style={[spark.bpmUnit, { color: mutedColor }]}>BPM</Text>
+
+      {/* Legend */}
+      <View style={spark.legend}>
+        <View style={spark.legendItem}>
+          <View style={[spark.legendDot, { backgroundColor: primaryColor + '50', borderWidth: 1, borderColor: primaryColor + '80' }]} />
+          <Text style={[spark.legendText, { color: mutedColor }]}>repertoire span {bpmMin}–{bpmMax}</Text>
+        </View>
+        {avgLeft && (
+          <View style={spark.legendItem}>
+            <View style={[spark.avgDot, { backgroundColor: primaryColor }]} />
+            <Text style={[spark.legendText, { color: mutedColor }]}>avg {avgBpm} BPM</Text>
+          </View>
+        )}
       </View>
     </View>
   );
 }
+
+// ─── Unified Rhythm Profile ───────────────────────────────────────────────────
+
+function RhythmProfile({
+  bpmMin, bpmMax, vibe, colors,
+}: {
+  bpmMin: number;
+  bpmMax: number;
+  vibe: DrummerVibe | null | undefined;
+  colors: ReturnType<typeof useColors>;
+}) {
+  const hasVibe = vibe && vibe.analysedCount > 0;
+  const avgBpm = hasVibe ? (vibe.avgBpm ?? null) : null;
+  const energyIcon = hasVibe && vibe.dominantEnergy
+    ? (ENERGY_ICONS[vibe.dominantEnergy.toLowerCase()] ?? '🎵')
+    : null;
+  const topMoods = hasVibe ? vibe.topMoods.slice(0, 5) : [];
+  const tags = hasVibe ? [...vibe.topGenres.slice(0, 4), ...vibe.topCharacter.slice(0, 3)] : [];
+  const dividerColor = colors.muted === '#E8D5B0' ? '#C4A060' : '#444';
+
+  return (
+    <View style={[rp.card, { backgroundColor: colors.card, borderColor: colors.border }]}>
+      <Text style={[rp.heading, { color: colors.mutedForeground }]}>RHYTHM PROFILE</Text>
+
+      {/* Stat row — only render when we have meaningful values */}
+      {(avgBpm !== null || hasVibe) && (
+        <View style={rp.statsRow}>
+          {avgBpm !== null && (
+            <View style={[rp.statBox, { backgroundColor: colors.primary + '15', borderColor: colors.primary + '30' }]}>
+              <Text style={[rp.statVal, { color: colors.primary }]}>{avgBpm}</Text>
+              <Text style={[rp.statLabel, { color: colors.mutedForeground }]}>AVG BPM</Text>
+            </View>
+          )}
+          {hasVibe && energyIcon && vibe.dominantEnergy && (
+            <View style={[rp.statBox, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+              <Text style={rp.statEmoji}>{energyIcon}</Text>
+              <Text style={[rp.statLabel, { color: colors.mutedForeground }]}>{vibe.dominantEnergy} energy</Text>
+            </View>
+          )}
+          {hasVibe && (
+            <View style={[rp.statBox, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+              <Text style={[rp.statVal, { color: colors.foreground, fontSize: 20 }]}>{vibe.analysedCount}</Text>
+              <Text style={[rp.statLabel, { color: colors.mutedForeground }]}>TRACKS STUDIED</Text>
+            </View>
+          )}
+        </View>
+      )}
+
+      {/* Zone bar */}
+      <BpmZoneBar
+        bpmMin={bpmMin}
+        bpmMax={bpmMax}
+        avgBpm={avgBpm}
+        primaryColor={colors.primary}
+        trackColor={colors.muted}
+        mutedColor={colors.mutedForeground}
+        dividerColor={dividerColor}
+      />
+
+      {/* Moods */}
+      {topMoods.length > 0 && (
+        <View style={rp.chipRow}>
+          {topMoods.map((m) => {
+            const c = MOOD_COLORS[m.toLowerCase()] ?? colors.primary;
+            return (
+              <View key={m} style={[rp.moodChip, { backgroundColor: c + '22', borderColor: c + '66' }]}>
+                <Text style={[rp.moodText, { color: c }]}>{m}</Text>
+              </View>
+            );
+          })}
+        </View>
+      )}
+
+      {/* Genre + character tags */}
+      {tags.length > 0 && (
+        <View style={rp.chipRow}>
+          {tags.map((t) => (
+            <View key={t} style={[rp.tag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
+              <Text style={[rp.tagText, { color: colors.foreground }]}>{t}</Text>
+            </View>
+          ))}
+        </View>
+      )}
+
+      {/* AI caption */}
+      {hasVibe && vibe.transformerCaptions.length > 0 && (
+        <Text style={[rp.caption, { color: colors.mutedForeground, borderColor: colors.border }]}>
+          "{vibe.transformerCaptions[0]}"
+        </Text>
+      )}
+
+      {/* Source */}
+      {hasVibe && (
+        <Text style={[rp.source, { color: colors.mutedForeground }]}>
+          Via Cyanite AI · {vibe.analysedCount} of {vibe.songCount} recordings
+        </Text>
+      )}
+    </View>
+  );
+}
+
+// ─── Loading skeleton ─────────────────────────────────────────────────────────
 
 function DrummerDetailSkeleton({ colors }: { colors: ReturnType<typeof useColors> }) {
   const insets = useSafeAreaInsets();
@@ -198,12 +230,14 @@ function DrummerDetailSkeleton({ colors }: { colors: ReturnType<typeof useColors
         <Skeleton width="60%" height={22} />
         <Skeleton width="40%" height={14} />
         <Skeleton width="100%" height={80} style={{ marginTop: 8 }} />
-        <Skeleton width="100%" height={80} />
+        <Skeleton width="100%" height={100} />
         <Skeleton width="100%" height={60} />
       </View>
     </View>
   );
 }
+
+// ─── Main screen ──────────────────────────────────────────────────────────────
 
 export default function DrummerDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -250,11 +284,7 @@ export default function DrummerDetailScreen() {
         {/* ── Cinematic hero ── */}
         <View style={{ height: HERO_HEIGHT }}>
           {drummer.photoUrl ? (
-            <Image
-              source={{ uri: drummer.photoUrl }}
-              style={StyleSheet.absoluteFillObject}
-              resizeMode="cover"
-            />
+            <Image source={{ uri: drummer.photoUrl }} style={StyleSheet.absoluteFillObject} resizeMode="cover" />
           ) : (
             <>
               <LinearGradient
@@ -266,19 +296,13 @@ export default function DrummerDetailScreen() {
               </View>
             </>
           )}
-
-          {/* Darken the photo slightly for text legibility */}
           {drummer.photoUrl && (
             <View style={[StyleSheet.absoluteFillObject, { backgroundColor: 'rgba(0,0,0,0.28)' }]} />
           )}
-
-          {/* Gradient fade from image into page background */}
           <LinearGradient
             colors={['transparent', colors.background] as const}
             style={styles.heroGradient}
           />
-
-          {/* Floating back button */}
           <TouchableOpacity
             onPress={goBack}
             testID="back-button"
@@ -289,17 +313,13 @@ export default function DrummerDetailScreen() {
               <Feather name="arrow-left" size={20} color="#fff" />
             </View>
           </TouchableOpacity>
-
-          {/* Name + years at bottom of hero */}
           <View style={styles.heroNameArea}>
-            <Text style={[styles.name, { fontFamily: 'serif' }]} numberOfLines={2}>
-              {drummer.name}
-            </Text>
+            <Text style={[styles.name, { fontFamily: 'serif' }]} numberOfLines={2}>{drummer.name}</Text>
             <Text style={styles.heroYears}>{yearsActive}</Text>
           </View>
         </View>
 
-        {/* ── Meta strip below hero ── */}
+        {/* ── Meta strip ── */}
         <View style={[styles.heroMeta, { backgroundColor: colors.card, borderBottomColor: colors.border }]}>
           <View style={styles.heroMetaRow}>
             <TouchableOpacity onPress={() => router.push(`/era/${drummer.primaryEra}`)}>
@@ -317,47 +337,40 @@ export default function DrummerDetailScreen() {
           </Text>
         </View>
 
-        {/* ── Content sections ── */}
+        {/* ── Biography ── */}
         <View style={styles.section}>
           <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Biography</Text>
           <Text style={[styles.bio, { color: colors.foreground }]}>{drummer.bio}</Text>
         </View>
 
+        {/* ── Signature style ── */}
         <View style={[styles.styleBox, { backgroundColor: colors.card, borderColor: colors.border, borderLeftColor: colors.primary }]}>
           <Text style={[styles.styleLabel, { color: colors.mutedForeground }]}>SIGNATURE STYLE</Text>
           <Text style={[styles.styleText, { color: colors.foreground }]}>{drummer.signatureStyle}</Text>
         </View>
 
+        {/* ── Rhythm Profile (replaces Tempo & Style + Sonic Fingerprint) ── */}
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Tempo & Style</Text>
-          <View style={[styles.sparkCard, { backgroundColor: colors.card, borderColor: colors.border }]}>
-            <BpmSparkline
-              bpmMin={drummer.bpmMin}
-              bpmMax={drummer.bpmMax}
-              primaryColor={colors.primary}
-              trackColor={colors.muted}
-              textColor={colors.foreground}
-              mutedColor={colors.mutedForeground}
-            />
-          </View>
+          <RhythmProfile
+            bpmMin={drummer.bpmMin}
+            bpmMax={drummer.bpmMax}
+            vibe={vibe}
+            colors={colors}
+          />
         </View>
 
-        {vibe && (
-          <View style={{ paddingHorizontal: 20, paddingTop: 24 }}>
-            <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Sonic Fingerprint</Text>
-            <DrummerVibeCard vibe={vibe} colors={colors} />
-          </View>
-        )}
-
+        {/* ── Legacy & Influence ── */}
         <View style={styles.section}>
           <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Legacy & Influence</Text>
           <Text style={[styles.influence, { color: colors.foreground }]}>{drummer.influence}</Text>
         </View>
 
+        {/* ── Streaming stats ── */}
         <View style={styles.section}>
           <SongstatsCard drummerId={drummer.id} />
         </View>
 
+        {/* ── Essential recordings ── */}
         {songs.length > 0 && (
           <View style={styles.section}>
             <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Essential Recordings</Text>
@@ -371,39 +384,40 @@ export default function DrummerDetailScreen() {
   );
 }
 
-const vibeStyles = StyleSheet.create({
-  card: { borderRadius: 12, borderWidth: 1, padding: 16, gap: 10 },
-  header: { flexDirection: 'row', alignItems: 'flex-start', gap: 12 },
-  emoji: { fontSize: 26 },
-  title: { fontSize: 15, fontWeight: '700' },
-  sub: { fontSize: 11, marginTop: 2 },
-  row: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
-  moodChip: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 16, borderWidth: 1 },
-  moodChipText: { fontSize: 12, fontWeight: '600' },
-  statsRow: { flexDirection: 'row', gap: 10 },
-  statBox: { flex: 1, alignItems: 'center', paddingVertical: 10, borderRadius: 8, borderWidth: 1, gap: 2 },
-  statVal: { fontSize: 26, fontWeight: '700', lineHeight: 30 },
-  statEmoji: { fontSize: 22 },
-  statLabel: { fontSize: 9, fontWeight: '600', letterSpacing: 1 },
-  tag: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 20, borderWidth: 1 },
-  tagText: { fontSize: 11, fontWeight: '600' },
-  freeGenre: { fontSize: 11, fontStyle: 'italic' },
-  caption: { fontSize: 12, fontStyle: 'italic', lineHeight: 18, borderLeftWidth: 3, paddingLeft: 10 },
-});
+// ─── Styles ───────────────────────────────────────────────────────────────────
 
 const spark = StyleSheet.create({
-  wrapper: { gap: 8 },
+  wrapper: { gap: 6 },
   zonesRow: { flexDirection: 'row' },
   zoneCell: { flex: 1, alignItems: 'center', gap: 2 },
   zoneLabel: { fontSize: 10, textAlign: 'center' },
   zoneRange: { fontSize: 9, textAlign: 'center' },
   track: { height: 10, borderRadius: 5, position: 'relative', overflow: 'hidden' },
   fill: { position: 'absolute', top: 0, bottom: 0, borderRadius: 5 },
+  avgPin: { position: 'absolute', top: 0, bottom: 0, width: 3, borderRadius: 1.5 },
   divider: { position: 'absolute', top: 0, bottom: 0, width: 1 },
-  bpmRow: { flexDirection: 'row', alignItems: 'baseline', gap: 6, justifyContent: 'center', marginTop: 4 },
-  bpmVal: { fontSize: 28, fontWeight: '700', fontFamily: 'serif' },
-  bpmSep: { fontSize: 18 },
-  bpmUnit: { fontSize: 13, marginLeft: 2 },
+  legend: { flexDirection: 'row', gap: 14, marginTop: 2 },
+  legendItem: { flexDirection: 'row', alignItems: 'center', gap: 5 },
+  legendDot: { width: 10, height: 10, borderRadius: 5 },
+  avgDot: { width: 3, height: 10, borderRadius: 1.5 },
+  legendText: { fontSize: 10 },
+});
+
+const rp = StyleSheet.create({
+  card: { borderRadius: 12, borderWidth: 1, padding: 16, gap: 12 },
+  heading: { fontSize: 10, fontWeight: '700', letterSpacing: 2 },
+  statsRow: { flexDirection: 'row', gap: 8 },
+  statBox: { flex: 1, alignItems: 'center', paddingVertical: 10, borderRadius: 8, borderWidth: 1, gap: 2 },
+  statVal: { fontSize: 24, fontWeight: '700', lineHeight: 28 },
+  statEmoji: { fontSize: 20 },
+  statLabel: { fontSize: 9, fontWeight: '600', letterSpacing: 0.8, textAlign: 'center' },
+  chipRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+  moodChip: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 16, borderWidth: 1 },
+  moodText: { fontSize: 12, fontWeight: '600' },
+  tag: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 20, borderWidth: 1 },
+  tagText: { fontSize: 11, fontWeight: '600' },
+  caption: { fontSize: 12, fontStyle: 'italic', lineHeight: 18, borderLeftWidth: 3, paddingLeft: 10 },
+  source: { fontSize: 10, fontStyle: 'italic' },
 });
 
 const styles = StyleSheet.create({
@@ -420,10 +434,7 @@ const styles = StyleSheet.create({
   heroNameArea: { position: 'absolute', bottom: 14, left: 20, right: 20 },
   name: { fontSize: 32, fontWeight: '800', lineHeight: 36, color: '#fff' },
   heroYears: { fontSize: 13, color: 'rgba(255,255,255,0.80)', marginTop: 2 },
-  heroMeta: {
-    paddingHorizontal: 20, paddingVertical: 14,
-    borderBottomWidth: StyleSheet.hairlineWidth, gap: 6,
-  },
+  heroMeta: { paddingHorizontal: 20, paddingVertical: 14, borderBottomWidth: StyleSheet.hairlineWidth, gap: 6 },
   heroMetaRow: { flexDirection: 'row', alignItems: 'center', gap: 10, flexWrap: 'wrap' },
   eraTag: { alignSelf: 'flex-start', paddingHorizontal: 8, paddingVertical: 4, borderRadius: 4, borderWidth: 1 },
   eraTagText: { fontSize: 11, fontWeight: '700' },
@@ -435,6 +446,5 @@ const styles = StyleSheet.create({
   styleBox: { marginHorizontal: 20, marginTop: 20, padding: 16, borderRadius: 10, borderWidth: 1, borderLeftWidth: 4, gap: 6 },
   styleLabel: { fontSize: 10, fontWeight: '700', letterSpacing: 2 },
   styleText: { fontSize: 14, lineHeight: 20, fontStyle: 'italic' },
-  sparkCard: { padding: 16, borderRadius: 10, borderWidth: 1 },
   influence: { fontSize: 15, lineHeight: 22 },
 });
