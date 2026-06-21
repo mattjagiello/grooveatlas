@@ -22,6 +22,8 @@ export const ERA_LIST_QUERY = gql`
   }
 `;
 
+const VIBE_FIELDS = `songCount analysedCount avgBpm dominantEnergy topMoods topGenres topCharacter freeGenreText transformerCaptions`;
+
 export const ERA_DETAIL_QUERY = gql`
   query Era($id: ID!) {
     era(id: $id) {
@@ -29,6 +31,7 @@ export const ERA_DETAIL_QUERY = gql`
       keyDrummerIds iconicSongIds
       keyDrummers { ${DRUMMER_CARD} }
       iconicSongs  { ${SONG_CARD} }
+      aiSoundProfile { ${VIBE_FIELDS} }
     }
   }
 `;
@@ -52,6 +55,7 @@ export const GENRE_DETAIL_QUERY = gql`
       charts(limit: 5) {
         trackId title artist albumTitle rank source
       }
+      aiSoundProfile { ${VIBE_FIELDS} }
     }
   }
 `;
@@ -148,6 +152,7 @@ import type { Era, Genre, Drummer, Song } from '@/constants/data';
 export interface EraWithNested extends Era {
   keyDrummers: Drummer[];
   iconicSongs: Song[];
+  aiSoundProfile: DrummerVibe | null;
 }
 
 export interface GenreChartTrack {
@@ -163,6 +168,7 @@ export interface GenreWithNested extends Genre {
   keyDrummers: Drummer[];
   iconicSongs: Song[];
   charts: GenreChartTrack[];
+  aiSoundProfile: DrummerVibe | null;
 }
 
 export interface DrummerWithSongs extends Drummer {

@@ -15,6 +15,7 @@ import {
 import { useEra } from '@/hooks/useGql';
 import DrummerCard from '@/components/DrummerCard';
 import TrackRow from '@/components/TrackRow';
+import SonicFingerprint from '@/components/SonicFingerprint';
 import { Drummer, Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 import { Fonts } from '@/constants/typography';
@@ -79,6 +80,16 @@ export default function EraDetailScreen() {
         <View style={styles.section}>
           <Text style={[styles.body, { color: colors.foreground }]}>{era.description}</Text>
         </View>
+
+        {/* ── AI Sonic Fingerprint ── */}
+        {era.aiSoundProfile && (
+          <>
+            <View style={[styles.divider, { backgroundColor: colors.border }]} />
+            <View style={styles.section}>
+              <SonicFingerprint vibe={era.aiSoundProfile} accentColor={era.color} />
+            </View>
+          </>
+        )}
 
         <View style={[styles.divider, { backgroundColor: colors.border }]} />
 

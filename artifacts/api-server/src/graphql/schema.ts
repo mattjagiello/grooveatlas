@@ -11,6 +11,7 @@ export const typeDefs = /* GraphQL */ `
     iconicSongIds: [String!]!
     keyDrummers: [Drummer!]!
     iconicSongs: [Song!]!
+    aiSoundProfile: DrummerVibe
   }
 
   type Genre {
@@ -28,6 +29,7 @@ export const typeDefs = /* GraphQL */ `
     keyDrummers: [Drummer!]!
     iconicSongs: [Song!]!
     charts(limit: Int): [ChartTrack!]!
+    aiSoundProfile: DrummerVibe
   }
 
   type Drummer {

@@ -15,6 +15,7 @@ import {
 import { useGenre } from '@/hooks/useGql';
 import DrummerCard from '@/components/DrummerCard';
 import TrackRow from '@/components/TrackRow';
+import SonicFingerprint from '@/components/SonicFingerprint';
 import { Drummer, Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 import { Fonts } from '@/constants/typography';
@@ -87,6 +88,16 @@ export default function GenreDetailScreen() {
         <View style={styles.section}>
           <Text style={[styles.body, { color: colors.foreground }]}>{genre.description}</Text>
         </View>
+
+        {/* ── AI Sonic Fingerprint ── */}
+        {genre.aiSoundProfile && (
+          <>
+            <View style={[styles.divider, { backgroundColor: colors.border }]} />
+            <View style={styles.section}>
+              <SonicFingerprint vibe={genre.aiSoundProfile} accentColor={genre.color} />
+            </View>
+          </>
+        )}
 
         <View style={[styles.divider, { backgroundColor: colors.border }]} />
 

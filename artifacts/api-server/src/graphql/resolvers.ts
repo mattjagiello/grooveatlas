@@ -82,9 +82,8 @@ function topN(counts: Record<string, number>, n: number): string[] {
     .map(([t]) => t);
 }
 
-function aggregateDrummerVibe(drummerId: string) {
-  const drummerSongs = songs.filter((s) => s.drummerId === drummerId);
-  const analysed = drummerSongs.filter((s) => {
+function aggregateVibeForSongs(targetSongs: Song[], sourceId: string) {
+  const analysed = targetSongs.filter((s) => {
     const c = getCached(s.id);
     return c && (c.bpm > 0 || (c.moodTags?.length ?? 0) > 0 || (c.genreTags?.length ?? 0) > 0);
   });
@@ -118,17 +117,24 @@ function aggregateDrummerVibe(drummerId: string) {
   for (const t of freeGenreParts) freeGenreCounts[t] = (freeGenreCounts[t] ?? 0) + 1;
 
   return {
-    drummerId,
-    songCount: drummerSongs.length,
+    drummerId: sourceId,
+    songCount: targetSongs.length,
     analysedCount: analysed.length,
     avgBpm: bpmCount > 0 ? Math.round(totalBpm / bpmCount) : null,
     dominantEnergy: topN(energyCounts, 1)[0] ?? null,
-    topMoods: topN(moodCounts, 5),
-    topGenres: topN(genreCounts, 4),
-    topCharacter: topN(charCounts, 4),
-    freeGenreText: topN(freeGenreCounts, 6).join(", ") || null,
+    topMoods: topN(moodCounts, 6),
+    topGenres: topN(genreCounts, 5),
+    topCharacter: topN(charCounts, 5),
+    freeGenreText: topN(freeGenreCounts, 8).join(", ") || null,
     transformerCaptions: [...new Set(captions)].slice(0, 3),
   };
+}
+
+function aggregateDrummerVibe(drummerId: string) {
+  return aggregateVibeForSongs(
+    songs.filter((s) => s.drummerId === drummerId),
+    drummerId,
+  );
 }
 
 function computeSimilarSongs(songId: string, limit: number) {
@@ -230,6 +236,8 @@ export const resolvers = {
   Era: {
     keyDrummers: (era: Era) => resolveKeyDrummers(era.keyDrummerIds),
     iconicSongs: (era: Era) => resolveIconicSongs(era.iconicSongIds),
+    aiSoundProfile: (era: Era) =>
+      aggregateVibeForSongs(songs.filter((s) => s.eraId === era.id), era.id),
   },
 
   Genre: {
@@ -237,6 +245,8 @@ export const resolvers = {
     iconicSongs: (genre: Genre) => resolveIconicSongs(genre.iconicSongIds),
     charts: (genre: Genre, { limit = 5 }: { limit?: number }) =>
       getCharts(genre.id, limit),
+    aiSoundProfile: (genre: Genre) =>
+      aggregateVibeForSongs(songs.filter((s) => s.genreIds.includes(genre.id)), genre.id),
   },
 
   Drummer: {
