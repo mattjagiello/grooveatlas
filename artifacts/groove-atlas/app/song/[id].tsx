@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React, { useState, useEffect } from 'react';
 import {
   ActivityIndicator,
+  Image,
   Platform,
   ScrollView,
   StyleSheet,
@@ -656,11 +657,19 @@ export default function SongDetailScreen() {
             onPress={() => router.push(`/drummer/${drummer.id}`)}
             style={[styles.drummerBox, { backgroundColor: colors.card, borderColor: colors.border }]}
           >
-            <View style={[styles.drummerAvatar, { backgroundColor: colors.primary }]}>
-              <Text style={styles.drummerInitials}>
-                {drummer.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
-              </Text>
-            </View>
+            {drummer.photoUrl ? (
+              <Image
+                source={{ uri: drummer.photoUrl }}
+                style={[styles.drummerAvatar, { backgroundColor: colors.primary }]}
+                resizeMode="cover"
+              />
+            ) : (
+              <View style={[styles.drummerAvatar, { backgroundColor: colors.primary }]}>
+                <Text style={styles.drummerInitials}>
+                  {drummer.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
+                </Text>
+              </View>
+            )}
             <View style={styles.drummerInfo}>
               <Text style={[styles.drummerLabel, { color: colors.mutedForeground }]}>DRUMMER</Text>
               <Text style={[styles.drummerName, { color: colors.foreground, fontFamily: 'serif' }]}>{drummer.name}</Text>

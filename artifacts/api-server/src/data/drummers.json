@@ -26,7 +26,8 @@
     "influence": "Set the technical benchmark for all jazz drumming that followed. His big band recordings remain the definitive example of swing drumming at its most spectacular.",
     "iconicSongIds": [
       "sing-sing-sing"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Buddy_Rich.jpg/330px-Buddy_Rich.jpg"
   },
   {
     "id": "gene-krupa",
@@ -52,7 +53,8 @@
     "influence": "Elevated the drummer from rhythm section support to featured soloist and public celebrity. Created the visual template for rock drumming.",
     "iconicSongIds": [
       "sing-sing-sing"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Gene_Krupa_Billboard.jpg/330px-Gene_Krupa_Billboard.jpg"
   },
   {
     "id": "max-roach",
@@ -80,7 +82,8 @@
     "influence": "Defined modern jazz drumming. Every jazz drummer since learns Max Roach's conceptual approach to ride cymbal timekeeping and melodic use of the kit.",
     "iconicSongIds": [
       "ko-ko"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Max_Roach%2C_Three_Deuces%2C_ca._1947.jpg/330px-Max_Roach%2C_Three_Deuces%2C_ca._1947.jpg"
   },
   {
     "id": "art-blakey",
@@ -109,7 +112,8 @@
     "influence": "Mentored more great jazz musicians than anyone in history through the Jazz Messengers. His hard bop drumming style remains one of jazz's most studied approaches.",
     "iconicSongIds": [
       "moanin"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Art_blakey_studio_portrait.jpg/330px-Art_blakey_studio_portrait.jpg"
   },
   {
     "id": "elvin-jones",
@@ -138,7 +142,8 @@
     "influence": "Revolutionized jazz drumming's relationship to time and rhythm. His work with Coltrane on A Love Supreme is among the most studied drumming in jazz history.",
     "iconicSongIds": [
       "a-love-supreme"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Elvin_Jones_1979_1.jpg"
   },
   {
     "id": "tony-williams",
@@ -167,7 +172,8 @@
     "influence": "The primary influence on virtually every jazz drummer who followed. His work with the Miles Davis Second Great Quintet is the benchmark of interactive jazz drumming.",
     "iconicSongIds": [
       "freedom-jazz-dance"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Tony_Williams_Tonga.jpg/330px-Tony_Williams_Tonga.jpg"
   },
   {
     "id": "steve-gadd",
@@ -199,7 +205,8 @@
     "influence": "Defined the gold standard of studio session drumming. His work across hundreds of albums makes him the most influential groove drummer in recording history.",
     "iconicSongIds": [
       "aja"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Steve_Gadd_at_Bod%C3%B8_Jazz_Open_2014.jpg/330px-Steve_Gadd_at_Bod%C3%B8_Jazz_Open_2014.jpg"
   },
   {
     "id": "harvey-mason",
@@ -228,7 +235,8 @@
     "influence": "His groove on 'Chameleon' influenced the entire jazz-funk and smooth jazz world. A model for how jazz drummers can work in commercial contexts without losing their voice.",
     "iconicSongIds": [
       "chameleon"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Harvey_Mason_2004_cropped.jpg/330px-Harvey_Mason_2004_cropped.jpg"
   },
   {
     "id": "jimmy-cobb",
@@ -259,7 +267,8 @@
     "iconicSongIds": [
       "so-what",
       "all-blues"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Jimmy_Cobb.jpg/330px-Jimmy_Cobb.jpg"
   },
   {
     "id": "jack-dejohnette",
@@ -291,7 +300,8 @@
     "iconicSongIds": [
       "miles-voodoo-down",
       "shhh-peaceful"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Deutsches_Jazzfestival_2015_-_DeJonette_Mitchell_Garrison_-_Jack_DeJohnette_-_03.jpg/330px-Deutsches_Jazzfestival_2015_-_DeJonette_Mitchell_Garrison_-_Jack_DeJohnette_-_03.jpg"
   },
   {
     "id": "alex-acuna",
@@ -323,7 +333,8 @@
     "influence": "Demonstrated how Latin and Afro-Cuban rhythmic traditions can enrich jazz fusion. His work with Weather Report is a landmark in the meeting of rhythmic cultures.",
     "iconicSongIds": [
       "birdland"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alex_Acu%C3%B1a_%285022184811%29.jpg/330px-Alex_Acu%C3%B1a_%285022184811%29.jpg"
   },
   {
     "id": "earl-palmer",
@@ -353,7 +364,8 @@
     "iconicSongIds": [
       "hound-dog",
       "whole-lotta-shakin"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Earl_Palmer.jpg/330px-Earl_Palmer.jpg"
   },
   {
     "id": "dj-fontana",
@@ -379,7 +391,8 @@
     "influence": "Defined the sound of early rock and roll drumming through his work with Elvis. His instinctive style influenced every rock drummer who followed.",
     "iconicSongIds": [
       "hound-dog"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/DJ_Fontana_performing_%28cropped%29.jpg/330px-DJ_Fontana_performing_%28cropped%29.jpg"
   },
   {
     "id": "ringo-starr",
@@ -404,7 +417,8 @@
     "influence": "Proved that feel and musicality matter more than technical flash. His work with The Beatles remains a masterclass in creative simplicity.",
     "iconicSongIds": [
       "come-together"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/ARTIST_INTERVIEW_-_Ringo_Starr_%28Former_the_Beatles%29_exclusive_interview_0-14_screenshot_%28portrait_crop%29.jpg/330px-ARTIST_INTERVIEW_-_Ringo_Starr_%28Former_the_Beatles%29_exclusive_interview_0-14_screenshot_%28portrait_crop%29.jpg"
   },
   {
     "id": "keith-moon",
@@ -430,7 +444,8 @@
     "iconicSongIds": [
       "my-generation",
       "wont-get-fooled-again"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Keith_Moon_4_-_The_Who_-_1975-2.jpg/330px-Keith_Moon_4_-_The_Who_-_1975-2.jpg"
   },
   {
     "id": "ginger-baker",
@@ -461,7 +476,8 @@
     "iconicSongIds": [
       "sunshine-of-your-love",
       "toad"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ginger_Baker_in_1984.jpg/330px-Ginger_Baker_in_1984.jpg"
   },
   {
     "id": "charlie-watts",
@@ -491,7 +507,8 @@
     "influence": "The defining example of pocket drumming in rock. His 60-year career with the Stones is the longest-running case study in groove-over-technique in popular music.",
     "iconicSongIds": [
       "sympathy-for-the-devil"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Charle-Watts-1965_%28cropped%29.jpg/330px-Charle-Watts-1965_%28cropped%29.jpg"
   },
   {
     "id": "mitch-mitchell",
@@ -518,7 +535,8 @@
     "iconicSongIds": [
       "manic-depression",
       "fire-hendrix"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Mitch_Mitchell.png"
   },
   {
     "id": "nick-mason",
@@ -546,7 +564,8 @@
     "iconicSongIds": [
       "time-pink-floyd",
       "money-pink-floyd"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Nick_Mason_2018_%28cropped2%29.jpg/330px-Nick_Mason_2018_%28cropped2%29.jpg"
   },
   {
     "id": "john-densmore",
@@ -572,7 +591,8 @@
     "influence": "Demonstrated how jazz and world music influences could serve psychedelic rock. The rhythmic backbone of some of the 1960s most enduring recordings.",
     "iconicSongIds": [
       "light-my-fire"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/John_Densmore.jpg/330px-John_Densmore.jpg"
   },
   {
     "id": "mick-fleetwood",
@@ -603,7 +623,8 @@
     "iconicSongIds": [
       "the-chain",
       "go-your-own-way"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/FleetMacTulsa031018-33_%2831359883398%29.jpg/330px-FleetMacTulsa031018-33_%2831359883398%29.jpg"
   },
   {
     "id": "al-jackson-jr",
@@ -631,7 +652,8 @@
     "influence": "The defining voice of Southern soul drumming. His approach to pocket and minimalism is still the gold standard for groove-first drumming.",
     "iconicSongIds": [
       "green-onions"
-    ]
+    ],
+    "photoUrl": null
   },
   {
     "id": "john-bonham",
@@ -659,7 +681,8 @@
       "moby-dick",
       "when-the-levee-breaks",
       "whole-lotta-love"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/9d850c3a35757f76fcc0b470752bf7ea/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "clyde-stubblefield",
@@ -686,7 +709,8 @@
     "iconicSongIds": [
       "cold-sweat",
       "funky-drummer"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Clyde-Stubblefield-june-24-2005.jpg/330px-Clyde-Stubblefield-june-24-2005.jpg"
   },
   {
     "id": "bernard-purdie",
@@ -718,7 +742,8 @@
     "influence": "Inventor of the Purdie Shuffle, one of drumming's most studied grooves. His session work defines the sound of American soul and R&B in the 1960s and 70s.",
     "iconicSongIds": [
       "aja"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/c9b179a1891027dee0ba0528679067b9/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "zigaboo-modeliste",
@@ -744,7 +769,8 @@
     "influence": "Created New Orleans funk drumming and influenced everyone from the Red Hot Chili Peppers to virtually every hip-hop producer who ever sampled the Meters.",
     "iconicSongIds": [
       "cissy-strut"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/962d6c2e05f238a20acc6e36c420b0fd/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "david-garibaldi",
@@ -771,7 +797,8 @@
     "influence": "Set the standard for sophisticated funk drumming with precise ghost note technique. Tower of Power recordings are required curriculum in percussion programs worldwide.",
     "iconicSongIds": [
       "what-is-hip"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/f30b71d6881bde7b3fd5f28680acc813/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "neil-peart",
@@ -799,7 +826,8 @@
     "influence": "Set the technical and musical standard for progressive rock drumming. His work inspired an entire generation of serious drummers to pursue both technique and musicality.",
     "iconicSongIds": [
       "tom-sawyer"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Rush_band_1970s_%28cropped%29.jpg/330px-Rush_band_1970s_%28cropped%29.jpg"
   },
   {
     "id": "bill-bruford",
@@ -831,7 +859,8 @@
     "iconicSongIds": [
       "roundabout",
       "heart-of-the-sunrise"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/a2ac936de1429fe22507c9f4e2351adc/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "carl-palmer",
@@ -858,7 +887,8 @@
     "influence": "Brought classical percussion technique and sensibility to rock music. His work with ELP remains the most ambitious fusion of classical music and rock drumming ever achieved.",
     "iconicSongIds": [
       "tarkus"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/04ca2e12a19655b4456c2128f9ec3a28/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "gavin-harrison",
@@ -886,7 +916,8 @@
     "iconicSongIds": [
       "trains",
       "arriving-somewhere"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/e92e8ac1428ef2a5801506e2b6a52b41/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "billy-cobham",
@@ -913,7 +944,8 @@
     "influence": "Pioneered jazz-rock fusion drumming and the open-handed technique. His power and musicality influenced generations of fusion and progressive drummers.",
     "iconicSongIds": [
       "birds-of-fire"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Billy_Cobham.jpg/330px-Billy_Cobham.jpg"
   },
   {
     "id": "stewart-copeland",
@@ -939,7 +971,8 @@
     "influence": "Showed how to blend non-Western rhythmic traditions with rock music. Inspired a generation to look beyond standard rock patterns for inspiration.",
     "iconicSongIds": [
       "roxanne"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/07c4bf9fa6d966fa24f7d03099f7453b/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "jeff-porcaro",
@@ -964,7 +997,8 @@
     "influence": "Defined 1980s studio drumming. The Rosanna Shuffle is one of the most studied grooves in contemporary drumming education.",
     "iconicSongIds": [
       "rosanna"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Jeff_Porcaro_Toto_Fahrenheit_World_Tour_1986.jpg/330px-Jeff_Porcaro_Toto_Fahrenheit_World_Tour_1986.jpg"
   },
   {
     "id": "sheila-e",
@@ -992,7 +1026,8 @@
     "influence": "One of drumming's great crossover stars. She demonstrated that a drummer could be a complete entertainer and front-line musical star.",
     "iconicSongIds": [
       "lets-go-crazy"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/e33ff0984c8cbd15a7be150b9693f54c/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "phil-collins",
@@ -1020,7 +1055,8 @@
     "influence": "Created the iconic 'In the Air Tonight' drum fill and the gated reverb snare sound. His drumming with Genesis was among progressive rock's most sophisticated.",
     "iconicSongIds": [
       "in-the-air-tonight"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/206b79a942ee278de023a9d3cd732f87/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "roger-taylor",
@@ -1049,7 +1085,8 @@
     "iconicSongIds": [
       "we-will-rock-you",
       "bohemian-rhapsody"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/417278315327bdfce80cd14a88aae211/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "dave-weckl",
@@ -1077,7 +1114,8 @@
     "iconicSongIds": [
       "got-a-match",
       "no-zone"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Dave_Weckl_Kongsberg_Jazzfestival_2018_%28171010%29.jpg/330px-Dave_Weckl_Kongsberg_Jazzfestival_2018_%28171010%29.jpg"
   },
   {
     "id": "phil-rudd",
@@ -1105,7 +1143,8 @@
     "influence": "The supreme example of less-is-more rock drumming. His playing proved that perfection in the basics is more powerful than technical complexity.",
     "iconicSongIds": [
       "back-in-black"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/98ffd8ea25e1a147b1d443a030c3c65e/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "ian-paice",
@@ -1134,7 +1173,8 @@
     "influence": "Bridged British jazz drumming and hard rock. His 50-year career with Deep Purple is one of the longest in rock, maintaining quality throughout.",
     "iconicSongIds": [
       "highway-star"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/ba7e9936605ced2463818efad32a62ce/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "tommy-lee",
@@ -1163,7 +1203,8 @@
     "iconicSongIds": [
       "dr-feelgood-crue",
       "home-sweet-home"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/d41d8cd98f00b204e9800998ecf8427e/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "chad-smith",
@@ -1190,7 +1231,8 @@
     "influence": "Defined the sound of funk-rock drumming. His partnership with Flea is the rhythm section blueprint for every band that wants to be simultaneously funky and heavy.",
     "iconicSongIds": [
       "give-it-away"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/2016_RiP_Red_Hot_Chili_Peppers_-_Chad_Smith_-_by_2eight_-_DSC0184.jpg/330px-2016_RiP_Red_Hot_Chili_Peppers_-_Chad_Smith_-_by_2eight_-_DSC0184.jpg"
   },
   {
     "id": "bill-ward",
@@ -1216,7 +1258,8 @@
     "influence": "Invented heavy metal drumming with Black Sabbath. Every metal drummer works within a vocabulary he helped establish on those first four Sabbath albums.",
     "iconicSongIds": [
       "paranoid"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/d41d8cd98f00b204e9800998ecf8427e/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "lars-ulrich",
@@ -1244,7 +1287,8 @@
     "iconicSongIds": [
       "master-of-puppets",
       "enter-sandman"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lars_Ulrich_2025_Marvel_Stadium_%285%29.jpg/330px-Lars_Ulrich_2025_Marvel_Stadium_%285%29.jpg"
   },
   {
     "id": "dave-lombardo",
@@ -1273,7 +1317,8 @@
     "iconicSongIds": [
       "raining-blood",
       "angel-of-death"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/0284bd0c9a6549270caa43958c92c468/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "vinnie-paul",
@@ -1302,7 +1347,8 @@
     "iconicSongIds": [
       "cowboys-from-hell",
       "walk-pantera"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/VinniePaul2008.JPG/330px-VinniePaul2008.JPG"
   },
   {
     "id": "danny-carey",
@@ -1329,7 +1375,8 @@
     "influence": "The most intellectually sophisticated drummer in heavy music. His ability to blend esoteric mathematical concepts with visceral physical power is unprecedented in any genre.",
     "iconicSongIds": [
       "lateralus"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Danny_Carey_Hellfest_2019.jpg/330px-Danny_Carey_Hellfest_2019.jpg"
   },
   {
     "id": "joey-jordison",
@@ -1358,7 +1405,8 @@
     "iconicSongIds": [
       "duality",
       "psychosocial"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/JoeyJordison.jpg/330px-JoeyJordison.jpg"
   },
   {
     "id": "tommy-ramone",
@@ -1383,7 +1431,8 @@
     "influence": "Invented the punk drum pattern. Every punk drummer since the Ramones plays within the vocabulary Tommy Ramone established on their first album.",
     "iconicSongIds": [
       "blitzkrieg-bop"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/ed81c9d9523771a0628b7364ed8ae4db/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "tre-cool",
@@ -1410,7 +1459,8 @@
     "influence": "Evolved punk drumming from garage to arena without losing its authenticity. Green Day's commercial success owes substantially to Tré Cool's ability to make punk sound huge.",
     "iconicSongIds": [
       "basket-case"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/GreenDayIOW230624_%28339_of_367%29_%28cropped%29.jpg/330px-GreenDayIOW230624_%28339_of_367%29_%28cropped%29.jpg"
   },
   {
     "id": "jimmy-chamberlin",
@@ -1435,7 +1485,8 @@
     "influence": "Brought genuine jazz musicality to 1990s alternative rock. His technical sophistication within the Pumpkins' maximalist vision helped define the sound of alternative rock drumming.",
     "iconicSongIds": [
       "cherub-rock"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/The_Smashing_Pumpkins_-_2019158212838_2019-06-07_Rock_am_Ring_-_1276_-_B70I8576_%28cropped%29.jpg/330px-The_Smashing_Pumpkins_-_2019158212838_2019-06-07_Rock_am_Ring_-_1276_-_B70I8576_%28cropped%29.jpg"
   },
   {
     "id": "taylor-hawkins",
@@ -1462,7 +1513,8 @@
     "influence": "Kept arena rock drumming emotionally resonant in the streaming era. His death in 2022 at 50 produced an outpouring of grief from the drumming community that reflected his unique place in modern rock.",
     "iconicSongIds": [
       "the-pretender"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/7b8bcf8a8d3888bfe108e4e05810583a/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "carlton-barrett",
@@ -1487,7 +1539,8 @@
     "influence": "Created the definitive reggae drum vocabulary with the Wailers. Every reggae drummer learns Carlton Barrett's one-drop pattern as their foundational skill.",
     "iconicSongIds": [
       "no-woman-no-cry"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/b4ab566990a50e28e2396542c1ec4ef0/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "tony-allen",
@@ -1517,7 +1570,8 @@
     "influence": "Co-invented Afrobeat and created one of the world's most influential rhythmic vocabularies. His influence on contemporary music spans jazz, hip-hop, and electronic music.",
     "iconicSongIds": [
       "zombie-fela"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/fab57ea4bacf5f5b697033810039a699/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "tito-puente",
@@ -1547,7 +1601,8 @@
     "iconicSongIds": [
       "oye-como-va",
       "para-los-rumberos"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/37173e4e2217044f5b1092092ff70f3e/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "ron-wilson",
@@ -1571,7 +1626,8 @@
     "influence": "Introduced the drum solo to a mass popular music audience. 'Wipe Out' remains one of the first drum recordings most people hear in their lives.",
     "iconicSongIds": [
       "wipeout"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/0ba7da369b8a95e56a7bd68c6e5a3b12/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "dave-grohl",
@@ -1597,7 +1653,8 @@
     "influence": "The definitive grunge drummer. Showed that primal power and emotional authenticity are as valid as technical mastery.",
     "iconicSongIds": [
       "smells-like-teen-spirit"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/FoosDublin210819-6_%2848620330261%29_%28cropped%29.jpg/330px-FoosDublin210819-6_%2848620330261%29_%28cropped%29.jpg"
   },
   {
     "id": "questlove",
@@ -1625,7 +1682,8 @@
     "influence": "Established live hip-hop drumming as a serious pursuit and became drumming's most important cultural scholar and ambassador.",
     "iconicSongIds": [
       "uptown-funk"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/35c1d4edf1f7dc64af14ea0123c2dbca/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "carter-beauford",
@@ -1652,7 +1710,8 @@
     "iconicSongIds": [
       "ants-marching",
       "crash-into-me"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Carter_Beauford_2008.jpg/330px-Carter_Beauford_2008.jpg"
   },
   {
     "id": "matt-cameron",
@@ -1680,7 +1739,8 @@
     "iconicSongIds": [
       "black-hole-sun",
       "spoonman"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/e13f79397f86fe211d2c14b0f9bc79d3/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "travis-barker",
@@ -1707,7 +1767,8 @@
     "influence": "Bridged the gap between punk rock and hip-hop drumming, inspiring a generation of young drummers who loved both genres.",
     "iconicSongIds": [
       "all-the-small-things"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Travis_Barker_2019_by_Glenn_Francis_%28tighter_portrait_crop%29.jpg/330px-Travis_Barker_2019_by_Glenn_Francis_%28tighter_portrait_crop%29.jpg"
   },
   {
     "id": "brann-dailor",
@@ -1734,7 +1795,8 @@
     "iconicSongIds": [
       "blood-and-thunder",
       "oblivion-mastodon"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/c38ad3a5a4a0d66f4e0595bb7b92d262/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "antonio-sanchez",
@@ -1761,7 +1823,8 @@
     "iconicSongIds": [
       "birdman-main-titles",
       "three-times-three"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/840425fb9ce73fe25d1d7b306cefe8bc/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "nate-smith",
@@ -1789,7 +1852,8 @@
     "iconicSongIds": [
       "dean-town",
       "birds-of-a-feather-vulf"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/a6fbd9bf3d3489a2e067f9db367aeada/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "cindy-blackman",
@@ -1819,7 +1883,8 @@
     "iconicSongIds": [
       "are-you-gonna-go-my-way",
       "someday-kravitz"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/fba633e4c4e56f34d629229475b3b3f2/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "papa-jo-jones",
@@ -1844,7 +1909,8 @@
     "influence": "Revolutionized jazz drumming by moving timekeeping to the hi-hat. Every jazz drummer since plays in his shadow.",
     "iconicSongIds": [
       "one-oclock-jump"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/89064c5f1b3d7e28812301c5190fc592/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "kenny-clarke",
@@ -1872,7 +1938,8 @@
     "iconicSongIds": [
       "a-night-in-tunisia",
       "salt-peanuts"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/1ff97adc32e6fdc5361e155e9123651f/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "louis-bellson",
@@ -1901,7 +1968,8 @@
     "influence": "Invented double bass drumming and proved that drummers could be composers and bandleaders of the highest order.",
     "iconicSongIds": [
       "caravan"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/b193006ffa8c6857a2a45f4fc2423403/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "philly-joe-jones",
@@ -1928,7 +1996,8 @@
     "iconicSongIds": [
       "walkin",
       "four"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/785c00ed455720eb8d20e1f0b3e4bd37/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "joe-morello",
@@ -1954,7 +2023,8 @@
     "iconicSongIds": [
       "take-five",
       "blue-rondo-a-la-turk"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/7ab42299517fa66c0e816b87b8dd2fa2/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "billy-higgins",
@@ -1983,7 +2053,8 @@
     "influence": "Bridged hard bop and free jazz with grace and joy. One of the most beloved and musical jazz drummers of any era.",
     "iconicSongIds": [
       "the-sidewinder"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/46b83a04c88f01ce412ac9d7a8ec97e0/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "roy-haynes",
@@ -2018,7 +2089,8 @@
     "iconicSongIds": [
       "snap-crackle",
       "we-three-haynes"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Roy_Haynes_drummer_%28cropped%29.jpg"
   },
   {
     "id": "hal-blaine",
@@ -2046,7 +2118,8 @@
       "be-my-baby",
       "california-dreamin",
       "good-vibrations"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hal_Blaine_in_1995.jpg/330px-Hal_Blaine_in_1995.jpg"
   },
   {
     "id": "jim-keltner",
@@ -2076,7 +2149,8 @@
     "influence": "The most respected session drummer in rock history. His name on a session is a guarantee of musical integrity and feel.",
     "iconicSongIds": [
       "imagine"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/7e3abb0b8b1919fdb65417481d574a47/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "steve-jordan",
@@ -2108,7 +2182,8 @@
     "iconicSongIds": [
       "who-did-you-think-i-was",
       "try-jmtrio"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/64706c1b26387513a27d941d8c9b7706/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "omar-hakim",
@@ -2139,7 +2214,8 @@
     "influence": "Played on some of the best-selling albums of the 1980s across completely different genres — the definition of a versatile elite drummer.",
     "iconicSongIds": [
       "lets-dance"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Omar_Hakim.jpg/330px-Omar_Hakim.jpg"
   },
   {
     "id": "peter-erskine",
@@ -2169,7 +2245,8 @@
     "influence": "Raised Weather Report's rhythmic floor to new heights. One of the most musical and versatile of all jazz-fusion drummers.",
     "iconicSongIds": [
       "teen-town"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/f6f605ddacdbdfd9e0b6794f3fd1107b/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "lenny-white",
@@ -2198,7 +2275,8 @@
     "iconicSongIds": [
       "romantic-warrior",
       "spain"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Lenny_White_%28cropped%29.jpg/330px-Lenny_White_%28cropped%29.jpg"
   },
   {
     "id": "alphonse-mouzon",
@@ -2227,7 +2305,8 @@
     "iconicSongIds": [
       "funky-snakefoot",
       "mysterious-traveller-wrtitle"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Alphonse-mouzon-ffm-001.jpg/330px-Alphonse-mouzon-ffm-001.jpg"
   },
   {
     "id": "airto-moreira",
@@ -2258,7 +2337,8 @@
     "iconicSongIds": [
       "tombo-in-7-4",
       "natural-feelings"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/81ba003ae74bdccd0c30b8b44ff2d0ad/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "stanton-moore",
@@ -2286,7 +2366,8 @@
     "iconicSongIds": [
       "tuck-and-roll",
       "go-go-galactic"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/0d73f44e17ca834bc465bfb4231830c2/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "vinnie-calliuta",
@@ -2318,7 +2399,8 @@
     "iconicSongIds": [
       "city-of-tiny-lites",
       "let-your-soul"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/cdbb0bd38401168d931b647e608362b8/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "dennis-chambers",
@@ -2350,7 +2432,8 @@
     "iconicSongIds": [
       "smooth-santana",
       "sco-mule"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Dennis_Chambers_Kongsberg_Jazzfestival_2017_%28190928%29.jpg/330px-Dennis_Chambers_Kongsberg_Jazzfestival_2017_%28190928%29.jpg"
   },
   {
     "id": "steve-smith",
@@ -2380,7 +2463,8 @@
     "influence": "Proved that commercial rock success and jazz authenticity can coexist. One of the few drummers equally respected by rock and jazz audiences.",
     "iconicSongIds": [
       "dont-stop-believin"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/7521efabd6a3ef0c4a31abc2697cb1df/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "simon-phillips",
@@ -2411,7 +2495,8 @@
     "influence": "One of rock's most technically sophisticated players, equally at home in jazz-fusion and stadium rock contexts.",
     "iconicSongIds": [
       "pamela"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/474dc72b8fc9cda45e6616c48f1e9d11/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "terry-bozzio",
@@ -2443,7 +2528,8 @@
     "iconicSongIds": [
       "walking-in-la",
       "mental-hopscotch"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/26c3ab33c39f036a974671e8a7933925/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "mike-portnoy",
@@ -2473,7 +2559,8 @@
     "iconicSongIds": [
       "pull-me-under",
       "the-dance-of-eternity"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/1ba430805563e886ab5770aac5916453/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "mike-mangini",
@@ -2502,7 +2589,8 @@
     "iconicSongIds": [
       "on-backs-of-angels",
       "the-enemy-inside"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/0b9a23d802980b790ef520eea67caf2d/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "virgil-donati",
@@ -2531,7 +2619,8 @@
     "iconicSongIds": [
       "inner-combustion",
       "moonbabies"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Virgil_Donati.jpg/330px-Virgil_Donati.jpg"
   },
   {
     "id": "matt-garstka",
@@ -2558,7 +2647,8 @@
     "iconicSongIds": [
       "physical-education",
       "tooth-and-claw"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Matt_Garstka_-_2014_NAMM_Show_%28cropped%29.jpg/330px-Matt_Garstka_-_2014_NAMM_Show_%28cropped%29.jpg"
   },
   {
     "id": "larnell-lewis",
@@ -2585,7 +2675,8 @@
     "iconicSongIds": [
       "lingus",
       "we-like-it-here"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/4a6ea8ed0a60e194e40722393a836d80/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "jojo-mayer",
@@ -2612,7 +2703,8 @@
     "iconicSongIds": [
       "guts-nerve",
       "the-last-beat"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/2a18b7297fecfa370f6f428bde23caee/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "benny-greb",
@@ -2640,7 +2732,8 @@
     "iconicSongIds": [
       "grebfruit-title",
       "spl-greb"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/1af060dfffc098e4912fc71366e6533e/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "mark-guiliana",
@@ -2667,7 +2760,8 @@
     "influence": "The leading figure in jazz drumming's engagement with electronic music aesthetics. His 'Blackstar' work brought experimental jazz drumming to mass audiences.",
     "iconicSongIds": [
       "lazarus"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/e86cbec18b47d328faca50dc4f6ba2f7/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "chris-dave",
@@ -2695,7 +2789,8 @@
     "iconicSongIds": [
       "adorn",
       "afro-blue-erykah"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/998a3ece73b6412dc1ec05c19e710151/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "louis-cole",
@@ -2722,7 +2817,8 @@
     "iconicSongIds": [
       "time-louis-cole",
       "after-the-fact"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/ac98a8cd3bfbd37fe346d58a56afb1a7/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "thomas-haake",
@@ -2747,7 +2843,8 @@
     "influence": "Created the rhythmic template for djent and polyrhythmic metal. 'Bleed' is considered one of the most technically demanding recorded drum performances.",
     "iconicSongIds": [
       "bleed"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/27f7b391e8341a77cbdf9e89d5acea90/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "george-kollias",
@@ -2773,7 +2870,8 @@
     "iconicSongIds": [
       "annihilation-wicked",
       "cast-down-heretic"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/a27d4f61a5305b9534b4ac70e5c777d2/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "gene-hoglan",
@@ -2803,7 +2901,8 @@
     "iconicSongIds": [
       "darkness-descends-dark-angel",
       "crystal-mountain"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/91d714a079d7e7789ca21470b2136e10/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "chris-adler",
@@ -2829,7 +2928,8 @@
     "influence": "Defined groove metal drumming through Lamb of God. Showed how thrash velocity and funk syncopation can coexist in heavy music.",
     "iconicSongIds": [
       "redneck"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/119615fc478e96f3a4d31d3b900eced4/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "mario-duplantier",
@@ -2855,7 +2955,8 @@
     "iconicSongIds": [
       "stranded",
       "the-chant"
-    ]
+    ],
+    "photoUrl": null
   },
   {
     "id": "jimmy-sullivan",
@@ -2881,7 +2982,8 @@
     "iconicSongIds": [
       "bat-country",
       "unholy-confessions"
-    ]
+    ],
+    "photoUrl": null
   },
   {
     "id": "jon-theodore",
@@ -2910,7 +3012,8 @@
     "iconicSongIds": [
       "my-god-is-the-sun",
       "i-sat-by-the-ocean"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/cfdac13ad06ed4b08e3636eb1cac81f1/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "brad-wilk",
@@ -2940,7 +3043,8 @@
     "iconicSongIds": [
       "killing-in-the-name",
       "bulls-on-parade"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/b58ac0d42b69ab304fea5152cc0e4e49/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "karen-carpenter",
@@ -2966,7 +3070,8 @@
     "iconicSongIds": [
       "we-only-just-begun",
       "top-of-the-world"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Karen_Carpenter_in_1972_White_House.png/330px-Karen_Carpenter_in_1972_White_House.png"
   },
   {
     "id": "alex-van-halen",
@@ -2995,7 +3100,8 @@
       "eruption",
       "panama",
       "jump"
-    ]
+    ],
+    "photoUrl": null
   },
   {
     "id": "nicko-mcbrain",
@@ -3023,7 +3129,8 @@
       "the-trooper",
       "aces-high",
       "run-to-the-hills"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/b4b3103c5cd9320bdca547137494f634/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "brian-blade",
@@ -3052,7 +3159,8 @@
     "iconicSongIds": [
       "season-of-changes",
       "doctor-jesus"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/a953bbee0159230e7c9a435e2c18b03b/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "levon-helm",
@@ -3082,7 +3190,8 @@
     "iconicSongIds": [
       "the-weight-band",
       "up-on-cripple-creek"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/e63f3d6769cd49d8b65ab380f7252824/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "paul-motian",
@@ -3114,7 +3223,8 @@
     "iconicSongIds": [
       "waltz-for-debby",
       "peace-piece-motian"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/9fd72a58c3897b561df6d2309e9c311c/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "jonathan-moffett",
@@ -3147,7 +3257,8 @@
     "iconicSongIds": [
       "thriller-live-moffett",
       "beat-it-live-moffett"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/afbf9cb09c7363cbebbc6a289a42d69a/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "marco-minnemann",
@@ -3180,7 +3291,8 @@
     "iconicSongIds": [
       "antipop-aristocrats",
       "sweaty-knockers"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/d9f86c1fd7a416a87bac961636b44b1e/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "thomas-pridgen",
@@ -3211,7 +3323,8 @@
     "iconicSongIds": [
       "goliath-mars-volta",
       "conjugal-burns"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/bca96fc116c9b3c2d1a5d0234f2e752c/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "thomas-lang",
@@ -3243,7 +3356,8 @@
     "iconicSongIds": [
       "creative-coordination-lang",
       "creative-control"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/4ca11d9749972f5584192575cfff574f/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "tony-royster-jr",
@@ -3274,7 +3388,8 @@
     "iconicSongIds": [
       "royster-jr-solo",
       "99-problems-live-royster"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/76a8475dc022afc04e7a0f28720a5c17/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "anika-nilles",
@@ -3303,7 +3418,8 @@
     "iconicSongIds": [
       "pikalar",
       "nevermind-nilles"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/36e1640f5258736b5774242662352759/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "sput-searight",
@@ -3334,7 +3450,8 @@
     "iconicSongIds": [
       "shofukan-sput",
       "bent-nails-sput"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/68ec67c49b930d33b1cbada958685654/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "yousef-dayes",
@@ -3363,7 +3480,8 @@
     "iconicSongIds": [
       "black-classic-dayes",
       "vol-1-dayes"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/34f3a685ab189b390232a9b421dc35cc/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "keith-carlock",
@@ -3395,7 +3513,8 @@
     "iconicSongIds": [
       "two-against-nature",
       "gaslighting-abscam"
-    ]
+    ],
+    "photoUrl": null
   },
   {
     "id": "aaron-spears",
@@ -3426,7 +3545,8 @@
     "iconicSongIds": [
       "usher-yeah-spears",
       "triple-diddle-spears"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/7ce1cf1a03efb72a9bb4ab66e8007698/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "chad-wackerman",
@@ -3458,7 +3578,8 @@
     "iconicSongIds": [
       "g-spot-tornado",
       "alien-orifice"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/4dde9a477cc104879b30f8867cb07b66/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "greg-bisonette",
@@ -3490,7 +3611,8 @@
     "iconicSongIds": [
       "yankee-rose",
       "just-like-paradise-roth"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/40491c4f3a5035b4b7730188acaafbc6/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "nate-wood",
@@ -3522,7 +3644,8 @@
     "iconicSongIds": [
       "chicken-noodle-soul",
       "forq-love"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/3aa02ee8916f7a0f0762903a5e555a13/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "eloy-casagrande",
@@ -3549,7 +3672,8 @@
     "iconicSongIds": [
       "kairos-sepultura",
       "the-mediator"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/147e7846be27022f00402060fc3907cd/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "jeff-tain-watts",
@@ -3579,7 +3703,8 @@
     "iconicSongIds": [
       "black-codes",
       "think-of-one"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/026db15b4826e8f132e33d994a990487/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "chris-coleman",
@@ -3612,7 +3737,8 @@
     "iconicSongIds": [
       "through-the-fire-chaka",
       "coleman-showcase"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/d7cd2fb7cead62054107697ff788216c/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "mel-lewis",
@@ -3642,7 +3768,8 @@
     "iconicSongIds": [
       "central-park-north-lewis",
       "village-vanguard-lewis"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/ac017a288f9699ba3fc0950c59ffcad9/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "jim-gordon",
@@ -3673,7 +3800,8 @@
     "iconicSongIds": [
       "layla-gordon",
       "let-it-down-gordon"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/fff28f86718002120b672600db07a5d4/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "jr-robinson",
@@ -3707,7 +3835,8 @@
     "iconicSongIds": [
       "i-wanna-dance-whitney",
       "sweet-love-robinson"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/bb8c2a6161efd4ee27340b0cb0fc776d/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "tommy-aldridge",
@@ -3739,7 +3868,8 @@
     "iconicSongIds": [
       "bark-at-the-moon",
       "here-ill-stay"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/W0959-Hellfest2013_Whitesnake_TommyAldridge_68105-Crop.JPG/330px-W0959-Hellfest2013_Whitesnake_TommyAldridge_68105-Crop.JPG"
   },
   {
     "id": "gary-novak",
@@ -3769,7 +3899,8 @@
     "iconicSongIds": [
       "beneath-the-mask-corea",
       "one-hand-in-my-pocket-novak"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/dcfc1ecf0f68dd730aae75a5e9b2b2d1/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "bill-stewart",
@@ -3799,7 +3930,8 @@
     "iconicSongIds": [
       "a-go-go-scofield",
       "quiet-scofield"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/0d885478218d1b56568f53f1b2dcbf5c/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "ari-hoenig",
@@ -3827,7 +3959,8 @@
     "iconicSongIds": [
       "berts-playground",
       "matrix-battle"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/7a236b5210f3298b8f00dc4bd969f1d3/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "dave-king",
@@ -3855,7 +3988,8 @@
     "iconicSongIds": [
       "giant-bad-plus",
       "anthem-earnest"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/15ab819d0d887a9a0a4aee8f04c0f77c/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "brooks-wackerman",
@@ -3885,7 +4019,8 @@
     "iconicSongIds": [
       "the-stage-a7x",
       "new-dark-ages"
-    ]
+    ],
+    "photoUrl": null
   },
   {
     "id": "eric-moore",
@@ -3914,7 +4049,8 @@
     "iconicSongIds": [
       "moore-showcase",
       "jungle-boogie-moore"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/0dd15288cd45d6f8e2a930e99e25db8e/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "tommy-igoe",
@@ -3943,7 +4079,8 @@
     "iconicSongIds": [
       "birdland-big-band-igoe",
       "groove-essentials-live"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/8ab5ddea2d3e96bbcd19f1d58e4cd4d6/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "greg-hutchinson",
@@ -3973,7 +4110,8 @@
     "iconicSongIds": [
       "habana-hargrove",
       "strasbourg-st-denis"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/274fcb6fc85a5fa51ef4bc335c07ed7b/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "aaron-mellergaard",
@@ -4000,7 +4138,8 @@
     "iconicSongIds": [
       "stray-the-skies",
       "napalm-vola"
-    ]
+    ],
+    "photoUrl": null
   },
   {
     "id": "jabo-starks",
@@ -4028,7 +4167,8 @@
     "iconicSongIds": [
       "sex-machine-starks",
       "super-bad-starks"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/29dc4e416da3d0553fd5455e5e708d43/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "james-gadson",
@@ -4061,7 +4201,8 @@
     "iconicSongIds": [
       "lean-on-me-gadson",
       "use-me-gadson"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/26d8e195d41532124d2f0bf3b18ed0d4/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "benny-benjamin",
@@ -4090,7 +4231,8 @@
     "iconicSongIds": [
       "my-girl-benjamin",
       "cant-help-myself-benjamin"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/5affc3801a23cf2a2292140257301050/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "bill-kreutzmann",
@@ -4122,7 +4264,8 @@
     "iconicSongIds": [
       "casey-jones-kreutzmann",
       "truckin-kreutzmann"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/BillKreutzmann.jpg/330px-BillKreutzmann.jpg"
   },
   {
     "id": "carmine-appice",
@@ -4154,7 +4297,8 @@
     "iconicSongIds": [
       "you-keep-me-hangin-on",
       "do-ya-think-appice"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Carmine_Appice_in_2015.jpg/330px-Carmine_Appice_in_2015.jpg"
   },
   {
     "id": "charlie-benante",
@@ -4183,7 +4327,8 @@
     "iconicSongIds": [
       "madhouse-benante",
       "indians-benante"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/84293c3c53dca528fc673e5bb9b3d556/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "clem-burke",
@@ -4212,7 +4357,8 @@
     "iconicSongIds": [
       "heart-of-glass-burke",
       "hanging-on-telephone"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/a3cb974a36842153b4c99c4b3d8700b8/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "cozy-powell",
@@ -4243,7 +4389,8 @@
     "iconicSongIds": [
       "stargazer-rainbow",
       "over-the-top-powell"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/71c67323adb6633c7ff81b23de8c3965/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "dale-crover",
@@ -4275,7 +4422,8 @@
     "iconicSongIds": [
       "honey-bucket-crover",
       "boris-crover"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/HF2023Melvins_1.jpg/330px-HF2023Melvins_1.jpg"
   },
   {
     "id": "gina-schock",
@@ -4303,7 +4451,8 @@
     "iconicSongIds": [
       "we-got-the-beat",
       "vacation-gogo"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/053224cadc3b182845a0e67ed36d583d/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "igor-cavalera",
@@ -4331,7 +4480,8 @@
     "iconicSongIds": [
       "roots-bloody-roots",
       "refuse-resist"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/128a62bdc15d1a0d869a3d074569c473/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "janet-weiss",
@@ -4361,7 +4511,8 @@
     "iconicSongIds": [
       "dig-me-out-weiss",
       "one-beat-weiss"
-    ]
+    ],
+    "photoUrl": null
   },
   {
     "id": "jon-fishman",
@@ -4390,7 +4541,8 @@
     "iconicSongIds": [
       "you-enjoy-myself-fishman",
       "tweezer-fishman"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Fishman_120309_MSG.JPG/330px-Fishman_120309_MSG.JPG"
   },
   {
     "id": "josh-freese",
@@ -4423,7 +4575,8 @@
     "iconicSongIds": [
       "judith-apc-freese",
       "whip-it-freese"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/b2214c7c1bca4183f3a904f9b2ad81dd/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "kenny-aronoff",
@@ -4456,7 +4609,8 @@
     "iconicSongIds": [
       "jack-and-diane-aronoff",
       "hurts-so-good-aronoff"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Kenny_Aronoff.jpg/330px-Kenny_Aronoff.jpg"
   },
   {
     "id": "matt-halpern",
@@ -4482,7 +4636,8 @@
     "iconicSongIds": [
       "ragnarok-periphery",
       "icarus-lives"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/7f7ff7b314466dec572de63d9b5b5ac9/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "max-weinberg",
@@ -4512,7 +4667,8 @@
     "iconicSongIds": [
       "born-to-run-weinberg",
       "hungry-heart-weinberg"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/718f2dc529edd5b4efd0693d31d21866/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "meg-white",
@@ -4538,7 +4694,8 @@
     "iconicSongIds": [
       "seven-nation-army-white",
       "ball-and-biscuit"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Meg_White_1_%28cropped%29.png/330px-Meg_White_1_%28cropped%29.png"
   },
   {
     "id": "mikkey-dee",
@@ -4567,7 +4724,8 @@
     "iconicSongIds": [
       "sacrifice-motorhead",
       "overnight-sensation"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/6cf5dd90ffb6bb6962c90d644ecd894d/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "moe-tucker",
@@ -4595,7 +4753,8 @@
     "iconicSongIds": [
       "sweet-jane-tucker",
       "rock-and-roll-tucker"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Maureen_Tucker_circa_1966.jpg/330px-Maureen_Tucker_circa_1966.jpg"
   },
   {
     "id": "roger-hawkins",
@@ -4624,7 +4783,8 @@
     "iconicSongIds": [
       "when-a-man-loves-a-woman",
       "i-ll-take-you-there"
-    ]
+    ],
+    "photoUrl": null
   },
   {
     "id": "russ-kunkel",
@@ -4656,7 +4816,8 @@
     "iconicSongIds": [
       "fire-and-rain-kunkel",
       "youve-got-a-friend-kunkel"
-    ]
+    ],
+    "photoUrl": null
   },
   {
     "id": "stella-mozgawa",
@@ -4683,7 +4844,8 @@
     "iconicSongIds": [
       "undertow-warpaint",
       "keep-it-healthy"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/c8b17e568c971470ebf8ba477387d404/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "terri-lyne-carrington",
@@ -4714,7 +4876,8 @@
     "iconicSongIds": [
       "money-jungle-carrington",
       "radio-music-carrington"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/c7c3c32c6326ddd9fe3df196417e0894/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "tony-thompson",
@@ -4745,7 +4908,8 @@
     "iconicSongIds": [
       "le-freak-thompson",
       "good-times-chic"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/168b2476b2b1f4249b0d5375a20c9434/1000x1000-000000-80-0-0.jpg"
   },
   {
     "id": "topper-headon",
@@ -4773,7 +4937,8 @@
     "iconicSongIds": [
       "rock-the-casbah",
       "train-in-vain"
-    ]
+    ],
+    "photoUrl": null
   },
   {
     "id": "vinny-appice",
@@ -4805,7 +4970,8 @@
     "iconicSongIds": [
       "mob-rules-appice",
       "holy-diver-appice"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Vinny_Appice_-_Kill_Devil_Hill_%283%29_%28cropped%29.jpg/330px-Vinny_Appice_-_Kill_Devil_Hill_%283%29_%28cropped%29.jpg"
   },
   {
     "id": "viola-smith",
@@ -4833,7 +4999,8 @@
     "iconicSongIds": [
       "vim-vam-vamoose",
       "smith-orchestra-swing"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Viola_Smith.jpg/330px-Viola_Smith.jpg"
   },
   {
     "id": "will-calhoun",
@@ -4866,7 +5033,8 @@
     "iconicSongIds": [
       "cult-of-personality-calhoun",
       "type-living-colour"
-    ]
+    ],
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Will_Calhoun_in_NY2009_Photo_by_Lia_Chang.jpg/330px-Will_Calhoun_in_NY2009_Photo_by_Lia_Chang.jpg"
   },
   {
     "id": "abe-cunningham",
@@ -4893,6 +5061,7 @@
     "iconicSongIds": [
       "change-deftones",
       "my-own-summer"
-    ]
+    ],
+    "photoUrl": "https://cdn-images.dzcdn.net/images/artist/2914ec03536e31b01bc146bd332426aa/1000x1000-000000-80-0-0.jpg"
   }
 ]

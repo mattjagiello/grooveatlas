@@ -18,7 +18,7 @@ export const ERA_DETAIL_QUERY = gql`
       keyDrummerIds iconicSongIds
       keyDrummers {
         id name born died primaryEra eras genres bands bio signatureStyle
-        bpmMin bpmMax influence iconicSongIds
+        bpmMin bpmMax influence photoUrl iconicSongIds
       }
       iconicSongs {
         id title artist drummerId year eraId genreIds
@@ -44,7 +44,7 @@ export const GENRE_DETAIL_QUERY = gql`
       keyDrummerIds iconicSongIds
       keyDrummers {
         id name born died primaryEra eras genres bands bio signatureStyle
-        bpmMin bpmMax influence iconicSongIds
+        bpmMin bpmMax influence photoUrl iconicSongIds
       }
       iconicSongs {
         id title artist drummerId year eraId genreIds
@@ -61,7 +61,7 @@ export const DRUMMERS_QUERY = gql`
   query Drummers($eraId: String, $genreId: String) {
     drummers(eraId: $eraId, genreId: $genreId) {
       id name born died primaryEra eras genres bands bio signatureStyle
-      bpmMin bpmMax influence iconicSongIds
+      bpmMin bpmMax influence photoUrl iconicSongIds
     }
   }
 `;
@@ -70,7 +70,7 @@ export const DRUMMER_DETAIL_QUERY = gql`
   query Drummer($id: ID!) {
     drummer(id: $id) {
       id name born died primaryEra eras genres bands bio signatureStyle
-      bpmMin bpmMax influence iconicSongIds
+      bpmMin bpmMax influence photoUrl iconicSongIds
       iconicSongs {
         id title artist drummerId year eraId genreIds
         tempo feel complexity description whyStudy songsterrSlug
@@ -98,7 +98,7 @@ export const SONG_DETAIL_QUERY = gql`
       }
       drummer {
         id name born died primaryEra eras genres bands bio signatureStyle
-        bpmMin bpmMax influence iconicSongIds
+        bpmMin bpmMax influence photoUrl iconicSongIds
       }
     }
   }
@@ -109,7 +109,7 @@ export const SEARCH_QUERY = gql`
     search(q: $q) {
       drummers {
         id name born died primaryEra eras genres bands bio signatureStyle
-        bpmMin bpmMax influence iconicSongIds
+        bpmMin bpmMax influence photoUrl iconicSongIds
       }
       songs {
         id title artist drummerId year eraId genreIds

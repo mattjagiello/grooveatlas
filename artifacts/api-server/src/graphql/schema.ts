@@ -44,6 +44,7 @@ export const typeDefs = /* GraphQL */ `
     bpmMin: Int!
     bpmMax: Int!
     influence: String!
+    photoUrl: String
     iconicSongIds: [String!]!
     iconicSongs: [Song!]!
   }

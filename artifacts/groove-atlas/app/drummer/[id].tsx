@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React from 'react';
 import {
   ActivityIndicator,
+  Image,
   Platform,
   ScrollView,
   StyleSheet,
@@ -237,11 +238,19 @@ export default function DrummerDetailScreen() {
             <Feather name="arrow-left" size={20} color={colors.foreground} />
           </TouchableOpacity>
           <View style={styles.heroRow}>
-            <View style={[styles.avatar, { backgroundColor: colors.primary }]}>
-              <Text style={styles.avatarText}>
-                {drummer.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
-              </Text>
-            </View>
+            {drummer.photoUrl ? (
+              <Image
+                source={{ uri: drummer.photoUrl }}
+                style={[styles.avatar, styles.avatarImg]}
+                resizeMode="cover"
+              />
+            ) : (
+              <View style={[styles.avatar, { backgroundColor: colors.primary }]}>
+                <Text style={styles.avatarText}>
+                  {drummer.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
+                </Text>
+              </View>
+            )}
             <View style={styles.heroInfo}>
               <Text style={[styles.name, { color: colors.foreground, fontFamily: 'serif' }]} numberOfLines={2}>
                 {drummer.name}
@@ -359,6 +368,7 @@ const styles = StyleSheet.create({
   backBtn: { marginBottom: 12, width: 36, height: 36, alignItems: 'center', justifyContent: 'center' },
   heroRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 14 },
   avatar: { width: 64, height: 64, borderRadius: 32, alignItems: 'center', justifyContent: 'center', flexShrink: 0 },
+  avatarImg: { overflow: 'hidden' },
   avatarText: { color: '#fff', fontSize: 22, fontWeight: '700' },
   heroInfo: { flex: 1, gap: 4 },
   name: { fontSize: 28, fontWeight: '700', lineHeight: 32 },

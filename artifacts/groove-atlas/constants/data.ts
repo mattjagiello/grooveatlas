@@ -38,6 +38,7 @@ export type Drummer = {
   bpmMin: number;
   bpmMax: number;
   influence: string;
+  photoUrl?: string | null;
   iconicSongIds: string[];
 };
 
