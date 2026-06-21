@@ -277,7 +277,7 @@ export default function DrummerDetailScreen() {
                 <>
                   <Text style={[page.statSep, { color: colors.border }]}>·</Text>
                   <Text style={[page.statUnit, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
-                    {vibe.analysedCount} tracks studied
+                    {vibe.analysedCount}{vibe.songCount > vibe.analysedCount ? `/${vibe.songCount}` : ''} songs analysed
                   </Text>
                 </>
               )}
@@ -321,7 +321,7 @@ export default function DrummerDetailScreen() {
                 "{caption}"
               </Text>
               <Text style={[page.cyaniteSource, { color: colors.mutedForeground }]}>
-                Cyanite AI · {hasVibe ? `${vibe.analysedCount} of ${vibe.songCount} recordings` : ''}
+                via Cyanite AI
               </Text>
             </View>
           )}
