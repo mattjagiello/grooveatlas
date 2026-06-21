@@ -1,6 +1,17 @@
 import { gql } from 'graphql-request';
 
-// ─── Fragments (inlined per query for clarity) ──────────────────────────────
+// ─── Field sets ───────────────────────────────────────────────────────────────
+// Card (list view) — no heavy prose fields
+const DRUMMER_CARD = `id name born died primaryEra eras genres bands bpmMin bpmMax photoUrl iconicSongIds`;
+// Detail page — full text fields
+const DRUMMER_DETAIL = `${DRUMMER_CARD} bio signatureStyle influence`;
+
+// Card (list view) — no description/whyStudy/songsterrSlug
+const SONG_CARD = `id title artist drummerId year eraId genreIds tempo feel complexity`;
+// Detail page — full text fields
+const SONG_DETAIL = `${SONG_CARD} description whyStudy songsterrSlug`;
+
+// ─── Queries ─────────────────────────────────────────────────────────────────
 
 export const ERA_LIST_QUERY = gql`
   query Eras {
@@ -16,14 +27,8 @@ export const ERA_DETAIL_QUERY = gql`
     era(id: $id) {
       id name subtitle years description color characteristics
       keyDrummerIds iconicSongIds
-      keyDrummers {
-        id name born died primaryEra eras genres bands bio signatureStyle
-        bpmMin bpmMax influence photoUrl iconicSongIds
-      }
-      iconicSongs {
-        id title artist drummerId year eraId genreIds
-        tempo feel complexity description whyStudy songsterrSlug
-      }
+      keyDrummers { ${DRUMMER_CARD} }
+      iconicSongs  { ${SONG_CARD} }
     }
   }
 `;
@@ -42,14 +47,8 @@ export const GENRE_DETAIL_QUERY = gql`
     genre(id: $id) {
       id name origin lat lng era description color characteristics
       keyDrummerIds iconicSongIds
-      keyDrummers {
-        id name born died primaryEra eras genres bands bio signatureStyle
-        bpmMin bpmMax influence photoUrl iconicSongIds
-      }
-      iconicSongs {
-        id title artist drummerId year eraId genreIds
-        tempo feel complexity description whyStudy songsterrSlug
-      }
+      keyDrummers { ${DRUMMER_CARD} }
+      iconicSongs  { ${SONG_CARD} }
       charts(limit: 5) {
         trackId title artist albumTitle rank source
       }
@@ -60,8 +59,7 @@ export const GENRE_DETAIL_QUERY = gql`
 export const DRUMMERS_QUERY = gql`
   query Drummers($eraId: String, $genreId: String) {
     drummers(eraId: $eraId, genreId: $genreId) {
-      id name born died primaryEra eras genres bands bio signatureStyle
-      bpmMin bpmMax influence photoUrl iconicSongIds
+      ${DRUMMER_CARD}
     }
   }
 `;
@@ -69,12 +67,8 @@ export const DRUMMERS_QUERY = gql`
 export const DRUMMER_DETAIL_QUERY = gql`
   query Drummer($id: ID!) {
     drummer(id: $id) {
-      id name born died primaryEra eras genres bands bio signatureStyle
-      bpmMin bpmMax influence photoUrl iconicSongIds
-      iconicSongs {
-        id title artist drummerId year eraId genreIds
-        tempo feel complexity description whyStudy songsterrSlug
-      }
+      ${DRUMMER_DETAIL}
+      iconicSongs { ${SONG_CARD} }
     }
   }
 `;
@@ -82,8 +76,7 @@ export const DRUMMER_DETAIL_QUERY = gql`
 export const SONGS_QUERY = gql`
   query Songs($eraId: String, $genreId: String, $drummerId: String) {
     songs(eraId: $eraId, genreId: $genreId, drummerId: $drummerId) {
-      id title artist drummerId year eraId genreIds
-      tempo feel complexity description whyStudy songsterrSlug
+      ${SONG_CARD}
     }
   }
 `;
@@ -91,15 +84,11 @@ export const SONGS_QUERY = gql`
 export const SONG_DETAIL_QUERY = gql`
   query Song($id: ID!) {
     song(id: $id) {
-      id title artist drummerId year eraId genreIds
-      tempo feel complexity description whyStudy songsterrSlug
+      ${SONG_DETAIL}
       trackMeta {
         trackId trackName albumTitle trackRating numFavourite trackLengthSecs genres spotifyId
       }
-      drummer {
-        id name born died primaryEra eras genres bands bio signatureStyle
-        bpmMin bpmMax influence photoUrl iconicSongIds
-      }
+      drummer { ${DRUMMER_CARD} }
     }
   }
 `;
@@ -107,14 +96,8 @@ export const SONG_DETAIL_QUERY = gql`
 export const SEARCH_QUERY = gql`
   query Search($q: String!) {
     search(q: $q) {
-      drummers {
-        id name born died primaryEra eras genres bands bio signatureStyle
-        bpmMin bpmMax influence photoUrl iconicSongIds
-      }
-      songs {
-        id title artist drummerId year eraId genreIds
-        tempo feel complexity description whyStudy songsterrSlug
-      }
+      drummers { ${DRUMMER_CARD} }
+      songs    { ${SONG_CARD} }
       genres {
         id name origin lat lng era description color characteristics
         keyDrummerIds iconicSongIds
@@ -139,17 +122,14 @@ export const DRUMMER_VIBE_QUERY = gql`
 export const SIMILAR_SONGS_QUERY = gql`
   query SimilarSongs($id: ID!, $limit: Int) {
     similarSongs(id: $id, limit: $limit) {
-      song {
-        id title artist year eraId genreIds tempo feel complexity
-        description whyStudy songsterrSlug drummerId
-      }
+      song { ${SONG_CARD} }
       score
       sharedTags
     }
   }
 `;
 
-// ─── Response types ──────────────────────────────────────────────────────────
+// ─── Response types ───────────────────────────────────────────────────────────
 
 import type { Era, Genre, Drummer, Song } from '@/constants/data';
 

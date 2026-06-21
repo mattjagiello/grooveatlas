@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { gqlClient } from '@/lib/gql-client';
 import {
   ERA_LIST_QUERY,
@@ -73,6 +73,7 @@ export function useDrummers(params?: { eraId?: string; genreId?: string }) {
 }
 
 export function useDrummer(id: string) {
+  const queryClient = useQueryClient();
   return useQuery<DrummerWithSongs | null>({
     queryKey: ['drummer', id],
     queryFn: () =>
@@ -80,6 +81,22 @@ export function useDrummer(id: string) {
         .request<{ drummer: DrummerWithSongs | null }>(DRUMMER_DETAIL_QUERY, { id })
         .then((d) => d.drummer),
     enabled: !!id,
+    placeholderData: () => {
+      // Seed from any cached drummer list so the page renders immediately
+      for (const [, list] of queryClient.getQueriesData<Drummer[]>({ queryKey: ['drummers'] })) {
+        const hit = list?.find((d) => d.id === id);
+        if (hit) return hit as DrummerWithSongs;
+      }
+      for (const [, era] of queryClient.getQueriesData<EraWithNested>({ queryKey: ['era'] })) {
+        const hit = era?.keyDrummers?.find((d) => d.id === id);
+        if (hit) return hit as DrummerWithSongs;
+      }
+      for (const [, genre] of queryClient.getQueriesData<GenreWithNested>({ queryKey: ['genre'] })) {
+        const hit = genre?.keyDrummers?.find((d) => d.id === id);
+        if (hit) return hit as DrummerWithSongs;
+      }
+      return undefined;
+    },
   });
 }
 
@@ -98,6 +115,7 @@ export function useSongs(params?: {
 }
 
 export function useSong(id: string) {
+  const queryClient = useQueryClient();
   return useQuery<SongWithDrummer | null>({
     queryKey: ['song', id],
     queryFn: () =>
@@ -105,6 +123,22 @@ export function useSong(id: string) {
         .request<{ song: SongWithDrummer | null }>(SONG_DETAIL_QUERY, { id })
         .then((d) => d.song),
     enabled: !!id,
+    placeholderData: () => {
+      // Seed from any cached song list so the page renders immediately
+      for (const [, list] of queryClient.getQueriesData<Song[]>({ queryKey: ['songs'] })) {
+        const hit = list?.find((s) => s.id === id);
+        if (hit) return hit as SongWithDrummer;
+      }
+      for (const [, era] of queryClient.getQueriesData<EraWithNested>({ queryKey: ['era'] })) {
+        const hit = era?.iconicSongs?.find((s) => s.id === id);
+        if (hit) return hit as SongWithDrummer;
+      }
+      for (const [, genre] of queryClient.getQueriesData<GenreWithNested>({ queryKey: ['genre'] })) {
+        const hit = genre?.iconicSongs?.find((s) => s.id === id);
+        if (hit) return hit as SongWithDrummer;
+      }
+      return undefined;
+    },
   });
 }
 
