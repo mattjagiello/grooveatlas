@@ -374,7 +374,6 @@ function CyaniteCard({ songId, colors }: { songId: string; colors: ReturnType<ty
       const status = await checkCyaniteStatus(trackId);
       if (isCyaniteError(status)) { setState({ phase: 'error', message: status.message }); return; }
       if (status.status === 'finished') { setState({ phase: 'ready', analysis: status.analysis, previewTitle }); return; }
-      if (status.status === 'failed') { setState({ phase: 'error', message: 'Analysis failed on server' }); return; }
     }
     setState({ phase: 'error', message: 'Timed out — try again in a moment.' });
   };

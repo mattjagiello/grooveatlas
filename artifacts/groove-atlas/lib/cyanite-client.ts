@@ -55,7 +55,7 @@ export async function startCyaniteAnalysis(
     if (data.cached === true) {
       return { cached: true, analysis: data.analysis as CyaniteAnalysis };
     }
-    return data as CyaniteStartResult;
+    return data as unknown as CyaniteStartResult;
   } catch (err) {
     return { code: 'ERROR', message: String(err) };
   }

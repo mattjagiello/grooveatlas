@@ -15,7 +15,7 @@ export type StemError =
   | { code: 'NO_PREVIEW'; message: string }
   | { code: 'ERROR'; message: string };
 
-export function isStemError(r: StemResult | StemError): r is StemError {
+export function isStemError(r: StartResult | StemResult | StemError | { status: string }): r is StemError {
   return 'code' in r;
 }
 
@@ -44,7 +44,7 @@ export async function startDrumExtraction(
         message: (data.error as string) ?? 'Unknown error',
       };
     }
-    return data as StartResult;
+    return data as unknown as StartResult;
   } catch (err) {
     return { code: 'ERROR', message: String(err) };
   }
@@ -67,7 +67,7 @@ export async function checkStemStatus(
     if (data.status === 'error') {
       return { code: 'ERROR', message: (data.message as string) ?? 'Processing failed' };
     }
-    return data as StemResult;
+    return data as unknown as StemResult;
   } catch (err) {
     return { code: 'ERROR', message: String(err) };
   }

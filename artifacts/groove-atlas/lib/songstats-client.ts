@@ -36,7 +36,7 @@ export async function fetchDrummerStats(
         message: (data.error as string) ?? 'Unknown error',
       };
     }
-    return data as SongstatsStats;
+    return data as unknown as SongstatsStats;
   } catch (err) {
     return { code: 'ERROR', message: String(err) };
   }

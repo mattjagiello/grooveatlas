@@ -1,1 +1,1612 @@
-{}
+{
+  "sing-sing-sing": {
+    "bpm": 106,
+    "valence": 0.8786,
+    "arousal": 0.3435,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1960s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up - tempo foxtrot in the 1940's style.",
+    "freeGenreTags": "jazz, dixieland, big band, swing",
+    "moodTags": [
+      "happy"
+    ],
+    "genreTags": [
+      "jazz"
+    ],
+    "moodAdvancedTags": [
+      "cheerful",
+      "positive",
+      "happy",
+      "bright",
+      "lighthearted"
+    ],
+    "movementTags": [
+      "bouncy"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "strings",
+      "bassGuitar",
+      "woodwinds",
+      "brass"
+    ]
+  },
+  "ko-ko": {
+    "bpm": 75,
+    "valence": 0.3794,
+    "arousal": 0.2883,
+    "energyLevel": "medium",
+    "energyDynamics": "low",
+    "musicalEraTag": "early / mid 1960s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Vintage jazzy theme with smooth sax and light drums.",
+    "freeGenreTags": "cool jazz, west coast jazz, bebop",
+    "moodTags": [
+      "happy",
+      "sexy",
+      "chilled"
+    ],
+    "genreTags": [
+      "jazz"
+    ],
+    "moodAdvancedTags": [
+      "energetic",
+      "boisterous",
+      "positive",
+      "cool",
+      "relaxed"
+    ],
+    "movementTags": [
+      "running"
+    ],
+    "characterTags": [
+      "cool"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "woodwinds"
+    ]
+  },
+  "moanin": {
+    "bpm": 63,
+    "valence": 0.7885,
+    "arousal": 0.2897,
+    "energyLevel": "medium",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1960s / early 1970s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Medium tempo blues, featuring trumpet and tenor sax.",
+    "freeGenreTags": "cool jazz, west coast jazz, bebop",
+    "moodTags": [
+      "happy"
+    ],
+    "genreTags": [
+      "jazz"
+    ],
+    "moodAdvancedTags": [
+      "quirky",
+      "positive",
+      "cool",
+      "fun",
+      "upbeat"
+    ],
+    "movementTags": [
+      "bouncy"
+    ],
+    "characterTags": [
+      "retro",
+      "sophisticated"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "piano",
+      "strings",
+      "bassGuitar",
+      "woodwinds",
+      "brass"
+    ]
+  },
+  "freedom-jazz-dance": {
+    "bpm": 100,
+    "valence": 0.818,
+    "arousal": 0.2212,
+    "energyLevel": "medium",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1980s / early 1990s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Jazz quintet with trumpet and sax.",
+    "freeGenreTags": "bebop, cool jazz, west coast jazz",
+    "moodTags": [
+      "chilled",
+      "happy",
+      "uplifting"
+    ],
+    "genreTags": [
+      "jazz"
+    ],
+    "moodAdvancedTags": [
+      "relaxed",
+      "energetic",
+      "cool",
+      "positive",
+      "upbeat"
+    ],
+    "movementTags": [
+      "running"
+    ],
+    "characterTags": [
+      "cool"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "piano",
+      "bassGuitar",
+      "woodwinds",
+      "brass"
+    ]
+  },
+  "aja": {
+    "bpm": 115,
+    "valence": 0.6086,
+    "arousal": -0.2103,
+    "energyLevel": "medium",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Contemporary pop ballad with male vocal.",
+    "freeGenreTags": "middle of the road, easy listening",
+    "moodTags": [
+      "chilled",
+      "romantic"
+    ],
+    "genreTags": [
+      "funkSoul"
+    ],
+    "moodAdvancedTags": [
+      "seductive",
+      "romantic",
+      "relaxed",
+      "sexy",
+      "intimate"
+    ],
+    "movementTags": [
+      "steady"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "piano",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "birds-of-fire": {
+    "bpm": 99,
+    "valence": 0.1512,
+    "arousal": 0.7038,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1970s / early 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Heavy rock beat with wah - wah guitar and flute.",
+    "freeGenreTags": "progressive rock, jazz rock, psychedelic rock",
+    "moodTags": [
+      "energetic",
+      "aggressive",
+      "happy"
+    ],
+    "genreTags": [
+      "jazz"
+    ],
+    "moodAdvancedTags": [
+      "weird",
+      "strange",
+      "powerful",
+      "tense",
+      "strong"
+    ],
+    "movementTags": [
+      "running"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "hound-dog": {
+    "bpm": 88,
+    "valence": 0.3029,
+    "arousal": 0.9523,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "early / mid 1970s",
+    "timeSignature": "4/4",
+    "transformerCaption": "50's Rock n Roll with male vocal.",
+    "freeGenreTags": "rock n roll, blues rock, pop rock, garage rock, hard rock",
+    "moodTags": [
+      "energetic",
+      "happy",
+      "aggressive"
+    ],
+    "genreTags": [
+      "blues",
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "upbeat",
+      "rollicking",
+      "excited",
+      "boisterous",
+      "quirky"
+    ],
+    "movementTags": [
+      "driving"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "whole-lotta-shakin": {
+    "bpm": 182,
+    "valence": 0.2974,
+    "arousal": 0.753,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1960s",
+    "timeSignature": "4/4",
+    "transformerCaption": "50's Rock n Roll.",
+    "freeGenreTags": "rockabilly, rock n roll, pop rock, country rock, blues rock",
+    "moodTags": [
+      "energetic",
+      "happy",
+      "aggressive"
+    ],
+    "genreTags": [
+      "blues"
+    ],
+    "moodAdvancedTags": [
+      "energetic",
+      "boisterous",
+      "upbeat",
+      "powerful",
+      "bright"
+    ],
+    "movementTags": [
+      "running",
+      "driving"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "piano",
+      "electricGuitar",
+      "bassGuitar",
+      "woodwinds"
+    ]
+  },
+  "wipeout": {
+    "bpm": 150,
+    "valence": 0.4253,
+    "arousal": 0.7859,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "early / mid 1970s",
+    "timeSignature": "4/4",
+    "transformerCaption": "60's Rock n Roll.",
+    "freeGenreTags": "rock n roll, classic rock, surf rock",
+    "moodTags": [
+      "happy",
+      "energetic",
+      "chilled"
+    ],
+    "genreTags": [
+      "rock",
+      "blues"
+    ],
+    "moodAdvancedTags": [
+      "bright",
+      "energetic",
+      "upbeat",
+      "determined",
+      "excited"
+    ],
+    "movementTags": [
+      "running",
+      "driving"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "sunshine-of-your-love": {
+    "bpm": 115,
+    "valence": -0.0951,
+    "arousal": 0.689,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1960s / early 1970s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Male vocal in the style of the 70's.",
+    "freeGenreTags": "blues rock, hard rock, rock n roll, classic rock",
+    "moodTags": [
+      "energetic",
+      "aggressive"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "powerful",
+      "strong",
+      "confident",
+      "resolute",
+      "determined"
+    ],
+    "movementTags": [
+      "stomping"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar"
+    ]
+  },
+  "toad": {
+    "bpm": 142,
+    "valence": -0.0465,
+    "arousal": 0.7602,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1970s / early 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Driving and determined, featuring urging electric guitar and drums that create a vibrant, bold mood.",
+    "freeGenreTags": "psychedelic rock, progressive rock, jazz rock",
+    "moodTags": [
+      "energetic",
+      "aggressive"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "nervous",
+      "ominous",
+      "agitated",
+      "exciting",
+      "restless"
+    ],
+    "movementTags": [
+      "running"
+    ],
+    "characterTags": [
+      "cool",
+      "retro",
+      "playful",
+      "bold",
+      "unpolished"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "sympathy-for-the-devil": {
+    "bpm": 116,
+    "valence": 0.5656,
+    "arousal": 0.5385,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1970s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up - tempo song with male vocal.",
+    "freeGenreTags": "rock n roll, blues rock, psychedelic rock, classic rock",
+    "moodTags": [
+      "happy"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "positive",
+      "quirky",
+      "cheerful",
+      "energetic",
+      "rollicking"
+    ],
+    "movementTags": [
+      "driving",
+      "running"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "acousticGuitar",
+      "electricGuitar"
+    ]
+  },
+  "light-my-fire": {
+    "bpm": 127,
+    "valence": 0.2479,
+    "arousal": 0.7731,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1970s / early 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Vintage 60's Italian pop with male vocal.",
+    "freeGenreTags": "psychedelic rock, surf rock, rock n roll",
+    "moodTags": [
+      "energetic",
+      "happy"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "happy",
+      "bright",
+      "fun",
+      "playful",
+      "perky",
+      "optimistic",
+      "upbeat"
+    ],
+    "movementTags": [
+      "groovy",
+      "stomping",
+      "bouncy",
+      "driving"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "acousticGuitar",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "come-together": {
+    "bpm": 82,
+    "valence": 0.3377,
+    "arousal": 0.805,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Driving and determined, featuring weighty electric guitar, male lead vocals and drums that create a daring, bold mood.",
+    "freeGenreTags": "rock n roll, southern rock, classic rock",
+    "moodTags": [
+      "energetic",
+      "uplifting"
+    ],
+    "genreTags": [
+      "rock",
+      "blues"
+    ],
+    "moodAdvancedTags": [
+      "strong",
+      "confident",
+      "powerful",
+      "resolute",
+      "energetic"
+    ],
+    "movementTags": [
+      "stomping"
+    ],
+    "characterTags": [
+      "retro",
+      "powerful"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "acousticGuitar",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "my-generation": {
+    "bpm": 97,
+    "valence": 0.5437,
+    "arousal": 0.7766,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "early / mid 1970s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Vintage 60's Rock n Roll with male vocals.",
+    "freeGenreTags": "rock n roll, blues rock, garage rock, psychedelic rock, hard rock",
+    "moodTags": [
+      "happy",
+      "energetic"
+    ],
+    "genreTags": [
+      "rock",
+      "blues"
+    ],
+    "moodAdvancedTags": [
+      "upbeat",
+      "excited",
+      "energetic",
+      "bright",
+      "boisterous"
+    ],
+    "movementTags": [
+      "stomping"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar"
+    ]
+  },
+  "wont-get-fooled-again": {
+    "bpm": 135,
+    "valence": 0.2521,
+    "arousal": 0.837,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1970s / early 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Classic Rock n Roll with male vocal.",
+    "freeGenreTags": "blues rock, rock n roll, hard rock, classic rock",
+    "moodTags": [
+      "energetic",
+      "uplifting",
+      "aggressive"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "confident",
+      "optimistic",
+      "boisterous",
+      "positive",
+      "uplifting"
+    ],
+    "movementTags": [
+      "running",
+      "driving",
+      "stomping"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar"
+    ]
+  },
+  "green-onions": {
+    "bpm": 137,
+    "valence": 0.544,
+    "arousal": 0.1272,
+    "energyLevel": "medium",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1970s / early 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Cool, laid back blues with Hammond organ and guitar.",
+    "freeGenreTags": "rock n roll, rnb, classic soul",
+    "moodTags": [
+      "chilled",
+      "happy",
+      "sexy"
+    ],
+    "genreTags": [
+      "blues",
+      "funkSoul",
+      "jazz"
+    ],
+    "moodAdvancedTags": [
+      "quirky",
+      "playful",
+      "feelGood",
+      "upbeat",
+      "bright"
+    ],
+    "movementTags": [
+      "bouncy",
+      "groovy"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "woodwinds"
+    ]
+  },
+  "cissy-strut": {
+    "bpm": 175,
+    "valence": 0.0219,
+    "arousal": 0.4018,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1970s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Rhythm track, featuring wah - wah guitar.",
+    "freeGenreTags": "jazz funk, big band, classic soul",
+    "moodTags": [
+      "dark",
+      "energetic"
+    ],
+    "genreTags": [
+      "funkSoul"
+    ],
+    "moodAdvancedTags": [
+      "nervous",
+      "restless",
+      "tense",
+      "mysterious",
+      "weird"
+    ],
+    "movementTags": [
+      "groovy"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar",
+      "brass"
+    ]
+  },
+  "cold-sweat": {
+    "bpm": 112,
+    "valence": 0.6468,
+    "arousal": 0.3614,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1970s",
+    "timeSignature": "4/4",
+    "transformerCaption": "A funky soul track with soulful male vocals.",
+    "freeGenreTags": "funk, soul, rnb, southern soul",
+    "moodTags": [
+      "happy",
+      "sexy",
+      "chilled"
+    ],
+    "genreTags": [
+      "funkSoul"
+    ],
+    "moodAdvancedTags": [
+      "sexy",
+      "seductive",
+      "confident",
+      "powerful",
+      "uplifting"
+    ],
+    "movementTags": [
+      "groovy"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar",
+      "brass"
+    ]
+  },
+  "funky-drummer": {
+    "bpm": 99,
+    "valence": 0.0374,
+    "arousal": 0.4644,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1980s / early 1990s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Medium tempo hip hop track featuring drums, bass and vocal shouts.",
+    "freeGenreTags": "rnb, funk, jazz funk, soul",
+    "moodTags": [
+      "happy",
+      "energetic",
+      "chilled"
+    ],
+    "genreTags": [
+      "funkSoul"
+    ],
+    "moodAdvancedTags": [
+      "confident",
+      "upbeat",
+      "comedic",
+      "celebratory",
+      "seductive"
+    ],
+    "movementTags": [
+      "groovy"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "bassGuitar"
+    ]
+  },
+  "what-is-hip": {
+    "bpm": 102,
+    "valence": 0.7423,
+    "arousal": 0.594,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1970s / early 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up - tempo 70s funk with horns and male vocal.",
+    "freeGenreTags": "jazz funk, jazz rock, big band",
+    "moodTags": [
+      "happy",
+      "energetic",
+      "sexy"
+    ],
+    "genreTags": [
+      "funkSoul"
+    ],
+    "moodAdvancedTags": [
+      "confident",
+      "optimistic",
+      "energetic",
+      "strong",
+      "powerful"
+    ],
+    "movementTags": [
+      "groovy"
+    ],
+    "characterTags": [
+      "retro",
+      "cool"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar",
+      "brass"
+    ]
+  },
+  "moby-dick": {
+    "bpm": 105,
+    "valence": -0.0378,
+    "arousal": 0.6221,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "A driving, determined alternative rock track featuring electric guitar and drums.",
+    "freeGenreTags": "rock n roll, southern rock, blues rock",
+    "moodTags": [
+      "aggressive",
+      "energetic"
+    ],
+    "genreTags": [
+      "blues"
+    ],
+    "moodAdvancedTags": [
+      "strong",
+      "resolute",
+      "confident",
+      "energetic",
+      "powerful"
+    ],
+    "movementTags": [
+      "groovy"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "when-the-levee-breaks": {
+    "bpm": 142,
+    "valence": -0.1675,
+    "arousal": 0.6353,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "early / mid 1990s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Driving and determined, featuring weighty electric guitar and drums that create an unstoppable, bold mood.",
+    "freeGenreTags": "cowboy western, blues rock, southern rock",
+    "moodTags": [
+      "energetic",
+      "aggressive"
+    ],
+    "genreTags": [
+      "blues",
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "strong",
+      "ponderous",
+      "powerful",
+      "laidBack",
+      "resolute"
+    ],
+    "movementTags": [
+      "stomping"
+    ],
+    "characterTags": [
+      "unpolished"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar",
+      "woodwinds"
+    ]
+  },
+  "whole-lotta-love": {
+    "bpm": 185,
+    "valence": -0.2112,
+    "arousal": 0.9579,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1970s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Blues - rock track with distorted electric guitars, bass, drums and male vocals.",
+    "freeGenreTags": "blues rock, southern rock, classic rock",
+    "moodTags": [
+      "energetic",
+      "aggressive"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "strong",
+      "powerful",
+      "ponderous",
+      "resolute",
+      "determined"
+    ],
+    "movementTags": [
+      "stomping"
+    ],
+    "characterTags": [
+      "bold"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "no-woman-no-cry": {
+    "bpm": 77,
+    "valence": 0.2203,
+    "arousal": -0.3478,
+    "energyLevel": "low",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1970s / early 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Laid - back reggae groove with male vocal.",
+    "freeGenreTags": "roots reggae, dub, dancehall, reggae",
+    "moodTags": [
+      "sexy",
+      "chilled",
+      "calm"
+    ],
+    "genreTags": [
+      "reggae"
+    ],
+    "moodAdvancedTags": [
+      "sad",
+      "bittersweet",
+      "melancholic",
+      "blue",
+      "poignant"
+    ],
+    "movementTags": [
+      "groovy"
+    ],
+    "characterTags": [
+      "ethereal"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "acousticGuitar",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "zombie-fela": {
+    "bpm": 134,
+    "valence": 0.7777,
+    "arousal": 0.5266,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "early / mid 1990s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up - tempo jazz fusion with saxophone and trumpet solos over driving rhythm section.",
+    "freeGenreTags": "jazz funk, jazz fusion, african",
+    "moodTags": [
+      "happy",
+      "chilled",
+      "energetic"
+    ],
+    "genreTags": [
+      "funkSoul",
+      "jazz"
+    ],
+    "moodAdvancedTags": [
+      "cheerful",
+      "celebratory",
+      "upbeat",
+      "optimistic",
+      "happy",
+      "soaring",
+      "lighthearted",
+      "joyous"
+    ],
+    "movementTags": [
+      "steady",
+      "running",
+      "groovy",
+      "driving",
+      "bouncy"
+    ],
+    "characterTags": [
+      "cool",
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "synth",
+      "electricGuitar",
+      "bassGuitar",
+      "woodwinds"
+    ]
+  },
+  "birdland": {
+    "bpm": 158,
+    "valence": 0.4338,
+    "arousal": 0.0515,
+    "energyLevel": "medium",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1980s / early 1990s",
+    "timeSignature": "4/4",
+    "transformerCaption": "A jazz track, in a positive mood, great for news and current affairs.",
+    "freeGenreTags": "west coast jazz, modern jazz, west coast",
+    "moodTags": [
+      "chilled"
+    ],
+    "genreTags": [
+      "jazz"
+    ],
+    "moodAdvancedTags": [
+      "comedic",
+      "quirky",
+      "optimistic",
+      "cheerful",
+      "positive"
+    ],
+    "movementTags": [
+      "robotic",
+      "driving",
+      "steady",
+      "groovy",
+      "running"
+    ],
+    "characterTags": [
+      "playful"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "piano",
+      "woodwinds",
+      "brass"
+    ]
+  },
+  "roundabout": {
+    "bpm": 135,
+    "valence": 0.9031,
+    "arousal": 0.2775,
+    "energyLevel": "medium",
+    "energyDynamics": "low",
+    "musicalEraTag": "early / mid 1990s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up - tempo pop rock with male vocal.",
+    "freeGenreTags": "middle of the road, rock n roll",
+    "moodTags": [
+      "happy",
+      "chilled",
+      "sexy"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "cheerful",
+      "playful",
+      "positive",
+      "optimistic",
+      "happy"
+    ],
+    "movementTags": [
+      "groovy"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "acousticGuitar",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "heart-of-the-sunrise": {
+    "bpm": 140,
+    "valence": -0.2767,
+    "arousal": 0.4779,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1970s / early 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Vintage 70's Psychedelic Pop featuring Wah - wah guitar and Hammond organ.",
+    "freeGenreTags": "psychedelic rock, progressive rock, jazz rock",
+    "moodTags": [
+      "energetic",
+      "dark"
+    ],
+    "genreTags": [
+      "rock",
+      "funkSoul",
+      "jazz"
+    ],
+    "moodAdvancedTags": [
+      "weird",
+      "strange",
+      "mysterious",
+      "tense",
+      "determined"
+    ],
+    "movementTags": [
+      "groovy"
+    ],
+    "characterTags": [
+      "mysterious",
+      "retro",
+      "unpolished",
+      "cool",
+      "bold"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "bassGuitar"
+    ]
+  },
+  "tarkus": {
+    "bpm": 115,
+    "valence": 0.2329,
+    "arousal": 0.3891,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1970s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Vintage 60's Rock n Roll with Hammond organ, electric guitar and drums.",
+    "freeGenreTags": "jazz rock, progressive rock, psychedelic rock",
+    "moodTags": [
+      "epic"
+    ],
+    "genreTags": [
+      "jazz"
+    ],
+    "moodAdvancedTags": [
+      "nervous",
+      "weird",
+      "powerful",
+      "strong",
+      "tense"
+    ],
+    "movementTags": [
+      "steady",
+      "running",
+      "driving",
+      "stomping"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "tom-sawyer": {
+    "bpm": 175,
+    "valence": 0.0003,
+    "arousal": 0.3451,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1990s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up - tempo alternative rock song with female vocal.",
+    "freeGenreTags": "rock n roll, grunge, garage rock",
+    "moodTags": [
+      "energetic"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "strong",
+      "confident",
+      "resolute",
+      "powerful",
+      "sexy"
+    ],
+    "movementTags": [
+      "stomping"
+    ],
+    "characterTags": [
+      "powerful"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "paranoid": {
+    "bpm": 164,
+    "valence": -0.399,
+    "arousal": 0.917,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1970s / early 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up tempo and driving 80s influenced hard rock with pounding drums, chugging guitars and male vocals.",
+    "freeGenreTags": "rock n roll, hard rock, classic rock",
+    "moodTags": [
+      "energetic",
+      "aggressive"
+    ],
+    "genreTags": [
+      "rock",
+      "metal"
+    ],
+    "moodAdvancedTags": [
+      "strong",
+      "resolute",
+      "powerful",
+      "ponderous",
+      "determined",
+      "fiery"
+    ],
+    "movementTags": [
+      "running",
+      "driving",
+      "stomping"
+    ],
+    "characterTags": [
+      "powerful",
+      "bold",
+      "unpolished"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "master-of-puppets": {
+    "bpm": 104,
+    "valence": -0.6639,
+    "arousal": 0.7478,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1980s / early 1990s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up - tempo heavy metal rock.",
+    "freeGenreTags": "heavy metal, glam metal, hard rock",
+    "moodTags": [
+      "aggressive",
+      "energetic"
+    ],
+    "genreTags": [
+      "metal",
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "powerful",
+      "aggressive",
+      "violent",
+      "ponderous",
+      "strong"
+    ],
+    "movementTags": [
+      "running",
+      "driving"
+    ],
+    "characterTags": [
+      "bold"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar"
+    ]
+  },
+  "enter-sandman": {
+    "bpm": 124,
+    "valence": -0.3423,
+    "arousal": 0.9109,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "early / mid 1990s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Fast and furious, this track is perfect for extreme sports, car racing, action and extreme sports.",
+    "freeGenreTags": "heavy metal, hard rock, classic rock",
+    "moodTags": [
+      "energetic",
+      "aggressive"
+    ],
+    "genreTags": [
+      "metal",
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "powerful",
+      "resolute",
+      "strong",
+      "aggressive",
+      "energetic",
+      "determined"
+    ],
+    "movementTags": [
+      "running",
+      "driving",
+      "stomping"
+    ],
+    "characterTags": [
+      "bold"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar"
+    ]
+  },
+  "roxanne": {
+    "bpm": 136,
+    "valence": 0.1128,
+    "arousal": 0.16,
+    "energyLevel": "medium",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1970s / early 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up - tempo pop rock with male vocal.",
+    "freeGenreTags": "soft rock, pop rock, rock, new wave",
+    "moodTags": [
+      "energetic"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "optimistic",
+      "confident",
+      "powerful",
+      "prestigious",
+      "positive"
+    ],
+    "movementTags": [
+      "steady"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar"
+    ]
+  },
+  "in-the-air-tonight": {
+    "bpm": 94,
+    "valence": 0.272,
+    "arousal": -0.1732,
+    "energyLevel": "medium",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1980s / early 1990s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Medium slow tempo, 80's style alternative pop rock with male vocals.",
+    "freeGenreTags": "new wave, synth pop, post punk revival, alternative rock",
+    "moodTags": [
+      "chilled",
+      "romantic"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "dreamy",
+      "reflective",
+      "sentimental",
+      "nostalgic",
+      "laidBack"
+    ],
+    "movementTags": [
+      "pulsing",
+      "groovy"
+    ],
+    "characterTags": [
+      "ethereal",
+      "warm",
+      "sparkling"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "synth",
+      "electricGuitar"
+    ]
+  },
+  "we-will-rock-you": {
+    "bpm": 82,
+    "valence": 0.1114,
+    "arousal": 0.7743,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1990s / early 2000s",
+    "timeSignature": "4/4",
+    "transformerCaption": "The national anthem of the United States of America sung by a group of male and female vocals.",
+    "freeGenreTags": "indie pop, alternative rock, folk rock, indie rock",
+    "moodTags": [
+      "energetic",
+      "uplifting"
+    ],
+    "genreTags": [
+      "rock",
+      "pop"
+    ],
+    "moodAdvancedTags": [
+      "upbeat",
+      "confident",
+      "energetic",
+      "excited",
+      "resolute"
+    ],
+    "movementTags": [
+      "stomping"
+    ],
+    "characterTags": [
+      "powerful",
+      "unpolished",
+      "bold",
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar"
+    ]
+  },
+  "bohemian-rhapsody": {
+    "bpm": 141,
+    "valence": 0.1175,
+    "arousal": -0.2725,
+    "energyLevel": "medium",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1980s / early 1990s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Pop song with male vocal. Acoustic guitar, piano and drums.",
+    "freeGenreTags": "classic soul, middle of the road",
+    "moodTags": [
+      "romantic"
+    ],
+    "genreTags": [
+      "pop"
+    ],
+    "moodAdvancedTags": [
+      "sad",
+      "reflective",
+      "romantic",
+      "tender",
+      "bittersweet"
+    ],
+    "movementTags": [
+      "flowing",
+      "steady"
+    ],
+    "characterTags": [
+      "warm"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "piano",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "rosanna": {
+    "bpm": 82,
+    "valence": 0.8301,
+    "arousal": 0.2751,
+    "energyLevel": "medium",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Medium tempo pop / rock with male vocal.",
+    "freeGenreTags": "soft rock, adult contemporary, pop rock, rock",
+    "moodTags": [
+      "romantic",
+      "chilled",
+      "energetic"
+    ],
+    "genreTags": [
+      "pop"
+    ],
+    "moodAdvancedTags": [
+      "optimistic",
+      "confident",
+      "powerful",
+      "anthemic",
+      "sexy"
+    ],
+    "movementTags": [
+      "steady"
+    ],
+    "characterTags": [
+      "powerful",
+      "luxurious",
+      "retro",
+      "heroic"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "piano",
+      "acousticGuitar",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "back-in-black": {
+    "bpm": 95,
+    "valence": 0.4354,
+    "arousal": 0.9002,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "early / mid 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up - tempo classic rock with screaming guitar solo.",
+    "freeGenreTags": "glam metal, heavy metal, hard rock",
+    "moodTags": [
+      "energetic",
+      "uplifting",
+      "happy"
+    ],
+    "genreTags": [
+      "metal",
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "confident",
+      "strong",
+      "powerful",
+      "resolute",
+      "energetic"
+    ],
+    "movementTags": [
+      "stomping"
+    ],
+    "characterTags": [
+      "bold"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar"
+    ]
+  },
+  "highway-star": {
+    "bpm": 174,
+    "valence": 0.2401,
+    "arousal": 0.8378,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "late 1970s / early 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up - tempo classic rock song with male vocal.",
+    "freeGenreTags": "rock n roll, classic rock, southern rock",
+    "moodTags": [
+      "energetic"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "strong",
+      "resolute",
+      "confident",
+      "energetic",
+      "exhilarating",
+      "upbeat",
+      "powerful",
+      "boisterous"
+    ],
+    "movementTags": [
+      "running"
+    ],
+    "characterTags": [
+      "bold",
+      "powerful"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "electricGuitar",
+      "bassGuitar"
+    ]
+  },
+  "lets-go-crazy": {
+    "bpm": 99,
+    "valence": 0.5484,
+    "arousal": 0.8362,
+    "energyLevel": "high",
+    "energyDynamics": "low",
+    "musicalEraTag": "mid / late 1980s",
+    "timeSignature": "4/4",
+    "transformerCaption": "Up - tempo pop rock song with male vocal.",
+    "freeGenreTags": "new wave, pop rock, synth pop",
+    "moodTags": [
+      "energetic",
+      "uplifting",
+      "sexy"
+    ],
+    "genreTags": [
+      "rock"
+    ],
+    "moodAdvancedTags": [
+      "strong",
+      "resolute",
+      "confident",
+      "energetic",
+      "determined"
+    ],
+    "movementTags": [
+      "bouncy",
+      "driving",
+      "running"
+    ],
+    "characterTags": [
+      "retro"
+    ],
+    "instrumentTags": [
+      "percussion",
+      "synth",
+      "electricGuitar"
+    ]
+  }
+}
