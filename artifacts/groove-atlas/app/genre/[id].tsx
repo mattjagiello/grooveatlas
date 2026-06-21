@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React from 'react';
 import {
   ActivityIndicator,
+  FlatList,
   Platform,
   ScrollView,
   StyleSheet,
@@ -104,19 +105,23 @@ export default function GenreDetailScreen() {
             <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
               Key Drummers
             </Text>
-            <ScrollView
+            <FlatList
               horizontal
               showsHorizontalScrollIndicator={false}
+              data={drummers}
+              keyExtractor={(d) => d.id}
+              initialNumToRender={3}
+              maxToRenderPerBatch={4}
+              windowSize={3}
+              removeClippedSubviews={Platform.OS !== 'web'}
               contentContainerStyle={styles.horizontal}
-            >
-              {drummers.map((d: Drummer) => (
+              renderItem={({ item }) => (
                 <DrummerCard
-                  key={d.id}
-                  drummer={d}
-                  onPress={(drummer: Drummer) => router.push(`/drummer/${drummer.id}`)}
+                  drummer={item}
+                  onPress={(d: Drummer) => router.push(`/drummer/${d.id}`)}
                 />
-              ))}
-            </ScrollView>
+              )}
+            />
           </View>
         )}
 
@@ -145,9 +150,9 @@ const styles = StyleSheet.create({
   root: { flex: 1 },
   content: {},
   loader: { marginTop: 100 },
-  backBtnAlone: { margin: 20, width: 36, height: 36, alignItems: 'center', justifyContent: 'center' },
+  backBtnAlone: { margin: 20, width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
   hero: { paddingHorizontal: 20, paddingBottom: 20, borderBottomWidth: StyleSheet.hairlineWidth, gap: 4 },
-  backBtn: { marginBottom: 12, width: 36, height: 36, alignItems: 'center', justifyContent: 'center' },
+  backBtn: { marginBottom: 12, width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
   colorBar: { height: 4, width: 40, borderRadius: 2, marginBottom: 8 },
   heroName: { fontSize: 38, fontWeight: '700', lineHeight: 44 },
   originRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 6 },

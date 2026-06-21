@@ -139,6 +139,7 @@ export default function EraHeroCarousel({ eras, selectedEraId, onSelectEra, onEx
                         onExploreEra(era);
                       }}
                       style={[styles.exploreBtn, { borderColor: era.color }]}
+                      hitSlop={{ top: 10, bottom: 10, left: 8, right: 8 }}
                     >
                       <Text style={[styles.exploreBtnText, { color: era.color }]}>
                         Explore

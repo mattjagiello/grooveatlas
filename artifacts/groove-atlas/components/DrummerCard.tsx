@@ -1,7 +1,7 @@
 import { Feather } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
-import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React, { useState } from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, useWindowDimensions, View } from 'react-native';
 import { Drummer } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 
@@ -14,19 +14,21 @@ type DrummerCardProps = {
 function Initials({ name, size, fontSize, bg }: { name: string; size: number; fontSize: number; bg: string }) {
   const letters = name.split(' ').map((n) => n[0]).join('').slice(0, 2);
   return (
-    <View style={[{ width: size, height: size, borderRadius: size / 2, backgroundColor: bg, alignItems: 'center', justifyContent: 'center' }]}>
+    <View style={{ width: size, height: size, borderRadius: size / 2, backgroundColor: bg, alignItems: 'center', justifyContent: 'center' }}>
       <Text style={{ color: '#fff', fontSize, fontWeight: '700', letterSpacing: 0.5 }}>{letters}</Text>
     </View>
   );
 }
 
 function Avatar({ drummer, size, fontSize, bg }: { drummer: Drummer; size: number; fontSize: number; bg: string }) {
-  if (drummer.photoUrl) {
+  const [errored, setErrored] = useState(false);
+  if (drummer.photoUrl && !errored) {
     return (
       <Image
         source={{ uri: drummer.photoUrl }}
         style={{ width: size, height: size, borderRadius: size / 2 }}
         resizeMode="cover"
+        onError={() => setErrored(true)}
       />
     );
   }
@@ -35,6 +37,9 @@ function Avatar({ drummer, size, fontSize, bg }: { drummer: Drummer; size: numbe
 
 export default function DrummerCard({ drummer, onPress, compact }: DrummerCardProps) {
   const colors = useColors();
+  const { width: screenWidth } = useWindowDimensions();
+  // Fluid card width: ~37% of screen, capped so large screens don't get too wide
+  const cardWidth = Math.min(Math.round(screenWidth * 0.37), 158);
 
   const handlePress = () => {
     Haptics.selectionAsync();
@@ -51,6 +56,7 @@ export default function DrummerCard({ drummer, onPress, compact }: DrummerCardPr
         onPress={handlePress}
         style={[styles.compact, { backgroundColor: colors.card, borderColor: colors.border }]}
         activeOpacity={0.75}
+        hitSlop={{ top: 4, bottom: 4 }}
       >
         <Avatar drummer={drummer} size={36} fontSize={12} bg={colors.primary} />
         <View style={styles.compactInfo}>
@@ -72,7 +78,7 @@ export default function DrummerCard({ drummer, onPress, compact }: DrummerCardPr
   return (
     <TouchableOpacity
       onPress={handlePress}
-      style={[styles.card, { backgroundColor: colors.card, borderColor: colors.border }]}
+      style={[styles.card, { width: cardWidth, backgroundColor: colors.card, borderColor: colors.border }]}
       activeOpacity={0.75}
     >
       <Avatar drummer={drummer} size={44} fontSize={16} bg={colors.primary} />
@@ -101,7 +107,6 @@ export default function DrummerCard({ drummer, onPress, compact }: DrummerCardPr
 
 const styles = StyleSheet.create({
   card: {
-    width: 140,
     padding: 12,
     borderRadius: 10,
     borderWidth: 1,
@@ -139,10 +144,12 @@ const styles = StyleSheet.create({
   compact: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 12,
     borderRadius: 8,
     borderWidth: 1,
     gap: 10,
+    minHeight: 44,
   },
   compactInfo: {
     flex: 1,

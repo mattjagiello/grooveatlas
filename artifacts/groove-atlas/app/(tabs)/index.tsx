@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   ActivityIndicator,
+  FlatList,
   Platform,
   ScrollView,
   StyleSheet,
@@ -90,6 +91,7 @@ export default function ExploreScreen() {
         <TouchableOpacity
           onPress={() => router.push('/(tabs)/search')}
           style={[styles.searchBtn, { backgroundColor: colors.muted, borderColor: colors.border }]}
+          hitSlop={{ top: 4, bottom: 4, left: 4, right: 4 }}
         >
           <Feather name="search" size={18} color={colors.primary} />
         </TouchableOpacity>
@@ -127,23 +129,30 @@ export default function ExploreScreen() {
                 >
                   Drummers of the {selectedEra?.name}
                 </Text>
-                <TouchableOpacity onPress={() => selectedEra && router.push(`/era/${selectedEra.id}`)}>
+                <TouchableOpacity
+                  onPress={() => selectedEra && router.push(`/era/${selectedEra.id}`)}
+                  hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                >
                   <Text style={[styles.seeAll, { color: colors.primary }]}>See all</Text>
                 </TouchableOpacity>
               </View>
-              <ScrollView
+              <FlatList
                 horizontal
                 showsHorizontalScrollIndicator={false}
+                data={displayDrummers}
+                keyExtractor={(d) => d.id}
+                initialNumToRender={3}
+                maxToRenderPerBatch={3}
+                windowSize={3}
+                removeClippedSubviews={Platform.OS !== 'web'}
                 contentContainerStyle={styles.horizontal}
-              >
-                {displayDrummers.map((drummer: Drummer) => (
+                renderItem={({ item }) => (
                   <DrummerCard
-                    key={drummer.id}
-                    drummer={drummer}
+                    drummer={item}
                     onPress={(d: Drummer) => router.push(`/drummer/${d.id}`)}
                   />
-                ))}
-              </ScrollView>
+                )}
+              />
             </View>
           )}
 
@@ -174,7 +183,10 @@ export default function ExploreScreen() {
                 <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
                   Browse by Genre
                 </Text>
-                <TouchableOpacity onPress={() => router.push('/(tabs)/genres')}>
+                <TouchableOpacity
+                  onPress={() => router.push('/(tabs)/genres')}
+                  hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                >
                   <Text style={[styles.seeAll, { color: colors.primary }]}>See all</Text>
                 </TouchableOpacity>
               </View>
@@ -188,6 +200,7 @@ export default function ExploreScreen() {
                     key={genre.id}
                     onPress={() => router.push(`/genre/${genre.id}`)}
                     style={[styles.genreChip, { borderColor: genre.color, backgroundColor: genre.color + '18' }]}
+                    hitSlop={{ top: 4, bottom: 4 }}
                   >
                     <View style={[styles.genreDot, { backgroundColor: genre.color }]} />
                     <Text style={[styles.genreChipText, { color: colors.foreground }]}>{genre.name}</Text>
@@ -214,9 +227,9 @@ const styles = StyleSheet.create({
   logo: { fontSize: 13, fontWeight: '700', letterSpacing: 4, lineHeight: 16 },
   logoSub: { fontSize: 26, fontWeight: '700', letterSpacing: 6, lineHeight: 30 },
   searchBtn: {
-    width: 38,
-    height: 38,
-    borderRadius: 19,
+    width: 44,
+    height: 44,
+    borderRadius: 22,
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,
@@ -235,7 +248,7 @@ const styles = StyleSheet.create({
   section: { marginBottom: 24 },
   sectionHeader: {
     flexDirection: 'row',
-    alignItems: 'baseline',
+    alignItems: 'center',
     justifyContent: 'space-between',
     marginHorizontal: 20,
     marginBottom: 12,
@@ -250,9 +263,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 7,
     paddingHorizontal: 14,
-    paddingVertical: 9,
+    paddingVertical: 12,
     borderRadius: 22,
     borderWidth: 1,
+    minHeight: 44,
   },
   genreDot: { width: 8, height: 8, borderRadius: 4 },
   genreChipText: { fontSize: 13, fontWeight: '600' },
