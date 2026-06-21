@@ -22,6 +22,7 @@ export default function EraDetailScreen() {
   const colors = useColors();
   const insets = useSafeAreaInsets();
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
+  const goBack = () => router.canGoBack() ? router.back() : router.replace('/(tabs)/eras' as never);
 
   const { data: era, isLoading } = useEra(id ?? '');
 
@@ -36,7 +37,7 @@ export default function EraDetailScreen() {
   if (!era) {
     return (
       <View style={[styles.root, { backgroundColor: colors.background }]}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backBtnAlone}>
+        <TouchableOpacity onPress={goBack} style={styles.backBtnAlone}>
           <Feather name="arrow-left" size={20} color={colors.foreground} />
         </TouchableOpacity>
         <Text style={{ color: colors.foreground, padding: 20 }}>Era not found</Text>
@@ -66,7 +67,7 @@ export default function EraDetailScreen() {
             },
           ]}
         >
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn} testID="back-button">
+          <TouchableOpacity onPress={goBack} style={styles.backBtn} testID="back-button">
             <Feather name="arrow-left" size={20} color={colors.foreground} />
           </TouchableOpacity>
           <View style={styles.heroContent}>

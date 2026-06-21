@@ -201,10 +201,12 @@ export default function DrummerDetailScreen() {
     );
   }
 
+  const goBack = () => router.canGoBack() ? router.back() : router.replace('/(tabs)' as never);
+
   if (!drummer) {
     return (
       <View style={[styles.root, { backgroundColor: colors.background }]}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backBtnAlone}>
+        <TouchableOpacity onPress={goBack} style={styles.backBtnAlone}>
           <Feather name="arrow-left" size={20} color={colors.foreground} />
         </TouchableOpacity>
         <Text style={{ color: colors.foreground, padding: 20 }}>Drummer not found</Text>
@@ -231,7 +233,7 @@ export default function DrummerDetailScreen() {
             { paddingTop: insets.top + webTopPad + 16, borderBottomColor: colors.border, backgroundColor: colors.card },
           ]}
         >
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn} testID="back-button">
+          <TouchableOpacity onPress={goBack} style={styles.backBtn} testID="back-button">
             <Feather name="arrow-left" size={20} color={colors.foreground} />
           </TouchableOpacity>
           <View style={styles.heroRow}>

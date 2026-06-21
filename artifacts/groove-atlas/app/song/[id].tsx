@@ -564,10 +564,12 @@ export default function SongDetailScreen() {
     );
   }
 
+  const goBack = () => router.canGoBack() ? router.back() : router.replace('/(tabs)' as never);
+
   if (!song) {
     return (
       <View style={[styles.root, { backgroundColor: colors.background }]}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backBtnAlone}>
+        <TouchableOpacity onPress={goBack} style={styles.backBtnAlone}>
           <Feather name="arrow-left" size={20} color={colors.foreground} />
         </TouchableOpacity>
         <Text style={{ color: colors.foreground, padding: 20 }}>Song not found</Text>
@@ -603,7 +605,7 @@ export default function SongDetailScreen() {
             { paddingTop: insets.top + webTopPad + 16, borderBottomColor: colors.border, backgroundColor: colors.card },
           ]}
         >
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn} testID="back-button">
+          <TouchableOpacity onPress={goBack} style={styles.backBtn} testID="back-button">
             <Feather name="arrow-left" size={20} color={colors.foreground} />
           </TouchableOpacity>
           <Text style={[styles.title, { color: colors.foreground, fontFamily: 'serif' }]}>{song.title}</Text>

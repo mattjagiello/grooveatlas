@@ -11,11 +11,11 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useEras, useDrummers, useSongs } from '@/hooks/useGql';
+import { useEras, useDrummers, useSongs, useGenres } from '@/hooks/useGql';
 import EraHeroCarousel from '@/components/EraHeroCarousel';
 import DrummerCard from '@/components/DrummerCard';
 import SongCard from '@/components/SongCard';
-import { Drummer, Era, Song } from '@/constants/data';
+import { Drummer, Era, Genre, Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
 
 export default function ExploreScreen() {
@@ -24,6 +24,7 @@ export default function ExploreScreen() {
   const [selectedEraId, setSelectedEraId] = useState<string | null>(null);
 
   const { data: eras = [], isLoading: erasLoading } = useEras();
+  const { data: genres = [] } = useGenres();
 
   const reversedEras = [...eras].reverse();
 
@@ -143,6 +144,35 @@ export default function ExploreScreen() {
               </View>
             </View>
           )}
+
+          {genres.length > 0 && (
+            <View style={styles.section}>
+              <View style={styles.sectionHeader}>
+                <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
+                  Browse by Genre
+                </Text>
+                <TouchableOpacity onPress={() => router.push('/(tabs)/genres')}>
+                  <Text style={[styles.seeAll, { color: colors.primary }]}>See all</Text>
+                </TouchableOpacity>
+              </View>
+              <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={styles.genreStrip}
+              >
+                {(genres as Genre[]).map((genre: Genre) => (
+                  <TouchableOpacity
+                    key={genre.id}
+                    onPress={() => router.push(`/genre/${genre.id}`)}
+                    style={[styles.genreChip, { borderColor: genre.color, backgroundColor: genre.color + '18' }]}
+                  >
+                    <View style={[styles.genreDot, { backgroundColor: genre.color }]} />
+                    <Text style={[styles.genreChipText, { color: colors.foreground }]}>{genre.name}</Text>
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
+            </View>
+          )}
         </ScrollView>
       )}
     </View>
@@ -191,4 +221,16 @@ const styles = StyleSheet.create({
   seeAll: { fontSize: 13, fontWeight: '600' },
   horizontal: { paddingHorizontal: 20, gap: 0 },
   songList: { paddingHorizontal: 16 },
+  genreStrip: { paddingHorizontal: 20, gap: 8 },
+  genreChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 7,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+    borderRadius: 22,
+    borderWidth: 1,
+  },
+  genreDot: { width: 8, height: 8, borderRadius: 4 },
+  genreChipText: { fontSize: 13, fontWeight: '600' },
 });
