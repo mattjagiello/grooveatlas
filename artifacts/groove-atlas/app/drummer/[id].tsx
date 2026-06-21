@@ -25,17 +25,6 @@ import type { DrummerVibe } from '@/lib/queries';
 
 const HERO_HEIGHT = 260;
 
-// ─── Colour maps ──────────────────────────────────────────────────────────────
-
-const MOOD_COLORS: Record<string, string> = {
-  aggressive: '#DC2626', energetic: '#EA580C', happy: '#D97706',
-  romantic: '#DB2777', sad: '#2563EB', relaxed: '#059669',
-  dark: '#7C3AED', ethereal: '#0891B2', melancholic: '#6366F1',
-  uplifting: '#16A34A', epic: '#9A3412', mysterious: '#6D28D9',
-  cheerful: '#D97706', positive: '#16A34A', bright: '#CA8A04',
-  powerful: '#9A3412', groovy: '#0D9488', cool: '#0284C7',
-};
-
 const ENERGY_LABELS: Record<string, string> = { low: 'Low', medium: 'Medium', high: 'High' };
 
 // ─── BPM zone bar ─────────────────────────────────────────────────────────────
@@ -176,8 +165,7 @@ export default function DrummerDetailScreen() {
   const energyLabel = hasVibe && vibe.dominantEnergy
     ? (ENERGY_LABELS[vibe.dominantEnergy.toLowerCase()] ?? vibe.dominantEnergy)
     : null;
-  const topMoods = hasVibe ? vibe.topMoods.slice(0, 6) : [];
-  const topTags = hasVibe ? [...vibe.topGenres.slice(0, 3), ...vibe.topCharacter.slice(0, 3)] : [];
+  const topMoods = hasVibe ? vibe.topMoods.slice(0, 3).join(' · ') : '';
   const caption = hasVibe && vibe.transformerCaptions.length > 0 ? vibe.transformerCaptions[0] : null;
   const dividerColor = colors.border;
 
@@ -295,35 +283,19 @@ export default function DrummerDetailScreen() {
             dividerColor={dividerColor}
           />
 
-          {/* Mood tags */}
+          {/* Mood */}
           {topMoods.length > 0 && (
-            <View style={page.tagRow}>
-              {topMoods.map((m) => {
-                const c = MOOD_COLORS[m.toLowerCase()] ?? colors.primary;
-                return (
-                  <View key={m} style={[page.moodChip, { backgroundColor: c + '18', borderColor: c + '55' }]}>
-                    <Text style={[page.moodText, { color: c, fontFamily: Fonts.label }]}>{m}</Text>
-                  </View>
-                );
-              })}
-              {topTags.map((t) => (
-                <View key={t} style={[page.tagChip, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-                  <Text style={[page.tagText, { color: colors.foreground, fontFamily: Fonts.labelRegular }]}>{t}</Text>
-                </View>
-              ))}
+            <View style={[page.moodLine, { borderLeftColor: colors.primary }]}>
+              <Text style={[page.moodLineLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>MOOD</Text>
+              <Text style={[page.moodLineText, { color: colors.foreground, fontFamily: Fonts.labelRegular }]}>{topMoods}</Text>
             </View>
           )}
 
           {/* AI caption */}
           {caption && (
-            <View style={[page.pullQuote, { borderLeftColor: colors.border, marginTop: 4 }]}>
-              <Text style={[page.pullText, { color: colors.mutedForeground, fontFamily: Fonts.serifItalic, fontSize: 13 }]}>
-                "{caption}"
-              </Text>
-              <Text style={[page.cyaniteSource, { color: colors.mutedForeground }]}>
-                via Cyanite AI
-              </Text>
-            </View>
+            <Text style={[page.vibeCaption, { color: colors.mutedForeground, fontFamily: Fonts.serifItalic }]}>
+              "{caption}" <Text style={{ fontStyle: 'normal', fontSize: 10 }}>via Cyanite AI</Text>
+            </Text>
           )}
         </View>
 
@@ -492,13 +464,10 @@ const page = StyleSheet.create({
   statUnit: { fontSize: 12, marginRight: 2 },
   statSep: { fontSize: 16, marginHorizontal: 2 },
 
-  tagRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 12 },
-  moodChip: { paddingHorizontal: 10, paddingVertical: 3, borderRadius: 14, borderWidth: 1 },
-  moodText: { fontSize: 12 },
-  tagChip: { paddingHorizontal: 10, paddingVertical: 3, borderRadius: 14, borderWidth: 1 },
-  tagText: { fontSize: 11 },
-
-  cyaniteSource: { fontSize: 10, marginTop: 4, fontStyle: 'italic' },
+  moodLine: { borderLeftWidth: 3, paddingLeft: 12, marginTop: 12, gap: 3 },
+  moodLineLabel: { fontSize: 9, letterSpacing: 2 },
+  moodLineText: { fontSize: 15 },
+  vibeCaption: { fontSize: 13, lineHeight: 20, marginTop: 10, opacity: 0.7 },
 
   capsLabel: { fontSize: 9, letterSpacing: 2, marginTop: 4 },
   horizontal: { paddingHorizontal: 16, paddingVertical: 12 },
