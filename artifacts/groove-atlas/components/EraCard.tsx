@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Era } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
+import { Fonts } from '@/constants/typography';
 
 type EraCardProps = {
   era: Era;
@@ -26,23 +27,23 @@ export default function EraCard({ era, onPress }: EraCardProps) {
       <View style={[styles.accent, { backgroundColor: era.color }]} />
       <View style={styles.content}>
         <View style={styles.header}>
-          <Text style={[styles.name, { color: colors.foreground, fontFamily: 'serif' }]}>
+          <Text style={[styles.name, { color: colors.foreground, fontFamily: Fonts.serif }]}>
             {era.name}
           </Text>
-          <Text style={[styles.years, { color: colors.mutedForeground }]}>{era.years}</Text>
+          <Text style={[styles.years, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>{era.years}</Text>
         </View>
-        <Text style={[styles.subtitle, { color: era.color }]}>{era.subtitle}</Text>
+        <Text style={[styles.subtitle, { color: era.color, fontFamily: Fonts.label }]}>{era.subtitle}</Text>
         <Text style={[styles.description, { color: colors.mutedForeground }]} numberOfLines={2}>
           {era.description}
         </Text>
         <View style={styles.characteristics}>
           {era.characteristics.slice(0, 2).map((c, i) => (
             <View key={i} style={[styles.chip, { backgroundColor: colors.muted }]}>
-              <Text style={[styles.chipText, { color: colors.mutedForeground }]}>{c}</Text>
+              <Text style={[styles.chipText, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>{c}</Text>
             </View>
           ))}
         </View>
-        <Text style={[styles.drummers, { color: colors.primary }]}>
+        <Text style={[styles.drummers, { color: colors.primary, fontFamily: Fonts.labelRegular }]}>
           {era.keyDrummerIds.length} key drummers · {era.iconicSongIds.length} iconic songs
         </Text>
       </View>
@@ -75,14 +76,13 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 22,
-    fontWeight: '700',
   },
   years: {
     fontSize: 12,
   },
   subtitle: {
-    fontSize: 13,
-    fontWeight: '600',
+    fontSize: 12,
+    letterSpacing: 0.5,
   },
   description: {
     fontSize: 13,
@@ -102,11 +102,9 @@ const styles = StyleSheet.create({
   },
   chipText: {
     fontSize: 10,
-    fontWeight: '500',
   },
   drummers: {
     fontSize: 12,
-    fontWeight: '600',
     marginTop: 4,
   },
 });

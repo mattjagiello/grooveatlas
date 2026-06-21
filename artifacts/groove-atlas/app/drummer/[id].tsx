@@ -18,6 +18,7 @@ import SongstatsCard from '@/components/SongstatsCard';
 import { Skeleton } from '@/components/Skeleton';
 import { Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
+import { Fonts } from '@/constants/typography';
 import type { DrummerVibe } from '@/lib/queries';
 
 const HERO_HEIGHT = 260;
@@ -33,7 +34,7 @@ const MOOD_COLORS: Record<string, string> = {
   powerful: '#9A3412', groovy: '#0D9488', cool: '#0284C7',
 };
 
-const ENERGY_ICONS: Record<string, string> = { low: '🌊', medium: '🔥', high: '⚡' };
+const ENERGY_LABELS: Record<string, string> = { low: 'LOW', medium: 'MED', high: 'HIGH' };
 
 // ─── BPM zone sparkline ───────────────────────────────────────────────────────
 
@@ -130,8 +131,8 @@ function RhythmProfile({
 }) {
   const hasVibe = vibe && vibe.analysedCount > 0;
   const avgBpm = hasVibe ? (vibe.avgBpm ?? null) : null;
-  const energyIcon = hasVibe && vibe.dominantEnergy
-    ? (ENERGY_ICONS[vibe.dominantEnergy.toLowerCase()] ?? '🎵')
+  const energyLabel = hasVibe && vibe.dominantEnergy
+    ? (ENERGY_LABELS[vibe.dominantEnergy.toLowerCase()] ?? vibe.dominantEnergy.toUpperCase())
     : null;
   const topMoods = hasVibe ? vibe.topMoods.slice(0, 5) : [];
   const tags = hasVibe ? [...vibe.topGenres.slice(0, 4), ...vibe.topCharacter.slice(0, 3)] : [];
@@ -139,27 +140,27 @@ function RhythmProfile({
 
   return (
     <View style={[rp.card, { backgroundColor: colors.card, borderColor: colors.border }]}>
-      <Text style={[rp.heading, { color: colors.mutedForeground }]}>RHYTHM PROFILE</Text>
+      <Text style={[rp.heading, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>RHYTHM PROFILE</Text>
 
       {/* Stat row — only render when we have meaningful values */}
       {(avgBpm !== null || hasVibe) && (
         <View style={rp.statsRow}>
           {avgBpm !== null && (
             <View style={[rp.statBox, { backgroundColor: colors.primary + '15', borderColor: colors.primary + '30' }]}>
-              <Text style={[rp.statVal, { color: colors.primary }]}>{avgBpm}</Text>
-              <Text style={[rp.statLabel, { color: colors.mutedForeground }]}>AVG BPM</Text>
+              <Text style={[rp.statVal, { color: colors.primary, fontFamily: Fonts.display }]}>{avgBpm}</Text>
+              <Text style={[rp.statLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>AVG BPM</Text>
             </View>
           )}
-          {hasVibe && energyIcon && vibe.dominantEnergy && (
+          {hasVibe && energyLabel && vibe.dominantEnergy && (
             <View style={[rp.statBox, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-              <Text style={rp.statEmoji}>{energyIcon}</Text>
-              <Text style={[rp.statLabel, { color: colors.mutedForeground }]}>{vibe.dominantEnergy} energy</Text>
+              <Text style={[rp.statVal, { color: colors.foreground, fontFamily: Fonts.display, fontSize: 22 }]}>{energyLabel}</Text>
+              <Text style={[rp.statLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>ENERGY</Text>
             </View>
           )}
           {hasVibe && (
             <View style={[rp.statBox, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-              <Text style={[rp.statVal, { color: colors.foreground, fontSize: 20 }]}>{vibe.analysedCount}</Text>
-              <Text style={[rp.statLabel, { color: colors.mutedForeground }]}>TRACKS STUDIED</Text>
+              <Text style={[rp.statVal, { color: colors.foreground, fontFamily: Fonts.display, fontSize: 22 }]}>{vibe.analysedCount}</Text>
+              <Text style={[rp.statLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>TRACKS</Text>
             </View>
           )}
         </View>
@@ -183,7 +184,7 @@ function RhythmProfile({
             const c = MOOD_COLORS[m.toLowerCase()] ?? colors.primary;
             return (
               <View key={m} style={[rp.moodChip, { backgroundColor: c + '22', borderColor: c + '66' }]}>
-                <Text style={[rp.moodText, { color: c }]}>{m}</Text>
+                <Text style={[rp.moodText, { color: c, fontFamily: Fonts.label }]}>{m}</Text>
               </View>
             );
           })}
@@ -195,7 +196,7 @@ function RhythmProfile({
         <View style={rp.chipRow}>
           {tags.map((t) => (
             <View key={t} style={[rp.tag, { backgroundColor: colors.muted, borderColor: colors.border }]}>
-              <Text style={[rp.tagText, { color: colors.foreground }]}>{t}</Text>
+              <Text style={[rp.tagText, { color: colors.foreground, fontFamily: Fonts.labelRegular }]}>{t}</Text>
             </View>
           ))}
         </View>
@@ -314,8 +315,8 @@ export default function DrummerDetailScreen() {
             </View>
           </TouchableOpacity>
           <View style={styles.heroNameArea}>
-            <Text style={[styles.name, { fontFamily: 'serif' }]} numberOfLines={2}>{drummer.name}</Text>
-            <Text style={styles.heroYears}>{yearsActive}</Text>
+            <Text style={[styles.name, { fontFamily: Fonts.display }]} numberOfLines={2}>{drummer.name}</Text>
+            <Text style={[styles.heroYears, { fontFamily: Fonts.labelRegular }]}>{yearsActive}</Text>
           </View>
         </View>
 
@@ -324,7 +325,7 @@ export default function DrummerDetailScreen() {
           <View style={styles.heroMetaRow}>
             <TouchableOpacity onPress={() => router.push(`/era/${drummer.primaryEra}`)}>
               <View style={[styles.eraTag, { backgroundColor: colors.primary + '20', borderColor: colors.primary }]}>
-                <Text style={[styles.eraTagText, { color: colors.primary }]}>{drummer.primaryEra}</Text>
+                <Text style={[styles.eraTagText, { color: colors.primary, fontFamily: Fonts.label }]}>{drummer.primaryEra}</Text>
               </View>
             </TouchableOpacity>
             {genreLabels.length > 0 && (
@@ -339,14 +340,14 @@ export default function DrummerDetailScreen() {
 
         {/* ── Biography ── */}
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Biography</Text>
+          <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>Biography</Text>
           <Text style={[styles.bio, { color: colors.foreground }]}>{drummer.bio}</Text>
         </View>
 
         {/* ── Signature style ── */}
         <View style={[styles.styleBox, { backgroundColor: colors.card, borderColor: colors.border, borderLeftColor: colors.primary }]}>
-          <Text style={[styles.styleLabel, { color: colors.mutedForeground }]}>SIGNATURE STYLE</Text>
-          <Text style={[styles.styleText, { color: colors.foreground }]}>{drummer.signatureStyle}</Text>
+          <Text style={[styles.styleLabel, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>SIGNATURE STYLE</Text>
+          <Text style={[styles.styleText, { color: colors.foreground, fontFamily: Fonts.serifItalic }]}>{drummer.signatureStyle}</Text>
         </View>
 
         {/* ── Rhythm Profile (replaces Tempo & Style + Sonic Fingerprint) ── */}
@@ -361,7 +362,7 @@ export default function DrummerDetailScreen() {
 
         {/* ── Legacy & Influence ── */}
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Legacy & Influence</Text>
+          <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>Legacy & Influence</Text>
           <Text style={[styles.influence, { color: colors.foreground }]}>{drummer.influence}</Text>
         </View>
 
@@ -373,7 +374,7 @@ export default function DrummerDetailScreen() {
         {/* ── Essential recordings ── */}
         {songs.length > 0 && (
           <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>Essential Recordings</Text>
+            <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>Essential Recordings</Text>
             {songs.map((s: Song) => (
               <SongCard key={s.id} song={s} onPress={(song: Song) => router.push(`/song/${song.id}`)} />
             ))}
@@ -432,7 +433,7 @@ const styles = StyleSheet.create({
   },
   heroInitials: { fontSize: 80, fontWeight: '800', opacity: 0.25, fontFamily: 'serif' },
   heroNameArea: { position: 'absolute', bottom: 14, left: 20, right: 20 },
-  name: { fontSize: 32, fontWeight: '800', lineHeight: 36, color: '#fff' },
+  name: { fontSize: 44, lineHeight: 46, color: '#fff', letterSpacing: 1 },
   heroYears: { fontSize: 13, color: 'rgba(255,255,255,0.80)', marginTop: 2 },
   heroMeta: { paddingHorizontal: 20, paddingVertical: 14, borderBottomWidth: StyleSheet.hairlineWidth, gap: 6 },
   heroMetaRow: { flexDirection: 'row', alignItems: 'center', gap: 10, flexWrap: 'wrap' },

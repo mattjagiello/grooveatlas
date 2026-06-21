@@ -4,6 +4,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
+import { Fonts } from '@/constants/typography';
 
 type SongCardProps = {
   song: Song;
@@ -33,7 +34,7 @@ export default function SongCard({ song, onPress, drummerName }: SongCardProps) 
       <View style={styles.header}>
         <View style={styles.info}>
           <Text
-            style={[styles.title, { color: colors.foreground, fontFamily: 'serif' }]}
+            style={[styles.title, { color: colors.foreground, fontFamily: Fonts.serif }]}
             numberOfLines={1}
           >
             {song.title}
@@ -42,7 +43,7 @@ export default function SongCard({ song, onPress, drummerName }: SongCardProps) 
             {song.artist} · {song.year}
           </Text>
           {drummerName && (
-            <Text style={[styles.drummer, { color: colors.primary }]} numberOfLines={1}>
+            <Text style={[styles.drummer, { color: colors.primary, fontFamily: Fonts.labelRegular }]} numberOfLines={1}>
               {drummerName}
             </Text>
           )}
@@ -52,7 +53,7 @@ export default function SongCard({ song, onPress, drummerName }: SongCardProps) 
 
       <View style={styles.meta}>
         <View style={[styles.tempo, { backgroundColor: colors.muted }]}>
-          <Text style={[styles.tempoText, { color: colors.primary }]}>
+          <Text style={[styles.tempoText, { color: colors.primary, fontFamily: Fonts.label }]}>
             {song.tempo} BPM
           </Text>
         </View>
@@ -62,19 +63,17 @@ export default function SongCard({ song, onPress, drummerName }: SongCardProps) 
               key={i}
               style={[
                 styles.complexityDot,
-                {
-                  backgroundColor: filled ? colors.primary : colors.border,
-                },
+                { backgroundColor: filled ? colors.primary : colors.border },
               ]}
             />
           ))}
-          <Text style={[styles.complexityLabel, { color: colors.mutedForeground }]}>
+          <Text style={[styles.complexityLabel, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]}>
             {COMPLEXITY_LABELS[song.complexity - 1]}
           </Text>
         </View>
       </View>
 
-      <Text style={[styles.feel, { color: colors.mutedForeground }]} numberOfLines={1}>
+      <Text style={[styles.feel, { color: colors.mutedForeground, fontFamily: Fonts.serifItalic }]} numberOfLines={1}>
         {song.feel}
       </Text>
     </TouchableOpacity>
@@ -107,7 +106,6 @@ const styles = StyleSheet.create({
   },
   drummer: {
     fontSize: 11,
-    fontWeight: '600',
   },
   meta: {
     flexDirection: 'row',
@@ -121,7 +119,6 @@ const styles = StyleSheet.create({
   },
   tempoText: {
     fontSize: 11,
-    fontWeight: '700',
   },
   complexity: {
     flexDirection: 'row',
@@ -139,6 +136,5 @@ const styles = StyleSheet.create({
   },
   feel: {
     fontSize: 12,
-    fontStyle: 'italic',
   },
 });

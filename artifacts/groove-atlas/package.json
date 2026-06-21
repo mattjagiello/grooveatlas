@@ -55,6 +55,9 @@
     "zod-validation-error": "^3.4.0"
   },
   "dependencies": {
+    "@expo-google-fonts/bebas-neue": "^0.4.1",
+    "@expo-google-fonts/oswald": "^0.4.2",
+    "@expo-google-fonts/playfair-display": "^0.4.2",
     "expo-audio": "~1.1.1",
     "graphql": "^16.14.2",
     "graphql-request": "^7.4.0"

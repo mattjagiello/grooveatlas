@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, useWindowDimensions, View } from 'react-native';
 import { Drummer } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
+import { Fonts } from '@/constants/typography';
 
 type DrummerCardProps = {
   drummer: Drummer;
@@ -38,7 +39,6 @@ function Avatar({ drummer, size, fontSize, bg }: { drummer: Drummer; size: numbe
 export default function DrummerCard({ drummer, onPress, compact }: DrummerCardProps) {
   const colors = useColors();
   const { width: screenWidth } = useWindowDimensions();
-  // Fluid card width: ~37% of screen, capped so large screens don't get too wide
   const cardWidth = Math.min(Math.round(screenWidth * 0.37), 158);
 
   const handlePress = () => {
@@ -61,12 +61,12 @@ export default function DrummerCard({ drummer, onPress, compact }: DrummerCardPr
         <Avatar drummer={drummer} size={36} fontSize={12} bg={colors.primary} />
         <View style={styles.compactInfo}>
           <Text
-            style={[styles.compactName, { color: colors.foreground, fontFamily: 'serif' }]}
+            style={[styles.compactName, { color: colors.foreground, fontFamily: Fonts.serif }]}
             numberOfLines={1}
           >
             {drummer.name}
           </Text>
-          <Text style={[styles.compactMeta, { color: colors.mutedForeground }]} numberOfLines={1}>
+          <Text style={[styles.compactMeta, { color: colors.mutedForeground, fontFamily: Fonts.labelRegular }]} numberOfLines={1}>
             {drummer.primaryEra} · {drummer.bands[0]?.replace('session musician –', 'Session')}
           </Text>
         </View>
@@ -83,8 +83,8 @@ export default function DrummerCard({ drummer, onPress, compact }: DrummerCardPr
     >
       <Avatar drummer={drummer} size={44} fontSize={16} bg={colors.primary} />
       <Text
-        style={[styles.name, { color: colors.foreground, fontFamily: 'serif' }]}
-        numberOfLines={1}
+        style={[styles.name, { color: colors.foreground, fontFamily: Fonts.serif }]}
+        numberOfLines={2}
       >
         {drummer.name}
       </Text>
@@ -93,14 +93,11 @@ export default function DrummerCard({ drummer, onPress, compact }: DrummerCardPr
       </Text>
       <View style={styles.tags}>
         <View style={[styles.tag, { backgroundColor: colors.muted }]}>
-          <Text style={[styles.tagText, { color: colors.mutedForeground }]}>
+          <Text style={[styles.tagText, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>
             {drummer.primaryEra}
           </Text>
         </View>
       </View>
-      <Text style={[styles.bpm, { color: colors.primary }]}>
-        {drummer.bpmMin}–{drummer.bpmMax} BPM
-      </Text>
     </TouchableOpacity>
   );
 }
@@ -117,6 +114,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '700',
     marginTop: 6,
+    lineHeight: 18,
   },
   band: {
     fontSize: 11,
@@ -134,12 +132,6 @@ const styles = StyleSheet.create({
   },
   tagText: {
     fontSize: 10,
-    fontWeight: '500',
-  },
-  bpm: {
-    fontSize: 10,
-    fontWeight: '600',
-    marginTop: 2,
   },
   compact: {
     flexDirection: 'row',

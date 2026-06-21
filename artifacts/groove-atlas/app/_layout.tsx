@@ -5,6 +5,16 @@ import {
   Inter_700Bold,
   useFonts,
 } from "@expo-google-fonts/inter";
+import { BebasNeue_400Regular } from "@expo-google-fonts/bebas-neue";
+import {
+  PlayfairDisplay_400Regular,
+  PlayfairDisplay_400Regular_Italic,
+  PlayfairDisplay_700Bold,
+} from "@expo-google-fonts/playfair-display";
+import {
+  Oswald_400Regular,
+  Oswald_600SemiBold,
+} from "@expo-google-fonts/oswald";
 import { Feather } from "@expo/vector-icons";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
@@ -53,6 +63,12 @@ export default function RootLayout() {
     Inter_500Medium,
     Inter_600SemiBold,
     Inter_700Bold,
+    BebasNeue_400Regular,
+    PlayfairDisplay_400Regular,
+    PlayfairDisplay_400Regular_Italic,
+    PlayfairDisplay_700Bold,
+    Oswald_400Regular,
+    Oswald_600SemiBold,
     ...Feather.font,
   });
 

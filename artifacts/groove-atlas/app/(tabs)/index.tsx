@@ -20,6 +20,7 @@ import SongCard from '@/components/SongCard';
 import { Skeleton } from '@/components/Skeleton';
 import { Drummer, Era, Genre, Song } from '@/constants/data';
 import { useColors } from '@/hooks/useColors';
+import { Fonts } from '@/constants/typography';
 
 function HomeSkeleton({ colors, insets }: { colors: ReturnType<typeof useColors>; insets: { top: number } }) {
   const webTopPad = Platform.OS === 'web' ? 67 : 0;
@@ -143,10 +144,10 @@ export default function ExploreScreen() {
         ]}
       >
         <View>
-          <Text style={[styles.logo, { color: colors.primary, fontFamily: 'serif' }]}>
+          <Text style={[styles.logo, { color: colors.mutedForeground, fontFamily: Fonts.label }]}>
             GROOVE
           </Text>
-          <Text style={[styles.logoSub, { color: colors.foreground, fontFamily: 'serif' }]}>
+          <Text style={[styles.logoSub, { color: colors.primary, fontFamily: Fonts.display }]}>
             ATLAS
           </Text>
         </View>
@@ -195,7 +196,7 @@ export default function ExploreScreen() {
             <View style={styles.section}>
               <View style={styles.sectionHeader}>
                 <Text
-                  style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}
+                  style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}
                 >
                   Drummers of the {selectedEra?.name}
                 </Text>
@@ -230,7 +231,7 @@ export default function ExploreScreen() {
             <View style={styles.section}>
               <View style={styles.sectionHeader}>
                 <Text
-                  style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}
+                  style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}
                 >
                   Iconic Recordings
                 </Text>
@@ -250,7 +251,7 @@ export default function ExploreScreen() {
           {genres.length > 0 && (
             <View style={styles.section}>
               <View style={styles.sectionHeader}>
-                <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: 'serif' }]}>
+                <Text style={[styles.sectionTitle, { color: colors.foreground, fontFamily: Fonts.serif }]}>
                   Browse by Genre
                 </Text>
                 <TouchableOpacity
@@ -294,8 +295,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
-  logo: { fontSize: 13, fontWeight: '700', letterSpacing: 4, lineHeight: 16 },
-  logoSub: { fontSize: 26, fontWeight: '700', letterSpacing: 6, lineHeight: 30 },
+  logo: { fontSize: 11, letterSpacing: 3, lineHeight: 14 },
+  logoSub: { fontSize: 34, lineHeight: 32 },
   searchBtn: {
     width: 44,
     height: 44,
@@ -322,7 +323,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginBottom: 12,
   },
-  sectionTitle: { fontSize: 18, fontWeight: '700' },
+  sectionTitle: { fontSize: 20 },
   seeAll: { fontSize: 13, fontWeight: '600' },
   horizontal: { paddingHorizontal: 20, gap: 0 },
   songList: { paddingHorizontal: 16 },
