@@ -190,7 +190,7 @@ export default function DrummerDetailScreen() {
   }
 
   const songs = (drummer.iconicSongs ?? []) as Song[];
-  const yearsActive = drummer.died ? `${drummer.born}–${drummer.died}` : `${drummer.born}–present`;
+  const yearsActive = `b. ${drummer.born}`;
   const initials = drummer.name.split(' ').map((n) => n[0]).join('').slice(0, 2);
 
   // Vibe data

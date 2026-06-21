@@ -46,9 +46,7 @@ export default function DrummerCard({ drummer, onPress, compact }: DrummerCardPr
     onPress?.(drummer);
   };
 
-  const yearsActive = drummer.died
-    ? `${drummer.born}–${drummer.died}`
-    : `b. ${drummer.born}`;
+  const yearsActive = `b. ${drummer.born}`;
 
   if (compact) {
     return (
