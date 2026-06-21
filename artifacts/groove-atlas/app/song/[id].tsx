@@ -153,6 +153,7 @@ function StemPlayer({
   const toggle = () => {
     if (playing) {
       player.pause();
+      player.seekTo(0);
     } else {
       player.seekTo(0);
       player.play();
@@ -165,12 +166,12 @@ function StemPlayer({
       style={[styles.stemPlayer, { backgroundColor: colors.muted, borderColor: colors.border }]}
     >
       <View style={[styles.stemIconWrap, { backgroundColor: colors.primary + '20' }]}>
-        <Feather name={playing ? 'pause' : icon} size={18} color={colors.primary} />
+        <Feather name={playing ? 'square' : icon} size={18} color={colors.primary} />
       </View>
       <View style={styles.stemInfo}>
         <Text style={[styles.stemLabel, { color: colors.foreground }]}>{label}</Text>
         <Text style={[styles.stemHint, { color: colors.mutedForeground }]}>
-          {playing ? 'Tap to pause' : 'Tap to play'}
+          {playing ? 'Tap to stop' : 'Tap to play'}
         </Text>
       </View>
     </TouchableOpacity>
