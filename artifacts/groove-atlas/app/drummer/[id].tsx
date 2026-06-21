@@ -243,17 +243,25 @@ export default function DrummerDetailScreen() {
               <Text style={[page.eraChipText, { color: colors.primary, fontFamily: Fonts.label }]}>{drummer.primaryEra}</Text>
             </View>
           </TouchableOpacity>
-          {drummer.genres.length > 0 && (
-            <Text style={[page.metaText, { color: colors.mutedForeground }]}>
-              {drummer.genres.join(' · ')}
-            </Text>
-          )}
+          {drummer.genres.map((g, i) => (
+            <TouchableOpacity key={g} onPress={() => router.push(`/genre/${g}`)}>
+              <Text style={[page.genreLink, { color: colors.mutedForeground }]}>
+                {g}{i < drummer.genres.length - 1 ? ' ·' : ''}
+              </Text>
+            </TouchableOpacity>
+          ))}
         </View>
         <View style={[page.bandsRow, { borderBottomColor: colors.border }]}>
           <Text style={[page.bandsLabel, { color: colors.foreground }]}>with </Text>
-          <Text style={[page.bandsText, { color: colors.mutedForeground }]} numberOfLines={2}>
-            {drummer.bands.join(', ')}
-          </Text>
+          <View style={page.bandsList}>
+            {drummer.bands.map((band, i) => (
+              <TouchableOpacity key={band} onPress={() => router.push(`/band/${encodeURIComponent(band)}`)}>
+                <Text style={[page.bandLink, { color: colors.mutedForeground }]}>
+                  {band}{i < drummer.bands.length - 1 ? ', ' : ''}
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </View>
         </View>
 
         {/* ── Biography ── */}
@@ -439,7 +447,7 @@ const page = StyleSheet.create({
   heroYears: { fontSize: 13, color: 'rgba(255,255,255,0.80)', marginTop: 2 },
 
   metaRow: {
-    flexDirection: 'row', alignItems: 'center', gap: 10,
+    flexDirection: 'row', alignItems: 'center', gap: 6, flexWrap: 'wrap',
     paddingHorizontal: 20, paddingVertical: 12,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
@@ -447,15 +455,16 @@ const page = StyleSheet.create({
     paddingHorizontal: 8, paddingVertical: 3, borderRadius: 4, borderWidth: 1,
   },
   eraChipText: { fontSize: 11 },
-  metaText: { fontSize: 12, flex: 1 },
+  genreLink: { fontSize: 12, textDecorationLine: 'underline', textDecorationStyle: 'dotted' },
 
   bandsRow: {
-    flexDirection: 'row', flexWrap: 'wrap',
+    flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start',
     paddingHorizontal: 20, paddingVertical: 10,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
   bandsLabel: { fontSize: 13, fontWeight: '700' },
-  bandsText: { fontSize: 13, flex: 1 },
+  bandsList: { flexDirection: 'row', flexWrap: 'wrap', flex: 1 },
+  bandLink: { fontSize: 13, textDecorationLine: 'underline', textDecorationStyle: 'dotted' },
 
   section: { paddingHorizontal: 20, paddingTop: 22, paddingBottom: 6 },
   sectionTitle: { fontSize: 22, marginBottom: 10 },

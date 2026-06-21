@@ -217,6 +217,9 @@ export const resolvers = {
 
     search: (_: unknown, { q }: { q: string }) => multiSearch(q),
 
+    drummersByBand: (_: unknown, { band }: { band: string }) =>
+      drummers.filter((d) => d.bands.includes(band)),
+
     drummerVibe: (_: unknown, { id }: { id: string }) =>
       aggregateDrummerVibe(id),
 

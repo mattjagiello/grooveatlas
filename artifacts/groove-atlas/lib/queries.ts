@@ -119,6 +119,14 @@ export const DRUMMER_VIBE_QUERY = gql`
   }
 `;
 
+export const DRUMMERS_BY_BAND_QUERY = gql`
+  query DrummersByBand($band: String!) {
+    drummersByBand(band: $band) {
+      ${DRUMMER_CARD}
+    }
+  }
+`;
+
 export const SIMILAR_SONGS_QUERY = gql`
   query SimilarSongs($id: ID!, $limit: Int) {
     similarSongs(id: $id, limit: $limit) {

@@ -7,6 +7,7 @@ import {
   GENRE_DETAIL_QUERY,
   DRUMMERS_QUERY,
   DRUMMER_DETAIL_QUERY,
+  DRUMMERS_BY_BAND_QUERY,
   SONGS_QUERY,
   SONG_DETAIL_QUERY,
   SEARCH_QUERY,
@@ -97,6 +98,17 @@ export function useDrummer(id: string) {
       }
       return undefined;
     },
+  });
+}
+
+export function useDrummersByBand(band: string) {
+  return useQuery<import('@/constants/data').Drummer[]>({
+    queryKey: ['drummersByBand', band],
+    queryFn: () =>
+      gqlClient
+        .request<{ drummersByBand: import('@/constants/data').Drummer[] }>(DRUMMERS_BY_BAND_QUERY, { band })
+        .then((d) => d.drummersByBand),
+    enabled: !!band,
   });
 }
 

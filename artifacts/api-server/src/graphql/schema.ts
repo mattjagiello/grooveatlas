@@ -123,6 +123,7 @@ export const typeDefs = /* GraphQL */ `
     songs(eraId: String, genreId: String, drummerId: String): [Song!]!
     song(id: ID!): Song
     search(q: String!): SearchResults!
+    drummersByBand(band: String!): [Drummer!]!
     drummerVibe(id: ID!): DrummerVibe
     similarSongs(id: ID!, limit: Int): [SimilarSong!]!
   }
