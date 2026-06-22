@@ -8,68 +8,68 @@ export default function Integrations() {
         }}
       />
 
-      <div className="absolute inset-0 flex flex-col" style={{ padding: "6vh 8vw" }}>
-        <div style={{ marginBottom: "4vh" }}>
-          <p className="font-body" style={{ fontSize: "2.2vw", color: "#C4971A", letterSpacing: "0.15em", textTransform: "uppercase" }}>
+      <div className="absolute inset-0 flex flex-col" style={{ padding: "5vh 8vw" }}>
+        <div style={{ marginBottom: "3.5vh" }}>
+          <p className="font-body" style={{ fontSize: "2vw", color: "#C4971A", letterSpacing: "0.15em", textTransform: "uppercase" }}>
             API Integrations
           </p>
-          <div style={{ width: "6vw", height: "0.35vh", background: "#8B6914", marginTop: "1.5vh" }} />
-          <h2 className="font-display" style={{ fontSize: "5.5vw", color: "#F5EDD4", letterSpacing: "0.02em", marginTop: "2vh" }}>
+          <div style={{ width: "6vw", height: "0.35vh", background: "#8B6914", marginTop: "1.2vh" }} />
+          <h2 className="font-display" style={{ fontSize: "5vw", color: "#F5EDD4", letterSpacing: "0.02em", marginTop: "1.5vh" }}>
             FIVE LIVE APIS · ONE PLATFORM
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-[2.2vh]" style={{ flex: 1 }}>
-          <div className="flex items-center gap-[3vw]" style={{ borderLeft: "0.4vw solid #8B6914", paddingLeft: "2vw" }}>
-            <p className="font-display" style={{ fontSize: "3.5vw", color: "#C4971A", width: "22vw", flexShrink: 0 }}>
+        <div className="flex flex-col" style={{ flex: 1, gap: "0" }}>
+          <div className="flex items-center" style={{ paddingTop: "1.8vh", paddingBottom: "1.8vh", paddingLeft: "2vw", borderLeft: "0.4vw solid #8B6914" }}>
+            <p className="font-display" style={{ fontSize: "3.2vw", color: "#C4971A", width: "20vw", flexShrink: 0 }}>
               CYANITE
             </p>
-            <p className="font-body" style={{ fontSize: "2.6vw", color: "#F5EDD4", opacity: 0.85 }}>
+            <p className="font-body" style={{ fontSize: "2.4vw", color: "#F5EDD4", opacity: 0.85 }}>
               Audio AI — BPM, energy, moods, sonic fingerprints per song
             </p>
           </div>
 
           <div style={{ height: "0.15vh", background: "#8B6914", opacity: 0.2 }} />
 
-          <div className="flex items-center gap-[3vw]" style={{ borderLeft: "0.4vw solid #8B6914", paddingLeft: "2vw" }}>
-            <p className="font-display" style={{ fontSize: "3.5vw", color: "#C4971A", width: "22vw", flexShrink: 0 }}>
+          <div className="flex items-center" style={{ paddingTop: "1.8vh", paddingBottom: "1.8vh", paddingLeft: "2vw", borderLeft: "0.4vw solid #8B6914" }}>
+            <p className="font-display" style={{ fontSize: "3.2vw", color: "#C4971A", width: "20vw", flexShrink: 0 }}>
               SONGSTATS
             </p>
-            <p className="font-body" style={{ fontSize: "2.6vw", color: "#F5EDD4", opacity: 0.85 }}>
-              Streaming stats — Spotify listeners, radio plays, chart history
+            <p className="font-body" style={{ fontSize: "2.4vw", color: "#F5EDD4", opacity: 0.85 }}>
+              Streaming stats — Spotify listeners, radio plays, chart history per artist
             </p>
           </div>
 
           <div style={{ height: "0.15vh", background: "#8B6914", opacity: 0.2 }} />
 
-          <div className="flex items-center gap-[3vw]" style={{ borderLeft: "0.4vw solid #8B6914", paddingLeft: "2vw" }}>
-            <p className="font-display" style={{ fontSize: "3.5vw", color: "#C4971A", width: "22vw", flexShrink: 0 }}>
+          <div className="flex items-center" style={{ paddingTop: "1.8vh", paddingBottom: "1.8vh", paddingLeft: "2vw", borderLeft: "0.4vw solid #8B6914" }}>
+            <p className="font-display" style={{ fontSize: "3.2vw", color: "#C4971A", width: "20vw", flexShrink: 0 }}>
               LALAL.AI
             </p>
-            <p className="font-body" style={{ fontSize: "2.6vw", color: "#F5EDD4", opacity: 0.85 }}>
+            <p className="font-body" style={{ fontSize: "2.4vw", color: "#F5EDD4", opacity: 0.85 }}>
               Stem separation — isolates the drum track from any song for study
             </p>
           </div>
 
           <div style={{ height: "0.15vh", background: "#8B6914", opacity: 0.2 }} />
 
-          <div className="flex items-center gap-[3vw]" style={{ borderLeft: "0.4vw solid #8B6914", paddingLeft: "2vw" }}>
-            <p className="font-display" style={{ fontSize: "3.5vw", color: "#C4971A", width: "22vw", flexShrink: 0 }}>
+          <div className="flex items-center" style={{ paddingTop: "1.8vh", paddingBottom: "1.8vh", paddingLeft: "2vw", borderLeft: "0.4vw solid #8B6914" }}>
+            <p className="font-display" style={{ fontSize: "3.2vw", color: "#C4971A", width: "20vw", flexShrink: 0 }}>
               MUSIXMATCH
             </p>
-            <p className="font-body" style={{ fontSize: "2.6vw", color: "#F5EDD4", opacity: 0.85 }}>
+            <p className="font-body" style={{ fontSize: "2.4vw", color: "#F5EDD4", opacity: 0.85 }}>
               Song metadata — ISRC, genres, artist details, catalogue enrichment
             </p>
           </div>
 
           <div style={{ height: "0.15vh", background: "#8B6914", opacity: 0.2 }} />
 
-          <div className="flex items-center gap-[3vw]" style={{ borderLeft: "0.4vw solid #8B6914", paddingLeft: "2vw" }}>
-            <p className="font-display" style={{ fontSize: "3.5vw", color: "#C4971A", width: "22vw", flexShrink: 0 }}>
+          <div className="flex items-center" style={{ paddingTop: "1.8vh", paddingBottom: "1.8vh", paddingLeft: "2vw", borderLeft: "0.4vw solid #8B6914" }}>
+            <p className="font-display" style={{ fontSize: "3.2vw", color: "#C4971A", width: "20vw", flexShrink: 0 }}>
               DEEZER
             </p>
-            <p className="font-body" style={{ fontSize: "2.6vw", color: "#F5EDD4", opacity: 0.85 }}>
-              30-second audio previews — feeds LALAL.AI stem extraction in-app
+            <p className="font-body" style={{ fontSize: "2.4vw", color: "#F5EDD4", opacity: 0.85 }}>
+              30-second previews — sourced automatically to feed LALAL.AI stem extraction
             </p>
           </div>
         </div>

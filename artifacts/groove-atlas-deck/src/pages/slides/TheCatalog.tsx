@@ -16,7 +16,7 @@ export default function TheCatalog() {
 
         <div>
           <h2 className="font-display" style={{ fontSize: "7vw", color: "#2A1A0A", lineHeight: 1, letterSpacing: "0.02em" }}>
-            SIX DECADES OF
+            EIGHT DECADES OF
           </h2>
           <h2 className="font-display" style={{ fontSize: "7vw", color: "#8B6914", lineHeight: 1, letterSpacing: "0.02em" }}>
             DRUM HISTORY
@@ -32,7 +32,7 @@ export default function TheCatalog() {
               Drummers
             </p>
             <p className="font-body" style={{ fontSize: "2.4vw", color: "#7A6040", marginTop: "0.8vh" }}>
-              Jazz · Funk · Rock · Latin · Soul · Hip-Hop
+              1930s through today, across jazz, funk, rock, latin, soul and hip-hop
             </p>
           </div>
           <div>
@@ -43,7 +43,7 @@ export default function TheCatalog() {
               Songs
             </p>
             <p className="font-body" style={{ fontSize: "2.4vw", color: "#7A6040", marginTop: "0.8vh" }}>
-              Each with audio analysis and vibe data
+              Each with audio analysis, vibe data, and playable previews
             </p>
           </div>
           <div>
@@ -54,7 +54,7 @@ export default function TheCatalog() {
               Live APIs
             </p>
             <p className="font-body" style={{ fontSize: "2.4vw", color: "#7A6040", marginTop: "0.8vh" }}>
-              Real-time audio intelligence and streaming data
+              Real-time audio intelligence and streaming data on every song
             </p>
           </div>
         </div>

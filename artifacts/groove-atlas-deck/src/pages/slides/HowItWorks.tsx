@@ -36,7 +36,7 @@ export default function HowItWorks() {
           >
             <p className="font-display" style={{ fontSize: "2.8vw", color: "#F5EDD4" }}>GRAPHQL API</p>
             <p className="font-body" style={{ fontSize: "2.2vw", color: "#F5EDD4", opacity: 0.85, marginTop: "1.5vh" }}>
-              GraphQL Yoga · port 8080 · runs on Replit
+              GraphQL Yoga · resolvers fan out to static data + external APIs
             </p>
           </div>
 
@@ -60,7 +60,7 @@ export default function HowItWorks() {
           >
             <p className="font-display" style={{ fontSize: "2.8vw", color: "#C4971A" }}>STATIC JSON</p>
             <p className="font-body" style={{ fontSize: "2.2vw", color: "#F5EDD4", opacity: 0.8, marginTop: "1.5vh" }}>
-              169 drummers · 407 songs · no database required
+              169 drummers · 407 songs · source of truth, no database
             </p>
           </div>
         </div>
@@ -68,7 +68,7 @@ export default function HowItWorks() {
         <div>
           <div style={{ height: "0.25vh", background: "#8B6914", opacity: 0.3, marginBottom: "2.5vh" }} />
           <p className="font-body" style={{ fontSize: "2.4vw", color: "#7A6040", fontStyle: "italic" }}>
-            API resolvers call Cyanite, Songstats, LALAL.AI, Musixmatch, and Deezer on demand — results returned directly in the GraphQL response.
+            Drummer and song data served from static JSON. External API data (Cyanite, Songstats, LALAL.AI) fetched on page load and cached in-session — no cold calls on every query.
           </p>
         </div>
       </div>
