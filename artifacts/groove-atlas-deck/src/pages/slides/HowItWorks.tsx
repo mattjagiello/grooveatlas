@@ -68,7 +68,7 @@ export default function HowItWorks() {
         <div>
           <div style={{ height: "0.25vh", background: "#8B6914", opacity: 0.3, marginBottom: "2.5vh" }} />
           <p className="font-body" style={{ fontSize: "2.4vw", color: "#7A6040", fontStyle: "italic" }}>
-            Drummer and song data served from static JSON. External API data (Cyanite, Songstats, LALAL.AI) fetched on page load and cached in-session — no cold calls on every query.
+            Drummer and song data served from static JSON. Cyanite and Songstats data fetched on page load and cached in-session. LALAL.AI stem extraction triggered on demand — called when a user requests an isolated drum track.
           </p>
         </div>
       </div>
