@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "id": "a1b2c3d4-0001-0001-0001-000000000001",
+    "position": 1,
+    "filepath": "src/pages/slides/Cover.tsx",
+    "title": "Cover",
+    "description": "Groove Atlas — Hackathon Pitch title slide",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0002-0002-0002-000000000002",
+    "position": 2,
+    "filepath": "src/pages/slides/TheCatalog.tsx",
+    "title": "The Catalog",
+    "description": "169 drummers · 407 songs · 5 APIs — scale of the dataset",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0003-0003-0003-000000000003",
+    "position": 3,
+    "filepath": "src/pages/slides/DataLayer.tsx",
+    "title": "The Data Layer",
+    "description": "GraphQL Yoga + Typesense architecture with schema preview",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0004-0004-0004-000000000004",
+    "position": 4,
+    "filepath": "src/pages/slides/Integrations.tsx",
+    "title": "API Integrations",
+    "description": "Five live APIs: Cyanite, Songstats, LALAL.AI, Musixmatch, Deezer",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0005-0005-0005-000000000005",
+    "position": 5,
+    "filepath": "src/pages/slides/HowItWorks.tsx",
+    "title": "How It Works",
+    "description": "Request flow: Expo app → GraphQL API → Typesense → Static JSON",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0006-0006-0006-000000000006",
+    "position": 6,
+    "filepath": "src/pages/slides/TheMobileApp.tsx",
+    "title": "The App",
+    "description": "Mobile-first Expo app — drummer profiles, song pages, search",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0007-0007-0007-000000000007",
+    "position": 7,
+    "filepath": "src/pages/slides/Closing.tsx",
+    "title": "Closing",
+    "description": "What's live and what's next",
+    "speakerNotes": ""
+  }
+]
