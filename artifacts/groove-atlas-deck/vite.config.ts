@@ -52,11 +52,6 @@ export default defineConfig({
       "@assets": path.resolve(import.meta.dirname, "..", "..", "attached_assets"),
     },
   },
-  css: {
-    postcss: {
-      plugins: [],
-    },
-  },
   root: path.resolve(import.meta.dirname),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
