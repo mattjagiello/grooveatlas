@@ -32,7 +32,7 @@ export default function TheCatalog() {
               Drummers
             </p>
             <p className="font-body" style={{ fontSize: "2.4vw", color: "#7A6040", marginTop: "0.8vh" }}>
-              1930s through today, across jazz, funk, rock, latin, soul and hip-hop
+              1940s through today — jazz, funk, rock, latin, soul, hip-hop, and more
             </p>
           </div>
           <div>
