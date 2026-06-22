@@ -47,3 +47,7 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Typesense runtime data
+.typesense-data/
+tools/typesense/*.log
